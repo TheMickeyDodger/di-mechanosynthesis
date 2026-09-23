@@ -16,7 +16,7 @@ automated agents in particular, are expected to follow.
 | `docs/donor-candidates.md`, `structures/` | Agent-proposed, unoptimized candidate geometries, their bookkeeping and the Figure 1 method |
 | `docs/e01-method-specification.md` | Prospective specification of the first calculation, which has not been run |
 | `docs/engine-capability-status.md` | What archived engine sources establish, and what remains unverified |
-| `tools/` | Deterministic renderer of Figure 1 and its bond table |
+| `tools/` | Deterministic renderers of Figures 1 and 2, with their input tables |
 | `provenance/EXPORT-MANIFEST.md` | SHA256 and derivation of every public file |
 | `.agents/RESEARCH-STATE.md` | Research-state record: intended end state, gates, status, open issues and next work |
 

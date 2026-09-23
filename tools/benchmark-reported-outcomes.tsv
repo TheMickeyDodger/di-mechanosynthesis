@@ -1,0 +1,10 @@
+# Per-interaction target formation reported by Cowie et al., arXiv:2605.27250v1 (reference [1] in docs/SOURCES.md),
+# section "Positional and chemical control of mechanosynthetic donation" (discussion of Fig. 5).
+# Values are transcribed as reported by the authors: percentages and 95% confidence intervals are not recomputed
+# from the counts. These are the authors' experimental interaction outcomes, not results of this project.
+# Columns: target, successful interactions, total interactions, reported percentage, reported 95% CI lower bound,
+# reported 95% CI upper bound (percentages).
+IR-C2	184	197	93	89	96
+2IR-C2	71	73	97	91	99
+IR-C2/C4	45	49	92	81	97
+2IR-C4	27	32	84	68	93

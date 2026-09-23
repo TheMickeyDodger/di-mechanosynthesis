@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="262" viewBox="0 0 720 262" role="img" aria-labelledby="outcomes-title outcomes-desc" font-family="Helvetica, Arial, sans-serif">
+  <title id="outcomes-title">Per-interaction target formation reported by Cowie et al. (arXiv:2605.27250v1)</title>
+  <desc id="outcomes-desc">Point-and-interval chart on a 0 to 100 percent axis of the experimental per-interaction outcomes reported by the benchmark authors, not results of this project. IR-C2: 184 of 197, reported 93 percent, 95 percent confidence interval 89 to 96; 2IR-C2: 71 of 73, reported 97 percent, 95 percent confidence interval 91 to 99; IR-C2/C4: 45 of 49, reported 92 percent, 95 percent confidence interval 81 to 97; 2IR-C4: 27 of 32, reported 84 percent, 95 percent confidence interval 68 to 93.</desc>
+  <rect x="0" y="0" width="720" height="262" fill="#ffffff"/>
+  <line x1="128.0" y1="22.0" x2="128.0" y2="200.0" stroke="#e4e4e4" stroke-width="1"/>
+  <text x="128.0" y="217.0" font-size="12" fill="#5a5a5a" text-anchor="middle">0</text>
+  <line x1="206.4" y1="22.0" x2="206.4" y2="200.0" stroke="#e4e4e4" stroke-width="1"/>
+  <text x="206.4" y="217.0" font-size="12" fill="#5a5a5a" text-anchor="middle">20</text>
+  <line x1="284.8" y1="22.0" x2="284.8" y2="200.0" stroke="#e4e4e4" stroke-width="1"/>
+  <text x="284.8" y="217.0" font-size="12" fill="#5a5a5a" text-anchor="middle">40</text>
+  <line x1="363.2" y1="22.0" x2="363.2" y2="200.0" stroke="#e4e4e4" stroke-width="1"/>
+  <text x="363.2" y="217.0" font-size="12" fill="#5a5a5a" text-anchor="middle">60</text>
+  <line x1="441.6" y1="22.0" x2="441.6" y2="200.0" stroke="#e4e4e4" stroke-width="1"/>
+  <text x="441.6" y="217.0" font-size="12" fill="#5a5a5a" text-anchor="middle">80</text>
+  <line x1="520.0" y1="22.0" x2="520.0" y2="200.0" stroke="#e4e4e4" stroke-width="1"/>
+  <text x="520.0" y="217.0" font-size="12" fill="#5a5a5a" text-anchor="middle">100</text>
+  <line x1="128.0" y1="200.0" x2="520.0" y2="200.0" stroke="#5a5a5a" stroke-width="1"/>
+  <text x="324.0" y="238.0" font-size="12.5" fill="#1f1f1f" text-anchor="middle">Reported target formation (%), with reported 95% confidence interval</text>
+  <text x="540.0" y="18.0" font-size="11.5" fill="#5a5a5a">Reported</text>
+  <text x="584.0" y="18.0" font-size="11.5" fill="#5a5a5a">95% CI</text>
+  <text x="650.0" y="18.0" font-size="11.5" fill="#5a5a5a">Count</text>
+  <text x="112.0" y="48.5" font-size="13" fill="#1f1f1f" text-anchor="end">IR-C2</text>
+  <line x1="476.9" y1="44.0" x2="504.3" y2="44.0" stroke="#3b3b3b" stroke-width="1.6"/>
+  <line x1="476.9" y1="39.0" x2="476.9" y2="49.0" stroke="#3b3b3b" stroke-width="1.6"/>
+  <line x1="504.3" y1="39.0" x2="504.3" y2="49.0" stroke="#3b3b3b" stroke-width="1.6"/>
+  <circle cx="492.6" cy="44.0" r="5" fill="#127c78" stroke="#ffffff" stroke-width="1.5"/>
+  <text x="540.0" y="48.5" font-size="13" fill="#1f1f1f">93%</text>
+  <text x="584.0" y="48.5" font-size="13" fill="#5a5a5a">[89, 96]</text>
+  <text x="650.0" y="48.5" font-size="13" fill="#5a5a5a">184/197</text>
+  <text x="112.0" y="90.5" font-size="13" fill="#1f1f1f" text-anchor="end">2IR-C2</text>
+  <line x1="484.7" y1="86.0" x2="516.1" y2="86.0" stroke="#3b3b3b" stroke-width="1.6"/>
+  <line x1="484.7" y1="81.0" x2="484.7" y2="91.0" stroke="#3b3b3b" stroke-width="1.6"/>
+  <line x1="516.1" y1="81.0" x2="516.1" y2="91.0" stroke="#3b3b3b" stroke-width="1.6"/>
+  <circle cx="508.2" cy="86.0" r="5" fill="#127c78" stroke="#ffffff" stroke-width="1.5"/>
+  <text x="540.0" y="90.5" font-size="13" fill="#1f1f1f">97%</text>
+  <text x="584.0" y="90.5" font-size="13" fill="#5a5a5a">[91, 99]</text>
+  <text x="650.0" y="90.5" font-size="13" fill="#5a5a5a">71/73</text>
+  <text x="112.0" y="132.5" font-size="13" fill="#1f1f1f" text-anchor="end">IR-C2/C4</text>
+  <line x1="445.5" y1="128.0" x2="508.2" y2="128.0" stroke="#3b3b3b" stroke-width="1.6"/>
+  <line x1="445.5" y1="123.0" x2="445.5" y2="133.0" stroke="#3b3b3b" stroke-width="1.6"/>
+  <line x1="508.2" y1="123.0" x2="508.2" y2="133.0" stroke="#3b3b3b" stroke-width="1.6"/>
+  <circle cx="488.6" cy="128.0" r="5" fill="#127c78" stroke="#ffffff" stroke-width="1.5"/>
+  <text x="540.0" y="132.5" font-size="13" fill="#1f1f1f">92%</text>
+  <text x="584.0" y="132.5" font-size="13" fill="#5a5a5a">[81, 97]</text>
+  <text x="650.0" y="132.5" font-size="13" fill="#5a5a5a">45/49</text>
+  <text x="112.0" y="174.5" font-size="13" fill="#1f1f1f" text-anchor="end">2IR-C4</text>
+  <line x1="394.6" y1="170.0" x2="492.6" y2="170.0" stroke="#3b3b3b" stroke-width="1.6"/>
+  <line x1="394.6" y1="165.0" x2="394.6" y2="175.0" stroke="#3b3b3b" stroke-width="1.6"/>
+  <line x1="492.6" y1="165.0" x2="492.6" y2="175.0" stroke="#3b3b3b" stroke-width="1.6"/>
+  <circle cx="457.3" cy="170.0" r="5" fill="#127c78" stroke="#ffffff" stroke-width="1.5"/>
+  <text x="540.0" y="174.5" font-size="13" fill="#1f1f1f">84%</text>
+  <text x="584.0" y="174.5" font-size="13" fill="#5a5a5a">[68, 93]</text>
+  <text x="650.0" y="174.5" font-size="13" fill="#5a5a5a">27/32</text>
+</svg>

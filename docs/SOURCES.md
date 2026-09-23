@@ -33,7 +33,8 @@ inverted-mode STM. arXiv:2605.27250v1 [cond-mat.mtrl-sci], submitted 26 May 2026
 - **Locators used:** the abstract; the sections "Mechanosynthetic C2 donation", "C2 donation mechanism" (Fig. 3)
   and "Positional and chemical control of mechanosynthetic donation" (discussion of Fig. 5).
 - **Used in:** the README, [benchmark.md](benchmark.md) and [donor-candidates.md](donor-candidates.md). The
-  reported counts appear in the README and benchmark tables.
+  reported counts appear in Figure 2 of the README, in the table in benchmark.md and in the chart input
+  [`../tools/benchmark-reported-outcomes.tsv`](../tools/benchmark-reported-outcomes.tsv).
 - **Basis:** inspected (cached listing and v1 PDF text).
 - **Limitations:** the work is a preprint, and no peer-review status is claimed. The Supplementary Information is
   "available upon request" and has not been obtained. No text or figures are copied.
@@ -250,8 +251,8 @@ The inputs to [`../structures/`](../structures/README.md) fall into four groups.
 
 ## 5. Figures
 
-The repository contains one figure, [`figures/activated-donor.svg`](figures/activated-donor.svg), which appears
-as Figure 1 of the README.
+The repository contains two figures. The first, [`figures/activated-donor.svg`](figures/activated-donor.svg),
+appears as Figure 1 of the README.
 - **Nature:** an original rendering, produced for this repository, of the heavy atoms of the proposed activated
   donor candidate.
 - **Inputs:** the unchanged coordinates of
@@ -265,9 +266,21 @@ as Figure 1 of the README.
   benchmark authors' coordinates. Hydrogen atoms are omitted, the atom-disc radii are graphic conventions rather
   than physical radii, and no computed quantity is shown.
 
-The diagrams and the chart of reported outcomes in earlier versions of the repository have been retired. They are
-recorded in the revision history of the export manifest. The reported outcomes remain tabulated in the README and
-in [benchmark.md](benchmark.md).
+The second figure, [`figures/benchmark-outcomes.svg`](figures/benchmark-outcomes.svg), appears as Figure 2 of the
+README.
+- **Nature:** an original point-and-interval chart of published data, namely the per-interaction target-formation
+  percentages, reported 95% confidence intervals and counts of [1]. It is not a copy of a figure from the paper.
+- **Input:** [`../tools/benchmark-reported-outcomes.tsv`](../tools/benchmark-reported-outcomes.tsv). The values are
+  transcribed as reported in the section "Positional and chemical control of mechanosynthetic donation" of [1]
+  (discussion of Fig. 5), and they match the table in [benchmark.md](benchmark.md).
+- **Method:** the deterministic standard-library script
+  [`../tools/render_outcomes_chart.py`](../tools/render_outcomes_chart.py). It draws the reported values on a 0 to
+  100 percent axis. It does not recompute percentages or confidence intervals from the counts.
+- **Limitations:** the values are the authors' experimental per-interaction outcomes. They are neither results of
+  this project nor independent full-build yields, and they are not multiplied into a build-success probability.
+
+The diagrams and the earlier chart of reported outcomes in previous versions of the repository have been retired.
+They are recorded in the revision history of the export manifest.
 
 ## 6. Private and unavailable records
 

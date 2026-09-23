@@ -41,18 +41,23 @@ inter-row dangling-bond (IR-DB) pair, and it transfers its C2 unit to the build 
 Cowie et al. report atomically precise mechanosynthesis of carbon structures on hydrogenated Si(100) by IM-STM at
 4 K [1]. The work is a preprint (arXiv:2605.27250v1, submitted 26 May 2026), and no peer-review status is claimed
 for it here. The authors state that Supplementary Information is available upon request, but this project has not
-obtained it. The authors report per-interaction target formation for four build targets in the section "Positional
-and chemical control of mechanosynthetic donation".
+obtained it. Figure 2 shows the per-interaction target formation that the authors report for four build targets.
+The exact values are tabulated in [docs/benchmark.md](docs/benchmark.md) and in the chart input
+[`tools/benchmark-reported-outcomes.tsv`](tools/benchmark-reported-outcomes.tsv). The counts are not multiplied
+here into a build-success probability.
 
-| Target | Reported outcome | Reported percentage | Reported 95% CI |
-|---|---|---|---|
-| IR-C2 | 184 / 197 | 93% | 89–96% |
-| 2IR-C2 | 71 / 73 | 97% | 91–99% |
-| IR-C2/C4 | 45 / 49 | 92% | 81–97% |
-| 2IR-C4 | 27 / 32 | 84% | 68–93% |
+<p align="center">
+  <img src="docs/figures/benchmark-outcomes.svg" width="720"
+       alt="Point-and-interval chart on a 0 to 100 percent axis of four per-interaction target-formation percentages with 95% confidence intervals and counts, as reported by Cowie et al.">
+</p>
 
-These are separate interaction counts reported by the authors, not results of this project. They do not describe
-independent full-build events or throughput, and they are not multiplied here into a build-success probability.
+Figure 2. Per-interaction target formation reported by Cowie et al. [1]
+([arXiv:2605.27250v1](https://arxiv.org/abs/2605.27250), section "Positional and chemical control of
+mechanosynthetic donation"). Points mark the reported percentages and bars the reported 95% confidence intervals,
+and the reported counts are listed at right. These are the authors' experimental per-interaction outcomes. They
+are neither calculations by this project nor independent full-build yields or throughput estimates. The chart is
+drawn by [`tools/render_outcomes_chart.py`](tools/render_outcomes_chart.py) from the reported values, without
+recomputation.
 
 The same paper proposes a mechanism for IR-C2 formation based on a QM/MM model that combines xTB (GFN0) with DFT
 (ωB97X-D3) [1, Fig. 3]. The mechanism proceeds in three steps:
@@ -127,8 +132,8 @@ output from language models is never treated as physical evidence. The rules are
 
 Every public file is listed with its SHA256 in [provenance/EXPORT-MANIFEST.md](provenance/EXPORT-MANIFEST.md),
 which excludes itself from its own table. Where a file was adapted from a private working record, the manifest
-states the change and gives the hash of the original. Figure 1 is drawn directly from repository data by the
-included script. A software capability is accepted only when it is shown for the exact version used.
+states the change and gives the hash of the original. Both figures are drawn directly from repository data by the
+included scripts. A software capability is accepted only when it is shown for the exact version used.
 
 The work is coordinated through a separate orchestration and review system, Dodging Infinity. That system
 authorizes bounded tasks, conducts independent review and records evidence status. This repository holds the
@@ -164,7 +169,9 @@ project's private working records are omitted, and the manifest lists each omiss
 | [docs/e01-method-specification.md](docs/e01-method-specification.md) | Prospective specification of the first calculation |
 | [docs/engine-capability-status.md](docs/engine-capability-status.md) | Capabilities of Psi4 1.11 as established, or not, by archived primary sources |
 | [docs/figures/activated-donor.svg](docs/figures/activated-donor.svg) | Figure 1 |
-| [tools/](tools/render_donor_plate.py) | Figure 1 renderer and its bond table |
+| [docs/figures/benchmark-outcomes.svg](docs/figures/benchmark-outcomes.svg) | Figure 2 |
+| [tools/render_donor_plate.py](tools/render_donor_plate.py) | Figure 1 renderer, with its bond table [tools/activated-donor-bonds.tsv](tools/activated-donor-bonds.tsv) |
+| [tools/render_outcomes_chart.py](tools/render_outcomes_chart.py) | Figure 2 renderer, with its input [tools/benchmark-reported-outcomes.tsv](tools/benchmark-reported-outcomes.tsv) |
 | [structures/](structures/README.md) | Donor-candidate coordinate files |
 | [AGENTS.md](AGENTS.md) | Conventions for contributors and automated agents |
 | [provenance/EXPORT-MANIFEST.md](provenance/EXPORT-MANIFEST.md) | Per-file SHA256, derivation and redaction statements |

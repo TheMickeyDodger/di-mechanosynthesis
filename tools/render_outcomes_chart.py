@@ -66,7 +66,7 @@ def main():
     out.append('  <text x="%.1f" y="%.1f" font-size="12.5" fill="%s" text-anchor="middle">'
                'Reported target formation (%%), with reported 95%% confidence interval</text>'
                % ((X0 + X1) / 2, axis_y + 38, INK))
-    for col, head in zip(COLS, ("Reported", "95% CI", "Count")):
+    for col, head in zip(COLS, ("Rate", "95% CI", "Count")):
         out.append('  <text x="%.1f" y="%.1f" font-size="11.5" fill="%s">%s</text>' % (col, ROW0 - 26, MUTED, head))
 
     for i, (target, k, n, pct, lo, hi) in enumerate(rows):

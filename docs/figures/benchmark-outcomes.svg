@@ -16,7 +16,7 @@
   <text x="520.0" y="217.0" font-size="12" fill="#5a5a5a" text-anchor="middle">100</text>
   <line x1="128.0" y1="200.0" x2="520.0" y2="200.0" stroke="#5a5a5a" stroke-width="1"/>
   <text x="324.0" y="238.0" font-size="12.5" fill="#1f1f1f" text-anchor="middle">Reported target formation (%), with reported 95% confidence interval</text>
-  <text x="540.0" y="18.0" font-size="11.5" fill="#5a5a5a">Reported</text>
+  <text x="540.0" y="18.0" font-size="11.5" fill="#5a5a5a">Rate</text>
   <text x="584.0" y="18.0" font-size="11.5" fill="#5a5a5a">95% CI</text>
   <text x="650.0" y="18.0" font-size="11.5" fill="#5a5a5a">Count</text>
   <text x="112.0" y="48.5" font-size="13" fill="#1f1f1f" text-anchor="end">IR-C2</text>

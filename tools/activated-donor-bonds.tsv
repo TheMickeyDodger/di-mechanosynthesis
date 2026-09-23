@@ -1,0 +1,28 @@
+# Heavy-atom bonds of the proposed activated donor candidate (EAOGe-C2 radical, 48 atoms).
+# Transcribed from the atom-mapped SMILES and the atom-identifier table in docs/donor-candidates.md,
+# with the C12-I13 bond of the precursor removed. Columns: atom ID 1, atom ID 2, bond order,
+# SMILES atom-map number of atom 1, SMILES atom-map number of atom 2. Hydrogen atoms are bonded to
+# the parent named in their identifier (for example D-C2-H1 to D-C2) and are not listed here.
+D-Ge1	D-Ca	1	1	11
+D-Ca	D-Cb	3	11	12
+D-Ge1	D-C2	1	1	2
+D-C2	D-C3	1	2	3
+D-C3	D-L1a	1	3	14
+D-L1a	D-L1b	1	14	15
+D-L1b	D-O1	1	15	16
+D-C3	D-C4	1	3	4
+D-C4	D-C5	1	4	5
+D-C5	D-L2a	1	5	17
+D-L2a	D-L2b	1	17	18
+D-L2b	D-O2	1	18	19
+D-C5	D-C9	1	5	9
+D-C9	D-Ge1	1	9	1
+D-C5	D-C6	1	5	6
+D-C6	D-C7	1	6	7
+D-C7	D-L3a	1	7	20
+D-L3a	D-L3b	1	20	21
+D-L3b	D-O3	1	21	22
+D-C7	D-C10	1	7	10
+D-C10	D-C3	1	10	3
+D-C7	D-C8	1	7	8
+D-C8	D-Ge1	1	8	1

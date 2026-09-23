@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="820" height="470" viewBox="0 0 820 470" role="img" aria-labelledby="e1-title e1-desc" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif">
+  <title id="e1-title">First experiment E-01: conceptual flow of the prospective specification (not run)</title>
+  <desc id="e1-desc">Three stages lead to two separately labelled outcomes. Stage 1, inputs: two agent-proposed, unoptimized donor candidates, a 49-atom precursor treated as a singlet and a 48-atom activated donor treated as a doublet. Stage 2, capability gate: version-matched evidence for each Psi4 1.11 feature used; a missing capability makes the dependent criterion indeterminate, never pass. Stage 3, engine validation at fixed geometry, one species at a time: SCF from several initial guesses, analytic versus finite-difference gradients, spin contamination, and a repeat run. Outcome A: an engine-validation verdict of pass, indeterminate or fail about the software and method setup only. Outcome B: a radical-localization hypothesis on the activated donor, reported separately as supported, not supported, indeterminate or not evaluable. Stop conditions are SCF non-convergence, S-squared of at least 1.05, and a resource-cap breach, each reported and never retuned. The experiment establishes nothing about surface reactions, pathways, stability or agreement with the benchmark.</desc>
+  <defs>
+    <marker id="e1-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#52514e"/>
+    </marker>
+  </defs>
+
+  <rect x="0.5" y="0.5" width="819" height="469" rx="12" fill="#fcfcfb" stroke="#0b0b0b" stroke-opacity="0.10"/>
+  <text x="32" y="40" font-size="17" font-weight="600" fill="#0b0b0b">First experiment (E-01) — defined, not run</text>
+  <text x="32" y="60" font-size="12.5" fill="#52514e">Conceptual flow of the prospective specification (docs/e01-method-specification.md)</text>
+
+  <!-- stages -->
+  <rect x="32" y="84" width="236" height="128" rx="10" fill="#ffffff" stroke="#c3c2b7"/>
+  <text x="48" y="108" font-size="14" font-weight="600" fill="#0b0b0b">1 · Inputs</text>
+  <g font-size="12.5" fill="#52514e">
+    <text x="48" y="132">Two donor candidates</text>
+    <text x="48" y="150">precursor: 49 atoms, singlet</text>
+    <text x="48" y="168">activated: 48 atoms, doublet</text>
+    <text x="48" y="186">agent-proposed, unoptimized</text>
+  </g>
+
+  <rect x="292" y="84" width="236" height="128" rx="10" fill="#ffffff" stroke="#c3c2b7"/>
+  <text x="308" y="108" font-size="14" font-weight="600" fill="#0b0b0b">2 · Capability gate</text>
+  <g font-size="12.5" fill="#52514e">
+    <text x="308" y="132">version-matched evidence for</text>
+    <text x="308" y="150">each Psi4 1.11 feature used</text>
+    <text x="308" y="168">missing ⇒ dependent criterion</text>
+    <text x="308" y="186">INDETERMINATE, never PASS</text>
+  </g>
+
+  <rect x="552" y="84" width="236" height="128" rx="10" fill="#ffffff" stroke="#c3c2b7"/>
+  <text x="568" y="108" font-size="14" font-weight="600" fill="#0b0b0b">3 · Engine validation</text>
+  <g font-size="12.5" fill="#52514e">
+    <text x="568" y="132">SCF from several guesses</text>
+    <text x="568" y="150">analytic vs finite-difference</text>
+    <text x="568" y="168">gradient · ⟨S²⟩ · repeat run</text>
+    <text x="568" y="186">fixed geometry, one species</text>
+  </g>
+
+  <path d="M 270 148 L 290 148" stroke="#52514e" stroke-width="1.5" fill="none" marker-end="url(#e1-arrow)"/>
+  <path d="M 530 148 L 550 148" stroke="#52514e" stroke-width="1.5" fill="none" marker-end="url(#e1-arrow)"/>
+
+  <!-- to outcomes -->
+  <path d="M 670 214 L 670 250" stroke="#52514e" stroke-width="1.5" fill="none" marker-end="url(#e1-arrow)"/>
+  <path d="M 640 214 L 640 232 L 216 232 L 216 250" stroke="#52514e" stroke-width="1.5" fill="none" marker-end="url(#e1-arrow)"/>
+
+  <!-- outcomes -->
+  <rect x="32" y="252" width="368" height="96" rx="10" fill="#ffffff" stroke="#2a78d6" stroke-width="1.5"/>
+  <text x="48" y="278" font-size="14" font-weight="600" fill="#0b0b0b">A · Engine-validation outcome</text>
+  <text x="48" y="302" font-size="12.5" fill="#0b0b0b">PASS · INDETERMINATE · FAIL</text>
+  <text x="48" y="324" font-size="12.5" fill="#52514e">about the software and method setup only</text>
+
+  <rect x="420" y="252" width="368" height="96" rx="10" fill="#ffffff" stroke="#eb6834" stroke-width="1.5"/>
+  <text x="436" y="278" font-size="14" font-weight="600" fill="#0b0b0b">B · Localization hypothesis</text>
+  <text x="436" y="300" font-size="12.5" fill="#0b0b0b">supported · not supported</text>
+  <text x="436" y="318" font-size="12.5" fill="#0b0b0b">indeterminate · not evaluable</text>
+  <text x="436" y="338" font-size="12.5" fill="#52514e">activated donor; never an engine FAIL</text>
+
+  <!-- boundary -->
+  <rect x="32" y="370" width="756" height="76" rx="10" fill="#f0efec" stroke="#c3c2b7"/>
+  <text x="48" y="398" font-size="12.5" fill="#0b0b0b">Stop conditions: SCF non-convergence · ⟨S²⟩ ≥ 1.05 · resource-cap breach — each reported, never retuned.</text>
+  <text x="48" y="422" font-size="12.5" fill="#0b0b0b">Establishes nothing about surface reactions, pathways, stability or agreement with the benchmark.</text>
+</svg>

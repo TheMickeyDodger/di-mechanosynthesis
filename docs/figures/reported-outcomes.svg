@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="360" viewBox="0 0 760 360" role="img" aria-labelledby="ro-title ro-desc" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif">
+  <title id="ro-title">Reported per-interaction target formation, as reported by Cowie et al. (arXiv:2605.27250v1)</title>
+  <desc id="ro-desc">Dot-and-interval chart of four experimental outcomes reported by the benchmark authors, not results of this project. IR-C2: 184 of 197, reported 93 percent, 95 percent confidence interval 89 to 96. 2IR-C2: 71 of 73, reported 97 percent, interval 91 to 99. IR-C2/C4: 45 of 49, reported 92 percent, interval 81 to 97. 2IR-C4: 27 of 32, reported 84 percent, interval 68 to 93. The horizontal axis runs from 50 to 100 percent. These are separate interaction counts and must not be multiplied into a build-success probability.</desc>
+
+  <rect x="0.5" y="0.5" width="759" height="359" rx="12" fill="#fcfcfb" stroke="#0b0b0b" stroke-opacity="0.10"/>
+
+  <text x="32" y="40" font-size="17" font-weight="600" fill="#0b0b0b">Reported per-interaction target formation</text>
+  <text x="32" y="62" font-size="13" fill="#52514e">Cowie et al., arXiv:2605.27250v1 — experimental counts reported by the authors, not results of this project</text>
+  <text x="32" y="82" font-size="12" fill="#52514e">Dot: reported percentage · Line: reported 95% confidence interval</text>
+
+  <!-- gridlines at 50, 60, 70, 80, 90, 100 percent; x = 190 + (percent - 50) * 9 -->
+  <g stroke="#e1e0d9" stroke-width="1">
+    <line x1="190" y1="106" x2="190" y2="276"/>
+    <line x1="280" y1="106" x2="280" y2="276"/>
+    <line x1="370" y1="106" x2="370" y2="276"/>
+    <line x1="460" y1="106" x2="460" y2="276"/>
+    <line x1="550" y1="106" x2="550" y2="276"/>
+    <line x1="640" y1="106" x2="640" y2="276"/>
+  </g>
+  <line x1="190" y1="276" x2="640" y2="276" stroke="#c3c2b7" stroke-width="1"/>
+  <g font-size="12" fill="#898781" text-anchor="middle">
+    <text x="190" y="294">50%</text>
+    <text x="280" y="294">60%</text>
+    <text x="370" y="294">70%</text>
+    <text x="460" y="294">80%</text>
+    <text x="550" y="294">90%</text>
+    <text x="640" y="294">100%</text>
+  </g>
+  <text x="415" y="316" font-size="12" fill="#52514e" text-anchor="middle">Reported target formation (%) — axis starts at 50%</text>
+
+  <g font-size="13" fill="#0b0b0b" text-anchor="end">
+    <text x="172" y="132">IR-C2</text>
+    <text x="172" y="174">2IR-C2</text>
+    <text x="172" y="216">IR-C2/C4</text>
+    <text x="172" y="258">2IR-C4</text>
+  </g>
+
+  <g stroke="#2a78d6" stroke-width="2" stroke-linecap="round">
+    <line x1="541" y1="128" x2="604" y2="128"/>
+    <line x1="559" y1="170" x2="631" y2="170"/>
+    <line x1="469" y1="212" x2="613" y2="212"/>
+    <line x1="352" y1="254" x2="577" y2="254"/>
+  </g>
+  <g fill="#2a78d6" stroke="#fcfcfb" stroke-width="2">
+    <circle cx="577" cy="128" r="5"/>
+    <circle cx="613" cy="170" r="5"/>
+    <circle cx="568" cy="212" r="5"/>
+    <circle cx="496" cy="254" r="5"/>
+  </g>
+
+  <g font-size="13">
+    <text x="660" y="132"><tspan font-weight="600" fill="#0b0b0b">93%</tspan><tspan fill="#52514e" dx="6">184 / 197</tspan></text>
+    <text x="660" y="174"><tspan font-weight="600" fill="#0b0b0b">97%</tspan><tspan fill="#52514e" dx="6">71 / 73</tspan></text>
+    <text x="660" y="216"><tspan font-weight="600" fill="#0b0b0b">92%</tspan><tspan fill="#52514e" dx="6">45 / 49</tspan></text>
+    <text x="660" y="258"><tspan font-weight="600" fill="#0b0b0b">84%</tspan><tspan fill="#52514e" dx="6">27 / 32</tspan></text>
+  </g>
+
+  <text x="32" y="342" font-size="11.5" fill="#52514e">Separate reported interaction counts (Fig. 5 discussion); not independent build events. Do not multiply into a build-success probability.</text>
+</svg>

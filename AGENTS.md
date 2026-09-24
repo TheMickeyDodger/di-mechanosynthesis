@@ -2,9 +2,10 @@
 
 This repository contains public, provenance-first research material on computational models of mechanically
 controlled chemistry. It holds an evidence policy, candidate input structures, a method specification, an engine
-capability record, figure renderers, provenance manifests and the record of one stopped engine-validation attempt
-(`results/e01/`), with its postmortem and installed-build survey. That attempt is closed as technically blocked
-and scientifically indeterminate. The repository contains no converged quantum-chemistry results. The
+capability record, the complete public MS-000 feasibility package, figure renderers, provenance manifests and the
+record of one stopped engine-validation attempt (`results/e01/`), with its postmortem and installed-build survey.
+That attempt is closed as technically blocked and scientifically indeterminate. The repository contains no
+converged quantum-chemistry results. The
 [README](README.md) describes the scientific scope. This document sets out the conventions that contributors, and
 automated agents in particular, are expected to follow.
 
@@ -18,6 +19,7 @@ automated agents in particular, are expected to follow.
 | `docs/donor-candidates.md`, `structures/` | Agent-proposed, unoptimized candidate geometries, their bookkeeping and the Figure 1 method |
 | `docs/e01-method-specification.md` | Prospective specification of the first calculation, kept as the preparation record |
 | `docs/engine-capability-status.md` | What archived engine sources and the installed build establish, and what remains unverified |
+| `docs/ms-000/` | Public adaptation of the complete MS-000 feasibility package, including its source ledger and ASE smoke-test record |
 | `results/e01/` | The stopped and closed E-01 attempt: report, postmortem and installed-build survey, machine-readable outcome, configuration used and redacted engine output |
 | `tools/` | Deterministic renderers of Figures 1 and 2, with their input tables |
 | `provenance/EXPORT-MANIFEST.md` | SHA256 and derivation of every public file |

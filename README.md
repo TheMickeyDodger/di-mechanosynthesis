@@ -179,9 +179,9 @@ The table lists each tool with its current status in the project. Numbers refer 
 
 ## Repository contents
 
-The public export covers the donor candidates, their documentation and the E-01 result. The surface-model
-coordinate files and the project's private working records are omitted, and the manifest lists each omission with
-its reason.
+The public export covers the donor candidates, their documentation, the E-01 result, and the adapted MS-000
+feasibility package. The surface-model coordinate files and the project's private working records are omitted,
+and the manifest lists each omission with its reason.
 
 | Path | Contents |
 |---|---|
@@ -191,6 +191,7 @@ its reason.
 | [docs/donor-candidates.md](docs/donor-candidates.md) | Donor identity, molecular graph, atom identifiers, electron bookkeeping, surface models and Figure 1 method |
 | [docs/e01-method-specification.md](docs/e01-method-specification.md) | Prospective specification of the first calculation, kept as the preparation record |
 | [docs/engine-capability-status.md](docs/engine-capability-status.md) | Capabilities of Psi4 1.11 as established, or not, by archived primary sources and the installed build |
+| [docs/ms-000/](docs/ms-000/README.md) | Complete public MS-000 feasibility package: compute spike, architecture, evidence policy, software landscape, source ledger and ASE smoke record |
 | [results/e01/README.md](results/e01/README.md) | E-01 result: the stopped attempt, runtime observations, hypotheses and diagnostic closeout |
 | [results/e01/postmortem.md](results/e01/postmortem.md) | E-01 postmortem and installed-build survey: the conditional source-level hypothesis, survey coverage and limits, and remaining gaps |
 | [results/e01/outcome.json](results/e01/outcome.json) | Machine-readable E-01 outcome with source hashes |

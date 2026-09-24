@@ -1,8 +1,10 @@
 # Sources and references
 
-This catalogue lists every reference, tool, method source, structure-generation input and figure in the
-repository, with direct links, versions, locators, uses and limitations. The numbering is shared by all documents
-in the repository. The catalogue contains no converged quantum-chemistry values. The project's only
+This catalogue lists the references, method sources, structure-generation inputs and figures used by the main
+repository narrative, with direct links, versions, locators, uses and limitations. The full MS-000 software
+assessment uses a larger retrieval set, catalogued separately in the
+[MS-000 source ledger](ms-000/SOURCE-LEDGER.md). The numbering here is shared by the main documents in the
+repository. The catalogue contains no converged quantum-chemistry values. The project's only
 quantum-chemistry attempt, E-01, stopped before any SCF iteration was reported and is closed as technically
 blocked and scientifically indeterminate. Its records are entries [20] and [21], and the dispersion library it
 used is [22]. The `v1.11` source files read for its postmortem are entries [23] and [24], and the project's

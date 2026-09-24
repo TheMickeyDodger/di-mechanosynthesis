@@ -64,12 +64,12 @@ its label. The remaining gates are:
 
 | Area | Status |
 |---|---|
-| Quantum-chemistry results | None converged. The only attempt, E-01, stopped before any SCF iteration was reported, and no converged electronic energies, forces, gradients or populations exist in project evidence. |
+| Quantum-chemistry results | None converged. The only attempt, E-01, stopped before any SCF iteration was reported, and no converged electronic energies, forces, gradients or populations exist in project evidence. E-01 is closed as technically BLOCKED and scientifically INDETERMINATE, and every chemistry-dependent result remains INDETERMINATE. |
 | Donor candidates | Two agent-proposed, unoptimized ETKDG embeddings with stable atom identifiers. Counts and electron parity were re-derived from the files. Not compared with the benchmark authors' supplementary coordinates, which have not been obtained. The donor identity rests on literature statements as recorded in the original reconstruction notes and is unverified in the current review. |
 | Surface models | Three definitions, built on an ASE lattice, unoptimized, with placeholders. Coordinate files are not published. |
-| First calculation (E-01) | Executed once on 2026-09-24 under a reviewed configuration ([results/e01](../results/e01/README.md)). The precursor stopped at its first SCF job when Psi4 aborted during integral setup with `PSIO_ERROR: 17 (Incorrect block start address)`; every dependent criterion is INDETERMINATE. The activated donor is blocked and unrun. The cause is undiagnosed. An earlier preparation attempt, which ended blocked before engine installation, remains part of the history. |
+| First calculation (E-01) | Executed once on 2026-09-24 under a reviewed configuration ([results/e01](../results/e01/README.md)). The precursor stopped at its first SCF job when Psi4 aborted during integral setup with `PSIO_ERROR: 17 (Incorrect block start address)`; every dependent criterion is INDETERMINATE. The activated donor is blocked and unrun. The cause is undiagnosed: a source-level postmortem and a bounded, read-only static survey of the installed build identified no cause, and no exact executable diagnostic could be specified from the evidence obtained ([results/e01/postmortem.md](../results/e01/postmortem.md)). The attempt is closed as technically BLOCKED and scientifically INDETERMINATE, a disposition that is terminal for the attempt as run. An earlier preparation attempt, which ended blocked before engine installation, remains part of the history. |
 | Engine | Psi4 1.11 installed from conda-forge in a project-local environment. The installation and basis construction were checked and the configured dispersion route was exercised in a dispersion-only check; no SCF completed. |
-| Engine capabilities | Partly established for the installed build: installation, basis construction with the iodine core potential and the functional composition as printed; the configured dispersion route was exercised in a dispersion-only check. SCF behaviour, analytic gradients, ⟨S²⟩ and Löwdin spins remain `UNVERIFIED` ([docs/engine-capability-status.md](../docs/engine-capability-status.md)). |
+| Engine capabilities | Partly established for the installed build: installation, basis construction with the iodine core potential and the functional composition as printed; the configured dispersion route was exercised in a dispersion-only check. SCF behaviour, analytic gradients, ⟨S²⟩ and Löwdin spins remain `UNVERIFIED` ([docs/engine-capability-status.md](../docs/engine-capability-status.md)). A static survey of the installed build recorded the availability of some input/output library names; that is name availability only, not ABI compatibility, initialization or callability, and the installed type widths remain unresolved. |
 | Functional identity | Open. The installed build runs the `wB97X-D3` entry through Libxc 7.1.2; the installed `libxc_functionals.py` differs from the v1.11 tag at the TH-FL entry only. Equivalence to the literature and benchmark functional is unresolved. |
 | Compute-environment controls | A recorded process-containment "failure" was an intentional negative control: the expected detection of a descendant process, followed by cleanup. The accepted reassessment explains it, and no rerun is implied. In E-01 the sampled resource and cleanup controls recorded the precursor job within the envelope with verified cleanup; these are sampled observations and cooperative limits, not hard containment. |
 | Result records | The E-01 preparation and run records were stored with verified digests in the project's provenance system. This is record-keeping, not a scientific result. |
@@ -87,14 +87,34 @@ The full catalogue, with links, locators and verification basis, is in [docs/SOU
   `wB97X-D3` entry.
 - **Installed build and E-01 run.** Package identities and selected installed files were hashed, and the engine
   output and error text of the E-01 attempt were preserved ([results/e01](../results/e01/README.md)).
+- **Psi4 `v1.11` input/output and conventional-integral source (E-01 postmortem).** The input/output library
+  files, the conventional (PK) integral manager and the Python binding of the input/output library were read at
+  the `v1.11` tag, with the line locators recorded in the project's private capture records. The reading is
+  source-conditional and does not establish the code of the installed binary
+  ([results/e01/postmortem.md](../results/e01/postmortem.md)).
+- **Installed build, statically surveyed.** A single bounded, read-only static inspection of the installed build
+  captured four input/output library headers in full and recorded the export trie and symbol table of the core
+  extension library. It read files and ran standard inspection utilities; it compiled nothing, linked nothing,
+  loaded nothing from the build and executed nothing from it. Its absence statements are scoped to the 1 791 of
+  6 260 package file names that it enumerated.
 
 ## 5. Known unresolved issues
 
 - **E-01 engine abort.** The precursor's first SCF job aborted during conventional (PK) integral setup with
-  `PSIO_ERROR: 17 (Incorrect block start address)`. The cause is undiagnosed. The ranked, untested hypotheses are
-  a large-file or block-address failure in the PK input/output path, a scratch capacity or other filesystem
-  condition, and a trigger specific to the precursor. The observed scratch allocation exceeded the pre-run
-  estimate, and disk exhaustion at the abort is neither established nor excluded. The activated donor is unrun.
+  `PSIO_ERROR: 17 (Incorrect block start address)`. The cause is undiagnosed, and the attempt is closed as
+  technically BLOCKED and scientifically INDETERMINATE. The postmortem keeps three ranked hypotheses open: a block
+  or entry inconsistency in the integral input/output path; a filesystem, capacity or operating-system
+  input/output condition, which the inspected source text does not support as the direct source of code 17, while
+  an indirect contribution is neither shown nor excluded; and a workload-dependent trigger, which overlaps the
+  first. A conditional source-level pathway inside the first hypothesis is possible in the source but has not been
+  shown to have occurred; it is not established as the cause and is neither established nor excluded. Disk capacity
+  remains a live possible contributor, neither established nor excluded. The observed scratch allocation exceeded
+  the pre-run estimate. The activated donor is unrun.
+- **Installed-build interfaces.** Whether any diagnostic could link against and call the installed input/output
+  code is unresolved. The entry points of the input/output handler class were not found among the exported names,
+  the installed widths D = sizeof(double) and I = sizeof(int) are unresolved, and ABI compatibility, the standalone
+  setup order and callability are not established. The ranked gaps are listed in
+  [results/e01/postmortem.md](../results/e01/postmortem.md), Section 8.
 - **Engine capabilities.** Several capabilities remain unverified for the installed Psi4 1.11, because no SCF
   completed: SCF convergence behaviour, analytic gradients with an effective core potential, ⟨S²⟩ reporting for
   unrestricted Kohn–Sham references and Löwdin spins. The direct-inversion coverage of Kohn–Sham stability analysis
@@ -118,20 +138,24 @@ The full catalogue, with links, locators and verification basis, is in [docs/SOU
 
 ## 6. Next bounded work
 
-The following steps are ordered by dependency, not by date. They are proposals; none has been executed or
-authorized.
+The steps listed here earlier have been completed, closed or left as proposals, as follows. E-01 is closed, and
+no step of it is pending.
 
-1. Tabulate what the existing E-01 records contain and state explicitly what they lack: no failing byte offset, no
-   address representation and no mapping from the integral batch index to an address.
-2. Optionally, a single filesystem-only probe on the same storage within stated limits on size, free space and
-   time. It would not exercise the engine's integral or input/output code, so it cannot resolve the engine-specific
-   question.
-3. A separately authorized, source-informed diagnostic of the engine's own PK input/output path. Completing steps 1
-   and 2, even with a successful probe, does not resolve the shared risk.
-4. Only afterwards, a revised configuration proposal, for example a different SCF algorithm with a named auxiliary
-   basis, or the same algorithm on storage verified for the required file sizes, each reviewed before any run.
+1. The tabulation of what the existing E-01 records contain was completed in the postmortem. The records give no
+   failing byte offset, no address representation and no mapping from the integral batch index to an address.
+2. The optional filesystem-only probe was not performed and is not pending. It would inform only the storage path
+   it tests and would not exercise the engine's integral or input/output code.
+3. The source-informed diagnostic of the engine's input/output path was carried as far as the evidence allows. A
+   source-level postmortem and a bounded, read-only static survey of the installed build were completed, and no
+   exact executable diagnostic could be specified from the evidence obtained; this is a statement about the
+   current evidence and does not assert that a diagnostic is impossible. A narrower replay through the exported
+   low-level `PSIO::write` was declined, because it would exercise only the exported block-start guard and would not
+   test the installed `AIOHandler` restart-versus-append behaviour, which is the mechanism at issue.
+4. A revised configuration, for example a different SCF algorithm with a named auxiliary basis, or the same
+   algorithm on storage verified for the required file sizes, remains a proposal. It would be a new calculation,
+   reviewed before any run, rather than a continuation of E-01.
 5. Resolution of the functional's identity against Libxc 7.1.2 and the primary literature, with any mismatch
-   escalated as a decision about method.
+   escalated as a decision about method, remains a proposal.
 
 Any future attempt should sample scratch free space and file sizes through to termination and record the sampling
 interval. The activated donor is not to be used as a diagnostic.
@@ -147,3 +171,4 @@ restatement. Superseded statements are corrected in place and noted in the log r
 | 2026-09-23 | Initial public export of the research state |
 | 2026-09-23 | Editorial revision into continuous prose; no change of scientific status, gates or open issues |
 | 2026-09-24 | E-01 executed once and stopped (engine abort during integral setup; activated donor unrun). Superseded in place: the statements that E-01 had not been run, that Psi4 was not installed and that the method clarifications were open. Capability, functional-identity, resource and next-work entries updated on the new evidence. |
+| 2026-09-24 | E-01 closeout recorded. A source-level postmortem and a static survey of the installed build identified no cause, no exact executable diagnostic could be specified, a narrower guard-only replay was declined, and the attempt is closed as technically blocked and scientifically indeterminate. Superseded in place: next-work steps 1 to 3, now recorded as completed or closed. Status, source-inspection and open-issue entries updated on the closeout records. |

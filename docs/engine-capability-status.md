@@ -129,3 +129,34 @@ installed build showed, and what it did not. Evidence from the installed build c
 
 The engine printed its standard warning that its effective-core-potential capability is in beta. Nothing here
 shows how the build behaves in an SCF, a gradient or a property calculation for these systems.
+
+## Static survey of the installed build (2026-09-24)
+
+After the E-01 stop, a single bounded, read-only static inspection of the installed build examined whether the
+entry points of the engine's input/output library that a diagnostic of the abort would need are available in it
+[26]. The survey read files and ran standard inspection utilities. It compiled nothing, linked nothing, loaded
+nothing from the build and executed nothing from it. Its findings are attributed to the private survey records and
+are set out, with their coverage and limits, in Section 5 of
+[`../results/e01/postmortem.md`](../results/e01/postmortem.md). The sections above are kept as written. The survey
+establishes no capability that the E-01 criteria require, and it changes no status recorded above: every
+capability marked `UNVERIFIED` remains `UNVERIFIED`, and conventional (PK) SCF for the precursor remains not
+established.
+
+Six levels of evidence are kept distinct for an installed interface: header declaration, symbol-table definition,
+dynamic export, ABI compatibility, initialization and setup order, and callability. None of them implies the next.
+An exported name establishes name availability only, and neither a pattern miss nor a presence establishes callable
+behaviour.
+
+| Level | Status for the input/output interfaces of the installed build | Evidence |
+|---|---|---|
+| Header declaration | Four installed input/output library headers were captured in full. The handler class `AIOHandler` and the functions `psio_init` and `psio_error` are declared without the `PSI_API` export macro | [26] |
+| Symbol-table definition | 12 of 22 required names are defined as external symbols. One local symbol is recorded and there is no `__DWARF` segment, so hidden definitions are not visible, and the absence of a name cannot show that the image lacks a hidden definition | [26] |
+| Dynamic export | The same 12 names are in the export trie. None of the seven handler-class items, the two header-inline `PSIO` functions or `psio_error` was found by the applied pattern | [26] |
+| ABI compatibility | Not established. The installed widths D = sizeof(double) and I = sizeof(int) are unresolved, and no static size assertion was found | [26] |
+| Initialization and setup order | Not established. The declarations name the pieces of a standalone setup but not a working order | [25], [26] |
+| Callability | Not established. Nothing was called | [26] |
+
+The enumeration of package file names covered 1 791 of the 6 260 names listed in the package metadata, so every
+absence statement above is scoped to the enumerated names. Observations recorded after the independent review of
+the survey, and not covered by it, are listed separately in the postmortem. None of this shows how the build
+behaves in an SCF, a gradient or a property calculation.

@@ -2,8 +2,9 @@
  "record": "E-01 outcome (public derivation)",
  "experiment": "E-01, donor-only engine validation of the two free donor candidates at fixed geometry",
  "outcome": "stopped",
- "summary": "The precursor stopped at its first SCF job, P-RKS-core, when Psi4 aborted during conventional (PK) integral setup with PSIO_ERROR 17 (Incorrect block start address) on unit 92; no SCF iteration was printed. No converged electronic energy or gradient of either donor was produced, and every dependent criterion is INDETERMINATE. The activated donor was not run. The cause of the abort has not been diagnosed.",
- "derivation": "Values are transcribed without change from the private run records named in 'sources', each identified by SHA256. Engine output and error text are published in results/e01/raw/ with the redactions stated in provenance/EXPORT-MANIFEST.md.",
+ "disposition": {"technical": "BLOCKED", "scientific": "INDETERMINATE", "terminal": true, "note": "terminal for the attempt as run; no converged quantum-chemistry result exists, every chemistry-dependent result remains INDETERMINATE, the cause of the abort is undiagnosed and the activated donor remains blocked and unrun"},
+ "summary": "The precursor stopped at its first SCF job, P-RKS-core, when Psi4 aborted during conventional (PK) integral setup with PSIO_ERROR 17 (Incorrect block start address) on unit 92; no SCF iteration was printed. No converged electronic energy or gradient of either donor was produced, and every dependent criterion is INDETERMINATE. The activated donor was not run. The cause of the abort has not been diagnosed. A source-level postmortem and a bounded, read-only static survey of the installed build identified no cause, no exact executable diagnostic could be specified from the evidence obtained, and the attempt is closed as technically BLOCKED and scientifically INDETERMINATE.",
+ "derivation": "Values are transcribed without change from the private run records named in 'sources', each identified by SHA256. Engine output and error text are published in results/e01/raw/ with the redactions stated in provenance/EXPORT-MANIFEST.md. The 'disposition', 'closeout' and 'hypotheses' fields and the revised 'proposed_next_steps' summarize the private postmortem, survey and closure records named at the end of 'sources'; they are paraphrased rather than transcribed and are set out in results/e01/postmortem.md.",
  "run": {"start_utc": "2026-09-24T05:54:52Z", "end_utc": "2026-09-24T06:09:09Z", "runner_exit_status": 0, "runner_note": "the runner recorded the engine failure and stopped the species in an orderly way"},
  "configuration": "results/e01/method-config.json",
  "species": {
@@ -55,34 +56,86 @@
  },
  "budget": {"precursor_wall_s": 853.6, "species_cap_s": 7200, "total_wall_s": 853.6, "total_cap_s": 14400, "core_seconds": 3414.4, "core_seconds_cap": 115200, "activated_wall_s": 0, "cap_breach": false, "note": "the stop occurred at about 12 percent of the species budget; it is not cap exhaustion"},
  "hypotheses": {
-  "status": "ranked, untested; no cause is asserted",
+  "status": "ranked; none was tested by an executable diagnostic; no cause is asserted",
   "ranked": [
-   "a large-file or block-address handling failure in the shared conventional PK / PSIO path",
-   "scratch capacity or another filesystem or I/O condition; disk exhaustion at the abort is neither established nor excluded",
-   "a precursor-dependent trigger such as its size or its iodine-containing integral workload; nothing isolates the failure to this species"
-  ]
+   "a block or entry inconsistency in the shared conventional PK / PSIO integral input/output path, covering operand formation and overflow, entry state, submission order, relative addresses that are not normalized, and arithmetic",
+   "a filesystem, capacity or operating-system I/O condition; the inspected v1.11 source does not support it as a direct raiser of code 17, because failed operating-system writes, reads and seeks raise codes 12, 11 and 10 there, each with a distinct message, provided the installed build matches the source and the error output was emitted and captured in full; an indirect contribution is neither shown nor excluded, and disk capacity is neither established nor excluded",
+   "a workload-dependent trigger such as the size of the precursor's integral workload; it overlaps the first hypothesis rather than competing with it; nothing isolates the failure to this species"
+  ],
+  "source_level_pathway": {
+   "classification": "[SPEC]",
+   "basis": "Psi4 v1.11 source text, with line locators recorded in the private postmortem records; source-conditional: it does not establish the code of the installed binary, and a type declared in the source is not a measured width in the installed build",
+   "description": "when the pre-striping zero-fill runs twice on one key, the second call restarts at entry-relative zero instead of extending the entry, which is left shorter than the workload by the remainder; a subsequent bucket write beginning strictly beyond the entry's current end fails the write-path block-start check and raises code 17 without an explanatory message",
+   "conditions_all_required": [
+    "the pre-clamp divisor, nine tenths of the engine's memory value as used before the later clamp, is positive",
+    "the row count is positive, which is so exactly when the workload size is greater than or equal to the pre-clamp divisor (inclusive, not strict)",
+    "the remainder is positive, that is, the pre-clamp divisor does not divide the workload size; a separate condition that does not follow from the previous one",
+    "for at least one bucket, the start is not covered by the pre-striped extent as it stands when that bucket's first write is issued"
+   ],
+   "row_count_zero": "only the unconditional second call runs, the entry receives the full workload size and there is no shortfall",
+   "complementary_rule": "a write beginning no later than the current end can lengthen the entry only when the end it requests is past the current end and the routine's last-entry condition allows it; where another entry follows, such a write raises the block-end code 18 instead, and in the remaining cases it lengthens nothing; coverage alone decides nothing",
+   "ordering": "one worker thread runs jobs in submission order, so submission order rather than concurrent completion matters; this narrows the ordering question but does not remove ordering as a factor",
+   "address_normalization": "a sufficient condition, not an equivalence: the global address routine applies at most one page-length subtraction, so the result is normalized when the offset sum is below twice the page length with no unsigned overflow; normalized inputs are one way to meet this but not the only way; the result is not normalized when the offset sum reaches twice the page length; both sums are unsigned and wrap on overflow",
+   "status": "possible in the source text but not shown to have occurred; not established as the cause of E-01; one concrete branch inside the first hypothesis, with nothing establishing that it rather than another branch operated; neither established nor excluded",
+   "configured_memory": "2,000,000,000 bytes, recorded in the retained configuration and engine banner",
+   "not_reconstructible": "the internal PK memory operand after any engine-side adjustment, the workload size, the divisor, the row count, the remainder, the extent of each bucket and the order in which the buckets' first writes were issued"
+  }
+ },
+ "closeout": {
+  "record": "results/e01/postmortem.md",
+  "postmortem": "a source-level assessment of the Psi4 v1.11 input/output and conventional-integral source text and of the retained run records; nothing was executed, compiled, linked, installed or delivered for it",
+  "installed_build_survey": {
+   "method": "a single bounded, read-only static inspection of the installed build that read files and ran standard inspection utilities; it compiled nothing, linked nothing, loaded nothing from the build and executed nothing from it",
+   "headers_captured_in_full": 4,
+   "checklist": {"required_names": 22, "exported_and_defined_external": 12, "not_found_by_applied_pattern": 10, "not_found_note": "all seven AIOHandler items, the header-inline PSIO::set_pid and PSIO::set_default_namespace, and psio_error; failing to match a pattern does not prove absence"},
+   "dwarf_segment": false,
+   "local_symbols_recorded": 1,
+   "local_symbol_note": "with a single local symbol recorded, the table effectively omits local and hidden definitions, so a missing name cannot show that the image lacks a hidden definition",
+   "installed_widths": "D = sizeof(double) and I = sizeof(int) are unresolved; the survey found no static size assertion, the target architecture is not used in their place, and the conventional values 8 and 4 are not assumed",
+   "package_file_enumeration": {"enumerated_names": 1791, "listed_names": 6260, "note": "every absence statement is scoped to the enumerated names; no absence across the installation follows"},
+   "evidence_levels": "header declaration, symbol-table definition, dynamic export, ABI compatibility, initialization and setup order, and callability are distinct; an exported name establishes name availability only, and neither a pattern miss nor a presence establishes callable behaviour",
+   "supplemental_findings_not_covered_by_independent_review": [
+    "no literal AIOHandler or psio_error occurrence in the retained export-trie or symbol-table captures",
+    "PSIO::read, PSIO::filecfg_kwd, _default_psio_lib_ and _default_psio_manager_ present in both listings; PSIO::zero_disk not matched by the applied pattern; PSIO_ZERO present in both listings and declared in the captured config.h",
+    "enumeration coverage quantified as 28.6 percent",
+    "a 208-byte difference between two recorded text totals, equal to the length of the final ledger event line"
+   ],
+   "binding_verification": "all 76 local survey-manifest bindings, including 69 run-evidence files, are reported verified in the private survey records; that verification is historical, was performed against private files not present in this repository and was not repeated for this export, which recomputed only the SHA256 of the ten postmortem, survey and closure records at the end of 'sources'"
+  },
+  "exact_executable_diagnostic": "not specifiable from the evidence obtained: the installed widths and so the numeric test constants, the write call and its payload, the standalone setup sequence and callability are unresolved; this is a statement about the current evidence and does not assert that a diagnostic is impossible",
+  "guard_only_replay": {"status": "declined", "reason": "a replay through the exported low-level PSIO::write would exercise only the exported block-start guard and would not test the installed AIOHandler restart-versus-append behaviour, which is the mechanism at issue, so it could not discriminate that mechanism"},
+  "fixed_position_test_limits": "a fixed-position test could not identify the cause of E-01 or weaken the capacity hypothesis by itself, and a result that did not reproduce the error would not clear the pathway unless the uncovered bucket start (condition 4) were independently demonstrated for E-01",
+  "activity": "no diagnostic harness was built, linked, loaded or executed at any point, and no chemistry, engine run or calculation was performed at any point in the postmortem, the survey or the closeout"
  },
  "proposed_next_steps": {
-  "status": "proposal only; not executed and not authorized",
-  "A": "tabulate what the existing records contain; they give no failing byte offset, no PSIO block unit or address representation and no mapping from batch index to address, so no inference is drawn",
-  "B": "optional single filesystem-only probe (large sequential write, reads at large offsets) under stated bounds; it never runs the PK / PSIO code path, so its success cannot weaken the first hypothesis",
-  "outstanding": "the PK / PSIO question needs a separately authorized, source-informed diagnostic of the engine's own code path",
-  "C": "only afterwards, a revised configuration proposal (for example a different SCF algorithm with a named auxiliary basis, or PK on storage verified for the file sizes), each subject to review",
-  "governing": "completing A and B, including a successful probe, does not resolve the shared PK / PSIO risk",
+  "status": "closed with the attempt; each earlier proposal is recorded below as completed, not performed or remaining a proposal; no step of E-01 is pending",
+  "A": "completed in the postmortem: the existing records give no failing byte offset, no PSIO block unit or address representation and no mapping from batch index to address, so no inference is drawn",
+  "B": "not performed and not pending: a filesystem-only probe would inform only the storage path it tests and never runs the PK / PSIO code path, so it could not clear that path",
+  "outstanding": "completed as far as the evidence allows: the source-level postmortem and the installed-build survey identified no cause, and no exact executable diagnostic could be specified; the narrower PSIO::write guard-only replay was declined",
+  "C": "remains a proposal only and has not been started: a revised configuration (for example a different SCF algorithm with a named auxiliary basis, or PK on storage verified for the file sizes) would be a new calculation subject to review, not a continuation of E-01",
+  "governing": "completing A and B, including a successful probe, would not have resolved the shared PK / PSIO risk",
   "instrumentation": "any future attempt samples scratch free space and file sizes through to termination, with the sampling interval recorded; a value between samples remains unobserved"
  },
  "not_claimed": [
   "no converged electronic energy, SCF solution, gradient, <S^2>, Lowdin population or localization result for either donor",
   "no statement about donor chemistry, the method or the functional",
   "no cause of the abort",
-  "no reproduction of the benchmark and no feasibility claim"
+  "no reproduction of the benchmark and no feasibility claim",
+  "the conditional source-level pathway is not claimed as the cause of E-01; it is neither established nor excluded",
+  "disk capacity is not claimed as a contributor and is not excluded; it is neither established nor excluded",
+  "installed-build name availability (a header declaration, a symbol-table definition or a dynamic export) is not claimed as ABI compatibility, initialization or callability"
  ],
  "limitations": [
   "sampled RSS and cooperative thread limits are observations and controls, not hard containment",
   "installed-file integrity is established only for the selected files listed in method-config.json",
   "the installed libxc_functionals.py differs from the v1.11 tag at the TH-FL entry only; no functional equivalence is claimed",
   "the donor geometries are agent-proposed and unoptimized",
-  "the pre-run scratch estimate was below the observed allocation"
+  "the pre-run scratch estimate was below the observed allocation",
+  "the 84 s and 81 s intervals from the scratch observation end at runner termination and at the error write and settlement respectively; both are valid, and neither ends at the unobserved instant of the abort",
+  "the source-level reading is conditional on the v1.11 source text and does not prove the installed binary's code",
+  "the installed-build survey is static; package-file enumeration covered 1791 of 6260 names, and the installed widths D and I are unresolved",
+  "the supplemental survey findings were recorded after the independent review of the survey and are not covered by it",
+  "the source captures, the raw survey captures and the project's orchestration records are private and are not published"
  ],
  "sources": [
   {"description": "precursor classification", "sha256": "0f4b0a2b9c8ee3468083af07e0e49d33773835078b2320bab38663a410539757", "public": "results/e01/raw/precursor-classification.json"},
@@ -95,6 +148,16 @@
   {"description": "free-space observation after cleanup", "sha256": "2ce1b2b1c3e5fa97308984aa7e6addfa42b38bdc5ca567696248e57e31ed7ea9"},
   {"description": "reviewed outcome report", "sha256": "5563fbdfb08d2ab7dafa1a1fa281d0748c17c5f56c5b312550785511f1802442"},
   {"description": "reviewed as-run evidence manifest (45 files)", "sha256": "6e7050b3fe02c237a9572b55e2f8a987517a14ffa8bae15db1992628c8cfdadc"},
-  {"description": "reviewed preparation manifest (33 files)", "sha256": "0d5d018df63b88ec4a00d1d4f0aaa9366324bcdf789978e66d3cd59293d5d10a"}
+  {"description": "reviewed preparation manifest (33 files)", "sha256": "0d5d018df63b88ec4a00d1d4f0aaa9366324bcdf789978e66d3cd59293d5d10a"},
+  {"description": "postmortem source assessment (controlling record)", "sha256": "629601e688b5f22379ca408f2eb43bfa112ff67ee106c1bb8a7a077095bf0d37"},
+  {"description": "independent review of the postmortem source assessment", "sha256": "4ce5f8469639733d4b6c90b3e8e9e94326eec9bf130c119c316cba62f49e2532"},
+  {"description": "installed-build survey observations", "sha256": "f3a0d09fdac5fa15c9c88e0f2870b18e67c7c6cde77afe329770149883153045"},
+  {"description": "installed-build survey diagnostic-feasibility determination", "sha256": "adb4a6eee85de8b450d04db55b1809e482500dccdd1ce4c532a37624e0ecc3d3"},
+  {"description": "installed-build survey evidence manifest (76 bindings, self-excluded)", "sha256": "e99807c15ba01b76b9d43181a10d6512f5297ecac385bef7cfd7c30d5fb954d7"},
+  {"description": "independent review of the survey result", "sha256": "37c77fe100f9df814d57b912e0b8f7b861c2aafcf432e379d0dc3842ba68a546"},
+  {"description": "acceptance record of the survey result, with supplemental findings", "sha256": "6b28b3a9e2157cc60ac13d2c3cdf84b22c346cc5f17c87cb19faddb200165dc8"},
+  {"description": "survey result status record", "sha256": "2230695b2dcef3f49cef380b4707447cd467b989547829b2b43ac13c618485c6"},
+  {"description": "terminal disposition of the diagnostic route", "sha256": "fb958eefbe078bc7a2bc8cedbe7b0bc7a3ff7495ad5fd0a60259f149f29e49cc"},
+  {"description": "closure record of the attempt", "sha256": "9261fa1903901f7b4eb660be56e0e612ba4f93b9062bc9c5782bc6114df15a87"}
  ]
 }

@@ -3,9 +3,12 @@
 This catalogue lists every reference, tool, method source, structure-generation input and figure in the
 repository, with direct links, versions, locators, uses and limitations. The numbering is shared by all documents
 in the repository. The catalogue contains no converged quantum-chemistry values. The project's only
-quantum-chemistry attempt, E-01, stopped before any SCF iteration was reported; its records are entries [20] and
-[21], the
-dispersion library it used is [22], and its public report is [results/e01](../results/e01/README.md).
+quantum-chemistry attempt, E-01, stopped before any SCF iteration was reported and is closed as technically
+blocked and scientifically indeterminate. Its records are entries [20] and [21], and the dispersion library it
+used is [22]. The `v1.11` source files read for its postmortem are entries [23] and [24], and the project's
+postmortem, installed-build survey and closure records are entries [25] to [27]. Its public report is
+[results/e01](../results/e01/README.md), and its postmortem is
+[results/e01/postmortem.md](../results/e01/postmortem.md).
 
 Each entry states its verification basis:
 - **Inspected** means that the source, or a cached copy of it, was read in the current review at the locators
@@ -49,8 +52,8 @@ arXiv:2512.24431v1, submitted 30 December 2025.
   supplementary information are recorded in the original reconstruction notes.
 - **Used in:** the README, [benchmark.md](benchmark.md), [donor-candidates.md](donor-candidates.md) and the
   structure headers.
-- **Basis:** the abstract was inspected; the listing was link-checked on 2026-09-23 (reported by Root); the
-  content of the supplementary information is recorded.
+- **Basis:** the abstract was inspected; the listing was link-checked on 2026-09-23 (reported in the project's
+  link-check record); the content of the supplementary information is recorded.
 - **Limitations:** donor identity and coordinates derived from this source have not been re-verified in the
   current review.
 
@@ -61,8 +64,8 @@ arXiv:2606.13876v1, submitted 11 June 2026.
 - **Locators used:** the abstract, which was inspected. The connectivity and attachment scheme of Fig. 1B/C is
   recorded in the reconstruction notes.
 - **Used in:** the README, [benchmark.md](benchmark.md) and [donor-candidates.md](donor-candidates.md).
-- **Basis:** the abstract was inspected; the listing was link-checked on 2026-09-23 (reported by Root); the use of
-  the figure is recorded.
+- **Basis:** the abstract was inspected; the listing was link-checked on 2026-09-23 (reported in the project's
+  link-check record); the use of the figure is recorded.
 - **Limitations:** the Supplementary Information is "available upon request" and has not been obtained.
 
 **[4]** MacLean, O. *et al.* Electron-Induced Formation of C2 on Si(100) from Acetylene and Ethylene.
@@ -96,7 +99,10 @@ arXiv:2607.19488v1, submitted 21 July 2026.
 - **Limitations:** Psi4 1.11 was installed from conda-forge in a project-local environment [20]. The installation
   and basis construction were checked for that build, the configured dispersion route was exercised in a
   dispersion-only check, and the E-01 precursor SCF aborted during integral setup [21]. SCF behaviour, analytic
-  gradients and spin properties of this build remain unverified.
+  gradients and spin properties of this build remain unverified. A postmortem of the `v1.11` input/output and
+  conventional-integral source [23, 24] and a bounded, read-only static survey of the installed build [26]
+  identified no cause of the abort. The survey records the availability of some input/output library names in the
+  installed build; that is not ABI compatibility, initialization or callability.
 
 **[7]** Psi4 manual, development version (page headers carry `1.12a1.dev35`).
 - **Links:** chapters on the [self-consistent field](https://psicode.org/psi4manual/master/scf.html),
@@ -153,7 +159,7 @@ arXiv:2607.19488v1, submitted 21 July 2026.
 identifies 2026.03.6).
 - **Links:** [RDKit Book, conformer generation](https://www.rdkit.org/docs/RDKit_Book.html#conformer-generation).
 - **Content:** documents the ETKDG conformer-generation algorithm used.
-- **Basis:** link-checked on 2026-09-23 (reported by Root).
+- **Basis:** link-checked on 2026-09-23 (reported in the project's link-check record).
 - **Limitations:** this is algorithm documentation only. It does not show that the donor candidates match any
   primary coordinates.
 
@@ -166,8 +172,9 @@ identifies 2026.03.6).
   PyPI record [pypi.org/pypi/ase/json](https://pypi.org/pypi/ase/json).
 - **Content:** the `diamond100` builder used for the surface definitions, Python requirements, constraint classes
   and the LGPL-2.1-or-later licence.
-- **Basis:** the surface-builder page was link-checked on 2026-09-23 (reported by Root). The format-options page
-  returned HTTP 200 to a HEAD request on 2026-09-23 (reported by Root). The remaining facts are recorded.
+- **Basis:** the surface-builder page was link-checked on 2026-09-23 (reported in the project's link-check
+  record). The format-options page returned HTTP 200 to a HEAD request on 2026-09-23 (reported in the project's
+  link-check record). The remaining facts are recorded.
 - **Limitations:** this is algorithm documentation only. For the format-options page only availability is
   established; its content, the extxyz section and the format behaviour are unverified.
 
@@ -301,7 +308,10 @@ The project's original working records are private and are not linked. They comp
 
 They are identified in the [export manifest](../provenance/EXPORT-MANIFEST.md) by description and SHA256 only.
 The original E-01 run records [21] are also private; the public derivatives in
-[`../results/e01/`](../results/e01/README.md) state their sources and redactions.
+[`../results/e01/`](../results/e01/README.md) state their sources and redactions. The postmortem, survey and
+closure records [25] to [27], the source captures and raw survey captures that they bind, and the project's
+orchestration records are private as well. The ten postmortem, survey and closure records are identified by
+description and SHA256 in [postmortem.md](../results/e01/postmortem.md).
 
 ## 7. Installed environment and E-01 records
 
@@ -323,12 +333,15 @@ The original E-01 run records [21] are also private; the public derivatives in
   classification, the resource ledger and scratch observations, bound by an as-run evidence manifest of 45 files
   (SHA256 `6e7050b3fe02c237a9572b55e2f8a987517a14ffa8bae15db1992628c8cfdadc`) and a preparation manifest of 33 files
   (SHA256 `0d5d018df63b88ec4a00d1d4f0aaa9366324bcdf789978e66d3cd59293d5d10a`).
-- **Used in:** [`../results/e01/`](../results/e01/README.md), the README and
+- **Used in:** [`../results/e01/`](../results/e01/README.md), including
+  [postmortem.md](../results/e01/postmortem.md), the README and
   [engine-capability-status.md](engine-capability-status.md).
 - **Basis:** the public derivatives were produced from these records, with their SHA256 values and redactions stated
   in the export manifest.
 - **Limitations:** the records document a stopped software run. They contain no converged electronic energy or
-  gradient of either donor and no statement about chemistry, and the cause of the abort is undiagnosed.
+  gradient of either donor and no statement about chemistry, and the cause of the abort is undiagnosed. The
+  postmortem and the installed-build survey [25, 26] did not diagnose it, and the attempt is closed as technically
+  blocked and scientifically indeterminate [27].
 
 **[22]** simple-dftd3 and dftd3-python, version 1.6.0, installed with Psi4 [20].
 - **Links:** conda-forge packages as recorded in the installation receipt,
@@ -341,3 +354,92 @@ The original E-01 run records [21] are also private; the public derivatives in
 - **Basis:** recorded (installation receipt and engine output), not newly inspected; the dispersion route was
   exercised in a dispersion-only check without SCF.
 - **Limitations:** the check covers the dispersion term only. E-01 completed no dispersion-corrected energy.
+
+## 8. E-01 postmortem sources and closeout records
+
+**[23]** Psi4 source files of the input/output library at tag `v1.11`, with its Python binding.
+- **Links:** the [`v1.11` tag tree](https://github.com/psi4/psi4/tree/v1.11). The files are cited by name and line
+  locator; no per-file link is given.
+- **Files and locators used:** `config.h`, recorded as `libpsio/config.h` (lines 42 to 84); `get_address.cc`
+  (lines 44 to 55); `get_global_address.cc` (lines 48 to 53); `rw.cc` (lines 94, 105, 128, 140, 160 and 172);
+  `volseek.cc` (lines 50 to 75); `read.cc` (lines 71 to 78); `write.cc` (lines 57 to 58 and 103 to 124);
+  `aio_handler.cc` (lines 89 to 116 and 209 to 480); and the Python binding `export_psio.cc` (lines 41 to 70).
+- **Content:** the error constants, including code 17 for an incorrect block start address and code 18 for a block
+  end, and the page length of 65 536; the relative and global address arithmetic; the block-start and extension
+  checks on the write path, and the explanatory message printed on the read path; the codes raised for failed
+  operating-system reads, writes and seeks; the asynchronous input/output handler, with its single worker thread,
+  its zero-fill and integral-write jobs and its lack of an exception handler; and the input/output functions
+  exposed to Python.
+- **Used in:** [postmortem.md](../results/e01/postmortem.md), Sections 2 to 4 and 7.
+- **Basis:** recorded. The files were read at the `v1.11` tag for the project's postmortem, and the locators above
+  are those given in its private capture records [25]. They were not re-inspected in the current review. The
+  tag-tree link shares the base of the repository link of [6], which was link-checked; the tag-tree URL itself was
+  not opened in the current review.
+- **Limitations:** source text is conditional evidence. It does not establish the code of the installed binary,
+  and a type declared in the source is not a measured width in the installed build. The installed `config.h` has
+  the same SHA256 as the capture of this file [26]; no other file was compared with the installed build. The
+  binding file is one of fifteen such export files, and only it was inspected. No source text is copied.
+
+**[24]** Psi4 source files of the conventional (PK) integral manager at tag `v1.11`.
+- **Links:** the [`v1.11` tag tree](https://github.com/psi4/psi4/tree/v1.11). The files are cited by name and line
+  locator; no per-file link is given.
+- **Files and locators used:** `PKmanagers.cc` (lines 946 to 947, 950 and 957 to 980); `PK_workers.cc` (lines 818
+  to 819 and 951 to 996); `PK_workers.h` (lines 189 to 193).
+- **Content:** the assignment of units 92 and 93 to the two supermatrix scratch files; the pre-striping arithmetic,
+  in which the divisor, row count and remainder are computed before the divisor is clamped, the first zero-fill is
+  conditional on a positive row count and the second is unconditional; and the asynchronous bucket writes with a
+  shared running position.
+- **Used in:** [postmortem.md](../results/e01/postmortem.md), Sections 2 and 3.
+- **Basis:** recorded, on the same terms as [23].
+- **Limitations:** the same as for [23]. The engine memory value, the workload size and the other operands of E-01
+  cannot be obtained from these files.
+
+**[25]** Project postmortem records of E-01, 2026-09-24.
+- **Content:** a source-level assessment of the E-01 abort, which is the controlling record (SHA256
+  `629601e688b5f22379ca408f2eb43bfa112ff67ee106c1bb8a7a077095bf0d37`), and an independent review of that assessment
+  (SHA256 `4ce5f8469639733d4b6c90b3e8e9e94326eec9bf130c119c316cba62f49e2532`). The assessment binds the source
+  captures of [23] and [24] by SHA256 and records the conditional source-level pathway, the ranked hypotheses, a
+  conditional design for a fixed-position test and the ranked gaps.
+- **Used in:** [postmortem.md](../results/e01/postmortem.md), [`../results/e01/`](../results/e01/README.md),
+  [engine-capability-status.md](engine-capability-status.md) and
+  [RESEARCH-STATE.md](../.agents/RESEARCH-STATE.md).
+- **Basis:** inspected. Both records were read in full in the current review, and their SHA256 values were
+  recomputed and matched. The source captures and other records that they bind are private, are not present in this
+  repository and were not re-inspected.
+- **Limitations:** the records assess source text and run records; they are not a diagnosis. The pathway they record
+  is a hypothesis, which is not established as the cause of E-01 and is neither established nor excluded. Text
+  produced by language models is never physical evidence.
+
+**[26]** Project records of the installed-build survey, 2026-09-24.
+- **Content:** the survey observations (SHA256 `f3a0d09fdac5fa15c9c88e0f2870b18e67c7c6cde77afe329770149883153045`),
+  the diagnostic-feasibility determination (SHA256
+  `adb4a6eee85de8b450d04db55b1809e482500dccdd1ce4c532a37624e0ecc3d3`), the evidence manifest of 76 bindings, which
+  excludes itself (SHA256 `e99807c15ba01b76b9d43181a10d6512f5297ecac385bef7cfd7c30d5fb954d7`), the independent review
+  of the survey result (SHA256 `37c77fe100f9df814d57b912e0b8f7b861c2aafcf432e379d0dc3842ba68a546`), the acceptance
+  record of the survey result, with supplemental findings (SHA256
+  `6b28b3a9e2157cc60ac13d2c3cdf84b22c346cc5f17c87cb19faddb200165dc8`), and the survey result status record (SHA256
+  `2230695b2dcef3f49cef380b4707447cd467b989547829b2b43ac13c618485c6`).
+- **Used in:** [postmortem.md](../results/e01/postmortem.md),
+  [engine-capability-status.md](engine-capability-status.md),
+  [`../results/e01/outcome.json`](../results/e01/outcome.json) and
+  [RESEARCH-STATE.md](../.agents/RESEARCH-STATE.md).
+- **Basis:** inspected. The six records were read in full in the current review, and their SHA256 values were
+  recomputed and matched. The raw survey captures and run evidence that they bind are private, are not present in
+  this repository and were not inspected. The verification of all 76 manifest bindings that these records report is
+  historical and was not repeated.
+- **Limitations:** the survey provides static evidence about software artifacts only. Its enumeration of package
+  file names covered 1 791 of 6 260 names, and the installed widths D = sizeof(double) and I = sizeof(int) are
+  unresolved. The supplemental findings of the acceptance record were recorded after the independent review and are
+  not covered by it. Nothing in these records establishes callability, a cause of E-01 or any chemical fact.
+
+**[27]** Project closeout records of E-01, 2026-09-24.
+- **Content:** the terminal disposition of the diagnostic route (SHA256
+  `fb958eefbe078bc7a2bc8cedbe7b0bc7a3ff7495ad5fd0a60259f149f29e49cc`), which records that the narrower guard-only
+  replay was declined and that the attempt is technically blocked and scientifically indeterminate, and the closure
+  record of the attempt (SHA256 `9261fa1903901f7b4eb660be56e0e612ba4f93b9062bc9c5782bc6114df15a87`).
+- **Used in:** [postmortem.md](../results/e01/postmortem.md), [`../results/e01/`](../results/e01/README.md), the
+  README and [RESEARCH-STATE.md](../.agents/RESEARCH-STATE.md).
+- **Basis:** inspected. Both records were read in full in the current review, and their SHA256 values were
+  recomputed and matched.
+- **Limitations:** the records close the attempt as run. They establish no cause of the abort, no chemical result,
+  no exclusion of disk capacity and no demonstration of the source-level pathway.

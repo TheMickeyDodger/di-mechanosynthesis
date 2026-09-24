@@ -120,17 +120,25 @@ integral setup with the error `PSIO_ERROR: 17 (Incorrect block start address)` a
 printed. No converged electronic energy or gradient of either donor was produced, and every dependent criterion is
 INDETERMINATE. The
 activated donor was not run, because the failure may affect the shared configuration. The cause has not been
-diagnosed, and further diagnostic work is proposed but not executed. The report, the machine-readable outcome and
-the redacted engine output are in [results/e01](results/e01/README.md) [21].
+diagnosed. A source-level postmortem of the engine's input/output code and a bounded, read-only static survey of
+the installed build identified no cause, and no exact executable diagnostic could be specified from the evidence
+they obtained [25, 26]. The attempt is therefore closed as technically BLOCKED and scientifically INDETERMINATE
+[27]. A conditional pathway to the error in the engine's source text is not established as the cause and is
+neither established nor excluded; disk capacity likewise remains neither established nor excluded as a
+contributor. The report, the postmortem ([results/e01/postmortem.md](results/e01/postmortem.md)), the
+machine-readable outcome and the redacted engine output are in [results/e01](results/e01/README.md) [21].
 
 Whether Psi4 1.11 provides each capability the calculation requires is examined in
 [docs/engine-capability-status.md](docs/engine-capability-status.md). That record combines the development manual
 (version string `1.12a1.dev35`) [7] and two source files from the `v1.11` tag [9, 10] with evidence from the
-installed build [20, 21]. The installation, the per-element basis construction with the iodine core potential (46
-core electrons) and the composition of the functional as printed by the engine are established for this build,
-and the configured dispersion route was exercised in a dispersion-only check. Analytic gradients with the core
-potential, ⟨S²⟩ reporting for unrestricted Kohn–Sham references, Löwdin spins and SCF behaviour at this size
-remain unverified, because no SCF completed. Whether the
+installed build [20, 21, 26]. The installation, the per-element basis construction with the iodine core potential
+(46 core electrons) and the composition of the functional as printed by the engine are established for this
+build, and the configured dispersion route was exercised in a dispersion-only check. Analytic gradients with the
+core potential, ⟨S²⟩ reporting for unrestricted Kohn–Sham references, Löwdin spins and SCF behaviour at this size
+remain unverified, because no SCF completed. The static survey recorded which input/output library names the
+installed build exports, but an exported name establishes name availability only, not ABI compatibility,
+initialization or callability, and the installed type widths that a diagnostic would need remain unresolved
+[26]. Whether the
 `wB97X-D3` entry is equivalent to the functional used in the benchmark calculations has not been established.
 
 ## Evidence classification and provenance
@@ -161,7 +169,7 @@ The table lists each tool with its current status in the project. Numbers refer 
 | Tool | Status here | Role |
 |---|---|---|
 | RDKit [13]; ASE [14] | Used in preparation, without quantum chemistry | Donor-candidate embeddings; structure building and extxyz input and output |
-| Psi4 1.11 [6] | Installed from conda-forge in a project-local environment [20]; installation and basis construction checked; the E-01 precursor SCF aborted during integral setup [21] | Electronic-structure engine for the first calculation |
+| Psi4 1.11 [6] | Installed from conda-forge in a project-local environment [20]; installation and basis construction checked; the E-01 precursor SCF aborted during integral setup [21]; a source-level postmortem and a static survey of the installed build identified no cause [25, 26] | Electronic-structure engine for the first calculation |
 | simple-dftd3 1.6.0 [22] | Installed with Psi4 [20]; exercised in a dispersion-only check without SCF | D3 dispersion term of ωB97X-D3 |
 | AiiDA [12] | Used to store the hashed E-01 preparation and run records; not used to execute calculations | Computational provenance |
 | xtb [15] | Candidate, documentation only | GFN0-xTB, the benchmark's QM/MM partner method; the xtb documentation describes a GFN0 parameter file |
@@ -183,7 +191,8 @@ its reason.
 | [docs/donor-candidates.md](docs/donor-candidates.md) | Donor identity, molecular graph, atom identifiers, electron bookkeeping, surface models and Figure 1 method |
 | [docs/e01-method-specification.md](docs/e01-method-specification.md) | Prospective specification of the first calculation, kept as the preparation record |
 | [docs/engine-capability-status.md](docs/engine-capability-status.md) | Capabilities of Psi4 1.11 as established, or not, by archived primary sources and the installed build |
-| [results/e01/README.md](results/e01/README.md) | E-01 result: the stopped attempt, runtime observations, hypotheses and proposed next work |
+| [results/e01/README.md](results/e01/README.md) | E-01 result: the stopped attempt, runtime observations, hypotheses and diagnostic closeout |
+| [results/e01/postmortem.md](results/e01/postmortem.md) | E-01 postmortem and installed-build survey: the conditional source-level hypothesis, survey coverage and limits, and remaining gaps |
 | [results/e01/outcome.json](results/e01/outcome.json) | Machine-readable E-01 outcome with source hashes |
 | [results/e01/method-config.json](results/e01/method-config.json) | Method and environment configuration used by E-01 |
 | [results/e01/raw/](results/e01/raw/) | Engine output, error text, job input and classification of the precursor, redacted where stated |
@@ -215,6 +224,6 @@ export pending redistribution review. Work that builds on the benchmark should c
 3. Blue, B. *et al.* Towards Atom-by-Atom Fabrication: Mechanosynthetic donation and abstraction.
    arXiv:2606.13876 (2026). <https://doi.org/10.48550/arXiv.2606.13876>
 
-References [4] to [22], covering further literature, software documentation and the project's own E-01 records,
-are catalogued with versions, locators, verification basis and limitations in [docs/SOURCES.md](docs/SOURCES.md),
-which uses the same numbering.
+References [4] to [27], covering further literature, software documentation, source files and the project's own
+E-01 records, are catalogued with versions, locators, verification basis and limitations in
+[docs/SOURCES.md](docs/SOURCES.md), which uses the same numbering.

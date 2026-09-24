@@ -2,8 +2,10 @@
 
 This catalogue lists every reference, tool, method source, structure-generation input and figure in the
 repository, with direct links, versions, locators, uses and limitations. The numbering is shared by all documents
-in the repository. The catalogue contains no computed values, because this project has not yet produced
-quantum-chemistry results.
+in the repository. The catalogue contains no converged quantum-chemistry values. The project's only
+quantum-chemistry attempt, E-01, stopped before any SCF iteration was reported; its records are entries [20] and
+[21], the
+dispersion library it used is [22], and its public report is [results/e01](../results/e01/README.md).
 
 Each entry states its verification basis:
 - **Inspected** means that the source, or a cached copy of it, was read in the current review at the locators
@@ -91,7 +93,10 @@ arXiv:2607.19488v1, submitted 21 July 2026.
 - **Content:** these sources identify the official repository and record that version 1.11 exists as a tagged
   release and a conda-forge package, under LGPL-3.0.
 - **Basis:** the repository was link-checked on 2026-09-23; the release, package and licence facts are recorded.
-- **Limitations:** Psi4 is not installed or validated here.
+- **Limitations:** Psi4 1.11 was installed from conda-forge in a project-local environment [20]. The installation
+  and basis construction were checked for that build, the configured dispersion route was exercised in a
+  dispersion-only check, and the E-01 precursor SCF aborted during integral setup [21]. SCF behaviour, analytic
+  gradients and spin properties of this build remain unverified.
 
 **[7]** Psi4 manual, development version (page headers carry `1.12a1.dev35`).
 - **Links:** chapters on the [self-consistent field](https://psicode.org/psi4manual/master/scf.html),
@@ -130,8 +135,8 @@ arXiv:2607.19488v1, submitted 21 July 2026.
 - **Links:** [libxc.gitlab.io/functionals](https://libxc.gitlab.io/functionals/).
 - **Content:** the list includes `HYB_GGA_XC_WB97X_D3` and `HYB_GGA_XC_WB97X_D`.
 - **Basis:** recorded on 2026-09-16.
-- **Limitations:** the Libxc version linked into an installed Psi4 1.11 is unknown, and the functional definition
-  was not inspected in the current review. Equivalence is not resolved here.
+- **Limitations:** the installed Psi4 1.11 build printed Libxc version 7.1.2 at runtime [21]. The functional
+  definition in Libxc was not inspected in the current review, and equivalence is not resolved here.
 
 **[12]** AiiDA, the selected provenance system (the documentation page identifies version 2.9.2).
 - **Links:** [introduction](https://aiida.readthedocs.io/projects/aiida-core/en/stable/intro/index.html);
@@ -140,8 +145,9 @@ arXiv:2607.19488v1, submitted 21 July 2026.
 - **Content:** the introduction describes workflow and data-provenance features. The other pages give installation
   options and the MIT licence.
 - **Basis:** the introduction was link-checked on 2026-09-23; installation and licence are recorded.
-- **Limitations:** the `stable` URL is mutable and does not prove an installed version. AiiDA is not integrated
-  with an engine here.
+- **Limitations:** the `stable` URL is mutable and does not prove an installed version. The project used an
+  installed AiiDA 2.9.2 only to store hashed records of the E-01 preparation and run [21]; it was not used to
+  execute calculations, and storage of records is not evidence of a scientific result.
 
 **[13]** RDKit, used for the donor embeddings (version 2026.03.6 in the file headers; the documentation page
 identifies 2026.03.6).
@@ -294,3 +300,44 @@ The project's original working records are private and are not linked. They comp
 - logs, workflow-provenance tests and review records
 
 They are identified in the [export manifest](../provenance/EXPORT-MANIFEST.md) by description and SHA256 only.
+The original E-01 run records [21] are also private; the public derivatives in
+[`../results/e01/`](../results/e01/README.md) state their sources and redactions.
+
+## 7. Installed environment and E-01 records
+
+**[20]** Project installation record of the Psi4 1.11 environment.
+- **Content:** 94 conda-forge packages (platforms `osx-arm64` and `noarch`), each with name, version, build,
+  channel, URL, MD5 and SHA256, including psi4 1.11, Python 3.14.7, libxc-c 7.1.2, qcengine 0.51.0,
+  qcelemental 0.51.2, simple-dftd3 1.6.0 and dftd3-python 1.6.0. The installation receipt has SHA256
+  `4e080247aaed75c151b029564673c1d5c8204e110ec239a233fadc3265eb8b59`.
+- **Used in:** the README, [engine-capability-status.md](engine-capability-status.md) and
+  [`../results/e01/method-config.json`](../results/e01/method-config.json), which lists the hashes of the selected
+  installed files.
+- **Basis:** recorded; the package identities were checked against the installed package records before the run.
+- **Limitations:** package records identify packages, not the integrity of every installed file; file bytes were
+  checked only for the selected files. The installed `libxc_functionals.py` differs from the `v1.11` tag [10] at
+  the TH-FL entry only, and no functional equivalence is claimed. No installation instructions are given.
+
+**[21]** Project records of the E-01 run, 2026-09-24.
+- **Content:** the reviewed configuration, the runner's gate checks, job inputs, engine output and error text, the
+  classification, the resource ledger and scratch observations, bound by an as-run evidence manifest of 45 files
+  (SHA256 `6e7050b3fe02c237a9572b55e2f8a987517a14ffa8bae15db1992628c8cfdadc`) and a preparation manifest of 33 files
+  (SHA256 `0d5d018df63b88ec4a00d1d4f0aaa9366324bcdf789978e66d3cd59293d5d10a`).
+- **Used in:** [`../results/e01/`](../results/e01/README.md), the README and
+  [engine-capability-status.md](engine-capability-status.md).
+- **Basis:** the public derivatives were produced from these records, with their SHA256 values and redactions stated
+  in the export manifest.
+- **Limitations:** the records document a stopped software run. They contain no converged electronic energy or
+  gradient of either donor and no statement about chemistry, and the cause of the abort is undiagnosed.
+
+**[22]** simple-dftd3 and dftd3-python, version 1.6.0, installed with Psi4 [20].
+- **Links:** conda-forge packages as recorded in the installation receipt,
+  [simple-dftd3 1.6.0](https://conda.anaconda.org/conda-forge/osx-arm64/simple-dftd3-1.6.0-gfortran_h643d65c_0.conda)
+  and
+  [dftd3-python 1.6.0](https://conda.anaconda.org/conda-forge/osx-arm64/dftd3-python-1.6.0-py314hcd3153d_1.conda).
+- **Content:** the D3 dispersion implementation through which the Psi4 route for ωB97X-D3 is configured
+  (`d3zero2b`, three-body term off). The parameters printed by the engine at E-01 setup are s6 = 1.0, s8 = 1.0,
+  sr6 = 1.281, sr8 = 1.094 and alpha6 = 14.0 [21].
+- **Basis:** recorded (installation receipt and engine output), not newly inspected; the dispersion route was
+  exercised in a dispersion-only check without SCF.
+- **Limitations:** the check covers the dispersion term only. E-01 completed no dispersion-corrected energy.

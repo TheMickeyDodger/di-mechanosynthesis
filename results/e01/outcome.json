@@ -1,0 +1,100 @@
+{
+ "record": "E-01 outcome (public derivation)",
+ "experiment": "E-01, donor-only engine validation of the two free donor candidates at fixed geometry",
+ "outcome": "stopped",
+ "summary": "The precursor stopped at its first SCF job, P-RKS-core, when Psi4 aborted during conventional (PK) integral setup with PSIO_ERROR 17 (Incorrect block start address) on unit 92; no SCF iteration was printed. No converged electronic energy or gradient of either donor was produced, and every dependent criterion is INDETERMINATE. The activated donor was not run. The cause of the abort has not been diagnosed.",
+ "derivation": "Values are transcribed without change from the private run records named in 'sources', each identified by SHA256. Engine output and error text are published in results/e01/raw/ with the redactions stated in provenance/EXPORT-MANIFEST.md.",
+ "run": {"start_utc": "2026-09-24T05:54:52Z", "end_utc": "2026-09-24T06:09:09Z", "runner_exit_status": 0, "runner_note": "the runner recorded the engine failure and stopped the species in an orderly way"},
+ "configuration": "results/e01/method-config.json",
+ "species": {
+  "precursor": {
+   "structure": "structures/donor-precursor-EAOGe-C2I.extxyz",
+   "status": "STOPPED",
+   "gates_before_first_scf": {
+    "memory": {"free_percent": 31, "hw_memsize_bytes": 17179869184, "required_bytes": 3073741824, "passed": true},
+    "installed_package_and_file_checks": "passed (94 of 94 package records; all selected file hashes)",
+    "basis_construction": {"job": "FEASIBILITY", "exit_status": 0, "nbf": 478, "spherical_harmonics": false, "ecp_core_electrons": 46, "natom": 49, "note": "construction only; no integrals and no SCF"},
+    "scratch_estimate": {"ks_job_bytes": 157272166104, "hf_job_bytes": 209696221472, "free_bytes": 557926461440, "passed": true, "label": "arithmetic estimate, not engine-reported"}
+   },
+   "jobs": [
+    {"id": "P-RKS-core", "reference": "RKS", "guess": "core", "status": "STOPPED", "exit_status": -6,
+     "stop_reason": "ENGINE-ERROR: exit -6, no result file",
+     "engine_error": "PSIO_ERROR: 17 (Incorrect block start address), unit 92, raised in libpsio/error.cc line 142; uncaught psi::PsiException, process terminated",
+     "engine_output_state": "the output ends after the planned PK integral batch table; no SCF iteration was printed",
+     "printed_setup": {"electrons": 192, "nalpha": 96, "nbeta": 96, "basis_functions": 478, "ecp_core_electrons": 46, "algorithm": "Yoshimine PK", "threads": 4, "planned_batch_table": "44 batches, final index 6553006921; the printed table is the planned layout, not evidence that the batches completed", "engine_warning": "ECP capability is in beta. Please check occupations closely."},
+     "numerical_wall_s": 852.442, "cleanup_wall_s": 0.122, "charged_wall_s": 852.57, "core_seconds": 3410.28,
+     "peak_sampled_rss_kb": 1131232, "rss_samples": 1581,
+     "rss_profile_note": "sampled RSS about 1.1 GB from roughly 14 s to 326 s, then 11 to 17 MB until the abort at 852 s",
+     "process_cleanup": "verified; the job scratch (311647500240 bytes) was removed after the job"}
+   ],
+   "not_produced": ["P-RKS-sad", "P-UKS-core", "P-UKS-sad", "P-UKS-bs", "P-GRAD", "24 displaced points", "P-REPEAT", "P-HF-stab"],
+   "criteria": {
+    "scf_convergence": "INDETERMINATE (0 of 5 prescribed solutions produced)",
+    "multiple_guess_consistency": "INDETERMINATE (0 of 5 converged); Kohn-Sham stability INDETERMINATE, never PASS",
+    "hf_stability": "INDETERMINATE (not run; not produced after the stop)",
+    "analytic_vs_fd_gradient": "INDETERMINATE (gradient job not produced)",
+    "reproducibility": "INDETERMINATE (gradient and repeat not produced)",
+    "resource_caps": "PASS (runner classification from sampled memory observations and cooperative thread limits; not hard containment)"
+   },
+   "classification_file": "results/e01/raw/precursor-classification.json"
+  },
+  "activated": {
+   "structure": "structures/donor-activated-EAOGe-C2-radical.extxyz",
+   "status": "BLOCKED_UNRUN",
+   "reason": "The precursor failure is unresolved and potentially shared, since the activated donor uses the same frozen configuration; nothing isolates it to the precursor and nothing establishes that the activated donor avoids it. No prediction of the activated outcome is made.",
+   "criteria": "not run; the localization hypothesis is not evaluable"
+  }
+ },
+ "scratch_observations": {
+  "before_recorded_stop": {"utc": "2026-09-24T06:07:45Z", "seconds_before_runner_end": 84, "job_settled_utc": "2026-09-24T06:09:06Z", "runner_end_utc": "2026-09-24T06:09:09Z",
+   "unit_92": {"logical_bytes": 103882500120, "allocated_bytes": 103884587008},
+   "unit_93": {"logical_bytes": 207765000120, "allocated_bytes": 207769108480},
+   "free_bytes": 246266699776,
+   "note": "the allocation exceeded the KS estimate and the largest pre-run estimate; the instant of the abort and the conditions at it were not observed"},
+  "after_cleanup": {"utc": "2026-09-24T06:09:48Z", "free_bytes": 557900038144, "job_scratch_present": false, "note": "shows reclamation after cleanup only; says nothing about the cause"}
+ },
+ "budget": {"precursor_wall_s": 853.6, "species_cap_s": 7200, "total_wall_s": 853.6, "total_cap_s": 14400, "core_seconds": 3414.4, "core_seconds_cap": 115200, "activated_wall_s": 0, "cap_breach": false, "note": "the stop occurred at about 12 percent of the species budget; it is not cap exhaustion"},
+ "hypotheses": {
+  "status": "ranked, untested; no cause is asserted",
+  "ranked": [
+   "a large-file or block-address handling failure in the shared conventional PK / PSIO path",
+   "scratch capacity or another filesystem or I/O condition; disk exhaustion at the abort is neither established nor excluded",
+   "a precursor-dependent trigger such as its size or its iodine-containing integral workload; nothing isolates the failure to this species"
+  ]
+ },
+ "proposed_next_steps": {
+  "status": "proposal only; not executed and not authorized",
+  "A": "tabulate what the existing records contain; they give no failing byte offset, no PSIO block unit or address representation and no mapping from batch index to address, so no inference is drawn",
+  "B": "optional single filesystem-only probe (large sequential write, reads at large offsets) under stated bounds; it never runs the PK / PSIO code path, so its success cannot weaken the first hypothesis",
+  "outstanding": "the PK / PSIO question needs a separately authorized, source-informed diagnostic of the engine's own code path",
+  "C": "only afterwards, a revised configuration proposal (for example a different SCF algorithm with a named auxiliary basis, or PK on storage verified for the file sizes), each subject to review",
+  "governing": "completing A and B, including a successful probe, does not resolve the shared PK / PSIO risk",
+  "instrumentation": "any future attempt samples scratch free space and file sizes through to termination, with the sampling interval recorded; a value between samples remains unobserved"
+ },
+ "not_claimed": [
+  "no converged electronic energy, SCF solution, gradient, <S^2>, Lowdin population or localization result for either donor",
+  "no statement about donor chemistry, the method or the functional",
+  "no cause of the abort",
+  "no reproduction of the benchmark and no feasibility claim"
+ ],
+ "limitations": [
+  "sampled RSS and cooperative thread limits are observations and controls, not hard containment",
+  "installed-file integrity is established only for the selected files listed in method-config.json",
+  "the installed libxc_functionals.py differs from the v1.11 tag at the TH-FL entry only; no functional equivalence is claimed",
+  "the donor geometries are agent-proposed and unoptimized",
+  "the pre-run scratch estimate was below the observed allocation"
+ ],
+ "sources": [
+  {"description": "precursor classification", "sha256": "0f4b0a2b9c8ee3468083af07e0e49d33773835078b2320bab38663a410539757", "public": "results/e01/raw/precursor-classification.json"},
+  {"description": "precursor run head (gates)", "sha256": "8513ccc3947df09eb1a65c212a55b2ea06a3a48543fac1e9f207dabd06f43f4a"},
+  {"description": "precursor run tail (accounting)", "sha256": "477e718c7f0040e3f8e5c9f6e381edda624d216755ac9ee4918c9a0a7db6911b"},
+  {"description": "precursor job journal", "sha256": "8e4859d7b79e73b35a83292e612f9d17ef669732576eb5b2b2e98eb177932892"},
+  {"description": "run resource ledger", "sha256": "465234ab3fb3760d7a8f7a1836e5ee4c21d6c1a21f6590ebb120b8f2751d52aa"},
+  {"description": "P-RKS-core engine stderr", "sha256": "2a90c4795b42b3a605fc9c8ff8408349456e504e63f802fa6edf3aa20264afc0", "public": "results/e01/raw/P-RKS-core.stderr.txt"},
+  {"description": "scratch observation before the abort", "sha256": "4338da0200c0ef499b969d1da6b74279b1e0f7290c81c7640a99be9fe897378a"},
+  {"description": "free-space observation after cleanup", "sha256": "2ce1b2b1c3e5fa97308984aa7e6addfa42b38bdc5ca567696248e57e31ed7ea9"},
+  {"description": "reviewed outcome report", "sha256": "5563fbdfb08d2ab7dafa1a1fa281d0748c17c5f56c5b312550785511f1802442"},
+  {"description": "reviewed as-run evidence manifest (45 files)", "sha256": "6e7050b3fe02c237a9572b55e2f8a987517a14ffa8bae15db1992628c8cfdadc"},
+  {"description": "reviewed preparation manifest (33 files)", "sha256": "0d5d018df63b88ec4a00d1d4f0aaa9366324bcdf789978e66d3cd59293d5d10a"}
+ ]
+}

@@ -107,3 +107,25 @@ Settling the identity of the functional requires five further sources:
 
 A mismatch found in any of these would constitute a change of method, to be decided explicitly and never
 substituted silently.
+
+## Evidence from the installed build (2026-09-24)
+
+Psi4 1.11 was later installed from conda-forge in a project-local environment [20] and used for the E-01 attempt
+[21]. The sections above describe the archived sources and are kept as written; this section records what the
+installed build showed, and what it did not. Evidence from the installed build concerns this build only.
+
+| Capability | Status for the installed build | Evidence |
+|---|---|---|
+| Installation of Psi4 1.11 and its dependencies | Established: 94 conda-forge packages; package identities checked before the run | [20] |
+| Per-element basis assignment with the iodine core potential | Established for construction: `assign 6-31G**` with `assign I lanl2dz` built 478 Cartesian basis functions for the precursor, with 46 core electrons in the iodine potential and 192 explicit electrons. The comma-free spelling `6-31G**` was used; it resolves to the same installed basis file as `6-31G(d,p)`. | [21]; [`../results/e01/raw/FEASIBILITY.result.json`](../results/e01/raw/FEASIBILITY.result.json), [`../results/e01/raw/P-RKS-core.psi4.out`](../results/e01/raw/P-RKS-core.psi4.out) |
+| Basis coverage for germanium and iodine | Established for construction: the installed basis files supplied entries for Ge, C, O, H and I, including the iodine core potential | [21] |
+| Composition of `wB97X-D3` as run | Printed by the engine: Libxc 7.1.2, `XC_HYB_GGA_XC_WB97X_D3`, and the exact-exchange lines `0.8043 HF,LR [omega = 0.2500]` and `0.1957 HF`, as printed | [21]; [`../results/e01/raw/P-RKS-core.psi4.out`](../results/e01/raw/P-RKS-core.psi4.out) |
+| `d3zero2b` dispersion | Configured route through simple-dftd3 [22]; the declared parameters were printed at E-01 setup, and the route was exercised in a dispersion-only check without SCF. E-01 completed no dispersion-corrected energy. | [21], [22] |
+| Installed `libxc_functionals.py` | Differs from the `v1.11` tag [10] at the TH-FL entry only; the `wB97X-D3` entry is unchanged | [20]; [`../results/e01/method-config.json`](../results/e01/method-config.json) |
+| Conventional (PK) SCF for the precursor at 478 basis functions | Not established: the first SCF job aborted during integral setup with `PSIO_ERROR: 17 (Incorrect block start address)`, and no SCF iteration was printed; cause undiagnosed | [21]; [`../results/e01/`](../results/e01/README.md) |
+| SCF convergence controls, analytic gradients with the core potential, ⟨S²⟩ for unrestricted Kohn–Sham references, Löwdin spins | Still `UNVERIFIED`: not validated by the stopped attempt. The gradient and property jobs were never launched. Whether any SCF activity occurred inside the aborted job is unknown; the absence of printed iterations does not show that none occurred | [21] |
+| RHF→UHF stability diagnostic | Not run: it was not produced after the precursor stopped. The reviewed plan would have recorded its result as unavailable (INDETERMINATE), because the inspected driver code of the installed build returns no machine-readable result for the check mode; no engine behaviour was observed | [21] |
+| Functional equivalence with the benchmark | Open | Not applicable |
+
+The engine printed its standard warning that its effective-core-potential capability is in beta. Nothing here
+shows how the build behaves in an SCF, a gradient or a property calculation for these systems.

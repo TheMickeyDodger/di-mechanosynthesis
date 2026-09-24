@@ -4,7 +4,7 @@ This file is public, like the rest of the repository. It records the intended en
 evidence gates, the current qualified status, the open issues and the next bounded work. It records scientific
 status only. It is not authorization for any agent or person to act ([AGENTS.md](../AGENTS.md)). The intended
 capabilities described in Section 1 are aims. They are neither accomplished capabilities nor permission to
-execute. The file was last updated on 2026-09-23.
+execute. The file was last updated on 2026-09-24.
 
 ## 1. Intended end state
 
@@ -64,14 +64,15 @@ its label. The remaining gates are:
 
 | Area | Status |
 |---|---|
-| Quantum-chemistry results | None. No reviewed energies, forces, gradients or populations exist in project evidence. |
+| Quantum-chemistry results | None converged. The only attempt, E-01, stopped before any SCF iteration was reported, and no converged electronic energies, forces, gradients or populations exist in project evidence. |
 | Donor candidates | Two agent-proposed, unoptimized ETKDG embeddings with stable atom identifiers. Counts and electron parity were re-derived from the files. Not compared with the benchmark authors' supplementary coordinates, which have not been obtained. The donor identity rests on literature statements as recorded in the original reconstruction notes and is unverified in the current review. |
 | Surface models | Three definitions, built on an ASE lattice, unoptimized, with placeholders. Coordinate files are not published. |
-| First calculation (E-01) | Prospective specification with open clarifications; not run. Project records show that an earlier preparation attempt ended blocked before engine installation. |
-| Engine | Psi4 1.11 selected; not installed or validated in project evidence. |
-| Engine capabilities | Mostly `UNVERIFIED` for 1.11 ([docs/engine-capability-status.md](../docs/engine-capability-status.md)). |
-| Functional identity | Open. The v1.11 source declares the `wB97X-D3` entry; its dependencies and its equivalence to the literature functional are unresolved. |
-| Compute-environment controls | A recorded process-containment "failure" was an intentional negative control: the expected detection of a descendant process, followed by cleanup. The accepted reassessment explains it, and no rerun is implied. Enforcement of resource limits at full workload scale remains unverified. |
+| First calculation (E-01) | Executed once on 2026-09-24 under a reviewed configuration ([results/e01](../results/e01/README.md)). The precursor stopped at its first SCF job when Psi4 aborted during integral setup with `PSIO_ERROR: 17 (Incorrect block start address)`; every dependent criterion is INDETERMINATE. The activated donor is blocked and unrun. The cause is undiagnosed. An earlier preparation attempt, which ended blocked before engine installation, remains part of the history. |
+| Engine | Psi4 1.11 installed from conda-forge in a project-local environment. The installation and basis construction were checked and the configured dispersion route was exercised in a dispersion-only check; no SCF completed. |
+| Engine capabilities | Partly established for the installed build: installation, basis construction with the iodine core potential and the functional composition as printed; the configured dispersion route was exercised in a dispersion-only check. SCF behaviour, analytic gradients, ⟨S²⟩ and Löwdin spins remain `UNVERIFIED` ([docs/engine-capability-status.md](../docs/engine-capability-status.md)). |
+| Functional identity | Open. The installed build runs the `wB97X-D3` entry through Libxc 7.1.2; the installed `libxc_functionals.py` differs from the v1.11 tag at the TH-FL entry only. Equivalence to the literature and benchmark functional is unresolved. |
+| Compute-environment controls | A recorded process-containment "failure" was an intentional negative control: the expected detection of a descendant process, followed by cleanup. The accepted reassessment explains it, and no rerun is implied. In E-01 the sampled resource and cleanup controls recorded the precursor job within the envelope with verified cleanup; these are sampled observations and cooperative limits, not hard containment. |
+| Result records | The E-01 preparation and run records were stored with verified digests in the project's provenance system. This is record-keeping, not a scientific result. |
 
 ## 4. Completed source inspection
 
@@ -84,23 +85,32 @@ The full catalogue, with links, locators and verification basis, is in [docs/SOU
 - **Psi4 `v1.11` source.** The stability root-following check in `proc.py` was inspected. The file
   `libxc_functionals.py` was retrieved once, verified against the expected Git blob, and inspected only for the
   `wB97X-D3` entry.
+- **Installed build and E-01 run.** Package identities and selected installed files were hashed, and the engine
+  output and error text of the E-01 attempt were preserved ([results/e01](../results/e01/README.md)).
 
 ## 5. Known unresolved issues
 
-- **Engine capabilities.** Several capabilities are unverified for Psi4 1.11: analytic gradients with an effective
-  core potential, ⟨S²⟩ reporting for unrestricted Kohn–Sham references, per-label basis and core-potential
-  assignment, Löwdin spins and convergence controls. So are basis coverage, the iodine core-electron count and the
-  direct-inversion coverage of Kohn–Sham stability analysis; no stability criterion is used.
-- **Functional identity.** Four dependencies remain unresolved: the Libxc definition of `HYB_GGA_XC_WB97X_D3`, the
-  Psi4 driver code that consumes the functional list, the implementation and availability of the `d3zero2b`
-  dispersion, and the parameters given in the primary literature.
-- **Method specification.** Four clarifications are open: whether the precursor also runs unrestricted and with
-  which guess set, the exact atom and species sampled by the finite-difference check, whether the per-species
-  budget suffices, and how to proceed if ⟨S²⟩ is unavailable.
+- **E-01 engine abort.** The precursor's first SCF job aborted during conventional (PK) integral setup with
+  `PSIO_ERROR: 17 (Incorrect block start address)`. The cause is undiagnosed. The ranked, untested hypotheses are
+  a large-file or block-address failure in the PK input/output path, a scratch capacity or other filesystem
+  condition, and a trigger specific to the precursor. The observed scratch allocation exceeded the pre-run
+  estimate, and disk exhaustion at the abort is neither established nor excluded. The activated donor is unrun.
+- **Engine capabilities.** Several capabilities remain unverified for the installed Psi4 1.11, because no SCF
+  completed: SCF convergence behaviour, analytic gradients with an effective core potential, ⟨S²⟩ reporting for
+  unrestricted Kohn–Sham references and Löwdin spins. The direct-inversion coverage of Kohn–Sham stability analysis
+  is also unresolved; no stability criterion is used. Basis construction, including the iodine core-electron count
+  of 46, is established for the installed build.
+- **Functional identity.** Three dependencies remain unresolved: the Libxc 7.1.2 definition of
+  `HYB_GGA_XC_WB97X_D3`, the Psi4 driver code that consumes the functional list, and the parameters given in the
+  primary literature. The `d3zero2b` dispersion route is configured through simple-dftd3 in the installed build and
+  was exercised in a dispersion-only check.
+- **Method specification.** The four clarifications that were open before the run were settled by review
+  ([results/e01/method-config.json](../results/e01/method-config.json)).
 - **Donor identity.** The original reconstruction notes record a mismatch between a printed mass-spectrometry
   formula in their cited source and the name-derived graph. The mismatch is recorded rather than corrected and is
   unverified in the current review.
-- **Resource limits.** Enforcement of resource limits at workload scale is unverified.
+- **Resource limits.** Resource limits are enforced by sampled observation and cooperative thread settings, not
+  hard containment. One E-01 job exercised them at workload scale for 852 s.
 - **Historical records.** Some earlier agent sessions in this project had a process-isolation problem, in which
   context from outside the project could have entered those sessions. Records from those sessions are treated as
   potentially influenced. They are used only as qualified data and are re-checked against primary sources where
@@ -108,16 +118,23 @@ The full catalogue, with links, locators and verification basis, is in [docs/SOU
 
 ## 6. Next bounded work
 
-The following steps are ordered by dependency, not by date.
+The following steps are ordered by dependency, not by date. They are proposals; none has been executed or
+authorized.
 
-1. Version-matched evidence for Psi4 1.11 covering each capability listed above, from tagged source files or from
-   the installed package's own documentation and basis files.
-2. Resolution of the functional's identity against Libxc, the dispersion implementation and the primary
-   literature, with any mismatch escalated as a decision about method.
-3. Settlement of the open method clarifications through technical review.
-4. Verification of resource-limit enforcement at workload scale.
-5. Only after these steps, and only with authorization, a bounded engine installation and the E-01 run. The run is
-   reported against the specification whatever its outcome, including a blocked or failed outcome.
+1. Tabulate what the existing E-01 records contain and state explicitly what they lack: no failing byte offset, no
+   address representation and no mapping from the integral batch index to an address.
+2. Optionally, a single filesystem-only probe on the same storage within stated limits on size, free space and
+   time. It would not exercise the engine's integral or input/output code, so it cannot resolve the engine-specific
+   question.
+3. A separately authorized, source-informed diagnostic of the engine's own PK input/output path. Completing steps 1
+   and 2, even with a successful probe, does not resolve the shared risk.
+4. Only afterwards, a revised configuration proposal, for example a different SCF algorithm with a named auxiliary
+   basis, or the same algorithm on storage verified for the required file sizes, each reviewed before any run.
+5. Resolution of the functional's identity against Libxc 7.1.2 and the primary literature, with any mismatch
+   escalated as a decision about method.
+
+Any future attempt should sample scratch free space and file sizes through to termination and record the sampling
+interval. The activated donor is not to be used as a diagnostic.
 
 ## 7. Update policy
 
@@ -129,3 +146,4 @@ restatement. Superseded statements are corrected in place and noted in the log r
 |---|---|
 | 2026-09-23 | Initial public export of the research state |
 | 2026-09-23 | Editorial revision into continuous prose; no change of scientific status, gates or open issues |
+| 2026-09-24 | E-01 executed once and stopped (engine abort during integral setup; activated donor unrun). Superseded in place: the statements that E-01 had not been run, that Psi4 was not installed and that the method clarifications were open. Capability, functional-identity, resource and next-work entries updated on the new evidence. |

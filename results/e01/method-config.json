@@ -1,0 +1,97 @@
+{
+ "record": "E-01 as-run method and environment configuration (public derivation)",
+ "derivation": "Derived from the project's reviewed, frozen E-01 configuration (private record, SHA256 813a28c7f658d5414401c6ec44abf80f87166071a35e92557d33fc1657961da8) and the reviewed installed-environment records (package receipt SHA256 4e080247aaed75c151b029564673c1d5c8204e110ec239a233fadc3265eb8b59; baseline hash set SHA256 45170652a4579319085a42cf9f1109b11ea52e0beb982439c4ac64eceb617d2a). Internal status annotations, review references, local paths and orchestration details were removed; the values below are unchanged. This is the configuration the run used; the earlier prospective protocol is docs/e01-method-specification.md.",
+ "engine": {
+  "program": "Psi4",
+  "version": "1.11",
+  "distribution": "conda-forge, platforms osx-arm64 and noarch, 94 packages in a project-local prefix",
+  "recorded_versions": {"psi4": "1.11", "python": "3.14.7", "libxc-c": "7.1.2", "qcengine": "0.51.0", "qcelemental": "0.51.2", "simple-dftd3": "1.6.0", "dftd3-python": "1.6.0"},
+  "libxc_version_printed_at_runtime": "7.1.2",
+  "selected_installed_file_sha256": {
+   "lib/python3.14/site-packages/qcengine/programs/empirical_dispersion_resources.py": "aedefaff49b8aba9c66943fb6d1c5e0cbd87db10df310b67bbc87ca952404ddb",
+   "lib/python3.14/site-packages/qcengine/programs/dftd_ng.py": "b90f3534df1b2c699492063432fe771a530c7fe91e6f1f60d493e07b6615fced",
+   "lib/python3.14/site-packages/psi4/driver/procrouting/empirical_dispersion.py": "aba9852bd7a65069aeb52f0c77fecdfea4a23fef4bd4acc575355605cb73be37",
+   "lib/python3.14/site-packages/psi4/driver/procrouting/dft/dft_builder.py": "b29d52e450f632793103b01249e27e2c6d61a48859b3c65d17f8cf4de45dad5a",
+   "lib/python3.14/site-packages/psi4/driver/procrouting/proc.py": "98ac648d84cc4587ec034b9207d3c6fbc3cd74df4c0409a85478e5467c0dd408",
+   "lib/python3.14/site-packages/psi4/driver/procrouting/proc_table.py": "23b3c7a5691145c61702748d77b60a5172bcebed7fd4bfda8f10d3ad4e08cd48",
+   "lib/python3.14/site-packages/psi4/header.py": "abe8728db6d54151d5da6097bf4a16441640e63250e2357f56a2c9b22b121250",
+   "lib/python3.14/site-packages/psi4/core.cpython-314-darwin.so": "0d12c8cda49e2cfe75cea563a2fe51889fa61b88c7b5234beb165b9b54805d99",
+   "lib/python3.14/site-packages/dftd3/qcschema.py": "52090940392211ba54a96eb79a649d68cb7f0108ec1e35dd0eb6b8ca8e1919b2",
+   "lib/python3.14/site-packages/dftd3/interface.py": "3db1f7b32330efd89f200381c51a8e46e22aafbfd313d8fa034fb7b4bb21d962",
+   "share/psi4/basis/6-31g_d_p_.gbs": "d1dac37ef75bbf07defdc7d97222601cd9effc9e672938405f745b705d2ad7c8",
+   "share/psi4/basis/6-31gss.gbs": "d1dac37ef75bbf07defdc7d97222601cd9effc9e672938405f745b705d2ad7c8",
+   "share/psi4/basis/lanl2dz.gbs": "363bf19b49a54ac2157066a1e9b27830d1447785b3d3f2e9e6a93d9b2f31d7b0"
+  },
+  "installed_file_deviation": {
+   "file": "lib/python3.14/site-packages/psi4/driver/procrouting/dft/libxc_functionals.py",
+   "installed_sha256": "43ae43c674816ab25cd94f7170732485e823701d5bf3e1a5d573a8dbe8d77964",
+   "v1.11_tag_sha256": "e289d7d713e2ae9cecf8e37a22d80ed7fd9beed0c9febd0aa9282afd81c448fe",
+   "difference": "the only difference found is the TH-FL entry, which reads LDA_XC_TH_FL instead of GGA_XC_TH_FL; the wB97X-D3 entry is unchanged",
+   "limitation": "this establishes no equivalence of the selected functional with any literature or benchmark functional"
+  },
+  "integrity_scope": "Package identity (name, version, build, channel, URL, MD5, SHA256) was checked for all 94 packages against the installation receipt; installed-file bytes were checked only for the files listed above."
+ },
+ "method": {
+  "functional": "wB97X-D3 (Psi4 name wb97x-d3)",
+  "dispersion": "D3 zero damping, configured through the Psi4 1.11 route d3zero2b to simple-dftd3; three-body term off; parameters printed at E-01 setup s6 1.0, s8 1.0, sr6 1.281, sr8 1.094, alpha6 14.0; E-01 completed no dispersion-corrected energy",
+  "basis": "6-31G(d,p) on all atoms except iodine; LANL2DZ with its effective core potential on iodine",
+  "basis_input": "assign 6-31G**\nassign I lanl2dz\n",
+  "basis_input_note": "6-31G** is the comma-free spelling of 6-31G(d,p) and resolves to the same installed file",
+  "cartesian_functions": true,
+  "grid": "engine default (75 radial, 302 spherical points)",
+  "scf": {"algorithm": "PK (conventional)", "e_convergence": 1e-08, "d_convergence": 1e-08, "maxiter": 100, "fail_on_maxiter": true},
+  "displaced_point_scf": {"e_convergence": 1e-10, "d_convergence": 1e-10},
+  "engine_memory_bytes": 2000000000,
+  "threads": 4
+ },
+ "schedule": {
+  "run_order": "prescribed guesses in order; then the analytic gradient on the reference solution; then 24 displaced points; then an independent repeat of the gradient job; then (precursor only) the Hartree-Fock stability diagnostic",
+  "precursor": {
+   "guesses": [
+    {"id": "P-RKS-core", "reference": "RKS", "guess": "core"},
+    {"id": "P-RKS-sad", "reference": "RKS", "guess": "SAD"},
+    {"id": "P-UKS-core", "reference": "UKS", "guess": "core"},
+    {"id": "P-UKS-sad", "reference": "UKS", "guess": "SAD"},
+    {"id": "P-UKS-bs", "reference": "UKS", "guess": "SAD with GUESS_MIX (broken symmetry)"}
+   ],
+   "gradient_reference": "lowest-energy converged RKS solution; ties within 1e-6 Eh resolved by core, then SAD",
+   "diagnostic": {"id": "P-HF-stab", "method": "Hartree-Fock", "reference": "RHF", "guess": "SAD", "stability_analysis": "CHECK"}
+  },
+  "activated": {
+   "guesses": [
+    {"id": "A-UKS-core", "reference": "UKS", "guess": "core"},
+    {"id": "A-UKS-sad", "reference": "UKS", "guess": "SAD"},
+    {"id": "A-UKS-bs", "reference": "UKS", "guess": "SAD with GUESS_MIX (broken symmetry)"}
+   ],
+   "gradient_reference": "solution L of docs/e01-method-specification.md, Section 4"
+  },
+  "finite_differences": {
+   "components": ["D-Cb:x", "D-Cb:y", "D-Cb:z", "D-L1a-H1:x", "D-L1a-H1:y", "D-L1a-H1:z"],
+   "steps_bohr": ["0.005", "0.0025"],
+   "signs": [1, -1],
+   "points_per_species": 24,
+   "frame": "engine Bohr coordinates of the reference geometry, rebuilt with units bohr, no_com, no_reorient, symmetry c1"
+  },
+  "repeat": "independent rerun of the gradient job in a fresh process with fresh scratch; compared at 1e-8 Eh and 1e-6 au"
+ },
+ "implementation": {
+  "gradient": "energy with the wavefunction returned, then an analytic gradient on that wavefunction with finite-difference fallback disabled",
+  "analytic_unavailable": "the 24 displaced points and the repeat still run; the comparison row is INDETERMINATE; reproducibility compares energies only",
+  "S2": "the last value printed by the engine for each unrestricted guess job; if absent, the dependent criteria are downgraded, never substituted",
+  "lowdin_spins": "engine one-electron property LOWDIN_SPINS for the activated guesses; if absent, the localization hypothesis is not evaluable",
+  "hf_stability": "planned extraction: the result would be recorded as unavailable (INDETERMINATE), because the inspected driver code of the installed build returns no machine-readable result for the CHECK mode; the diagnostic was not run in E-01",
+  "guards": "symmetry c1; engine geometry equal to the input within 1e-8 bohr before and after each job; Cartesian basis; iodine core-electron count and explicit electron count as recorded for the inputs; any deviation stops the species"
+ },
+ "stop_rules": [
+  "any SCF non-convergence stops the species at once; no later job of that species runs",
+  "<S^2> >= 1.05 for a converged unrestricted guess stops the species at once",
+  "a resource-cap breach or any stopped job (engine error, guard, recentring) stops the species at once",
+  "unresolved resource or process-cleanup evidence blocks every further launch",
+  "nothing is retried, retuned or substituted"
+ ],
+ "resource_envelope": {"cores_max": 8, "memory_gb_max": 16, "species_wall_s": 7200, "total_wall_s": 14400, "core_hours": 32, "one_species_at_a_time": true, "per_job_wall": "the remaining species aggregate at launch"},
+ "preflight_feasibility": {
+  "memory": "free memory at least the engine memory plus 1 GiB",
+  "scratch": "arithmetic estimate, not engine-reported: with P = nbf(nbf+1)/2 and Q = P(P+1)/2, KS jobs 3 x Q x 8 bytes; the Hartree-Fock diagnostic 2 x Q x 8 bytes plus Q x 16 bytes"
+ }
+}

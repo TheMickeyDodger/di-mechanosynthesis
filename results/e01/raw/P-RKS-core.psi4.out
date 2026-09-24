@@ -1,0 +1,255 @@
+
+  Memory set to   1.863 GiB by Python driver.
+  Threads set to 4 by Python driver.
+
+Scratch directory: <job-scratch>/
+   => Libint2 <=
+
+    Primary   basis highest AM E, G, H:  7, 6, 3
+    Auxiliary basis highest AM E, G, H:  7, 7, 4
+    Onebody   basis highest AM E, G, H:  -, -, -
+    Solid Harmonics ordering:            Gaussian
+
+*** tstart() called on <host>
+*** at Thu Sep 24 01:54:54 2026
+
+   => Loading Basis Set <=
+
+    Name: E01_MIXED
+    Role: ORBITAL
+    Keyword: BASIS
+    atoms 1                             entry GE         line   861 file <psi4-prefix>/share/psi4/basis/6-31gss.gbs 
+    atoms 2-3, 5-8, 10-13, 15-19, 21-22 entry C          line   115 file <psi4-prefix>/share/psi4/basis/6-31gss.gbs 
+    atoms 4                             entry I          line  1044 (ECP: line  2621) file <psi4-prefix>/share/psi4/basis/lanl2dz.gbs 
+    atoms 9, 14, 20                     entry O          line   149 file <psi4-prefix>/share/psi4/basis/6-31gss.gbs 
+    atoms 23-49                         entry H          line    44 file <psi4-prefix>/share/psi4/basis/6-31gss.gbs 
+
+    !!!  WARNING: ECP capability is in beta. Please check occupations closely.  !!!
+
+   => WB97X-D3: Empirical Dispersion <=
+
+    Grimme's -D3 (zero-damping) Dispersion Correction
+    Grimme S.; Antony J.; Ehrlich S.; Krieg H. (2010), J. Chem. Phys., 132: 154104
+
+        s6 =       1.000000
+        s8 =       1.000000
+       sr6 =       1.281000
+    alpha6 =      14.000000
+       sr8 =       1.094000
+
+
+         ---------------------------------------------------------
+                                   SCF
+               by Justin Turney, Rob Parrish, Andy Simmonett
+                          and Daniel G. A. Smith
+                              RKS Reference
+                        4 Threads,   1907 MiB Core
+         ---------------------------------------------------------
+
+  ==> Geometry <==
+
+    Molecular point group: c1
+    Full point group: C1
+
+    Geometry (in Angstrom), charge = 0, multiplicity = 1:
+
+       Center              X                  Y                   Z               Mass       
+    ------------   -----------------  -----------------  -----------------  -----------------
+         GE          -0.630336800000    -0.180109050000     1.971116620000    73.921177761000
+         C           -1.058396790000    -0.184887380000     3.746548560000    12.000000000000
+         C           -1.348647590000    -0.179331160000     4.906531230000    12.000000000000
+         I           -1.827656430000    -0.175311740000     6.950125360000   126.904471900000
+         C            0.755516180000    -1.449335420000     1.460060610000    12.000000000000
+         C            0.852594850000    -1.181269420000    -0.053195320000    12.000000000000
+         C            1.927039580000    -2.108060440000    -0.616362650000    12.000000000000
+         C            3.272622640000    -1.884227070000    -0.001704500000    12.000000000000
+         O            4.139024580000    -2.806158860000    -0.625109940000    15.994914619570
+         C           -0.430366710000    -1.520174250000    -0.712223470000    12.000000000000
+         C           -1.520711070000    -0.474156560000    -0.599562860000    12.000000000000
+         C           -2.483249500000    -0.817330250000    -1.711107220000    12.000000000000
+         C           -3.668794190000     0.052541330000    -1.855145060000    12.000000000000
+         O           -4.487541370000     0.064694880000    -0.736529980000    15.994914619570
+         C           -2.139231470000    -0.604278620000     0.778301550000    12.000000000000
+         C           -1.064560850000     0.928301830000    -0.756832580000    12.000000000000
+         C            0.281713430000     1.271421090000    -0.167384500000    12.000000000000
+         C            0.701162590000     2.520161980000    -0.879544580000    12.000000000000
+         C            2.001525980000     3.110956330000    -0.517655880000    12.000000000000
+         O            2.148244290000     3.504304060000     0.803071640000    15.994914619570
+         C            1.322857440000     0.207886250000    -0.315452430000    12.000000000000
+         C            0.057725440000     1.542078490000     1.307677040000    12.000000000000
+         H            1.720309960000    -1.194616980000     1.944508660000     1.007825032230
+         H            0.450395320000    -2.491142840000     1.612237660000     1.007825032230
+         H            1.620407340000    -3.144780280000    -0.376597320000     1.007825032230
+         H            1.953927590000    -1.998218240000    -1.716997420000     1.007825032230
+         H            3.676543760000    -0.882226840000    -0.157645660000     1.007825032230
+         H            3.253031380000    -2.202401590000     1.066131100000     1.007825032230
+         H            4.231716210000    -2.518418660000    -1.570753300000     1.007825032230
+         H           -0.840103370000    -2.455402040000    -0.319733950000     1.007825032230
+         H           -0.217288640000    -1.649297510000    -1.810876490000     1.007825032230
+         H           -2.817510140000    -1.880423470000    -1.630979530000     1.007825032230
+         H           -1.864703580000    -0.737786290000    -2.653587430000     1.007825032230
+         H           -3.448351560000     1.071988460000    -2.232692070000     1.007825032230
+         H           -4.314309740000    -0.393286730000    -2.669926090000     1.007825032230
+         H           -4.879927980000    -0.862278730000    -0.651402840000     1.007825032230
+         H           -2.357322370000    -1.684867740000     0.952792980000     1.007825032230
+         H           -2.982474180000     0.054460770000     0.965758150000     1.007825032230
+         H           -1.798158410000     1.593149110000    -0.247600150000     1.007825032230
+         H           -1.104803860000     1.251152860000    -1.838909140000     1.007825032230
+         H           -0.100388400000     3.282311840000    -0.655613060000     1.007825032230
+         H            0.603388500000     2.329855130000    -1.973172940000     1.007825032230
+         H            2.130323570000     4.029945500000    -1.145124660000     1.007825032230
+         H            2.885034550000     2.488830310000    -0.749068190000     1.007825032230
+         H            3.098856010000     3.558357160000     1.042598730000     1.007825032230
+         H            1.801507700000     0.312087820000    -1.301135480000     1.007825032230
+         H            2.109106450000     0.399722950000     0.463185190000     1.007825032230
+         H           -0.650755180000     2.347904800000     1.493578180000     1.007825032230
+         H            1.041014830000     1.737665230000     1.785403430000     1.007825032230
+
+  Running in c1 symmetry.
+
+  Rotational constants: A =      0.00727  B =      0.00199  C =      0.00186 [cm^-1]
+  Rotational constants: A =    217.93510  B =     59.58517  C =     55.78768 [MHz]
+  Nuclear repulsion = 2588.106425421151016
+
+  Charge       = 0
+  Multiplicity = 1
+  Electrons    = 192
+  Nalpha       = 96
+  Nbeta        = 96
+
+  ==> Algorithm <==
+
+  SCF Algorithm Type is PK.
+  DIIS enabled.
+  MOM disabled.
+  Fractional occupation disabled.
+  Guess Type is CORE.
+  Energy threshold   = 1.00e-08
+  Density threshold  = 1.00e-08
+  Integral threshold = 1.00e-12
+
+  ==> Primary Basis <==
+
+  Basis Set: E01_MIXED
+    Blend: 6-31G** + LANL2DZ
+    Number of shells: 217
+    Number of basis functions: 478
+    Number of Cartesian functions: 478
+    Spherical Harmonics?: false
+    Max angular momentum: 2
+
+  Core potential: E01_MIXED
+    Number of shells: 4
+    Number of ECP primitives: 20
+    Number of ECP core electrons: 46
+    Max angular momentum: 3
+
+  ==> DFT Potential <==
+
+   => LibXC <=
+
+    Version 7.1.2
+    S. Lehtola, C. Steigemann, M. J. T. Oliveira, and M. A. L. Marques,  SoftwareX 7, 1–5 (2018) (10.1016/j.softx.2017.11.002)
+
+   => Composite Functional: WB97X-D3 <= 
+
+    wB97X-D3 Hyb-GGA Exchange-Correlation Functional
+
+    Y.-S. Lin, G.-D. Li, S.-P. Mao, and J.-D. Chai,  J. Chem. Theory Comput. 9, 263–272 (2013) (10.1021/ct300715s)
+
+    Deriv               =              1
+    GGA                 =           TRUE
+    Meta                =          FALSE
+
+    Exchange Hybrid     =           TRUE
+    MP2 Hybrid          =          FALSE
+
+   => Exchange-Correlation Functionals <=
+
+    1.0000   wB97X-D3 range-separated functional
+
+   => Exact (HF) Exchange <=
+
+    0.8043            HF,LR [omega = 0.2500]
+    0.1957               HF 
+
+   => LibXC Density Thresholds  <==
+
+    XC_HYB_GGA_XC_WB97X_D3:  1.00E-14 
+
+   => Molecular Quadrature <=
+
+    Radial Scheme          =       TREUTLER
+    Pruning Scheme         =           NONE
+    Nuclear Scheme         =       TREUTLER
+
+    Blocking Scheme        =         OCTREE
+    BS radius alpha        =              1
+    Pruning alpha          =              1
+    Radial Points          =             75
+    Spherical Points       =            302
+    Total Points           =         991094
+    Total Blocks           =           6953
+    Max Points             =            256
+    Max Functions          =            351
+    Weights Tolerance      =       1.00E-15
+
+  ==> Integral Setup <==
+
+  Using Yoshimine PK algorithm.
+  Sizing the integral batches needed.
+  Building batch lookup table.
+   Calculation information:
+      Number of atoms:                  49
+      Number of AO shells:             217
+      Number of primitives:            484
+      Number of atomic orbitals:       478
+      Number of basis functions:       478
+
+      Integral cutoff                 1.00e-12
+      Number of threads:                 4
+
+	Batch   1 pq = [       0,   17427] index = [             0,151858878] size =    151858878
+	Batch   2 pq = [   17427,   24646] index = [     151858878,303724981] size =    151866103
+	Batch   3 pq = [   24646,   30185] index = [     303724981,455582205] size =    151857224
+	Batch   4 pq = [   30185,   34855] index = [     455582205,607452940] size =    151870735
+	Batch   5 pq = [   34855,   38969] index = [     607452940,759310965] size =    151858025
+	Batch   6 pq = [   38969,   42688] index = [     759310965,911154016] size =    151843051
+	Batch   7 pq = [   42688,   46108] index = [     911154016,1062996886] size =    151842870
+	Batch   8 pq = [   46108,   49291] index = [    1062996886,1214825986] size =    151829100
+	Batch   9 pq = [   49291,   52281] index = [    1214825986,1366677621] size =    151851635
+	Batch  10 pq = [   52281,   55109] index = [    1366677621,1518528495] size =    151850874
+	Batch  11 pq = [   55109,   57799] index = [    1518528495,1670391100] size =    151862605
+	Batch  12 pq = [   57799,   60369] index = [    1670391100,1822238265] size =    151847165
+	Batch  13 pq = [   60369,   62834] index = [    1822238265,1974087195] size =    151848930
+	Batch  14 pq = [   62834,   65206] index = [    1974087195,2125943821] size =    151856626
+	Batch  15 pq = [   65206,   67494] index = [    2125943821,2277753765] size =    151809944
+	Batch  16 pq = [   67494,   69707] index = [    2277753765,2429567778] size =    151814013
+	Batch  17 pq = [   69707,   71852] index = [    2429567778,2581390878] size =    151823100
+	Batch  18 pq = [   71852,   73935] index = [    2581390878,2733229080] size =    151838202
+	Batch  19 pq = [   73935,   75961] index = [    2733229080,2885074741] size =    151845661
+	Batch  20 pq = [   75961,   77934] index = [    2885074741,3036893145] size =    151818404
+	Batch  21 pq = [   77934,   79858] index = [    3036893145,3188690011] size =    151796866
+	Batch  22 pq = [   79858,   81737] index = [    3188690011,3340509453] size =    151819442
+	Batch  23 pq = [   81737,   83574] index = [    3340509453,3492348525] size =    151839072
+	Batch  24 pq = [   83574,   85371] index = [    3492348525,3644146506] size =    151797981
+	Batch  25 pq = [   85371,   87131] index = [    3644146506,3795949146] size =    151802640
+	Batch  26 pq = [   87131,   88856] index = [    3795949146,3947738796] size =    151789650
+	Batch  27 pq = [   88856,   90549] index = [    3947738796,4099605975] size =    151867179
+	Batch  28 pq = [   90549,   92211] index = [    4099605975,4251480366] size =    151874391
+	Batch  29 pq = [   92211,   93843] index = [    4251480366,4403301246] size =    151820880
+	Batch  30 pq = [   93843,   95447] index = [    4403301246,4555112628] size =    151811382
+	Batch  31 pq = [   95447,   97025] index = [    4555112628,4706973825] size =    151861197
+	Batch  32 pq = [   97025,   98577] index = [    4706973825,4858761753] size =    151787928
+	Batch  33 pq = [   98577,  100105] index = [    4858761753,5010555565] size =    151793812
+	Batch  34 pq = [  100105,  101610] index = [    5010555565,5162346855] size =    151791290
+	Batch  35 pq = [  101610,  103093] index = [    5162346855,5314134871] size =    151788016
+	Batch  36 pq = [  103093,  104555] index = [    5314134871,5465926290] size =    151791419
+	Batch  37 pq = [  104555,  105997] index = [    5465926290,5617735003] size =    151808713
+	Batch  38 pq = [  105997,  107420] index = [    5617735003,5769581910] size =    151846907
+	Batch  39 pq = [  107420,  108824] index = [    5769581910,5921385900] size =    151803990
+	Batch  40 pq = [  108824,  110210] index = [    5921385900,6073177155] size =    151791255
+	Batch  41 pq = [  110210,  111579] index = [    6073177155,6224992410] size =    151815255
+	Batch  42 pq = [  111579,  112931] index = [    6224992410,6376761846] size =    151769436
+	Batch  43 pq = [  112931,  114267] index = [    6376761846,6528530778] size =    151768932
+	Batch  44 pq = [  114267,  114481] index = [    6528530778,6553006921] size =     24476143

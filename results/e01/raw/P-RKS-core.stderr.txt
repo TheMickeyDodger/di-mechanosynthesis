@@ -1,0 +1,20 @@
+PSIO_ERROR: unit = 92, errval = 17
+PSIO_ERROR: 17 (Incorrect block start address)
+
+Practical advice: This error is probably disk related. First, check that your scratch isn’t full.
+Second, make sure that you’re setting scratch ("psi4 -s" or "export PSI_SCRATCH") rather than letting it 
+default to /tmp. Third, run the job again to see if the error is reproducible.
+If it persists, finally, file an issue.
+
+libc++abi: terminating due to uncaught exception of type psi::PsiException: 
+Fatal Error: PSIO_ERROR: 17 (Incorrect block start address)
+
+Practical advice: This error is probably disk related. First, check that your scratch isn’t full.
+Second, make sure that you’re setting scratch ("psi4 -s" or "export PSI_SCRATCH") rather than letting it 
+default to /tmp. Third, run the job again to see if the error is reproducible.
+If it persists, finally, file an issue.
+
+Error occurred in file: <conda-forge-build-tree>/psi4/src/psi4/libpsio/error.cc on line: 142
+The most recent 5 function calls were:
+
+

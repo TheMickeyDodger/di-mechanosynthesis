@@ -59,9 +59,11 @@ bookkeeping on file contents, not results of electronic-structure calculations.
 | Activated | 48 | C17 H27 Ge O3 | 0 / 2 | 185 (odd) | Consistent with a doublet | 1, on `D-Cb` |
 
 The two compositions differ by exactly one iodine atom. With an effective core potential on iodine, the number of
-electrons treated explicitly in the precursor is 238 − *n*<sub>core</sub>(I). The value of *n*<sub>core</sub> for
-the selected basis is `UNVERIFIED` from project sources and must be taken from the installed engine's basis library
-or output. The activated donor contains no iodine and needs no effective core potential.
+electrons treated explicitly in the precursor is 238 − *n*<sub>core</sub>(I). When the E-01 attempt built the
+selected basis with the installed Psi4 1.11, the engine reported *n*<sub>core</sub>(I) = 46 and 192 explicit
+electrons for the precursor ([`../results/e01/raw/P-RKS-core.psi4.out`](../results/e01/raw/P-RKS-core.psi4.out)).
+This is basis-construction output only; no SCF completed. The activated donor contains no iodine and needs no
+effective core potential.
 
 ## 3. Generation of the coordinates
 

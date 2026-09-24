@@ -6,8 +6,9 @@ germanium-based molecular tool transfers a C2 unit to a pair of dangling bonds o
 surface under inverted-mode scanning tunnelling microscopy. The present work defines candidate structures for the
 tool and an electronic-structure validation protocol, which are prerequisites for modelling the coupled
 tool–surface system. The repository is an active research record that is revised as sources are examined and
-calculations are specified. It does not yet contain quantum-chemistry results, and it does not reproduce any
-experiment, model or calculation from the benchmark study.
+calculations are specified. It reports one engine-validation attempt, E-01, which stopped before producing any
+converged result ([results/e01](results/e01/README.md)). It contains no converged quantum-chemistry results, and it
+does not reproduce any experiment, model or calculation from the benchmark study.
 
 <p align="center">
   <img src="docs/figures/activated-donor.svg" width="720"
@@ -105,20 +106,32 @@ Si(100)-(2×1) comparator cluster with a C2 placeholder. They were constructed o
 with geometric dimer formation and hydrogen capping. Their coordinate files are not published, because they are
 not inputs to the first calculation and they contain placeholder geometry.
 
-The first calculation, designated E-01, is specified prospectively in
-[docs/e01-method-specification.md](docs/e01-method-specification.md) and has not been run. It asks whether the
-selected engine setup runs correctly on the two free donor candidates at fixed geometry. The setup is Psi4 1.11
-with the ωB97X-D3 functional, 6-31G(d,p) on all atoms except iodine, and LANL2DZ with its effective core potential
-on iodine [6, 7]. The criteria cover SCF convergence from several initial guesses, agreement between analytic and
-finite-difference gradients, spin contamination and run-to-run reproducibility. A radical-localization hypothesis
-for the activated donor is reported separately, and several clarifications of the specification remain open.
+The first calculation, designated E-01, asks whether the selected engine setup runs correctly on the two free donor
+candidates at fixed geometry. The setup is Psi4 1.11 with the ωB97X-D3 functional, 6-31G(d,p) on all atoms except
+iodine, and LANL2DZ with its effective core potential on iodine [6, 7]. The criteria cover SCF convergence from
+several initial guesses, agreement between analytic and finite-difference gradients, spin contamination and
+run-to-run reproducibility, with a radical-localization hypothesis for the activated donor reported separately.
+The prospective protocol in [docs/e01-method-specification.md](docs/e01-method-specification.md) records the
+preparation; its open clarifications were settled by review before the run, and the configuration actually used is
+[results/e01/method-config.json](results/e01/method-config.json) [21].
+
+E-01 was executed once on 2026-09-24. The precursor stopped at its first SCF job: Psi4 aborted during conventional
+integral setup with the error `PSIO_ERROR: 17 (Incorrect block start address)` after 852 s; no SCF iteration was
+printed. No converged electronic energy or gradient of either donor was produced, and every dependent criterion is
+INDETERMINATE. The
+activated donor was not run, because the failure may affect the shared configuration. The cause has not been
+diagnosed, and further diagnostic work is proposed but not executed. The report, the machine-readable outcome and
+the redacted engine output are in [results/e01](results/e01/README.md) [21].
 
 Whether Psi4 1.11 provides each capability the calculation requires is examined in
-[docs/engine-capability-status.md](docs/engine-capability-status.md). The inspected documentation is the
-development manual (version string `1.12a1.dev35`) [7], together with two source files from the `v1.11` tag
-[9, 10]. As a result, most capabilities remain unverified for an installed 1.11 build. The v1.11 source declares a
-`wB97X-D3` entry built from the Libxc identifier `HYB_GGA_XC_WB97X_D3` with a `d3zero2b` dispersion term [10].
-Whether this entry is equivalent to the functional used in the benchmark calculations has not been established.
+[docs/engine-capability-status.md](docs/engine-capability-status.md). That record combines the development manual
+(version string `1.12a1.dev35`) [7] and two source files from the `v1.11` tag [9, 10] with evidence from the
+installed build [20, 21]. The installation, the per-element basis construction with the iodine core potential (46
+core electrons) and the composition of the functional as printed by the engine are established for this build,
+and the configured dispersion route was exercised in a dispersion-only check. Analytic gradients with the core
+potential, ⟨S²⟩ reporting for unrestricted Kohn–Sham references, Löwdin spins and SCF behaviour at this size
+remain unverified, because no SCF completed. Whether the
+`wB97X-D3` entry is equivalent to the functional used in the benchmark calculations has not been established.
 
 ## Evidence classification and provenance
 
@@ -148,8 +161,9 @@ The table lists each tool with its current status in the project. Numbers refer 
 | Tool | Status here | Role |
 |---|---|---|
 | RDKit [13]; ASE [14] | Used in preparation, without quantum chemistry | Donor-candidate embeddings; structure building and extxyz input and output |
-| Psi4 1.11 [6] | Selected; not installed or validated here | Electronic-structure engine for the first calculation |
-| AiiDA [12] | Selected provenance system | Scientific job execution and computational provenance |
+| Psi4 1.11 [6] | Installed from conda-forge in a project-local environment [20]; installation and basis construction checked; the E-01 precursor SCF aborted during integral setup [21] | Electronic-structure engine for the first calculation |
+| simple-dftd3 1.6.0 [22] | Installed with Psi4 [20]; exercised in a dispersion-only check without SCF | D3 dispersion term of ωB97X-D3 |
+| AiiDA [12] | Used to store the hashed E-01 preparation and run records; not used to execute calculations | Computational provenance |
 | xtb [15] | Candidate, documentation only | GFN0-xTB, the benchmark's QM/MM partner method; the xtb documentation describes a GFN0 parameter file |
 | CP2K [16] | Candidate, documentation only | Periodic and QM/MM engine whose manual documents an internal GFN0-xTB option |
 | tblite [17] | Candidate, documentation only | Tight-binding library whose documentation lists GFN1-xTB, GFN2-xTB and IPEA1-xTB but not GFN0; not a substitute for the GFN0 route |
@@ -157,8 +171,9 @@ The table lists each tool with its current status in the project. Numbers refer 
 
 ## Repository contents
 
-The public export covers the donor candidates and their documentation. The surface-model coordinate files and the
-project's private working records are omitted, and the manifest lists each omission with its reason.
+The public export covers the donor candidates, their documentation and the E-01 result. The surface-model
+coordinate files and the project's private working records are omitted, and the manifest lists each omission with
+its reason.
 
 | Path | Contents |
 |---|---|
@@ -166,8 +181,12 @@ project's private working records are omitted, and the manifest lists each omiss
 | [docs/benchmark.md](docs/benchmark.md) | Attribution, reported observations and proposed mechanism of the benchmark study |
 | [docs/evidence-policy.md](docs/evidence-policy.md) | Evidence classes, classification rules and provenance requirements |
 | [docs/donor-candidates.md](docs/donor-candidates.md) | Donor identity, molecular graph, atom identifiers, electron bookkeeping, surface models and Figure 1 method |
-| [docs/e01-method-specification.md](docs/e01-method-specification.md) | Prospective specification of the first calculation |
-| [docs/engine-capability-status.md](docs/engine-capability-status.md) | Capabilities of Psi4 1.11 as established, or not, by archived primary sources |
+| [docs/e01-method-specification.md](docs/e01-method-specification.md) | Prospective specification of the first calculation, kept as the preparation record |
+| [docs/engine-capability-status.md](docs/engine-capability-status.md) | Capabilities of Psi4 1.11 as established, or not, by archived primary sources and the installed build |
+| [results/e01/README.md](results/e01/README.md) | E-01 result: the stopped attempt, runtime observations, hypotheses and proposed next work |
+| [results/e01/outcome.json](results/e01/outcome.json) | Machine-readable E-01 outcome with source hashes |
+| [results/e01/method-config.json](results/e01/method-config.json) | Method and environment configuration used by E-01 |
+| [results/e01/raw/](results/e01/raw/) | Engine output, error text, job input and classification of the precursor, redacted where stated |
 | [docs/figures/activated-donor.svg](docs/figures/activated-donor.svg) | Figure 1 |
 | [docs/figures/benchmark-outcomes.svg](docs/figures/benchmark-outcomes.svg) | Figure 2 |
 | [tools/render_donor_plate.py](tools/render_donor_plate.py) | Figure 1 renderer, with its bond table [tools/activated-donor-bonds.tsv](tools/activated-donor-bonds.tsv) |
@@ -196,5 +215,6 @@ export pending redistribution review. Work that builds on the benchmark should c
 3. Blue, B. *et al.* Towards Atom-by-Atom Fabrication: Mechanosynthetic donation and abstraction.
    arXiv:2606.13876 (2026). <https://doi.org/10.48550/arXiv.2606.13876>
 
-References [4] to [19], covering further literature and software documentation, are catalogued with versions,
-locators, verification basis and limitations in [docs/SOURCES.md](docs/SOURCES.md), which uses the same numbering.
+References [4] to [22], covering further literature, software documentation and the project's own E-01 records,
+are catalogued with versions, locators, verification basis and limitations in [docs/SOURCES.md](docs/SOURCES.md),
+which uses the same numbering.

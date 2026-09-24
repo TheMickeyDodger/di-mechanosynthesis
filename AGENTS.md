@@ -2,7 +2,8 @@
 
 This repository contains public, provenance-first research material on computational models of mechanically
 controlled chemistry. It holds an evidence policy, candidate input structures, a method specification, an engine
-capability record, a figure renderer and provenance manifests. It contains no quantum-chemistry results. The
+capability record, figure renderers, provenance manifests and the record of one stopped engine-validation attempt
+(`results/e01/`). It contains no converged quantum-chemistry results. The
 [README](README.md) describes the scientific scope. This document sets out the conventions that contributors, and
 automated agents in particular, are expected to follow.
 
@@ -14,8 +15,9 @@ automated agents in particular, are expected to follow.
 | `docs/evidence-policy.md` | Evidence classes and the rules every claim must follow |
 | `docs/benchmark.md` | What the benchmark preprint reports, with locators |
 | `docs/donor-candidates.md`, `structures/` | Agent-proposed, unoptimized candidate geometries, their bookkeeping and the Figure 1 method |
-| `docs/e01-method-specification.md` | Prospective specification of the first calculation, which has not been run |
-| `docs/engine-capability-status.md` | What archived engine sources establish, and what remains unverified |
+| `docs/e01-method-specification.md` | Prospective specification of the first calculation, kept as the preparation record |
+| `docs/engine-capability-status.md` | What archived engine sources and the installed build establish, and what remains unverified |
+| `results/e01/` | The stopped E-01 attempt: report, machine-readable outcome, configuration used and redacted engine output |
 | `tools/` | Deterministic renderers of Figures 1 and 2, with their input tables |
 | `provenance/EXPORT-MANIFEST.md` | SHA256 and derivation of every public file |
 | `.agents/RESEARCH-STATE.md` | Research-state record: intended end state, gates, status, open issues and next work |
@@ -44,7 +46,8 @@ software version used.
 
 The following restrictions reflect the present absence of reviewed results rather than permanent prohibitions, and
 each lifts only when reviewed evidence that meets the evidence policy exists. Energies, forces, gradients, spin
-populations and other quantum-chemistry results are not claimed, because no reviewed results exist yet. Neither
+populations and other quantum-chemistry results are not claimed, because no converged results exist; the only
+attempt, E-01, stopped during integral setup, and its cause is not diagnosed. Neither
 reproduction of the benchmark's experiments, surface model, mechanism or calculations, nor agreement with them, is
 claimed. The donor-candidate and surface geometries are not described as relaxed or validated, nor as verified
 against the benchmark authors' supplementary coordinates. Engine capabilities and functional equivalence that are

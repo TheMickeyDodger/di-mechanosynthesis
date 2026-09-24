@@ -20,7 +20,9 @@ Each claim is assigned one of six classes, or the `[GAP]` marker, according to t
 
 In the benchmark, for example, the reported count of 184 IR-C2 outcomes in 197 interactions is `[LIT]` over
 `[EXP]`, and the benchmark's QM/MM energy profile is `[LIT]` over `[COMP-PRED]`. The donor-candidate geometries in
-this repository are `[AGENT]`.
+this repository are `[AGENT]`. The record of the stopped E-01 attempt in `results/e01/` is a failure record of a
+software run under Section 4; it carries no class about chemistry, because no converged electronic energy or
+gradient of either donor was produced.
 
 ## 2. Rules of classification
 

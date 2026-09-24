@@ -1,0 +1,92 @@
+{
+ "species": "precursor",
+ "caps": {
+  "outcome": "PASS",
+  "evidence": "verified within caps"
+ },
+ "coverage": {
+  "coherent": true,
+  "complete": true,
+  "errors": [],
+  "status": {
+   "P-RKS-core": "STOPPED",
+   "P-RKS-sad": "NOT_PRODUCED_STOP",
+   "P-UKS-core": "NOT_PRODUCED_STOP",
+   "P-UKS-sad": "NOT_PRODUCED_STOP",
+   "P-UKS-bs": "NOT_PRODUCED_STOP",
+   "P-GRAD": "NOT_PRODUCED_STOP",
+   "P-REPEAT": "NOT_PRODUCED_STOP",
+   "P-HF-stab": "NOT_PRODUCED_STOP",
+   "FD:D-Cb:x:h=0.005:+": "NOT_PRODUCED_STOP",
+   "FD:D-Cb:x:h=0.005:-": "NOT_PRODUCED_STOP",
+   "FD:D-Cb:x:h=0.0025:+": "NOT_PRODUCED_STOP",
+   "FD:D-Cb:x:h=0.0025:-": "NOT_PRODUCED_STOP",
+   "FD:D-Cb:y:h=0.005:+": "NOT_PRODUCED_STOP",
+   "FD:D-Cb:y:h=0.005:-": "NOT_PRODUCED_STOP",
+   "FD:D-Cb:y:h=0.0025:+": "NOT_PRODUCED_STOP",
+   "FD:D-Cb:y:h=0.0025:-": "NOT_PRODUCED_STOP",
+   "FD:D-Cb:z:h=0.005:+": "NOT_PRODUCED_STOP",
+   "FD:D-Cb:z:h=0.005:-": "NOT_PRODUCED_STOP",
+   "FD:D-Cb:z:h=0.0025:+": "NOT_PRODUCED_STOP",
+   "FD:D-Cb:z:h=0.0025:-": "NOT_PRODUCED_STOP",
+   "FD:D-L1a-H1:x:h=0.005:+": "NOT_PRODUCED_STOP",
+   "FD:D-L1a-H1:x:h=0.005:-": "NOT_PRODUCED_STOP",
+   "FD:D-L1a-H1:x:h=0.0025:+": "NOT_PRODUCED_STOP",
+   "FD:D-L1a-H1:x:h=0.0025:-": "NOT_PRODUCED_STOP",
+   "FD:D-L1a-H1:y:h=0.005:+": "NOT_PRODUCED_STOP",
+   "FD:D-L1a-H1:y:h=0.005:-": "NOT_PRODUCED_STOP",
+   "FD:D-L1a-H1:y:h=0.0025:+": "NOT_PRODUCED_STOP",
+   "FD:D-L1a-H1:y:h=0.0025:-": "NOT_PRODUCED_STOP",
+   "FD:D-L1a-H1:z:h=0.005:+": "NOT_PRODUCED_STOP",
+   "FD:D-L1a-H1:z:h=0.005:-": "NOT_PRODUCED_STOP",
+   "FD:D-L1a-H1:z:h=0.0025:+": "NOT_PRODUCED_STOP",
+   "FD:D-L1a-H1:z:h=0.0025:-": "NOT_PRODUCED_STOP"
+  },
+  "halt": "STOP at P-RKS-core (STOPPED)",
+  "next_item": null,
+  "reference_solution": null,
+  "reference_note": null,
+  "fd_missing": []
+ },
+ "stop": {
+  "stopped": true,
+  "conditions": [
+   "STOPPED: P-RKS-core (ENGINE-ERROR: exit -6, no result file)"
+  ],
+  "note": "reported result; no calculation continued past it; nothing retuned or retried"
+ },
+ "scf_convergence": {
+  "outcome": "INDETERMINATE",
+  "not_converged": [],
+  "not_produced_stopped_or_missing": [
+   "P-RKS-core",
+   "P-RKS-sad",
+   "P-UKS-core",
+   "P-UKS-sad",
+   "P-UKS-bs"
+  ]
+ },
+ "multiple_guess_consistency": {
+  "ks_stability": "INDETERMINATE (cannot be established by multiple guesses; never PASS)",
+  "spread": {
+   "n_converged": 0,
+   "n_scheduled": 5
+  },
+  "outcome": "INDETERMINATE",
+  "reason": "not every scheduled solution converged (partial, reported)"
+ },
+ "hf_stability": {
+  "outcome": "INDETERMINATE",
+  "reason": "not evaluable (unavailable, not produced or missing)"
+ },
+ "gradient": {
+  "outcome": "INDETERMINATE",
+  "reason": "gradient job NOT_PRODUCED_STOP",
+  "halt": "STOP at P-RKS-core (STOPPED)",
+  "note": null
+ },
+ "reproducibility": {
+  "outcome": "INDETERMINATE",
+  "reason": "gradient NOT_PRODUCED_STOP, repeat NOT_PRODUCED_STOP"
+ }
+}

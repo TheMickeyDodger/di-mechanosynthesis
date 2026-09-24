@@ -1,7 +1,15 @@
 # First calculation (E-01): prospective specification of donor-only engine validation
 
+**Status (2026-09-24).** This document is the preparation record and is kept as written. Its open clarifications
+were settled by review before the run, and the configuration actually used is
+[`../results/e01/method-config.json`](../results/e01/method-config.json). E-01 was executed once: the precursor
+stopped when the engine aborted during integral setup, no converged result was produced and the activated donor
+was not run ([`../results/e01/`](../results/e01/README.md)). Statements below about the calculation not having
+been run, and about open clarifications, describe the state before the run.
+
 This document adapts the project's accepted method definition for the first planned calculation, designated E-01.
-The calculation has not been run, and the specification still contains open clarifications (Section 5). Its
+The calculation had not been run when it was written, and the specification then contained open clarifications
+(Section 5). Its
 numerical thresholds are prospective engineering choices, not literature values, unless stated otherwise. Several
 engine capabilities on which it depends are unverified for the selected program version, as recorded in
 [engine-capability-status.md](engine-capability-status.md). The definition originates in an agent-prepared
@@ -122,11 +130,26 @@ One apparent ambiguity has been clarified. The ⟨S²⟩ tolerance of 0.01 belon
 consistency across initial guesses (Section 3). The statement that no 0.01 tolerance is used applies only to the
 localization hypothesis (Section 4). The two sections have separate scopes.
 
-Four technical clarifications remain open and must be settled before any run:
+Four technical clarifications were open when this specification was written and had to be settled before any
+run:
 - whether the precursor also runs unrestricted, and with which guess set
 - which leg hydrogen, and which species, the finite-difference check samples
 - whether the full set of sub-calculations fits the per-species budget
 - how a run proceeds if ⟨S²⟩ is unavailable, since the stop at ⟨S²⟩ ≥ 1.05 could not then be evaluated
+
+They were settled by review before the run, as recorded in
+[`../results/e01/method-config.json`](../results/e01/method-config.json):
+- the precursor schedule prescribes restricted core and SAD guesses, with unrestricted core, SAD and
+  broken-symmetry guesses for comparison; in the run only the restricted core guess was attempted, and every later
+  guess was not run after the stop
+- the finite-difference check samples `D-Cb` and the leg hydrogen `D-L1a-H1` in both species
+- the per-species budget is an aggregate ceiling; exhausting it is a reported stop, and the budget was not shown in
+  advance to suffice
+- an unavailable ⟨S²⟩ downgrades the dependent criteria and makes the localization hypothesis not evaluable,
+  without substituting a value
+
+The run also applied one rule more strictly than the text above: any SCF non-convergence, and ⟨S²⟩ ≥ 1.05 for any
+converged unrestricted guess, stops that species at once, before any further job.
 
 ## 6. What E-01 can and cannot establish
 

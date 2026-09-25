@@ -318,7 +318,7 @@ Nothing here was executed except the smoke test in SMOKE-AND-ENVIRONMENT-RECORD.
 | 8 | Cost | `[AGENT]` | Hybrid DFT on a small molecule: modest relative to any slab calculation (qualitative, unmeasured) | Not applicable |
 | 9 | Integration | `[AGENT]` | Cross-engine **molecular** check for P2 (functional definition, D3 variant) and the ωB97X-D/def2-TZVPP proxy (spike M10). Not periodic; not a QM/MM host for the needed scheme | Not applicable |
 | 10 | Overlap | `[AGENT]` | Any second engine implementing ωB97X-D3 could serve the P2 check; Psi4 is chosen because it lists the functional and ships arm64 conda packages | Not applicable |
-| 11 | Decision | `[AGENT]` | **Reduces custom work narrowly; ADOPT as a conditional validation utility, not a runtime minimum.** If omitted, P2 internal consistency could be established with another engine that implements ωB97X-D3, or left open | MS-000-COMPUTE-SPIKE.md §4 P2 |
+| 11 | Decision | `[AGENT]` | **Reduces custom work narrowly; ADOPT as a conditional validation utility, not a runtime minimum.** The package is optional: another engine that implements ωB97X-D3 can serve instead. The capability is required: without a second implementation of ωB97X-D3 the P2 cross-engine check cannot run, spike §8.3 C5 is unmet, and Stage 2 may not begin | MS-000-COMPUTE-SPIKE.md §4 P2, §8.3 |
 
 ## 3. Conditional minimum stack for MS-001
 
@@ -328,7 +328,8 @@ Nothing here was executed except the smoke test in SMOKE-AND-ENVIRONMENT-RECORD.
 |---|---|---|---|
 | **Required runtime (conditional)** | ASE 3.29.x; CP2K 2026.2; AiiDA 2.9.x with `aiida-cp2k` | Structure/constraints/IO; the DFT level and the GFN0 level; scientific job execution and provenance. The two-level coupling comes from one of the existing reuse candidates in Section 4 (ASE `SimpleQMMM` is inside ASE; CP2K `MIXED` is inside CP2K), **once a route is demonstrated (P3b)** | No MS-001 run is possible without a structure layer, an engine for both levels, and a provenance owner |
 | **Conditional coupling-route candidate outside the required tier** | Py-ChemShell 25.0 (`NLayerSubtractive`) | Only if selected as the coupling route (Section 4.3); brings link-atom options | Not needed if route R-A or R-B is demonstrated |
-| **Conditional reference/validation utilities** | xtb CLI 6.7.x (GFN0 reference implementation and parameter-file provenance); Psi4 1.11 (P2 molecular cross-engine check) | Stage 1 method-validation calculations (spike §8.2) | xtb: CP2K-internal GFN0 remains usable; identity provenance still possible; cross-implementation comparison lost. Psi4: another engine implementing ωB97X-D3 could serve, or P2 internal consistency stays open |
+| **Required validation capability (package optional)** | A second implementation of ωB97X-D3; candidate package Psi4 1.11 | P2 molecular cross-engine check, a Stage 1 method-validation calculation (spike §8.2) | Another engine implementing ωB97X-D3 may replace Psi4. With no second implementation the P2 check cannot run, spike §8.3 C5 is unmet, and Stage 2 may not begin |
+| **Optional reference utility** | xtb CLI 6.7.x (GFN0 reference implementation and parameter-file provenance) | Cross-implementation GFN0 comparison in Stage 1 | CP2K-internal GFN0 remains usable and identity provenance is still possible; the cross-implementation comparison is lost; no stage is blocked. If the selected composition takes its GFN0 level from xtb, xtb is a required runtime tool instead |
 | **Optional visualization** | OVITO Python module / Basic | Trajectory bond analysis and rendering | ASE renders computed coordinates; nothing in the gate depends on OVITO |
 | **Supporting analysis only** | ASE NEB (part of ASE); Sella (optional) | Fixed-z barrier questions | Not required to observe E1–E6 |
 
@@ -339,14 +340,17 @@ the set, namely QCFractal or pyiron as a different workflow/provenance owner, Py
 with link-atom options (which would add a tool), another engine implementing ωB97X-D3 in place of Psi4 for the P2
 check, and ASE's own viewer in place of OVITO. Those alternatives are retained as documented options; selecting
 one re-opens the minimum set. Within the proposed composition, removing a required-tier tool removes a role the
-composition needs; removing a validation or visualization tool weakens a check but, as the table says, does not by
-itself prevent the parity checks where an alternative exists.
+composition needs. Removing Psi4 is possible only if another engine supplies the required cross-engine capability;
+without that capability Stage 2 is blocked (spike §8.3 C5). Removing OVITO, or removing xtb where it does not
+supply the GFN0 level, weakens a check or the rendering and blocks no stage. Where the selected composition takes
+its GFN0 level from xtb, xtb is a required runtime tool, and removing it blocks Stage 1 onward.
 
-**Deferred, with reason:** Pynta (metallic-surface domain; Fireworks + MongoDB), SCINE Chemoton/Puffin (no
-network-exploration requirement in MS-001; re-evaluate at MS-004), QCFractal (duplicates AiiDA; PostgreSQL),
-Sella (optional), xtb-python (deprecated upstream; stale wheels), tblite (no GFN0), pyiron and atomate2 (second
-workflow owners; no matching workflow), autodE and KinBot (molecular/gas-phase problem shape), OpenSCAD (no MS-001
-role).
+**Rejected for MS-001, with reason:** Pynta (metallic-surface domain; Fireworks + MongoDB), tblite for GFN0 (no
+GFN0), autodE and KinBot (molecular/gas-phase problem shape).
+
+**Deferred, with reason:** SCINE Chemoton/Puffin (no network-exploration requirement in MS-001; re-evaluate at
+MS-004), QCFractal (duplicates AiiDA; PostgreSQL), Sella (optional), xtb-python (deprecated upstream; stale
+wheels), pyiron and atomate2 (second workflow owners; no matching workflow), OpenSCAD (no MS-001 role).
 
 **The stack stays CONDITIONAL until these are resolved** (closing evidence in MS-000-COMPUTE-SPIKE.md §4):
 

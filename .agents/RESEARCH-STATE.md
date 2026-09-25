@@ -73,7 +73,7 @@ its label. The remaining gates are:
 | Functional identity | Open. The installed build runs the `wB97X-D3` entry through Libxc 7.1.2; the installed `libxc_functionals.py` differs from the v1.11 tag at the TH-FL entry only. Equivalence to the literature and benchmark functional is unresolved. |
 | Compute-environment controls | A recorded process-containment "failure" was an intentional negative control: the expected detection of a descendant process, followed by cleanup. The accepted reassessment explains it, and no rerun is implied. In E-01 the sampled resource and cleanup controls recorded the precursor job within the envelope with verified cleanup; these are sampled observations and cooperative limits, not hard containment. |
 | Result records | The E-01 preparation and run records were stored with verified digests in the project's provenance system. This is record-keeping, not a scientific result. |
-| MS-000 feasibility package | The complete public adaptation is versioned under [docs/ms-000](../docs/ms-000/README.md). It records the benchmark extraction, conditional minimum stack, open parity gaps, evidence policy, source ledger, and ASE smoke test. Its scientific gate remains PENDING. |
+| MS-000 feasibility package | The complete public adaptation is versioned under [docs/ms-000](../docs/ms-000/README.md). It records the benchmark extraction, conditional minimum stack, open parity gaps, evidence policy, source ledger, and ASE smoke test. Its [closure record](../docs/ms-000/CLOSURE.md) disposes the six feasibility criteria that form the MS-000 gate: all six are met, including independent scientific review of the plan, and the gate is PASS. MS-001 faithful-reproduction readiness remains BLOCKED on missing source inputs and missing parity and coupling evidence. Human authorization of MS-001 is absent, and neither scope option is selected. |
 
 ## 4. Completed source inspection
 
@@ -139,10 +139,15 @@ The full catalogue, with links, locators and verification basis, is in [docs/SOU
 
 ## 6. Next bounded work
 
-Before any pathway calculation, the research must decide whether to remain blocked pending source coordinates and
-methods or to authorize a declared-deviation study under a fully specified open-source setup. Either choice must
-preserve the prerequisites and evidence limits in the [MS-000 compute spike](../docs/ms-000/MS-000-COMPUTE-SPIKE.md).
-No choice is made by this repository update.
+The MS-000 gate is PASS, with all six feasibility criteria met, including independent scientific review of the
+plan ([closure record §2](../docs/ms-000/CLOSURE.md#2-gate-disposition)). The pass selects and authorizes nothing.
+Before any pathway calculation, a person must make the MS-001 scope decision. One option is faithful reproduction (option A), which remains blocked until
+the source coordinates and methods are obtained and parity evidence exists. The other is to authorize a
+declared-deviation study under a fully specified open-source setup (option B). The Stage 0, Stage 1 and Stage 2
+preconditions of both options are set out in the
+[MS-000 closure record](../docs/ms-000/CLOSURE.md#8-stage-preconditions-for-scope-options-a-and-b), and the
+prerequisites and evidence limits in the [MS-000 compute spike](../docs/ms-000/MS-000-COMPUTE-SPIKE.md) apply to
+either choice. No choice is made by this repository update.
 
 The steps listed here earlier have been completed, closed or left as proposals, as follows. E-01 is closed, and
 no step of it is pending.
@@ -179,3 +184,4 @@ restatement. Superseded statements are corrected in place and noted in the log r
 | 2026-09-24 | E-01 executed once and stopped (engine abort during integral setup; activated donor unrun). Superseded in place: the statements that E-01 had not been run, that Psi4 was not installed and that the method clarifications were open. Capability, functional-identity, resource and next-work entries updated on the new evidence. |
 | 2026-09-24 | E-01 closeout recorded. A source-level postmortem and a static survey of the installed build identified no cause, no exact executable diagnostic could be specified, a narrower guard-only replay was declined, and the attempt is closed as technically blocked and scientifically indeterminate. Superseded in place: next-work steps 1 to 3, now recorded as completed or closed. Status, source-inspection and open-issue entries updated on the closeout records. |
 | 2026-09-24 | The complete public MS-000 feasibility package was added under `docs/ms-000/`; its PENDING scientific gate and the existing E-01 status are unchanged. |
+| 2026-09-24 | MS-000 closure recorded in `docs/ms-000/CLOSURE.md`. Six feasibility criteria form the MS-000 gate. All six are met, including independent scientific review of the plan, and the gate is PASS. MS-001 faithful-reproduction readiness remains BLOCKED on missing source inputs and missing parity and coupling evidence. Human authorization of MS-001 is absent, and no scope option is selected. The compute spike's MS-001 protocol was corrected for forward dependencies and missing Stage 0 items. It gained a numerical-convergence protocol with a Stage 1a calibration, direct composite calibration, and defined Stage 2 checkpoints. The architecture's gate language was separated from authorization. Superseded in place: the MS-000 row, which now gives the disposition of each criterion, and the next-work paragraph. E-01 status unchanged. |

@@ -3,14 +3,15 @@
 Status: public adaptation of the MS-000 architecture record. It assigns responsibilities for research control,
 scientific computation, workflow provenance, and visualization. It does not authorize a calculation.
 
-Companion documents: [MS-000-COMPUTE-SPIKE.md](MS-000-COMPUTE-SPIKE.md), [EVIDENCE-POLICY.md](EVIDENCE-POLICY.md),
-[OPEN-SOURCE-LANDSCAPE.md](OPEN-SOURCE-LANDSCAPE.md), [SOURCE-LEDGER.md](SOURCE-LEDGER.md).
+Companion documents: [MS-000-COMPUTE-SPIKE.md](MS-000-COMPUTE-SPIKE.md), [CLOSURE.md](CLOSURE.md),
+[EVIDENCE-POLICY.md](EVIDENCE-POLICY.md), [OPEN-SOURCE-LANDSCAPE.md](OPEN-SOURCE-LANDSCAPE.md),
+[SOURCE-LEDGER.md](SOURCE-LEDGER.md).
 
 ## 1. What this program is
 
 A human-gated research program whose first scientific target is the Cowie et al. 2026 IR-C2 donation model
 (arXiv:2605.27250) as characterised in MS-000-COMPUTE-SPIKE.md. MS-000 is a feasibility spike: it produces
-documents, a source ledger and one import/IO smoke test. It runs no chemistry.
+documents, a source ledger, one import/IO smoke test and a closure record. It runs no chemistry.
 
 ## 2. Ownership boundaries
 
@@ -20,7 +21,7 @@ documents, a source ledger and one import/IO smoke test. It runs no chemistry.
 | **Scientific engines** (xtb, CP2K, Psi4; conditional) | Energies, forces, structures, populations, and every physical conclusion drawn from them | Mission state, evidence class assignment, review decisions |
 | **Scientific workflow system** (AiiDA, conditional; QCFractal deferred as an alternative) | Scientific job execution, restarts, and the computational provenance graph (inputs, codes, outputs, hashes) | Authorization, evidence-class labeling, delivery |
 | **Structure/analysis/rendering libraries** (ASE, OVITO) | Building, constraining, reading/writing and rendering **computed** coordinates; connectivity analysis | Physics (they have no energies without an engine) |
-| **Humans** | Every milestone gate; scope decisions (e.g., faithful reproduction vs declared-deviation study); MS-001 authorization | Get replaced by an approval a machine minted |
+| **Humans** | Authorization to proceed past every milestone gate; scope decisions (e.g., faithful reproduction vs declared-deviation study); MS-001 authorization | Get replaced by an approval a machine minted |
 
 Consequences for tool selection (OPEN-SOURCE-LANDSCAPE.md): a second workflow engine (Fireworks via Pynta or
 atomate2; pyiron; Puffin/MongoDB) duplicates the workflow-system role and is deferred; DI does not implement a
@@ -35,15 +36,16 @@ by another.
 
 | Milestone | Content | Gate |
 |---|---|---|
-| **MS-000** | This spike: stack, gaps, evidence policy, prospective protocol | Independent document review; scientific gate PENDING (spike §8.1); separate human authorization required before MS-001 |
+| **MS-000** | This spike: stack, gaps, evidence policy, prospective protocol | The six feasibility criteria (spike §8.1): PASS, all six met, including independent scientific review of the plan ([CLOSURE.md §2](CLOSURE.md#2-gate-disposition)); separate human authorization required before MS-001 |
 | **MS-001** | IR-C2 reproduction under a human-selected scope option (faithful reproduction is BLOCKED on missing inputs and parity evidence, with its own prerequisites in spike §8.3-A; a declared-deviation study is a possible option, not selected, with its own prerequisites in §8.3-B) | Human authorization; the option's prerequisites; Stage 0 → Stage 1 (method-validation calculations) → Stage 2 (trajectory), each Reviewer-checked (spike §8.2) |
 | **MS-002** | IR-C2 → IR-C4 reproduction (Cowie Fig. 4 model) | Human authorization after MS-001 review |
 | **MS-003** | Perturb mechanical variables (approach depth, step size, lateral offset, leg configuration), including the deeper-approach alternative pathway (spike M8) | **Only after both MS-001 and MS-002 pass**; human authorization |
 | **MS-004** | Off-target and competing hypotheses (H abstraction, Si abstraction, the 2IR-C4 off-target product's two proposed pathways) | Requires review; this is the **first unanswered scientific question** in the program; human authorization |
 | **MS-100+** | Anything beyond single validated primitives | Only after validated primitives exist; human authorization |
 
-A milestone "passes" only when its declared observations are met with full provenance, an independent Reviewer
-approves, and a human records authorization to proceed. A blocked or pending gate is a valid state.
+A milestone's gate is met only when its declared criteria are met with full provenance and an independent
+Reviewer approves. Proceeding to the next milestone additionally requires a separate, recorded human
+authorization, which a met gate does not imply (Section 6). A blocked or pending gate is a valid state.
 
 ## 4. Explicitly deferred
 
@@ -73,9 +75,11 @@ and no latency or throughput figure exists in the source.
 | **Scientific gate** | Evidence against the milestone's declared criteria, independently checked | The milestone's prerequisites are met with evidence | Authorization to proceed |
 | **Human authorization** | A person, recorded by DI | Permission to start the next milestone under a stated scope | That the gate was passed on merit (a human may authorize a bounded study while the gate stays pending, and must say so) |
 
-The MS-000 scientific gate is **PENDING** for the reasons in spike §8.1: missing trajectory setup, missing parity
-evidence, no public independent-review approval, and pending review of the tolerance procedure. This page conveys
-no authorization for MS-001.
+The MS-000 gate is its six feasibility criteria (spike §8.1). All six are met, including independent scientific
+review of the plan, and the gate is **PASS** ([CLOSURE.md §2](CLOSURE.md#2-gate-disposition)).
+MS-001 faithful-reproduction readiness is a separate status of scope option A. It remains **BLOCKED** on missing
+source inputs and missing parity and coupling evidence (spike §5), and no authorization could change that. This
+page conveys no authorization for MS-001.
 
 ## 7. Repository boundary
 

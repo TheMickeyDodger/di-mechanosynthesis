@@ -1,13 +1,14 @@
 # MS-000 Compute Spike: Cowie IR-C2 as a reproduction target
 
-Status: public adaptation of the MS-000 feasibility study. MS-000 scientific gate: **PENDING**
-([Section 8](#8-ms-000-scientific-gate-and-ms-001-prospective-protocol)). Faithful-reproduction readiness:
-**BLOCKED** on missing inputs and missing parity evidence ([Section 5](#5-reproduction-readiness-and-scope-options)).
-This document does not authorize MS-001 work.
+Status: public adaptation of the MS-000 feasibility study. The MS-000 gate is the six feasibility criteria of
+[Section 8.1](#81-ms-000-gate-criteria-and-current-status). It is **PASS**: all six criteria are met, including
+independent scientific review of the plan ([CLOSURE.md §2](CLOSURE.md#2-gate-disposition)). MS-001
+faithful-reproduction readiness is **BLOCKED** on missing source inputs and missing parity and coupling evidence
+([Section 5](#5-reproduction-readiness-and-scope-options)). This document does not authorize MS-001 work.
 
-Companion documents: [ARCHITECTURE.md](ARCHITECTURE.md), [EVIDENCE-POLICY.md](EVIDENCE-POLICY.md),
-[OPEN-SOURCE-LANDSCAPE.md](OPEN-SOURCE-LANDSCAPE.md), [SOURCE-LEDGER.md](SOURCE-LEDGER.md),
-[SMOKE-AND-ENVIRONMENT-RECORD.md](SMOKE-AND-ENVIRONMENT-RECORD.md).
+Companion documents: [CLOSURE.md](CLOSURE.md), [ARCHITECTURE.md](ARCHITECTURE.md),
+[EVIDENCE-POLICY.md](EVIDENCE-POLICY.md), [OPEN-SOURCE-LANDSCAPE.md](OPEN-SOURCE-LANDSCAPE.md),
+[SOURCE-LEDGER.md](SOURCE-LEDGER.md), [SMOKE-AND-ENVIRONMENT-RECORD.md](SMOKE-AND-ENVIRONMENT-RECORD.md).
 
 Evidence-class tags (defined in EVIDENCE-POLICY.md): `[EXP]` experimentally demonstrated, `[COMP-REPRO]`
 computationally reproduced, `[COMP-PRED]` computationally predicted, `[LIT]` literature-derived, `[AGENT]`
@@ -238,7 +239,7 @@ One row per requirement. Column 3 names candidates evaluated in OPEN-SOURCE-LAND
 
 | # | Cowie method element (locator) | Required capability | Candidate open-source implementation | Known gap | MS-001 plan (conditional) |
 |---|---|---|---|---|---|
-| M1 | H:Si(100)-2×1 SPC apex carrying the IR-DB pair; Fig. 1B–C | Atomistic model with atom identities; cluster/slab, size, termination | ASE (`ase.build`, `Atoms`, tags) | Cowie geometry unknown `[GAP]`; any model is `[AGENT]` | Construct a candidate model; label `[AGENT]`; Reviewer signs off on the model definition before Stage 2 |
+| M1 | H:Si(100)-2×1 SPC apex carrying the IR-DB pair; Fig. 1B–C | Atomistic model with atom identities; cluster/slab, size, termination | ASE (`ase.build`, `Atoms`, tags) | Cowie geometry unknown `[GAP]`; any model is `[AGENT]` | Construct a candidate model; label `[AGENT]`; Reviewer signs off on the model definition before Stage 1 (8.3 B1) |
 | M2 | EAOGe-C2• with three OH legs on the Si sample; representative leg configuration (Fig. 1A; Fig. 3 caption) | Molecular builder; treatment of legs and sample-side surface | ASE; engines for relaxation | No coordinates; leg attachment non-unique; explicit-vs-implicit legs and their level unknown `[GAP]` | Model one leg configuration; record it as a choice and a deviation |
 | M3 | Two-level energetics per the trajectory label (Fig. 3, Fig. 4 captions) | GFN0-xTB energies/forces; ωB97X-D3 energies/forces (range-separated hybrid + D3); a coupling scheme | GFN0: xtb `--gfn 0` or CP2K `GFN_TYPE 0`. DFT: CP2K via libxc `WB97X_D3` with HF and VDW sections, or Psi4 for cluster-only checks. Coupling: three existing subtractive-composition candidates (ASE `SimpleQMMM`; CP2K `MIXED`/`GENMIX` with `MAPPING`; Py-ChemShell `NLayerSubtractive`), none yet shown to compose GFN0 with ωB97X-D3 for this system (P3b) | Partition, embedding, link atoms, HFX/range-separation/D3 damping/basis/ECP all unstated; **no implementation can be shown equivalent** (P1–P3); coupling route not yet demonstrated (P3b) | No parity claim. Any scheme is a declared deviation, frozen in provenance, run only under an authorized scope option and only once a P3b route is demonstrated and its coupled gradient validated |
 | M4 | Driven coordinate z with approach then retraction (Fig. 3E; §3) | Externally driven constrained relaxation at a sequence of fixed z, keeping both branches and atom identity | ASE constraints (`FixAtoms` on remote layers of each body; rigid displacement of one body per step) with ASE or Sella minimization; engines from M3 | Drive definition unstated (P4) | Driven-scan protocol with explicit fixed sets, step, per-step criteria and branch bookkeeping; **no NEB substitute** |
@@ -273,12 +274,13 @@ SOURCE-LEDGER.md.
 
 ## 5. Reproduction readiness and scope options
 
-**Faithful-reproduction readiness: BLOCKED.** A faithful reproduction requires the Cowie model geometry,
+**MS-001 faithful-reproduction readiness: BLOCKED.** A faithful reproduction requires the Cowie model geometry,
 partition, embedding, numerical setup and drive protocol. None is available to this study (Section 1), and no
-parity evidence exists for any candidate implementation (Section 4). Readiness is evidence-based: it changes only
-when those inputs are obtained through an authorized channel **and** equivalence evidence exists (8.3-A). A human
-decision cannot change it; a human can only authorize a different scope (option B), which has its own, separate
-prerequisites (8.3-B).
+parity evidence or demonstrated coupling route exists for any candidate implementation (Section 4). Readiness is
+evidence-based: it changes only when those inputs are obtained through an authorized channel **and** equivalence
+evidence exists (8.3-A). A human decision cannot change it; a human can only authorize a different scope (option
+B), which has its own, separate prerequisites (8.3-B). This status belongs to option A and is not an MS-000 gate
+criterion (8.1).
 
 Two scope options exist for MS-001. **Neither is selected here; selection is a human-reviewed scope decision.**
 
@@ -341,19 +343,23 @@ CP2K, tblite, Psi4 or AiiDA was installed or executed; `which xtb cp2k cp2k.psmp
 
 Three things are kept separate: **document acceptance** (an independent reviewer approves these documents as a research
 deliverable), the **scientific gate** (MS-000 criteria met with evidence), and **human authorization** (a person
-authorizes MS-001 and its scope option). None implies another.
+authorizes MS-001 and its scope option). None implies another. The MS-000 gate is the six criteria of 8.1. MS-001
+faithful-reproduction readiness (Section 5) is a status of scope option A, not a further MS-000 criterion.
 
 ### 8.1 MS-000 gate criteria and current status
 
-| Criterion (operator handoff) | Status | Evidence / blocker |
+The criterion-by-criterion evidence and the kind of dependence of each criterion are set out in
+[CLOSURE.md §2](CLOSURE.md#2-gate-disposition).
+
+| Criterion | Status | Evidence / basis |
 |---|---|---|
-| Credible stack identified | **MET, CONDITIONAL** | OPEN-SOURCE-LANDSCAPE.md §3 |
+| Credible stack identified | **MET** | OPEN-SOURCE-LANDSCAPE.md §3–§4. The stack is conditional; its conditions (P1–P4 and P3b, Section 4) are MS-001 stage preconditions (8.3), not MS-000 criteria |
 | All major Cowie requirements mapped to implementations or explicit gaps | **MET** | Sections 3 and 4 |
-| Justified minimum dependency set | **MET** | OPEN-SOURCE-LANDSCAPE.md, adopt/defer/reject per tool |
-| Prospective MS-001 acceptance criteria | **MET qualitatively; numerical tolerances PENDING the 8.6 procedure** | Sections 8.4–8.6 |
+| Justified minimum dependency set | **MET** | OPEN-SOURCE-LANDSCAPE.md, adopt/defer/reject per tool and the §3 tiers; the P2 cross-engine capability is required while its package is optional ([CLOSURE.md §4](CLOSURE.md#4-dependency-set)) |
+| Prospective MS-001 acceptance criteria | **MET** | Sections 8.4–8.6: qualitative criteria; tolerances that are documented stopping criteria, declared multiples, declared acceptance budgets applied through explicit rules, or declarations; a numerical-convergence protocol whose calibration (Stage 1a) precedes the checks that consume it; pass, fail and indeterminate rules with blocking dispositions; defined Stage 2 checkpoints; no forward dependency |
 | No LLM physics | **MET** | Every physical statement is `[EXP]`/`[COMP-PRED]` with a Cowie locator, `[LIT]` with a source, or a `[GAP]`; none originates from an LLM |
-| Independent scientific review approves the plan | **PENDING in this public record** | This adaptation publishes no private review receipt and claims no approval |
-| **Overall MS-000 scientific gate** | **PENDING** | Reasons, in order: (1) the trajectory setup (geometry, partition, embedding, numerics, drive) is unavailable; (2) no parity evidence exists for P1–P4, and no two-level coupling route has been demonstrated for this system through any of the identified reuse candidates (P3b); (3) independent scientific approval is not established in this public record; (4) tolerance selection under 8.6 awaits review. **Not marked passed.** |
+| Independent scientific review approves the plan | **MET** | The independent review recorded APPROVE for the scientific plan and bound the decision through export-manifest SHA256 `50bd256010b680f708cc7a8455018d331f098724cba29ebe69c6cd3c5c7b7a33`; the separate private review record is not published ([CLOSURE.md §2](CLOSURE.md#2-gate-disposition)). A final independent review checks this status promotion against that decision. Review assesses a plan; it is neither physical evidence nor parity validation |
+| **MS-000 gate (all six criteria)** | **PASS** | All six criteria are met. MS-001 faithful-reproduction readiness stays BLOCKED on missing source inputs and parity and coupling evidence (Section 5), no scope option is selected and no MS-001 work is authorized |
 
 ### 8.2 Sequencing: preliminary method-validation calculations precede scientific trajectory calculations
 
@@ -362,9 +368,9 @@ MS-001 scope option, and they precede **Stage 2** (the scientific trajectory).
 
 | Stage | Content | Precondition |
 |---|---|---|
-| 0 | No calculations. Under option A: the source-provided model, partition, embedding, links, charge/spin, numerics and drive frozen and hashed. Under option B: model definitions (M1, M2), declared scheme (P3), drive protocol (P4). Under either: a coupling route selected from the reuse candidates (P3b), tolerance-selection record (8.6), provenance wiring test on a trivial AiiDA job | 8.3 "before Stage 0" group only: human authorization of a scope option (C1) and, for option A, the source inputs (A1) |
-| 1 | Preliminary method-validation calculations: P1 GFN0 identity run with full provenance; P2 cross-engine molecular check; **composite coupled energy/gradient validation** (8.5); constraint-projection check | 8.3 "before Stage 1" group: Stage 0 definitions frozen (C2–C4 and A3, or B1–B3); Reviewer approval of the definitions |
-| 2 | Scientific trajectory calculations (M4–M6), then optional supporting analyses (M7) | 8.3 "before Stage 2" group: Stage 1 results reviewed (C5, C6, and A2/A4 or B4); no parameter changed after Stage 1 without a recorded reason unrelated to agreement with the paper |
+| 0 | No chemistry calculations; the only execution is the provenance wiring test on a trivial AiiDA job, a software check. Under option A: the source-provided model, partition, embedding, links, charge/spin, numerics and drive frozen and hashed, any setting the source leaves unstated declared as a deviation, and the per-item equivalence tests defined (A5). Under option B: model definitions (M1, M2), declared scheme with the settings of both levels (P3, P2), drive protocol (P4). Under either: a coupling route selected from the reuse candidates (P3b), tolerance-selection record and numerical-convergence protocol (8.6), validation set (C7), provenance wiring test | 8.3 "before Stage 0" group only: human authorization of a scope option (C1) and, for option A, the source inputs (A1) |
+| 1 | **Stage 1a, numerical calibration:** refinement ladders and repeats on every validation configuration for every constituent evaluation and for the direct composite coupled energy and mapped gradient, and on the P2 test molecule in both engines (8.6 N1–N4). **Stage 1b, method validation**, which consumes only recorded Stage 1a outputs: P1 GFN0 identity run with full provenance; P2 cross-engine molecular check (N7); constituent-level and **composite coupled energy/gradient validation** (8.5, N5); constraint-projection check (N8); under option A, the equivalence tests (A5) | 8.3 "before Stage 1" group: Stage 0 definitions frozen (C2–C4, C7, and A3/A5 or B1–B3); Reviewer approval of the definitions |
+| 2 | Scientific trajectory calculations (M4–M6) with the checkpoints of 8.5, then optional supporting analyses (M7) on results that are not quarantined | 8.3 "before Stage 2" group: Stage 1 results reviewed (C5, C6, and A2/A4 or B4); every change to a frozen value made through the revision sequence in 8.6 |
 
 ### 8.3 MS-001 prerequisites, per stage and per scope option
 
@@ -373,7 +379,8 @@ stage. Every check below is required; the grouping only fixes where each one sit
 
 **Before Stage 0 may begin (authorization and inputs only):**
 
-- C1. Human authorization of a scope option (Section 5), recorded by DI separately from document acceptance.
+- C1. Human authorization of a scope option (Section 5), recorded by DI separately from document acceptance and
+  from the MS-000 gate.
 - Option A only, evidence-based, none currently met:
   - A1. Source inputs obtained through an authorized channel: the Cowie model geometry with atom identities,
     partition, embedding and link treatment, charge and spin, basis/ECP and dispersion parameters, drive
@@ -385,30 +392,55 @@ stage. Every check below is required; the grouping only fixes where each one sit
 
 - C2. A coupling route **selected** from the reuse candidates (P3b) and fully specified; its validation is a
   Stage 1 activity (see C6).
-- C3. Provenance capture (EVIDENCE-POLICY.md §4) tested on a trivial AiiDA job.
-- C4. Tolerances selected and approved under 8.6 and recorded.
+- C3. Provenance capture (EVIDENCE-POLICY.md §4) tested on a trivial AiiDA job, against the field set frozen for
+  MS-001 after the data-model review of EVIDENCE-POLICY.md §6.
+- C4. Tolerances, acceptance budgets and the numerical-convergence protocol (8.6: refinement ladders, repeat
+  counts, finite-difference steps and regime interval, state diagnostics) declared, approved and recorded.
+- C7. Validation set declared and frozen: the pre-trajectory configurations for the Stage 1 finite-difference and
+  constraint-projection checks, built geometrically from the frozen model and drive inputs without any
+  calculation (8.5); the atoms to be displaced, including the boundary and link-host atoms of the declared
+  partition; the P2 test molecule, with the model chemistry held identical in both engines (8.6 N2) and a
+  declared isolated-molecule treatment for a periodic engine; and the Stage 2 checkpoints (8.5) with the rules
+  that select their configurations and segments.
 - Option A only:
-  - A3. Model inputs frozen and hashed as **source-provided**, not `[AGENT]`.
+  - A3. Source inputs (model, partition and scheme, settings of both levels, drive protocol) frozen and hashed as
+    **source-provided**, not `[AGENT]`; any setting the source leaves unstated is declared by the project and
+    recorded as a deviation (A4).
+  - A5. For each of P1–P4, the equivalence test that A2 applies, defined from the source inputs and approved under
+    8.6 before any Stage 1 result exists: the source-stated values the frozen input must reproduce, and any
+    source-provided reference output to be reproduced, with its tolerance. An item with no applicable test is
+    recorded in advance as not establishable.
 - Option B only:
   - B1. Model geometries (M1, M2) frozen, hashed, labeled `[AGENT]`.
-  - B2. P3 declared as a fully specified scheme (partition, embedding, links, charge, spin), labeled `[AGENT]`
-    deviation, Reviewer-approved.
-  - B3. P4 drive protocol Reviewer-approved.
+  - B2. P3 declared as a fully specified scheme (partition, embedding, links, charge, spin) together with the
+    settings of both levels (GFN0 route and selector; exact-exchange fraction and range separation, D3 form and
+    parameters, basis and core treatment per element, engine numerical settings), labeled `[AGENT]` deviation,
+    Reviewer-approved.
+  - B3. P4 drive protocol, including the step-size sensitivity steps and segment rule (8.6), Reviewer-approved.
 
 **Before Stage 2 may begin (results of Stage 1 method-validation calculations):**
 
-- C5. Stage 1 complete with P1 identity provenance captured and P2 internal consistency established.
-- C6. The selected coupling route's composite coupled energy/gradient validated (8.5), including boundary/link
-  chain-rule terms and constraint projection.
+- C5. Stage 1a recorded with a convergence regime demonstrated (8.6 N3, N4) for every constituent and the direct
+  composite on every validation configuration, and for the P2 test molecule in both engines; Stage 1b complete
+  with P1 identity provenance captured, P2
+  internal consistency established (N7), and provenance coverage (8.5) complete for every Stage 1 job. P2 requires
+  a second implementation of ωB97X-D3 (Psi4 or another engine); without one, or without a demonstrated common
+  representation, C5 is unmet and Stage 2 may not begin.
+- C6. The selected coupling route's composite coupled energy/gradient validated (8.5; 8.6 N5 and N8) on every
+  configuration of the validation set (C7), including boundary/link chain-rule terms and constraint projection.
 - Option A only:
-  - A2. Equivalence evidence for each of P1–P4 against the stated Cowie setup (Section 4), recorded per item.
-  - A4. Parity status recorded per item as **established** or **not established**; any item not established
-    makes the run a deviation, to be reported as such.
+  - A2. Equivalence evidence for each of P1–P4 from the tests defined in A5, recorded per item.
+  - A4. Parity status recorded per item as **established** or **not established**. If any item is not
+    established, the run cannot proceed as a faithful reproduction; continuing requires a new scope decision
+    (C1, Section 5), and every result is reported as a deviation.
 - Option B only:
   - B4. Parity to Cowie recorded as **unknown** for every item, in every result (carried into Stage 2 reporting).
 
-Dependency check: Stage 0 needs only C1 and (option A) A1; Stage 1 needs Stage 0 outputs (C2–C4, A3 or B1–B3);
-Stage 2 needs Stage 1 outputs (C5, C6, A2/A4 or B4). No group references a later stage.
+Dependency check: Stage 0 needs only C1 and (option A) A1; Stage 1 needs Stage 0 outputs (C2–C4, C7, and A3/A5
+or B1–B3); Stage 2 needs Stage 1 outputs (C5, C6, A2/A4 or B4). No group references a later stage: every Stage 1
+input, including the validation configurations, the numerical-convergence protocol and the equivalence tests, is
+fixed before any Stage 1 result exists; within Stage 1, Stage 1b consumes only recorded Stage 1a outputs; and the
+Stage 2 checkpoints (8.5) gate only the results they quarantine.
 
 ### 8.4 Qualitative event-order and connectivity observations a reproduction must show
 
@@ -438,45 +470,201 @@ recorded in advance.
 
 ### 8.5 Convergence, energy-force validation and provenance coverage plan
 
-- Per-step reporting: SCF convergence status, maximum residual force at each accepted step, and a step-size
-  sensitivity check (one coarser and one finer z step on a short segment) showing whether the event order
-  E1–E4 changes. Report; never tune.
-- **Constituent-level consistency:** finite-difference force checks against energies for each level on one
-  configuration per branch.
-- **Composite coupled energy/gradient validation (required, Stage 1):** finite-difference validation of the
-  *coupled* total energy and gradient of the declared scheme, including (a) boundary/link-atom chain-rule
-  contributions (displace a boundary atom and a link-atom host and compare the analytic coupled gradient with the
-  finite difference), and (b) constraint projection (verify that the projected gradient used by the driven scan is
-  the analytic gradient with the fixed-atom and rigid-displacement constraints applied, and that constrained atoms
-  do not move). Validating each level separately is insufficient.
-- P1 identity provenance and P2 cross-engine check as Stage 1 items.
+- Per-step reporting (Stage 2): SCF convergence status and maximum residual force at each accepted step. Report;
+  never tune.
+- **Validation set (C7):** pre-trajectory configurations built geometrically from the frozen model and drive
+  inputs, with no calculation, covering the bonding situations the branches are expected to pass through: the
+  separated bodies; tool–surface contact with the Ge–C bond intact; a pendent C2 bound to the surface with the
+  Ge–C bond broken (8.4 E1–E3). They are unrelaxed `[AGENT]` inputs, not results. Energy–force consistency is a
+  property of a configuration and its electronic state, not of trajectory history, so these configurations test
+  the relation the driven scan relies on without depending on it.
+- **Numerical calibration (Stage 1a):** refinement ladders and repeats (8.6 N1–N4) on every configuration of the
+  validation set for every constituent evaluation and for the directly evaluated composite coupled energy and
+  mapped gradient, and on the P2 test molecule in both engines. Stage 1b starts only once these outputs are
+  recorded.
+- **Constituent-level consistency (Stage 1b):** finite-difference force checks against energies (8.6 N5) for each
+  level on every configuration of the validation set.
+- **Composite coupled energy/gradient validation (required, Stage 1b):** finite-difference validation (8.6 N5) of
+  the *coupled* total energy and gradient of the declared scheme on every configuration of the validation set,
+  including (a) boundary/link-atom chain-rule contributions (displace a boundary atom and a link-atom host and
+  compare the analytic coupled gradient with the finite difference), and (b) constraint projection (8.6 N8:
+  verify that the projected gradient used by the driven scan is the analytic gradient with the fixed-atom and
+  rigid-displacement constraints applied, and that constrained atoms do not move). Validating each level
+  separately is insufficient.
+- P1 identity provenance and the P2 cross-engine check on the declared test molecule (C7; 8.6 N7) as Stage 1b
+  items.
+- **Stage 2 checkpoints (declared in C7).** Each driven branch carries two declared checkpoints. At each one,
+  propagation of that branch pauses until the check is complete and recorded.
+  - *Branch check.* A driven step can converge to an electronic state that depends on its history, so the
+    constituent and composite finite-difference checks (8.6 N5) are repeated at the declared visited configuration
+    of each branch. Direct constituent and composite energy and force envelopes are re-measured there with the
+    production-rung repeats and one tighter aligned rung (N3, N4); N5 uses the envelopes for the exact constituent
+    or composite quantity it checks. Every actual Stage 2 configuration used in an E1 or E5 energy difference also
+    receives the direct composite-energy measurements required by N6. PASS releases the branch.
+  - *Sensitivity check.* Checkpoint S is reached when the base-step scan of a branch has accepted the last step of
+    its declared segment (for example, the steps around the first event detected on that branch at the base step).
+    The segment is re-run from the base-step configuration at its first step with the declared coarser and finer z
+    steps, and the order of the E1–E4 events within it, judged by the cutoff rule, is compared across the three
+    steps. An unchanged order releases the segment.
+  - *Quarantine.* A changed or indeterminate sensitivity result, or a failed or indeterminate branch check,
+    quarantines results:
+    - For a sensitivity result, every accepted step of the branch from the segment's first step onward.
+    - For a branch check, the whole branch.
+    - Every later branch that starts from a quarantined step. The retraction branch starts where the approach
+      branch ends.
+    - The checkpoint's own runs.
+    - Everything derived from these results: E1–E6 determinations, energy signs, the M6 profile and M7 analyses.
+
+    Steps before a quarantined span, and all Stage 1 results, are unaffected. Propagation of every quarantined
+    branch stops, and no analysis uses quarantined results except to report them as quarantined.
+  - *Restart.* A quarantined branch restarts only through the revision sequence in 8.6. That means fresh approval
+    of the changed settings or steps, the affected branches re-run from their first steps, and every checkpoint
+    repeated. With settings unchanged there is no restart. Re-running identical settings cannot change a recorded
+    outcome and is never used to seek a different one. The quarantined results remain as records, reported only as
+    step-size-sensitive or as failing the branch check, and every E-criterion that depends on them is reported
+    indeterminate on that ground. They are never released later; a revision produces new results beside them.
 - Provenance coverage: every accepted step and check is an AiiDA node carrying the fields in EVIDENCE-POLICY.md §4;
   a coverage report lists any step lacking a field; missing fields block the `[COMP-REPRO]`/`[COMP-PRED]` label.
 
 ### 8.6 Prospective tolerance selection and approval procedure (before any run)
 
 No numerical tolerance is derived from Cowie, because none is available. The procedure fixes **how** each
-tolerance is chosen, **by whom**, and **how pass/fail is decided**, all before Stage 1:
+tolerance is chosen, **by whom**, and **how pass/fail is decided**, all before Stage 1. Every tolerance, budget,
+ladder and step is declared before Stage 1; none is chosen or adjusted from a result of this program. The results
+that enter the rules are measurements, namely the Stage 1a envelopes and the Stage 2 re-measurements, consumed by
+rules fixed in advance. Under option A, a value the source states (A1) is the initial value; the bases below apply
+otherwise.
+
+**Terms.**
+- An SCF or optimizer convergence threshold is a *stopping criterion*. It ends an iteration and is not an accuracy
+  bound on the converged energy or forces. For example, the Psi4 development manual defines SCF convergence by the
+  change in energy and the root-mean-square change in density between iterations
+  ([engine-capability-status.md](../engine-capability-status.md#scf-convergence-controls)).
+- An *empirical stability envelope* is the observed spread of a quantity under frozen, declared perturbations. It
+  shows stability under those perturbations only and is not a rigorous error bound. No rigorous error bound is
+  claimed anywhere in this procedure.
+- An *acceptance budget* is a declared tolerance, frozen before Stage 1 and reviewed. It is a proposal, not a
+  validated numerical uncertainty, and results are reported against it.
 
 | Quantity needing a tolerance | Selection basis (proposal) | Proposed by | Checked by | Approved by | Pass/fail rule |
 |---|---|---|---|---|---|
-| Force convergence per accepted step | The engine's documented default for the optimizer used, tightened only if the step-size sensitivity check shows event-order dependence; the source of the value is cited in the record | Method author | Independent reviewer | Human | A step is accepted only if the reported maximum residual force is at or below the recorded value |
-| SCF energy convergence | The engine's documented default for the method, cited | Method author | Independent reviewer | Human | Step rejected if SCF did not converge to the recorded value |
+| Force convergence per accepted step | The documented default of the optimizer selected in Stage 0, cited from documentation for the exact version used; a stopping criterion, not an accuracy bound. The step-size sensitivity check (Stage 2) never selects this value; it can only trigger the revision sequence below | Method author | Independent reviewer | Human | A step is accepted only if the reported maximum residual force is at or below the recorded value |
+| SCF energy convergence | The engine's documented default for the method, cited from documentation for the exact version used; a stopping criterion, not an accuracy bound on the converged energy or forces | Method author | Independent reviewer | Human | Step rejected if SCF did not converge to the recorded value |
+| Energy-sign criteria (E1, E5) | No budget and no physical threshold: the envelope rule N6 applied to direct composite-energy measurements at each actual Stage 2 configuration used in the sign | Method author | Independent reviewer | Human | A sign is reported only under N6; otherwise indeterminate |
 | Bond/no-bond cutoff per element pair (E1, E2, E4, E6) | A stated multiple of the sum of covalent radii from a cited tabulation, with the multiple recorded; sensitivity reported by re-evaluating E1–E4 at one smaller and one larger multiple | Method author | Independent reviewer | Human | Observation counts as observed only if it holds at all three multiples; otherwise indeterminate |
 | E3(i) proximity criterion | A distance cutoff chosen by the same covalent-radius rule | Method author | Independent reviewer | Human | Proximity claim only |
 | E3(ii) radical-character criterion | A spin-population localization threshold from the engine's population analysis, with the analysis scheme named and the sites (pendent C2; EAOGe• Ge) declared; if the scheme cannot produce spin populations, E3(ii) is reported indeterminate | Method author | Independent reviewer | Human | Radical-character claim only, and only if the threshold is met on every accepted step in the range; it never supports E3(iii) |
 | E3(iii) interaction/stabilization criterion | A declared interaction-energy threshold: energy of the pendent-plus-tool configuration minus the energy of the same fragments at a declared non-interacting separation, both within the same scheme at the same z, with the reference separation recorded; if the scheme cannot produce a consistent fragment reference (e.g., the partition forbids it), E3(iii) is reported indeterminate | Method author | Independent reviewer | Human | Stabilization claim only if the threshold is met on every accepted step in the range and E3(i) also holds; independent of E3(ii) |
-| P2 cross-engine agreement | A tolerance on total-energy differences and on per-atom force differences for one molecule, justified from the documented numerical precision of both engines | Method author | Independent reviewer | Human | Internal consistency established only if both tolerances are met |
-| Composite coupled gradient (8.5) | A finite-difference agreement tolerance justified from the displacement size and engine precision | Method author | Independent reviewer | Human | Scheme accepted for Stage 2 only if met at every tested atom |
-| Step-size sensitivity | No numeric tolerance; the rule is that the E1–E4 event order is unchanged between the three step sizes | Method author | Independent reviewer | Human | Unchanged: pass; changed: the run is reported as sensitive and Stage 2 does not proceed without human review |
+| P2 cross-engine agreement | Declared acceptance budgets for the energy difference and for each force-component difference on the declared test molecule (C7), applied through N7 against the Stage 1a envelopes of both engines. The budgets are declarations, not derived or validated uncertainties | Method author | Independent reviewer | Human | N7: pass, fail or indeterminate per comparison; P2 is established only if every comparison passes; a common representation or regime that cannot be demonstrated is blocking |
+| Finite-difference checks: constituent levels and composite coupled gradient (8.5) | A declared acceptance budget per gradient component, three declared steps (h, h/2, h/4) and a declared interval around 4 for the regime ratio, applied through N5 with the Stage 1a envelopes | Method author | Independent reviewer | Human | N5: PASS required at every tested component of every validation configuration; the scheme is accepted for Stage 2 only if the composite check passes; FAIL returns the route to Stage 0; INDETERMINATE is blocking |
+| Constraint projection (8.5) | Exact rules for fixed-atom coordinates and removed components, and a declared acceptance budget for retained components, applied through N8 with the recorded precision | Method author | Independent reviewer | Human | N8: pass, fail or indeterminate on every tested configuration; indeterminate is blocking |
+| Step-size sensitivity | No numeric tolerance; the rule is that the order of the E1–E4 events within the declared segment is unchanged between the three step sizes. The segment rule and the coarser and finer steps are declared with the drive protocol before Stage 1 | Method author | Independent reviewer | Human | At checkpoint S (8.5): an unchanged order releases the segment; a changed or indeterminate order quarantines the branch as 8.5 defines |
 
-All selected values, their cited basis and the approval record are frozen before Stage 1. Changing any value after
-Stage 1 requires a recorded reason unrelated to agreement with the paper and a fresh approval.
+**Numerical-convergence protocol.** Every item is declared in Stage 0, which runs no calculation. The calibration
+runs form Stage 1a, and the checks that consume their outputs (Stage 1b) start only once those outputs are
+recorded.
+
+- **N1, refinement ladder.** For each engine and level, at least three rungs run from the frozen production
+  settings to tighter ones. Only numerical controls that the version-matched documentation defines are changed,
+  for example SCF thresholds, integration grids or density cutoffs, and integral screening. The basis, core
+  treatment, functional, dispersion form, geometry, charge and multiplicity never change along a ladder. The
+  coupling route also has an aligned composite ladder: at composite rung k, every constituent evaluation uses its
+  declared rung k and the frozen mapping, link-host and subtractive-composition rules are applied to produce the
+  actual coupled energy and mapped analytic gradient. Constituent and composite values are both recorded; a
+  constituent envelope is never substituted for a composite envelope.
+- **N2, same representation.** Compared values use identical atoms and coordinates from the frozen files, and the
+  same charge, multiplicity, basis, core treatment, functional parameters, dispersion form and parameters, and
+  electronic state. The electronic state is judged by declared diagnostics: SCF convergence, the multiplicity and
+  the declared population sites. A comparison that fails N2 is not used.
+- **N3, energy calibration (Stage 1a).** On each validation configuration, every constituent energy and the actual
+  composite coupled energy are computed at every applicable rung; the P2 test-molecule energy is computed at every
+  rung in each engine. Each production rung is repeated a declared number of times, from independent initial
+  guesses where the engine permits. For each recorded object X, its direct envelope `ε_X` is the largest absolute
+  difference among its production-rung repeats and between its production rung and each tighter rung. A convergence
+  regime is demonstrated for X when the magnitude of the difference between successive rungs does not increase
+  along its ladder. Without a demonstrated regime, X is unusable: every check that consumes it is blocked, and C5
+  or C6, as applicable, is unmet until a revision is revalidated.
+- **N4, force calibration (Stage 1a).** The same direct procedure is applied to every analytic force component of
+  each constituent and to every component of the actual composite mapped gradient, including link-host and
+  chain-rule terms, giving an object-specific envelope `φ_X`. A component is stable when the same regime condition
+  holds. A constituent force envelope is never used for the composite gradient.
+- **N5, finite-difference checks (Stage 1b).** For a tested gradient component of object X,
+  `D(s) = [E_X(x + s) - E_X(x - s)] / (2s)` is computed at three declared steps `s = h, h/2, h/4`, with every
+  displaced point satisfying N2. A constituent check uses that constituent's direct `ε_X` and `φ_X`; the composite
+  check uses the direct composite `ε_X` and mapped-gradient `φ_X` from N3–N4.
+  - *Derivation.* Assume `E` is smooth along the displacement, at least five times differentiable, with the
+    electronic state unchanged. Taylor expansion then gives `D(s) = g + a s^2 + O(s^4)`, where `g` is the exact
+    derivative and `a` is one sixth of the third derivative. The Richardson estimate
+    `R = [4 D(h/2) - D(h)] / 3` therefore equals `g + O(h^4)`. The truncation remaining in `D(h/2)` is estimated by
+    `T = |D(h) - D(h/2)| / 3`, which in the asymptotic regime overstates the error of `R`.
+  - *Noise.* If every computed energy lies within `ε` of the smooth function, which is the working assumption N3
+    supports and not a bound, then noise shifts `D(s)` by at most `ε/s` and `R` by at most `N = 3ε/h`. Truncation
+    falls as `s^2` while noise grows as `1/s`.
+  - *Regime.* When the leading nonzero truncation term is the stated `a s^2` term, the asymptotic regime is indicated
+    when `q = [D(h) - D(h/2)] / [D(h/2) - D(h/4)]` lies in the declared interval around 4, and
+    `|D(h/2) - D(h/4)|` exceeds its own noise allowance `6ε/h`. If the leading `s^2` coefficient vanishes, the
+    denominator is unresolved, or the ratio indicates a different leading order, this three-step test is
+    INDETERMINATE rather than PASS.
+  - *Rule.* Take the allowance `U = T + N + φ`, the analytic gradient component `G` (the negative of the force) and
+    the declared budget `B`.
+    - PASS: the regime is indicated and `|G - R| + U <= B`.
+    - FAIL: the regime is indicated and `|G - R| - U > B`.
+    - INDETERMINATE: every other case.
+- **N6, energy signs (E1, E5).** Each actual Stage 2 configuration a or b used in an energy-sign claim receives
+  direct composite-energy production-rung repeats and at least one tighter aligned composite rung. Its envelope
+  `ε_a` or `ε_b` is calculated by N3 from those values. The sign of the composite `ΔE` is reported only if
+  `|ΔE| > ε_a + ε_b`; otherwise it is indeterminate. No constituent envelope, validation-configuration transfer
+  or acceptance budget is used.
+- **N7, P2 agreement.** The model chemistry is identical in both engines (N2), and a periodic engine uses a
+  declared isolated-molecule treatment from its version-matched documentation.
+  - Rule for the production-rung energies, with difference `ΔE`, envelopes `ε_1` and `ε_2`, and budget `B_E`:
+    - PASS: `|ΔE| + ε_1 + ε_2 <= B_E`.
+    - FAIL: `|ΔE| - (ε_1 + ε_2) > B_E`.
+    - INDETERMINATE: otherwise.
+  - Each force component is judged the same way with `φ_1`, `φ_2` and `B_F`.
+  - P2 is established only if every comparison passes. If a common representation or a regime in either engine
+    cannot be demonstrated, P2 cannot be established, which is blocking (C5 unmet).
+  - A pass establishes internal consistency only. Two engines that share a definitional error would still agree,
+    which is why P2(a) checks each input against the primary definition.
+- **N8, constraint projection.** Recorded values are compared. The output format and its rounding rule are declared
+  before Stage 1; half a unit in the last recorded digit is used only for round-to-nearest. For truncation or
+  another formatting rule, `r` is the full interval that rule permits.
+  - Fixed-atom coordinates must be identical in the output before and after a constrained step, and the gradient
+    components the constraints remove must be zero in the recorded projected gradient. Otherwise the check fails.
+  - The retained components are compared with the analytic gradient after the constraints are applied, computed
+    independently from the same recorded gradient. Let the difference be `Δ`, let `r` be the combined
+    formatting-dependent allowance defined immediately above, and let `B_P` be the declared budget.
+    - PASS: `|Δ| + r <= B_P`.
+    - FAIL: `|Δ| - r > B_P`.
+    - INDETERMINATE (blocking): otherwise.
+
+Where a quantity cannot be resolved, the outcome is INDETERMINATE and blocking as stated, never a pass. This
+covers a missing regime or common representation, a noise-limited difference and an unresolvable recorded
+precision. The acceptance budgets, like the E3 thresholds, are declarations: results are reported against them,
+and they are never presented as physically justified or as validated uncertainties.
+
+All selected values, their cited basis and the approval record are frozen before Stage 1. After freezing, a value
+or definition changes only through this revision sequence:
+
+1. A recorded reason that does not refer to agreement with the paper. A validation tolerance or budget is never
+   relaxed to turn a recorded failure or indeterminate result into a pass; a demonstrated error in its recorded
+   basis is corrected with the failure retained.
+2. Fresh approval by the same roles as the original selection.
+3. Revalidation of everything the old value governed: every Stage 1 check and every accepted step whose outcome
+   used it is repeated. Because the driven scan is history-dependent, a changed per-step criterion invalidates the
+   rest of the branch, which is re-run from its first step together with the sensitivity segments.
+4. Superseded results are retained, and both outcomes are reported.
+
+A quarantine at a Stage 2 checkpoint (8.5) is the declared trigger on which the force-convergence value, the
+production settings or the z step may be tightened through this sequence. A frozen definition that fails in Stage
+1, such as a coupling route that fails its demonstration, returns to Stage 0 under the same sequence. Diagnostic
+runs under 8.8 are additional runs and never replace a frozen-setup result.
 
 ### 8.7 Reviewer approval requirement
 
 MS-001 results are not evidence of anything until an independent Reviewer has (a) checked provenance completeness,
-(b) checked that no parameter changed after Stage 1 without a recorded, agreement-independent reason, (c) assessed
+(b) checked that every change to a frozen value followed the revision sequence in 8.6 (an agreement-independent
+reason, fresh approval and revalidation), (c) assessed
 the technical claims (coupled-gradient validation, E3 electronic evidence, GFN0 identity provenance) independently,
 and (d) issued a canonical decision recorded by DI. No forced pass.
 

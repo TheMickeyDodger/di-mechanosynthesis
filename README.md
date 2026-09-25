@@ -192,6 +192,7 @@ and the manifest lists each omission with its reason.
 | [docs/e01-method-specification.md](docs/e01-method-specification.md) | Prospective specification of the first calculation, kept as the preparation record |
 | [docs/engine-capability-status.md](docs/engine-capability-status.md) | Capabilities of Psi4 1.11 as established, or not, by archived primary sources and the installed build |
 | [docs/ms-000/](docs/ms-000/README.md) | Complete public MS-000 feasibility package: compute spike, architecture, evidence policy, software landscape, source ledger and ASE smoke record |
+| [docs/ms-000/CLOSURE.md](docs/ms-000/CLOSURE.md) | MS-000 closure record: all six feasibility criteria met and gate PASS; dependency classes, unresolved gaps and the stage preconditions of both MS-001 scope options |
 | [results/e01/README.md](results/e01/README.md) | E-01 result: the stopped attempt, runtime observations, hypotheses and diagnostic closeout |
 | [results/e01/postmortem.md](results/e01/postmortem.md) | E-01 postmortem and installed-build survey: the conditional source-level hypothesis, survey coverage and limits, and remaining gaps |
 | [results/e01/outcome.json](results/e01/outcome.json) | Machine-readable E-01 outcome with source hashes |

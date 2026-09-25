@@ -2,8 +2,9 @@
 
 This repository contains public, provenance-first research material on computational models of mechanically
 controlled chemistry. It holds an evidence policy, candidate input structures, a method specification, an engine
-capability record, the complete public MS-000 feasibility package, figure renderers, provenance manifests and the
-record of one stopped engine-validation attempt (`results/e01/`), with its postmortem and installed-build survey.
+capability record, the complete public MS-000 feasibility package with its closure record, figure renderers,
+provenance manifests and the record of one stopped engine-validation attempt (`results/e01/`), with its
+postmortem and installed-build survey.
 That attempt is closed as technically blocked and scientifically indeterminate. The repository contains no
 converged quantum-chemistry results. The
 [README](README.md) describes the scientific scope. This document sets out the conventions that contributors, and
@@ -19,7 +20,7 @@ automated agents in particular, are expected to follow.
 | `docs/donor-candidates.md`, `structures/` | Agent-proposed, unoptimized candidate geometries, their bookkeeping and the Figure 1 method |
 | `docs/e01-method-specification.md` | Prospective specification of the first calculation, kept as the preparation record |
 | `docs/engine-capability-status.md` | What archived engine sources and the installed build establish, and what remains unverified |
-| `docs/ms-000/` | Public adaptation of the complete MS-000 feasibility package, including its source ledger and ASE smoke-test record |
+| `docs/ms-000/` | Public adaptation of the complete MS-000 feasibility package, including its source ledger, ASE smoke-test record and closure record |
 | `results/e01/` | The stopped and closed E-01 attempt: report, postmortem and installed-build survey, machine-readable outcome, configuration used and redacted engine output |
 | `tools/` | Deterministic renderers of Figures 1 and 2, with their input tables |
 | `provenance/EXPORT-MANIFEST.md` | SHA256 and derivation of every public file |
@@ -59,11 +60,13 @@ claimed. The donor-candidate and surface geometries are not described as relaxed
 against the benchmark authors' supplementary coordinates. Engine capabilities and functional equivalence that are
 marked `UNVERIFIED` or open are not claimed.
 
-Three further restrictions are matters of method or scope rather than of missing evidence. Reported
+Four further restrictions are matters of method or scope rather than of missing evidence. Reported
 per-interaction counts are never multiplied into build-success probabilities. Installation commands, releases or
 claims of readiness are not given for software that this repository does not provide. Name availability in an
 installed build, whether a header declaration, a symbol-table definition or a dynamic export, is not claimed as
-ABI compatibility, initialization or callability.
+ABI compatibility, initialization or callability. The MS-000 gate, whatever its disposition, is a feasibility
+judgement on a plan. It is not described as readiness for faithful reproduction, as parity validation, as physical
+evidence or as authorization of MS-001, and neither MS-001 scope option is described as selected.
 
 ## Adding or changing content
 

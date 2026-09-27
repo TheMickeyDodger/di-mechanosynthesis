@@ -5,7 +5,9 @@ repository narrative, with direct links, versions, locators, uses and limitation
 assessment uses a larger retrieval set, catalogued separately in the
 [MS-000 source ledger](ms-000/SOURCE-LEDGER.md); the MS-001 Stage 0 retrievals are catalogued in the
 [MS-001 Stage 0 source ledger](ms-001/SOURCE-LEDGER.md) and summarized in Section 9 (entries [28] to [31]). The
-numbering here is shared by the main documents in the
+sources of the MS-001 pre-Stage-1 closure packet are catalogued in the
+[pre-Stage-1 source ledger](ms-001/PRESTAGE1-SOURCE-LEDGER.md) and summarized in Section 10 (entries [32] to [35]).
+The numbering here is shared by the main documents in the
 repository. The catalogue contains no converged quantum-chemistry values. The project's only
 quantum-chemistry attempt, E-01, stopped before any SCF iteration was reported and is closed as technically
 blocked and scientifically indeterminate. Its records are entries [20] and [21], and the dispersion library it
@@ -548,3 +550,75 @@ summarize it for the narrative catalogue.
   - The dftd4 source that the declared route uses, the rounding of formatted output and the Libint2 version of the
     Psi4 build remain open. So do C4's definitional question on N8 and the build provenance of the installed Psi4.
   - Nothing here is physical evidence or parity, upgrades an evidence label, or authorizes Stage 1.
+
+## 10. MS-001 pre-Stage-1 closure sources
+
+The exhaustive record of these sources is the [pre-Stage-1 source ledger](ms-001/PRESTAGE1-SOURCE-LEDGER.md). It
+gives identity, retrieval or observation time, byte count, SHA256, locators and limits for each. The entries below
+summarize it.
+
+**[32]** Installed E-01 Psi4 environment and its package archives, 2026-09-27.
+- **Links and versions:**
+  - the installed package records of psi4 1.11 (`py314h53d0584_1`) and libint 2.13.1 (`h5a0831b_0`), both
+    conda-forge `osx-arm64`;
+  - three installed Libint2 files and the Psi4 core library;
+  - the two package archives named by those records,
+    <https://conda.anaconda.org/conda-forge/osx-arm64/libint-2.13.1-h5a0831b_0.conda> and
+    <https://conda.anaconda.org/conda-forge/osx-arm64/psi4-1.11-py314h53d0584_1.conda>.
+- **Content.** The installed Libint2 package version, 2.13.1. The agreement of three installed files with the
+  record's digests. The normalization code of the installed `shell.h`. The static linkage declarations.
+- **Used in.** [INSTALLED-BUILD-AUDIT.md](ms-001/INSTALLED-BUILD-AUDIT.md).
+- **Basis.** Inspected. Read-only static observation of the named files, with hashes. Each archive matched the
+  SHA256 and MD5 in its installed record.
+- **Limitations.**
+  - Package provenance only, not runtime conformance.
+  - The recipe and build metadata inside both archives' `info` members were not read, because the system archive
+    tool lacks zstd support. Libint2 and Psi4 source and build identity remain unresolved.
+  - Runtime linkage is not established.
+
+**[33]** The dftd4 4.2.0 and tblite 0.6.0 source archives from the CP2K download site, 2026-09-27, with the CP2K
+2026.2 toolchain files that pin them.
+- **Links and versions.**
+  - <https://www.cp2k.org/static/downloads/dftd4-4.2.0.tar.xz> and
+    <https://www.cp2k.org/static/downloads/tblite-0.6.0.tar.xz>, each matching the SHA256 pinned by the CP2K 2026.2
+    toolchain.
+  - The toolchain scripts, patches and CP2K source files read inside the retained release archive [31].
+- **Content.**
+  - Both archives carry byte-identical dftd4 4.2.0 source files. The tblite route patches them and the standalone
+    route does not.
+  - By source tracing, CP2K's GFN0 D4 path with its defaults reaches none of the patched routines.
+  - Dependency resolution depends on switches that neither toolchain script sets.
+- **Used in.** [G4-DFTD4-DECLARATION-PROPOSAL.md](ms-001/G4-DFTD4-DECLARATION-PROPOSAL.md).
+- **Basis.** Inspected. Every member was checked before unpacking, and both trees were compared file by file with
+  SHA256 and Git blob SHA1. Patch applicability was checked by dry run only.
+- **Limitations.**
+  - Correspondence with any upstream release asset was not examined.
+  - Nothing was built. No build, linkage or runtime claim follows.
+
+**[34]** aiida-core 2.9.2 source members of the retained Stage 0 wheel, 2026-09-27.
+- **Links and versions.** The wheel of the Stage 0 hash-locked installation (SHA256 `72ec503b…7bdd`). Its members
+  for the transport, the direct scheduler, the script assembly, the CalcJob class, the upload task and the process
+  type are identified in the ledger.
+- **Content.** Login-shell default and command form. Environment inheritance by transport shells. The direct
+  scheduler's invocation and header. The dry-run transport. The order of `presubmit` and upload. The persistence of
+  an unregistered process class.
+- **Used in.** [C3-WIRING-TEST-PROPOSAL.md](ms-001/C3-WIRING-TEST-PROPOSAL.md) and the
+  [N8 decision packet](ms-001/N8-DECISION-PACKET.md).
+- **Basis.** Inspected. The members were read from the retained wheel without installation or import.
+- **Limitations.** Source text only. How aiida-core behaves on the host is a run observation, which only an
+  authorized wiring test could make.
+
+**[35]** Project records of the MS-001 pre-Stage-1 closure packet, 2026-09-27.
+- **Content.**
+  - the [closure packet](ms-001/PRESTAGE1-CLOSURE-PACKET.md), with its consolidated readiness table;
+  - the installed-build audit;
+  - the proposed G4 dftd4 declaration;
+  - the N8 decision packet;
+  - the proposed C3 wiring test W1;
+  - the [pre-Stage-1 source ledger](ms-001/PRESTAGE1-SOURCE-LEDGER.md).
+- **Basis.** New records of this project, identified by SHA256 in the export manifest.
+- **Limitations.**
+  - Every recommendation, candidate text and specification is `[AGENT]`, and none is applied or approved.
+  - The frozen Stage 0 records, including C4 and its approval record, are byte-identical.
+  - Nothing here is physical evidence or upgrades an evidence label.
+  - Stage 1 remains BLOCKED and is not authorized.

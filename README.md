@@ -162,6 +162,16 @@ prospective definitions. The acceptance and the approval cover definitions only 
 readiness; they change no evidence label. C3 readiness and N8 remain BLOCKED, and Stage 1 remains BLOCKED and
 unauthorized until a separate authorization is given and its prerequisites hold.
 
+A [pre-Stage-1 closure packet](docs/ms-001/PRESTAGE1-CLOSURE-PACKET.md) of 2026-09-27 takes the remaining
+prerequisites as far as static reading allows [32–35]. It contains:
+- a static audit of the installed Psi4 build, which carries Libint2 2.13.1;
+- a proposed declaration of the dftd4 source for G4;
+- a decision packet on N8;
+- a specification of a proposed non-chemistry wiring test for the C3 blockers.
+
+Every proposal in it is unapplied and awaits a person's decision. No frozen definition changed, nothing was run or
+installed, and Stage 1 remains BLOCKED and unauthorized.
+
 ## Evidence classification and provenance
 
 Scientific claims are classified by their underlying evidence as experimentally demonstrated (`[EXP]`),
@@ -190,12 +200,12 @@ The table lists each tool with its current status in the project. Numbers refer 
 | Tool | Status here | Role |
 |---|---|---|
 | RDKit [13]; ASE [14] | Used in preparation, without quantum chemistry; ASE 3.29.0 also built the MS-001 Stage 0 geometries geometrically [30] | Donor-candidate embeddings; structure building and extxyz input and output |
-| Psi4 1.11 [6] | Installed from conda-forge in a project-local environment [20]; installation and basis construction checked; the E-01 precursor SCF aborted during integral setup [21]; a source-level postmortem and a static survey of the installed build identified no cause [25, 26] | Electronic-structure engine for the first calculation |
+| Psi4 1.11 [6] | Installed from conda-forge in a project-local environment [20]; installation and basis construction checked; the E-01 precursor SCF aborted during integral setup [21]; a source-level postmortem and a static survey of the installed build identified no cause [25, 26]; its package records identify Libint2 2.13.1 [32] | Electronic-structure engine for the first calculation |
 | simple-dftd3 1.6.0 [22] | Installed with Psi4 [20]; exercised in a dispersion-only check without SCF | D3 dispersion term of ωB97X-D3 |
 | AiiDA [12] | Used to store the hashed E-01 preparation and run records. In MS-001 Stage 0 it ran one trivial non-chemistry job as a provenance wiring test [30]; it has run no chemistry calculation | Computational provenance |
 | xtb [15] | Candidate, documentation only | GFN0-xTB, the benchmark's QM/MM partner method; the xtb documentation describes a GFN0 parameter file |
 | CP2K [16] | Declared in MS-001 Stage 0 as the engine for both levels and the coupling route [28, 30]; documentation and, since 2026-09-27, release source read [31]; not installed | Periodic and QM/MM engine whose manual documents an internal GFN0-xTB option |
-| tblite [17] | Candidate, documentation only | Tight-binding library whose documentation lists GFN1-xTB, GFN2-xTB and IPEA1-xTB but not GFN0; not a substitute for the GFN0 route |
+| tblite [17] | Candidate; documentation and, since 2026-09-27, its 0.6.0 source archive read as a possible provider of the dftd4 library for CP2K [33]; not installed | Tight-binding library whose documentation lists GFN1-xTB, GFN2-xTB and IPEA1-xTB but not GFN0; not a substitute for the GFN0 route |
 | QCFractal [18]; OVITO [19] | Candidates, documentation only | Alternative workflow store (deferred); rendering of computed coordinates |
 
 ## Repository contents
@@ -215,6 +225,7 @@ and the manifest lists each omission with its reason.
 | [docs/ms-000/](docs/ms-000/README.md) | Complete public MS-000 feasibility package: compute spike, architecture, evidence policy, software landscape, source ledger and ASE smoke record |
 | [docs/ms-000/CLOSURE.md](docs/ms-000/CLOSURE.md) | MS-000 closure record: all six feasibility criteria met and gate PASS; dependency classes, unresolved gaps and the stage preconditions of both MS-001 scope options |
 | [docs/ms-001/](docs/ms-001/README.md) | MS-001 Stage 0 package, scope option B: authorization record, provenance wiring test, coupling route, method declaration, drive protocol, tolerances, validation set, failure record, source ledger, freeze record and C4 human approval record; independent review approval and Lead acceptance recorded, C4 approved by a person on 2026-09-27, Stage 0 closed as frozen prospective definitions and Stage 1 BLOCKED |
+| [docs/ms-001/PRESTAGE1-CLOSURE-PACKET.md](docs/ms-001/PRESTAGE1-CLOSURE-PACKET.md) | Pre-Stage-1 closure packet: installed-build audit, proposed G4 dftd4 declaration, N8 decision packet, proposed C3 wiring test W1, consolidated readiness table and supplementary source ledger; every proposal unapplied, Stage 1 BLOCKED |
 | [structures/ms-001/](structures/ms-001/README.md) | MS-001 Stage 0 geometries: model M1, the start configuration, validation configurations V1–V3 and the P2 test molecule, built geometrically and unrelaxed |
 | [tools/build_ms001_geometries.py](tools/build_ms001_geometries.py) | Deterministic generator of the MS-001 Stage 0 geometries; it measures and asserts every reported distance and angle |
 | [tools/c3_provenance_wiring.py](tools/c3_provenance_wiring.py) | Driver of the C3 provenance wiring test, one trivial non-chemistry AiiDA job |
@@ -251,6 +262,6 @@ export pending redistribution review. Work that builds on the benchmark should c
 3. Blue, B. *et al.* Towards Atom-by-Atom Fabrication: Mechanosynthetic donation and abstraction.
    arXiv:2606.13876 (2026). <https://doi.org/10.48550/arXiv.2606.13876>
 
-References [4] to [31], covering further literature, software documentation, source files and the project's own
+References [4] to [35], covering further literature, software documentation, source files and the project's own
 E-01 and MS-001 records, are catalogued with versions, locators, verification basis and limitations in
 [docs/SOURCES.md](docs/SOURCES.md), which uses the same numbering.

@@ -138,6 +138,8 @@ The full catalogue, with links, locators and verification basis, is in [docs/SOU
       that are not inputs of the job, and its survival along a chain of jobs is unverified. It did not demonstrate
       four: calculation performed, failure record, review record and retained-per-claim. The prerequisite blockers
       are identity-chain survival, the remaining provenance extensions and the login-shell environment gap.
+      *Updated 2026-09-27:* a proposed wiring test W1 that could close them is specified, awaiting its own
+      authorization ([C3-WIRING-TEST-PROPOSAL.md](../docs/ms-001/C3-WIRING-TEST-PROPOSAL.md)). The blockers stand.
     - Definitions still to settle from version-matched source: GFN0 parameter provenance through CP2K (G4); CP2K's
       unit for `OMEGA`; the normalization of single-primitive basis coefficients; the printed representations
       compared by N8, which stays BLOCKED until both compared representations and the combined formatting allowance
@@ -153,6 +155,14 @@ The full catalogue, with links, locators and verification basis, is in [docs/SOU
         ([C4-PROPOSED-REVISION-01.md](../docs/ms-001/C4-PROPOSED-REVISION-01.md)).
       - The installed Psi4 binary's build provenance and runtime conformance remain open.
       - This prerequisite still does not hold. N8 remains BLOCKED and has not been run.
+      - *Updated 2026-09-27, pre-Stage-1 closure packet*
+        ([PRESTAGE1-CLOSURE-PACKET.md](../docs/ms-001/PRESTAGE1-CLOSURE-PACKET.md)):
+        - The installed Psi4 build of E-01 carries Libint2 2.13.1, by its package record, and the installed header
+          defines the same normalization. The recipe records of both packages remain unread, so normalization stays
+          partially established.
+        - A declaration of the dftd4 source for G4 and a decision packet on N8, with option O2 recommended, are
+          prepared as proposals. They are not applied and not approved.
+        - This prerequisite still does not hold.
   - **Dependencies within Stage 1.**
     - CP2K installation and build identity, including the libxc version it links.
     - The undocumented route capabilities: link atoms and mixed methods in CP2K `MIXED`, the numerical mixing
@@ -209,6 +219,12 @@ definitions; the closure authorizes nothing. The next bounded work is:
      Psi4;
    - a human decision under C4 §3 on N8's definition, from the options recorded as a proposal;
    - the C3 blockers.
+
+   *Updated 2026-09-27:* the [pre-Stage-1 closure packet](../docs/ms-001/PRESTAGE1-CLOSURE-PACKET.md) takes these
+   as far as static reading allows:
+   - The static read of the installed build is done, except for its packages' recipe records.
+   - The G4 declaration and the N8 decision are proposals awaiting a person's decision under C4 §3.
+   - W1, the wiring test for the C3 blockers, is specified and awaits its own authorization.
 2. Only after a separate authorization, Stage 1: installing CP2K and running the calibration and
    method-validation calculations of Stage 1a and 1b, including the demonstration of the coupling route.
 
@@ -256,3 +272,4 @@ restatement. Superseded statements are corrected in place and noted in the log r
 | 2026-09-26 | Independent review approval of the corrected MS-001 Stage 0 definition package, and Lead acceptance recorded. Further independent reviews had recorded REJECT for the checkpoint S comparison and then for the persistence of E3; both were corrected without any calculation or geometry regeneration, and the latest independent review recorded the canonical decision APPROVE. Human approval of C4 remains PENDING, so Stage 0 is not closed. This update is status-only: no definition, evidence label or gate changed. Stage 1 stays BLOCKED and unauthorized, C3 readiness and N8 stay BLOCKED, option A stays BLOCKED and MS-000 remains a feasibility PASS only. P1, P2, P3b, C5 and C6 remain unestablished, and E3's minimum persistence Δd_min = 0.20 Å remains an arbitrary `[AGENT]` declaration without physical validation, as the declared-deviations list now states. Superseded in place: the MS-001 Stage 0 row, the open-items entry and the next-work list. |
 | 2026-09-27 | A person approved C4, the tolerances and numerical-convergence protocol of MS-001 Stage 0, as the prospective numerical protocol of scope option B, Stage 0, bound to commit `bd3d16a5173b19e3461817171487a106eea3173c` and SHA256 `707c7f72564e6bd2bae2a8a0e5acf2c13dd86e048ca624858d147514cffbb68d`, with the records C4 references as they stood at that commit. The decision is recorded in `docs/ms-001/C4-HUMAN-APPROVAL.md`, and Stage 0 is closed as a set of frozen prospective definitions. C4 is byte-identical; its opening Approval bullet, which still reads PENDING, is retained as the frozen text of the approved bytes and superseded by the approval record. The one gate that changed is the human approval of C4. No scientific or readiness gate, definition or evidence label changed: Stage 1 stays BLOCKED and unauthorized, C3 readiness and N8 stay BLOCKED, option A stays BLOCKED and MS-000 remains a feasibility PASS only. P1, P2, P3b, C5 and C6 remain unestablished, and Δd_min = 0.20 Å remains an arbitrary `[AGENT]` declaration without physical validation. Superseded in place: the date line, the MS-001 Stage 0 row, the open-items entry and the next-work list, whose first item, the human approval of C4, is removed as completed. Earlier log rows are kept as written; their PENDING statements were accurate on their dates. |
 | 2026-09-27 | Source resolution of the five definitions required before Stage 1, from version-matched CP2K 2026.2 release source, Psi4 v1.11 tagged source and Libint v2.8.1 (`docs/ms-001/SOURCE-RESOLUTION.md`). `OMEGA` (CP2K's unit and conversion semantics) and the compiled Psi4 steps (tagged-source behaviour) are established; G4, basis normalization and the N8 representations are partially established. CP2K writes no separate, direct record of the gradient `GEO_OPT` uses; whether a force record can serve as N8's record (i) is recorded as a definitional question, with options for a decision under C4 §3 in `docs/ms-001/C4-PROPOSED-REVISION-01.md`, not applied and not approved. C4 is byte-identical; B2 received dated annotations only; no value, label, gate or dependency changed. Stage 1 stays BLOCKED and unauthorized; N8 stays BLOCKED and has not been run. Superseded in place, with dates: the open-items entry on the five definitions and next-work item 1. |
+| 2026-09-27 | Pre-Stage-1 closure packet (`docs/ms-001/PRESTAGE1-CLOSURE-PACKET.md` and five companion records). A static audit of the installed E-01 Psi4 build identifies Libint2 2.13.1 by package record, with the same header-defined normalization; the packages' recipe records could not be read, so normalization stays partially established. A proposed dftd4 declaration for G4 finds byte-identical dftd4 4.2.0 source files in the two CP2K-hosted archives, patched by one toolchain route and not the other, and a dependency-resolution gap. An N8 decision packet recommends option O2. A non-chemistry wiring test W1 for the C3 blockers is specified. Every proposal is unapplied and awaits a person's decision or a separate authorization; no frozen record, definition, label or gate changed. Stage 1 stays BLOCKED and unauthorized. Updated in place, with dates: the C3-blockers and five-definitions open items and next-work item 1. |

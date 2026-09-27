@@ -40,43 +40,60 @@ established inside the compared interval as INDETERMINATE (B3 §5, C7 §4, C4 ro
 
 The latest independent review, of the package as corrected for that gap, recorded the canonical decision APPROVE.
 It accepted the corrected definitions of C1, C2, C3, C4, C7, B1, B2 and B3, with the qualifications given per item
-below, and Lead acceptance is recorded. Human approval of C4 is still PENDING, so Stage 0 is not closed. The
-acceptance is of definitions only. It validates nothing physically: the minimum persistence Δd_min = 0.20 Å, for
+below, and Lead acceptance is recorded. As of 2026-09-26, human approval of C4 was still PENDING, and Stage 0 was
+not closed; the next paragraph records the approval. The acceptance is of definitions only. It validates nothing
+physically: the minimum persistence Δd_min = 0.20 Å, for
 example, remains an arbitrary `[AGENT]` declaration without physical validation. It changes no `[AGENT]`, `[SPEC]`,
 `[GAP]` or `UNVERIFIED` label. A later status-only revision, recorded in the export manifest, changed status
 sentences only: in this record and, among the artifacts bound in Section 2, in the package index, the geometry record
 document and the opening Approval bullet of C4, whose digests there are refreshed. Every other byte of C4, and every
 other bound artifact, is byte-identical to the reviewed version. The private review records are not published.
 
+**Human approval of C4.** On 2026-09-27 a person approved C4 as the prospective numerical protocol of scope option B,
+Stage 0, bound to commit `bd3d16a5173b19e3461817171487a106eea3173c`, path
+`docs/ms-001/C4-TOLERANCES-AND-CONVERGENCE.md` and SHA256
+`707c7f72564e6bd2bae2a8a0e5acf2c13dd86e048ca624858d147514cffbb68d`, the digest bound in Section 2, which does not
+change. The decision, its channel of record and its limits are recorded in the
+[C4 human approval record](C4-HUMAN-APPROVAL.md). The approval adopts C4 with the records it references as they stood
+at that commit, and any later change to C4 or to what it binds follows its binding revision sequence
+([C4 §3](C4-TOLERANCES-AND-CONVERGENCE.md#3-revision-sequence-binding)). It validates nothing physically, upgrades no
+evidence label, and authorizes no Stage 1, Stage 1a or Stage 1b work and no calculation, installation or engine run.
+The one gate it satisfies is the human approval of
+C4; no scientific or readiness gate changed. C4 itself is byte-identical, and its opening Approval bullet still states
+that approval by a person is PENDING. That bullet is retained unchanged as the frozen text of the approved digest,
+accurate at the bound commit, before the 2026-09-27 human decision, and it is superseded by the approval record. It
+is not edited, because any edit would create bytes that no person approved.
+
 | Item | Requirement (spike §8.3; closure §8) | Record | Disposition | What remains |
 |---|---|---|---|---|
 | C1 | Human authorization of a scope option, recorded separately from the MS-000 gate | [C1-AUTHORIZATION.md](C1-AUTHORIZATION.md) | **Accepted by the independent reviews.** Option B, Stage 0 only, 2026-09-26 | Nothing for C1. The authorization does not extend to Stage 1 |
 | C2 | A coupling route selected from the reuse candidates and fully specified | [C2-COUPLING-ROUTE.md](C2-COUPLING-ROUTE.md) | **Accepted by independent review**, with its capability gaps disclosed and P3b unestablished. R-B, CP2K `MIXED`/`GENMIX`, is selected. Native-interface limitations, undocumented capabilities and demonstrated negatives (none) are now distinguished | P3b open. The five undocumented route capabilities are dependencies within Stage 1; C6 is a Stage 2 gate |
 | C3 | Provenance capture tested on a trivial AiiDA job against the field set frozen after the data-model review | [C3-PROVENANCE-WIRING.md](C3-PROVENANCE-WIRING.md) | **Accepted by independent review as a reviewed partial demonstration; readiness BLOCKED.** One trivial non-chemistry job ran with exit status 0. F1 now requires retained full diff bytes and untracked source contents. Coverage: 2 fields on the job, 5 by surrogate (atom identity only as surrogate, with chain survival unverified), 4 not demonstrated | Prerequisites to starting Stage 1: identity-chain survival, the remaining provenance extensions and the login-shell environment gap. Closing them needs a new wiring test under its own authorization |
-| C4 | Tolerances, budgets and the numerical-convergence protocol declared, approved and recorded | [C4-TOLERANCES-AND-CONVERGENCE.md](C4-TOLERANCES-AND-CONVERGENCE.md) | **Accepted by independent review**, including the E3 persistence correction made here; **human approval PENDING**. The operational electronic-state rule is declared; E3(iii) is INDETERMINATE by declaration; **N8 is BLOCKED** pending the representation of both compared records. Row 11 carries the zero-accepted-step case and requires the order comparison of the events E1–E4 under their full criteria at checkpoint S; row 5 declares E3's minimum persistence Δd_min = 0.20 Å for that comparison; row 3 keeps the N6 energy criterion of event E1 apart from the geometric trigger | Human approval of C4. Prerequisites to starting Stage 1: the N8 representations and the compiled Psi4 fitting-basis steps. Dependency within Stage 1: engine grid acceptance |
+| C4 | Tolerances, budgets and the numerical-convergence protocol declared, approved and recorded | [C4-TOLERANCES-AND-CONVERGENCE.md](C4-TOLERANCES-AND-CONVERGENCE.md) | **Accepted by independent review**, including the E3 persistence correction made here, and **approved by a person on 2026-09-27** at the digest bound in Section 2 ([approval record](C4-HUMAN-APPROVAL.md)). The opening Approval bullet of C4, which still reads PENDING, is frozen text superseded by that record. The operational electronic-state rule is declared; E3(iii) is INDETERMINATE by declaration; **N8 is BLOCKED** pending the representations of both compared records and the combined formatting allowance r. Row 11 carries the zero-accepted-step case and requires the order comparison of the events E1–E4 under their full criteria at checkpoint S; row 5 declares E3's minimum persistence Δd_min = 0.20 Å for that comparison; row 3 keeps the N6 energy criterion of event E1 apart from the geometric trigger | Nothing further for human approval. Prerequisites to starting Stage 1: the N8 representations, with the combined formatting allowance r, and the compiled Psi4 fitting-basis steps. Dependency within Stage 1: engine grid acceptance |
 | C7 | Validation set, displaced atoms, P2 test molecule with identical model chemistry and isolated-molecule treatment, Stage 2 checkpoint selectors | [C7-VALIDATION-SET.md](C7-VALIDATION-SET.md); [structures/ms-001](../../structures/ms-001/README.md) | **Geometry, validation definitions and the corrected checkpoint comparison accepted by independent review**, including the E3 persistence correction made here. The selectors use B3 §5 unchanged and are geometric only, and a branch with zero accepted steps selects nothing and blocks. Checkpoint S compares the events E1–E4 under their full criteria. E3 counts only over its declared minimum persistence, and neither a match of geometric lists nor a match of isolated E3 hits ever releases a segment | Prerequisite to starting Stage 1: basis normalization. Dependencies within Stage 1: the remaining N2 checks and libxc identity |
 | B1 | Models M1 and M2 frozen, hashed and labelled `[AGENT]` | [structures/ms-001](../../structures/ms-001/README.md) | **Accepted by independent review** as an `[AGENT]` model definition with no physical validation. The geometry is unchanged from attempt 3. The rigidity statement is limited to start, V1 and V2, and V3's intended change of about 1.50 Å is described | Not a model of the benchmark geometry and not compared with the authors' coordinates `[GAP]` |
 | B2 | Scheme (partition, embedding, links, charge, spin) and the settings of both levels, as an `[AGENT]` deviation, approved by the reviewer | [B2-METHOD-DECLARATION.md](B2-METHOD-DECLARATION.md) | **Accepted by independent review**, with explicit prerequisite blockers and no claim of method readiness. The convergence controls and SCF algorithms of both engines are declared. For Psi4, `GUESS SAD`, `DF_SCF_GUESS false` and `SAD_SCF_TYPE DIRECT` are declared as explicit options, and the cited Python driver paths honor them (B2 §6). The fitting-basis behavior of the compiled SAD solver, double-hybrid test and gradient remains `UNVERIFIED` and blocks Stage 1. Nothing beyond the cited Python source is claimed about fitting bases. The dispersion-input contract is established from version-matched source | Prerequisites to starting Stage 1: G4 `[GAP]`, the unit of `OMEGA` and the compiled Psi4 fitting-basis steps. Dependencies within Stage 1: GAPW with exact exchange, GFN0 with `UKS`, and the s-dftd3 r⁻⁸ exponent. Stage 2 gate: the defining reference `[GAP]` for P2. D3 sr8 = 1.0 is a declared deviation |
 | B3 | Drive protocol, including the sensitivity steps and segment rule, approved by the reviewer | [B3-DRIVE-PROTOCOL.md](B3-DRIVE-PROTOCOL.md) | **Accepted by independent review**, including the E3 persistence correction made here. The geometric triggers T_A and T_R govern z0, the approach stopping rule and the selection of checkpoint configurations and windows. Checkpoint S compares the order of the inherited events E1–E4 under their full criteria, including E1's N6-resolved energy decrease and E2's persistent Si–C bond and intact Si–Si bonds at the anchoring Si. E3 counts only where the pendent state persists over the declared minimum Δd_min = 0.20 Å of imposed d, and it is placed at the first step of that span. An isolated E3 hit is not observed, and a span that cannot be established inside the compared interval makes E3 INDETERMINATE. An INDETERMINATE event makes S INDETERMINATE, and a match of geometric lists alone never releases a segment. Event E1 needs the Si–C bond to form and an N6-resolved energy decrease at the same step. It is INDETERMINATE when an energy or sign is unavailable, and at step 0 unless the Si–C bond is absent there at all three multiples. A branch with zero accepted steps has no anchor or window, blocks both checkpoints, makes no sensitivity re-run and starts no dependent branch | Nothing further within Stage 0. The declared Δd_min = 0.20 Å remains an arbitrary `[AGENT]` declaration without physical validation |
 
-**Stage 0 as a whole: PENDING human approval of C4.** Every Stage 0 definition is recorded and hashed below. The
-corrected definition package has independent review approval: C1, C2 (P3b unestablished), C3 (readiness BLOCKED), C4
-(N8 BLOCKED), C7, B1, B2 and B3 are accepted as definitions. Lead acceptance is recorded. C4 lacks human approval, and
-Stage 0 is not closed until it is given. The acceptance validates nothing physically and upgrades no evidence label.
+**Stage 0 as a whole: closed as a set of frozen prospective definitions.** Every Stage 0 definition is recorded and
+hashed below. The corrected definition package has independent review approval: C1, C2 (P3b unestablished), C3
+(readiness BLOCKED), C4 (N8 BLOCKED), C7, B1, B2 and B3 are accepted as definitions. Lead acceptance is recorded, and a
+person approved C4 on 2026-09-27 ([approval record](C4-HUMAN-APPROVAL.md)). The closure fixes these definitions
+prospectively. It is not readiness, validates nothing physically, upgrades no evidence label, and authorizes no
+Stage 1, Stage 1a or Stage 1b work and no calculation, installation or engine run.
 
 **Readiness for Stage 1: BLOCKED.** The categories below are used across this package (B2 §8, the package index and
 the research state).
-- **Prerequisites to starting Stage 1.** All must hold before any Stage 1 calculation. Three are recorded: the Stage 0
-  items are corrected or explicitly reviewed-blocked, independent review has approved them, and Lead acceptance is
-  recorded. The others do not hold:
-  - human approval of C4 (PENDING);
+- **Prerequisites to starting Stage 1.** All must hold before any Stage 1 calculation. Four are recorded: the Stage 0
+  items are corrected or explicitly reviewed-blocked, independent review has approved them, Lead acceptance is
+  recorded, and a person approved C4 on 2026-09-27. The others do not hold:
   - a separate human authorization of Stage 1;
   - the C3 blockers closed;
   - five definitions settled from version-matched source: G4, the unit of `OMEGA`, basis normalization, the N8
-    representations, and whether the compiled Psi4 SCF and gradient steps use any fitting basis under the declared
-    settings.
+    representations (with them, the combined formatting allowance r of N8), and whether the compiled Psi4 SCF and
+    gradient steps use any fitting basis under the declared settings.
 
-  None of these four holds, and Stage 1 has not started.
+  None of these three holds, and Stage 1 has not started.
 - **Dependencies within Stage 1.** These are settled only by Stage 1 work:
   - CP2K installation and build identity, including the libxc version it links;
   - the five undocumented route capabilities of C2 §5;
@@ -102,12 +119,13 @@ established.
 | B2 method declaration | `docs/ms-001/B2-METHOD-DECLARATION.md` | `e0db2ecf5ac86f961f96983483db401c8a2f1ebd99fd25a7d22b1f6f8b7cc7e1` | `[AGENT]` declared deviation over `[LIT]` defaults and parameters; `[GAP]` items listed |
 | B3 drive protocol | `docs/ms-001/B3-DRIVE-PROTOCOL.md` | `79aceedc391afd949660271aed23e2f48da7da8078b288427f3db5219dccea7a` | `[AGENT]` over `[LIT]` optimizer defaults |
 | C4 tolerances and convergence | `docs/ms-001/C4-TOLERANCES-AND-CONVERGENCE.md` | `707c7f72564e6bd2bae2a8a0e5acf2c13dd86e048ca624858d147514cffbb68d` | `[AGENT]` declarations; cited defaults `[LIT]`. Budgets are declarations, not validated uncertainties |
+| C4 human approval record | `docs/ms-001/C4-HUMAN-APPROVAL.md` | `96975be965e2bd10eed45ab236282ec0c6d7d3751965eb98f2e216e5a925cffc` | Process record; no evidence class |
 | C7 validation set | `docs/ms-001/C7-VALIDATION-SET.md` | `05c8e75215b2233ae77f239f42297d83e9a7129c87b0419f9abdccab728400a4` | `[AGENT]`. That the branches pass through the configurations is `[SPEC]` |
 | C3 provenance wiring | `docs/ms-001/C3-PROVENANCE-WIRING.md` | `cd0ffcc37d40fbb82a0801a2685335c68fdde08e8f6fc6c6d31e3ff76fe2723d` | Software wiring evidence only, with no chemistry class. The field set is `[AGENT]`; coverage gaps are `[GAP]` |
 | Failure record | `docs/ms-001/FAILURE-RECORD.md` | `3e5724c6786c0cb68bc7ee311608303945f4dbc95e4de2fae503b164c4151187` | The failure-record provenance field (evidence policy §4) |
 | Source ledger | `docs/ms-001/SOURCE-LEDGER.md` | `c897550140bd6b644621c382d40e338d6b3a9911a7aef6558082377080cddac3` | `[LIT]` provenance record |
-| Package index | `docs/ms-001/README.md` | `776f60937b556fbe8482f1d55ec37c7706424f6ea040488492defae153851662` | Navigation |
-| Geometry record (document) | `structures/ms-001/README.md` | `b92b636b860f276c08ba9604a88a4c01cc47b149e516e497bcbd3beedf5c9acd` | `[AGENT]` choices; `[GAP]` benchmark relation |
+| Package index | `docs/ms-001/README.md` | `cf304112d3a0568530a0190a843374370bcc9531c213dfbe407e0b0f0e13daea` | Navigation |
+| Geometry record (document) | `structures/ms-001/README.md` | `4cc6cc42660a0dd439f9d0c018aba0cbdea933b0d734fb163cec2442ac97aba6` | `[AGENT]` choices; `[GAP]` benchmark relation |
 | Geometry record (machine-readable) | `structures/ms-001/geometry-record.json` | `43ef99bc795b600c834f9bf5a7590ee3dd6600bc8f1a65354f849120a5f55e74` | `[AGENT]`. Measured construction values establish internal consistency only |
 | B1 model M1 | `structures/ms-001/M1-build-site.extxyz` | `c9374642d5e1cd4509b83cc9c48adbdbe1de1821df949f8700b55f53c0ff0aea` | `[AGENT]` |
 | B1 model M2 (reused) | `structures/donor-activated-EAOGe-C2-radical.extxyz` | `bb7ab3443a99fcdfe47df6a928a07cc45cdd531299051727a5b160493c9186e3` | `[AGENT]`; unchanged, read by digest |

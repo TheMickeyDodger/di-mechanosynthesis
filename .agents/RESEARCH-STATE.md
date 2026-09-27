@@ -4,7 +4,7 @@ This file is public, like the rest of the repository. It records the intended en
 evidence gates, the current qualified status, the open issues and the next bounded work. It records scientific
 status only. It is not authorization for any agent or person to act ([AGENTS.md](../AGENTS.md)). The intended
 capabilities described in Section 1 are aims. They are neither accomplished capabilities nor permission to
-execute. The file was last updated on 2026-09-26.
+execute. The file was last updated on 2026-09-27.
 
 ## 1. Intended end state
 
@@ -74,7 +74,7 @@ its label. The remaining gates are:
 | Compute-environment controls | A recorded process-containment "failure" was an intentional negative control: the expected detection of a descendant process, followed by cleanup. The accepted reassessment explains it, and no rerun is implied. In E-01 the sampled resource and cleanup controls recorded the precursor job within the envelope with verified cleanup; these are sampled observations and cooperative limits, not hard containment. |
 | Result records | The E-01 preparation and run records were stored with verified digests in the project's provenance system. This is record-keeping, not a scientific result. |
 | MS-000 feasibility package | The complete public adaptation is versioned under [docs/ms-000](../docs/ms-000/README.md). It records the benchmark extraction, conditional minimum stack, open parity gaps, evidence policy, source ledger, and ASE smoke test. Its [closure record](../docs/ms-000/CLOSURE.md) disposes the six feasibility criteria that form the MS-000 gate: all six are met, including independent scientific review of the plan, and the gate is PASS. MS-001 faithful-reproduction readiness remains BLOCKED on missing source inputs and missing parity and coupling evidence. A person has since authorized scope option B for Stage 0 only (next row). |
-| MS-001 Stage 0 (scope option B) | Authorized by a person for Stage 0 only, on 2026-09-26 ([C1](../docs/ms-001/C1-AUTHORIZATION.md)). Option A is not authorized and remains BLOCKED; parity is unknown for every item. The Stage 0 definitions are recorded in [docs/ms-001](../docs/ms-001/README.md). The independent review of this package recorded the canonical decision REJECT, substantively REVISE: C1 was accepted, and C2, C3, C4, C7, B1, B2 and B3 were returned for correction, with C3 readiness BLOCKED. A renewed review of the corrected package again recorded REJECT and required five further corrections. Further independent reviews each recorded REJECT for one remaining defect, first the checkpoint S comparison and then the persistence of E3, and each was corrected. The latest independent review recorded the canonical decision APPROVE for the corrected definition package, and Lead acceptance is recorded. Human approval of C4 remains PENDING, so Stage 0 is not closed ([freeze record](../docs/ms-001/STAGE0-FREEZE-RECORD.md)). The acceptance covers definitions only: C3 readiness and N8 remain BLOCKED, P1, P2, P3b, C5 and C6 remain unestablished, and every model, setting and threshold stays `[AGENT]`. Those definitions are: the provenance wiring test on one trivial non-chemistry job, which finished with exit status 0; the coupling-route selection, CP2K `MIXED`/`GENMIX`, with P3b open; the two-level declaration; the drive protocol; tolerances and the numerical-convergence protocol; and the validation set, with geometries built geometrically and unrelaxed. No chemistry calculation was run, and Stage 1 has not started, is BLOCKED and is not authorized. |
+| MS-001 Stage 0 (scope option B) | Authorized by a person for Stage 0 only, on 2026-09-26 ([C1](../docs/ms-001/C1-AUTHORIZATION.md)). Option A is not authorized and remains BLOCKED; parity is unknown for every item. The Stage 0 definitions are recorded in [docs/ms-001](../docs/ms-001/README.md). The independent review of this package recorded the canonical decision REJECT, substantively REVISE: C1 was accepted, and C2, C3, C4, C7, B1, B2 and B3 were returned for correction, with C3 readiness BLOCKED. A renewed review of the corrected package again recorded REJECT and required five further corrections. Further independent reviews each recorded REJECT for one remaining defect, first the checkpoint S comparison and then the persistence of E3, and each was corrected. The latest independent review recorded the canonical decision APPROVE for the corrected definition package, and Lead acceptance is recorded. On 2026-09-27 a person approved C4, the tolerances and numerical-convergence protocol, bound to its exact SHA256 ([approval record](../docs/ms-001/C4-HUMAN-APPROVAL.md)), and Stage 0 is closed as a set of frozen prospective definitions ([freeze record](../docs/ms-001/STAGE0-FREEZE-RECORD.md)). The acceptance and the approval cover definitions only and are neither readiness nor physical validation: C3 readiness and N8 remain BLOCKED, P1, P2, P3b, C5 and C6 remain unestablished, and every model, setting and threshold stays `[AGENT]`. Those definitions are: the provenance wiring test on one trivial non-chemistry job, which finished with exit status 0; the coupling-route selection, CP2K `MIXED`/`GENMIX`, with P3b open; the two-level declaration; the drive protocol; tolerances and the numerical-convergence protocol; and the validation set, with geometries built geometrically and unrelaxed. No chemistry calculation was run, and Stage 1 has not started, is BLOCKED and is not authorized. |
 
 ## 4. Completed source inspection
 
@@ -127,10 +127,12 @@ The full catalogue, with links, locators and verification basis, is in [docs/SOU
   primary literature. The `d3zero2b` dispersion route is configured through simple-dftd3 in the installed build and
   was exercised in a dispersion-only check.
 - **MS-001 Stage 0 open items.** None is claimed. The corrected Stage 0 definitions have independent review approval
-  and Lead acceptance, which settles none of the items below. The items are sorted by when they must be settled.
+  and Lead acceptance, and C4 has human approval (2026-09-27); none of these settles any item below. The items are
+  sorted by when they must be settled.
   - **Prerequisites to starting Stage 1.**
-    - Human approval of C4, which is PENDING, and a separate Stage 1 authorization. Independent review approval and
-      Lead acceptance of the corrected Stage 0 items are recorded.
+    - A separate Stage 1 authorization. Independent review approval and Lead acceptance of the corrected Stage 0
+      items, and the human approval of C4 ([approval record](../docs/ms-001/C4-HUMAN-APPROVAL.md)), are recorded;
+      they authorize nothing.
     - The C3 blockers. C3 is a reviewed partial demonstration. It showed two provenance fields on the trivial job
       and five by surrogate. Among the five, atom identity is surrogate coverage only: it is stored in separate nodes
       that are not inputs of the job, and its survival along a chain of jobs is unverified. It did not demonstrate
@@ -138,8 +140,9 @@ The full catalogue, with links, locators and verification basis, is in [docs/SOU
       are identity-chain survival, the remaining provenance extensions and the login-shell environment gap.
     - Definitions still to settle from version-matched source: GFN0 parameter provenance through CP2K (G4); CP2K's
       unit for `OMEGA`; the normalization of single-primitive basis coefficients; the printed representations
-      compared by N8, which is BLOCKED until then; and whether the compiled Psi4 SCF and gradient steps use any
-      fitting basis under the declared settings.
+      compared by N8, which stays BLOCKED until both compared representations and the combined formatting allowance
+      r of C4 row 10 are defined; and whether the compiled Psi4 SCF and gradient steps use any fitting basis under
+      the declared settings.
   - **Dependencies within Stage 1.**
     - CP2K installation and build identity, including the libxc version it links.
     - The undocumented route capabilities: link atoms and mixed methods in CP2K `MIXED`, the numerical mixing
@@ -181,14 +184,16 @@ A person has since made the MS-001 scope decision:
 - **Option A.** Faithful reproduction is not authorized and remains blocked until the source coordinates and
   methods are obtained and parity evidence exists.
 
-The Stage 0 definitions are now recorded in [docs/ms-001](../docs/ms-001/README.md). The next bounded work is:
-1. Human approval of C4, which is PENDING. Independent review approval and Lead acceptance of the corrected Stage 0
-   items are recorded in the [freeze record](../docs/ms-001/STAGE0-FREEZE-RECORD.md), and Stage 0 is not closed until
-   C4 is approved by a person.
-2. Settling, from version-matched source, the definitions that are prerequisites to starting Stage 1: G4, the unit
-   of `OMEGA`, basis normalization, the N8 representations and the compiled Psi4 fitting-basis steps. Closing the C3 blockers, which needs a new wiring
-   test under its own authorization.
-3. Only after a separate authorization, Stage 1: installing CP2K and running the calibration and
+The Stage 0 definitions are recorded in [docs/ms-001](../docs/ms-001/README.md). Independent review approval and
+Lead acceptance of the corrected Stage 0 items are recorded in the
+[freeze record](../docs/ms-001/STAGE0-FREEZE-RECORD.md), and a person approved C4 on 2026-09-27
+([approval record](../docs/ms-001/C4-HUMAN-APPROVAL.md)). Stage 0 is closed as a set of frozen prospective
+definitions; the closure authorizes nothing. The next bounded work is:
+1. Settling, from version-matched source, the definitions that are prerequisites to starting Stage 1: G4, the unit
+   of `OMEGA`, basis normalization, the N8 representations, with them the combined formatting allowance r of N8, and
+   the compiled Psi4 fitting-basis steps. Closing the C3 blockers, which needs a new wiring test under its own
+   authorization.
+2. Only after a separate authorization, Stage 1: installing CP2K and running the calibration and
    method-validation calculations of Stage 1a and 1b, including the demonstration of the coupling route.
 
 Stage 1 has not started, and this update authorizes nothing.
@@ -233,3 +238,4 @@ restatement. Superseded statements are corrected in place and noted in the log r
 | 2026-09-26 | Independent review of the MS-001 Stage 0 package: canonical decision REJECT, substantively REVISE. C1 was accepted; C2, C3, C4, C7, B1, B2 and B3 were returned for correction, and C3 readiness is BLOCKED. The required corrections were made without any calculation or geometry regeneration. Among them: deterministic sensitivity windows; N8 BLOCKED pending its representation; an operational electronic-state rule; E3(iii) INDETERMINATE by declaration; frozen effective convergence controls; the dispersion-input contract read from source; and C3 recorded as a reviewed partial demonstration. Superseded in place: the MS-001 Stage 0 row, the open-items entry (atom identity is now classed as surrogate coverage) and the next-work list. Stage 1 stays BLOCKED and option A stays BLOCKED. |
 | 2026-09-26 | Renewed independent review of the MS-001 Stage 0 package: canonical decision REJECT. Five further corrections were made without any calculation or geometry regeneration. The Psi4 guess and fitting-basis settings were declared from version-matched source, with the compiled steps `UNVERIFIED` and added as a prerequisite to starting Stage 1. The geometric Si–C trigger that controls the drive was separated from event E1, which keeps its N6 energy criterion. The zero-accepted-step case was defined as blocking. A source-count wording was corrected, and the freeze record and export manifest were rebound. Superseded in place: the MS-001 Stage 0 row, the open-items entry and the next-work list. Stage 1 stays BLOCKED and option A stays BLOCKED. |
 | 2026-09-26 | Independent review approval of the corrected MS-001 Stage 0 definition package, and Lead acceptance recorded. Further independent reviews had recorded REJECT for the checkpoint S comparison and then for the persistence of E3; both were corrected without any calculation or geometry regeneration, and the latest independent review recorded the canonical decision APPROVE. Human approval of C4 remains PENDING, so Stage 0 is not closed. This update is status-only: no definition, evidence label or gate changed. Stage 1 stays BLOCKED and unauthorized, C3 readiness and N8 stay BLOCKED, option A stays BLOCKED and MS-000 remains a feasibility PASS only. P1, P2, P3b, C5 and C6 remain unestablished, and E3's minimum persistence Δd_min = 0.20 Å remains an arbitrary `[AGENT]` declaration without physical validation, as the declared-deviations list now states. Superseded in place: the MS-001 Stage 0 row, the open-items entry and the next-work list. |
+| 2026-09-27 | A person approved C4, the tolerances and numerical-convergence protocol of MS-001 Stage 0, as the prospective numerical protocol of scope option B, Stage 0, bound to commit `bd3d16a5173b19e3461817171487a106eea3173c` and SHA256 `707c7f72564e6bd2bae2a8a0e5acf2c13dd86e048ca624858d147514cffbb68d`, with the records C4 references as they stood at that commit. The decision is recorded in `docs/ms-001/C4-HUMAN-APPROVAL.md`, and Stage 0 is closed as a set of frozen prospective definitions. C4 is byte-identical; its opening Approval bullet, which still reads PENDING, is retained as the frozen text of the approved bytes and superseded by the approval record. The one gate that changed is the human approval of C4. No scientific or readiness gate, definition or evidence label changed: Stage 1 stays BLOCKED and unauthorized, C3 readiness and N8 stay BLOCKED, option A stays BLOCKED and MS-000 remains a feasibility PASS only. P1, P2, P3b, C5 and C6 remain unestablished, and Δd_min = 0.20 Å remains an arbitrary `[AGENT]` declaration without physical validation. Superseded in place: the date line, the MS-001 Stage 0 row, the open-items entry and the next-work list, whose first item, the human approval of C4, is removed as completed. Earlier log rows are kept as written; their PENDING statements were accurate on their dates. |

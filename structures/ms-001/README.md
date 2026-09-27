@@ -105,6 +105,8 @@ The items that depend on these files are declared elsewhere in the Stage 0 packa
   [B3](../../docs/ms-001/B3-DRIVE-PROTOCOL.md) and
   [C7 §4](../../docs/ms-001/C7-VALIDATION-SET.md#4-stage-2-checkpoint-selectors).
 
-All of these have independent review approval and Lead acceptance, and human approval of C4 is pending, as
-recorded in the [freeze record](../../docs/ms-001/STAGE0-FREEZE-RECORD.md). Acceptance does not validate them
-physically.
+All of these have independent review approval and Lead acceptance, as recorded in the
+[freeze record](../../docs/ms-001/STAGE0-FREEZE-RECORD.md). A person approved C4 on 2026-09-27
+([approval record](../../docs/ms-001/C4-HUMAN-APPROVAL.md)), and Stage 0 is closed as a set of frozen prospective
+definitions. Neither acceptance nor approval validates these files or definitions physically, and the geometries
+remain unrelaxed `[AGENT]` models.

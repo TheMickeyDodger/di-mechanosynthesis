@@ -156,9 +156,11 @@ The Stage 0 package in [docs/ms-001](docs/ms-001/README.md) records:
 Every model and setting in it is agent-proposed. Its [freeze record](docs/ms-001/STAGE0-FREEZE-RECORD.md) gives the
 disposition of each Stage 0 item. An independent review accepted C1 and returned the other items for correction.
 After further corrections, the latest independent review approved the corrected definition package, and Lead
-acceptance is recorded. Human approval of C4 is still pending, so Stage 0 is not closed. The acceptance covers
-definitions only and is not physical validation; it changes no evidence label. C3 readiness and N8 remain BLOCKED,
-and Stage 1 remains BLOCKED until a separate authorization is given and its prerequisites hold.
+acceptance is recorded. On 2026-09-27 a person approved C4, the tolerances and numerical-convergence protocol, bound
+to its exact SHA256 ([approval record](docs/ms-001/C4-HUMAN-APPROVAL.md)), and Stage 0 is closed as a set of frozen
+prospective definitions. The acceptance and the approval cover definitions only and are not physical validation or
+readiness; they change no evidence label. C3 readiness and N8 remain BLOCKED, and Stage 1 remains BLOCKED and
+unauthorized until a separate authorization is given and its prerequisites hold.
 
 ## Evidence classification and provenance
 
@@ -212,7 +214,7 @@ and the manifest lists each omission with its reason.
 | [docs/engine-capability-status.md](docs/engine-capability-status.md) | Capabilities of Psi4 1.11 as established, or not, by archived primary sources and the installed build |
 | [docs/ms-000/](docs/ms-000/README.md) | Complete public MS-000 feasibility package: compute spike, architecture, evidence policy, software landscape, source ledger and ASE smoke record |
 | [docs/ms-000/CLOSURE.md](docs/ms-000/CLOSURE.md) | MS-000 closure record: all six feasibility criteria met and gate PASS; dependency classes, unresolved gaps and the stage preconditions of both MS-001 scope options |
-| [docs/ms-001/](docs/ms-001/README.md) | MS-001 Stage 0 package, scope option B: authorization record, provenance wiring test, coupling route, method declaration, drive protocol, tolerances, validation set, failure record, source ledger and freeze record; independent review approval and Lead acceptance recorded, human approval of C4 pending |
+| [docs/ms-001/](docs/ms-001/README.md) | MS-001 Stage 0 package, scope option B: authorization record, provenance wiring test, coupling route, method declaration, drive protocol, tolerances, validation set, failure record, source ledger, freeze record and C4 human approval record; independent review approval and Lead acceptance recorded, C4 approved by a person on 2026-09-27, Stage 0 closed as frozen prospective definitions and Stage 1 BLOCKED |
 | [structures/ms-001/](structures/ms-001/README.md) | MS-001 Stage 0 geometries: model M1, the start configuration, validation configurations V1–V3 and the P2 test molecule, built geometrically and unrelaxed |
 | [tools/build_ms001_geometries.py](tools/build_ms001_geometries.py) | Deterministic generator of the MS-001 Stage 0 geometries; it measures and asserts every reported distance and angle |
 | [tools/c3_provenance_wiring.py](tools/c3_provenance_wiring.py) | Driver of the C3 provenance wiring test, one trivial non-chemistry AiiDA job |

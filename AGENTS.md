@@ -3,9 +3,10 @@
 This repository contains public, provenance-first research material on computational models of mechanically
 controlled chemistry. It holds an evidence policy, candidate input structures, a method specification, an engine
 capability record, the complete public MS-000 feasibility package with its closure record, the MS-001 Stage 0
-package for scope option B (definitions with independent review approval and Lead acceptance, human approval of
-C4 pending, and geometrically built input structures), figure renderers, provenance manifests and the record of one
-stopped engine-validation attempt (`results/e01/`), with its postmortem and installed-build survey.
+package for scope option B (definitions with independent review approval and Lead acceptance, C4 approved by a
+person on 2026-09-27, Stage 0 closed as a set of frozen prospective definitions, and geometrically built input
+structures), figure renderers, provenance manifests and the record of one stopped engine-validation attempt
+(`results/e01/`), with its postmortem and installed-build survey.
 That attempt is closed as technically blocked and scientifically indeterminate. The repository contains no
 converged quantum-chemistry results. The
 [README](README.md) describes the scientific scope. This document sets out the conventions that contributors, and
@@ -22,7 +23,7 @@ automated agents in particular, are expected to follow.
 | `docs/e01-method-specification.md` | Prospective specification of the first calculation, kept as the preparation record |
 | `docs/engine-capability-status.md` | What archived engine sources and the installed build establish, and what remains unverified |
 | `docs/ms-000/` | Public adaptation of the complete MS-000 feasibility package, including its source ledger, ASE smoke-test record and closure record |
-| `docs/ms-001/` | MS-001 Stage 0 package (scope option B): authorization record, provenance wiring test, coupling route, method declaration, drive protocol, tolerances, validation set, failure record, source ledger and freeze record |
+| `docs/ms-001/` | MS-001 Stage 0 package (scope option B): authorization record, provenance wiring test, coupling route, method declaration, drive protocol, tolerances, validation set, failure record, source ledger, freeze record and C4 human approval record |
 | `structures/ms-001/` | MS-001 Stage 0 geometries (`[AGENT]`, built geometrically, unrelaxed) with their record of declared choices and measured construction values |
 | `results/e01/` | The stopped and closed E-01 attempt: report, postmortem and installed-build survey, machine-readable outcome, configuration used and redacted engine output |
 | `tools/` | Deterministic renderers of Figures 1 and 2, with their input tables; the MS-001 Stage 0 geometry generator; the C3 provenance wiring driver |
@@ -74,9 +75,17 @@ evidence or as authorization of MS-001.
 A person has authorized MS-001 scope option B for Stage 0 only. That authorization is not described as readiness,
 as parity or as authorization of Stage 1. Option A is not described as authorized, and its faithful-reproduction
 readiness remains blocked. The MS-001 Stage 0 package is further restricted as follows:
-- **Definitions.** Its definitions have independent review approval and Lead acceptance. They are not described
-  as approved by a person until the human approval of C4 is recorded, nor as physically validated, and their
-  acceptance does not upgrade any evidence label.
+- **Definitions.** Its definitions have independent review approval and Lead acceptance, and a person approved C4
+  on 2026-09-27 as the prospective numerical protocol of Stage 0, bound to its exact SHA256
+  ([approval record](docs/ms-001/C4-HUMAN-APPROVAL.md)). Stage 0 is closed as a set of frozen prospective
+  definitions. Neither the acceptance, the approval nor the closure is described as physical validation, as
+  readiness or as authorization of Stage 1, Stage 1a or Stage 1b, or of any calculation, installation or engine run,
+  and none of them upgrades any evidence label. The
+  approval covers C4 as bound, with the records it references as they stood at the bound commit, and not any later
+  state of them; a later change follows the revision sequence of C4 §3.
+- **Frozen C4 text.** The opening Approval bullet of C4 still reads that approval by a person is PENDING. It is the
+  frozen text of the approved bytes, superseded by the approval record, and it is not edited, because an edit would
+  create bytes that no person approved.
 - **Geometries.** Its geometries are not described as relaxed or validated, nor as a model of the benchmark
   geometry.
 - **Coupling.** No composition of GFN0-xTB with ωB97X-D3 is described as demonstrated.

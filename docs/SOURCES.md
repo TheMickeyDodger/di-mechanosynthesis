@@ -495,13 +495,16 @@ summarize it for the narrative catalogue.
 - **Limitations:** source reading establishes what the code states, not runtime behaviour, except where the C3 job
   measured it.
 
-**[30]** Project records of MS-001 Stage 0 (scope option B), 2026-09-26.
+**[30]** Project records of MS-001 Stage 0 (scope option B), 2026-09-26, with the C4 human approval record of
+2026-09-27.
 - **Content:** the Stage 0 package in [docs/ms-001](ms-001/README.md):
   - the authorization record;
   - the provenance wiring test on one trivial non-chemistry AiiDA job, which finished with exit status 0;
   - the coupling-route selection, the two-level declaration, the drive protocol, the tolerances and
     numerical-convergence protocol, and the validation set;
-  - the failure record and the freeze record.
+  - the failure record and the freeze record;
+  - the [C4 human approval record](ms-001/C4-HUMAN-APPROVAL.md) of 2026-09-27, which binds the approval of C4 to its
+    exact path, commit and SHA256 and identifies the private decision records by SHA256 only.
 
   With it go the geometries in [structures/ms-001](../structures/ms-001/README.md), built by
   [`tools/build_ms001_geometries.py`](../tools/build_ms001_geometries.py), and the wiring driver
@@ -509,4 +512,6 @@ summarize it for the narrative catalogue.
 - **Basis:** new records of this project, identified by SHA256 in the freeze record and the export manifest.
 - **Limitations:** every model, setting and threshold is `[AGENT]`, a declared deviation. The records contain no
   energy, force, gradient or optimized structure. Parity with the benchmark is unknown. The definitions have
-  independent review approval and Lead acceptance, human approval of C4 is pending, and Stage 1 is not authorized.
+  independent review approval and Lead acceptance, and a person approved C4 on 2026-09-27 as the prospective Stage 0
+  numerical protocol, so Stage 0 is closed as a set of frozen prospective definitions. The approval validates nothing
+  physically and changes no evidence label, and Stage 1 is not authorized.

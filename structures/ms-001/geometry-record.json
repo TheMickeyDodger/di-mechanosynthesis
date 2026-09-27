@@ -1,0 +1,572 @@
+{
+  "c7_role_mapping": {
+    "P2": "P2-test-molecule-H3GeCCSiH3.extxyz",
+    "V1": "V1-separated-bodies.extxyz",
+    "V2": "V2-contact-GeC-intact.extxyz",
+    "V3": "V3-pendent-C2-GeC-broken.extxyz"
+  },
+  "evidence_class": "AGENT",
+  "filename_note": "intact/broken in the V2 and V3 file names are C7 recipe labels and denote the geometry recipe only",
+  "files": {
+    "M1-build-site.extxyz": {
+      "atoms": 361,
+      "c7_role": "not a C7 configuration",
+      "derived_measured_on_written_file": {
+        "constructed_edges": {
+          "constructed_edges_remeasured": 460,
+          "max_abs_deviation_from_declared_A": 9.599e-09,
+          "tolerance_A": 1e-06
+        },
+        "counts_on_output": {
+          "H": 174,
+          "H_cap": 136,
+          "H_dimer": 38,
+          "Si": 187,
+          "total": 361
+        },
+        "measurements": {
+          "distance S-L1-07-05 / S-L1-09-05": {
+            "declared": 5.327921,
+            "measured": 5.327921,
+            "tolerance": 1e-06,
+            "unit": "A"
+          },
+          "z_difference S-L1-07-05 / S-L2-07-04": {
+            "declared": 1.135352,
+            "measured": 1.135352,
+            "tolerance": 1e-06,
+            "unit": "A"
+          },
+          "z_difference S-L1-09-05 / S-L2-09-04": {
+            "declared": 1.135352,
+            "measured": 1.135352,
+            "tolerance": 1e-06,
+            "unit": "A"
+          }
+        },
+        "min_distance_not_joined_by_constructed_edge_A": {
+          "H-H": [
+            1.52074,
+            "S-L4-00-01-H2",
+            "S-L4-02-01-H1"
+          ],
+          "other": [
+            2.802752,
+            "S-L4-00-01",
+            "S-L4-02-01-H1"
+          ]
+        },
+        "nominal_outward_directions_on_output": {
+          "S-L1-07-05": [
+            0.35524,
+            -0.0,
+            0.934775
+          ],
+          "S-L1-09-05": [
+            -0.35524,
+            -0.0,
+            0.934775
+          ]
+        }
+      },
+      "electron_bookkeeping": {
+        "all_electron_count_neutral_atoms": 2792,
+        "all_electron_count_parity": "even",
+        "composition": {
+          "H": 174,
+          "Si": 187
+        },
+        "note": "bookkeeping only; charge and spin not assigned here; no electronic-state claim; deferred to B2"
+      },
+      "evidence_class": "AGENT",
+      "not_computed": "bond order, bond formation or cleavage, electronic state, spin state and stability were not computed; no energy, force or gradient was evaluated; no geometry is relaxed; not compared with the benchmark authors' coordinates [GAP]; not a model of the benchmark geometry; topology words name the construction recipe and constructed distances only",
+      "role": "M1 build site (B1)",
+      "sha256": "c9374642d5e1cd4509b83cc9c48adbdbe1de1821df949f8700b55f53c0ff0aea"
+    },
+    "P2-test-molecule-H3GeCCSiH3.extxyz": {
+      "atoms": 10,
+      "c7_role": "P2 test molecule",
+      "derived_measured_on_written_file": {
+        "measurements": {
+          "angle P2-Ca / P2-Cb / P2-Si1": {
+            "declared": 180.0,
+            "measured": 180.0,
+            "tolerance": 0.0001,
+            "unit": "deg"
+          },
+          "angle P2-Ge1 / P2-Ca / P2-Cb": {
+            "declared": 180.0,
+            "measured": 180.0,
+            "tolerance": 0.0001,
+            "unit": "deg"
+          },
+          "angle P2-Ge1-H1 / P2-Ge1 / P2-Ca": {
+            "declared": 109.471221,
+            "measured": 109.471221,
+            "tolerance": 0.0001,
+            "unit": "deg"
+          },
+          "angle P2-Ge1-H2 / P2-Ge1 / P2-Ca": {
+            "declared": 109.471221,
+            "measured": 109.47122,
+            "tolerance": 0.0001,
+            "unit": "deg"
+          },
+          "angle P2-Ge1-H3 / P2-Ge1 / P2-Ca": {
+            "declared": 109.471221,
+            "measured": 109.47122,
+            "tolerance": 0.0001,
+            "unit": "deg"
+          },
+          "angle P2-Si1-H1 / P2-Si1 / P2-Cb": {
+            "declared": 109.471221,
+            "measured": 109.471221,
+            "tolerance": 0.0001,
+            "unit": "deg"
+          },
+          "angle P2-Si1-H2 / P2-Si1 / P2-Cb": {
+            "declared": 109.471221,
+            "measured": 109.47122,
+            "tolerance": 0.0001,
+            "unit": "deg"
+          },
+          "angle P2-Si1-H3 / P2-Si1 / P2-Cb": {
+            "declared": 109.471221,
+            "measured": 109.471221,
+            "tolerance": 0.0001,
+            "unit": "deg"
+          },
+          "distance P2-Ca / P2-Cb": {
+            "declared": 1.18502,
+            "measured": 1.18502,
+            "tolerance": 1e-06,
+            "unit": "A"
+          },
+          "distance P2-Cb / P2-Si1": {
+            "declared": 1.87,
+            "measured": 1.87,
+            "tolerance": 1e-06,
+            "unit": "A"
+          },
+          "distance P2-Ge1 / P2-Ca": {
+            "declared": 1.836863,
+            "measured": 1.836863,
+            "tolerance": 1e-06,
+            "unit": "A"
+          },
+          "distance P2-Ge1 / P2-Ge1-H1": {
+            "declared": 1.51,
+            "measured": 1.51,
+            "tolerance": 1e-06,
+            "unit": "A"
+          },
+          "distance P2-Ge1 / P2-Ge1-H2": {
+            "declared": 1.51,
+            "measured": 1.51,
+            "tolerance": 1e-06,
+            "unit": "A"
+          },
+          "distance P2-Ge1 / P2-Ge1-H3": {
+            "declared": 1.51,
+            "measured": 1.51,
+            "tolerance": 1e-06,
+            "unit": "A"
+          },
+          "distance P2-Si1 / P2-Si1-H1": {
+            "declared": 1.42,
+            "measured": 1.42,
+            "tolerance": 1e-06,
+            "unit": "A"
+          },
+          "distance P2-Si1 / P2-Si1-H2": {
+            "declared": 1.42,
+            "measured": 1.42,
+            "tolerance": 1e-06,
+            "unit": "A"
+          },
+          "distance P2-Si1 / P2-Si1-H3": {
+            "declared": 1.42,
+            "measured": 1.42,
+            "tolerance": 1e-06,
+            "unit": "A"
+          },
+          "projected_angle P2-Ge1-H1 / P2-Ge1 / P2-Si1-H1 / P2-Si1": {
+            "declared": 60.0,
+            "measured": 60.0,
+            "tolerance": 0.0001,
+            "unit": "deg"
+          },
+          "projected_angle P2-Ge1-H2 / P2-Ge1 / P2-Si1-H2 / P2-Si1": {
+            "declared": 60.0,
+            "measured": 60.0,
+            "tolerance": 0.0001,
+            "unit": "deg"
+          },
+          "projected_angle P2-Ge1-H3 / P2-Ge1 / P2-Si1-H3 / P2-Si1": {
+            "declared": 60.0,
+            "measured": 60.0,
+            "tolerance": 0.0001,
+            "unit": "deg"
+          }
+        }
+      },
+      "electron_bookkeeping": {
+        "all_electron_count_neutral_atoms": 64,
+        "all_electron_count_parity": "even",
+        "composition": {
+          "C": 2,
+          "Ge": 1,
+          "H": 6,
+          "Si": 1
+        },
+        "note": "bookkeeping only; charge and spin not assigned here; no electronic-state claim; deferred to B2"
+      },
+      "evidence_class": "AGENT",
+      "not_computed": "bond order, bond formation or cleavage, electronic state, spin state and stability were not computed; no energy, force or gradient was evaluated; no geometry is relaxed; not compared with the benchmark authors' coordinates [GAP]; not a model of the benchmark geometry; topology words name the construction recipe and constructed distances only",
+      "role": "C7 P2 cross-engine test molecule",
+      "sha256": "25c7bceef076f2ed77987dbfabf89cce814490091e72ce911e08ed1ed6e2a702"
+    },
+    "V1-separated-bodies.extxyz": {
+      "atoms": 409,
+      "c7_role": "V1, nominal name \"separated bodies\"",
+      "derived_measured_on_written_file": {
+        "coordinates_identical_to_start_file": true,
+        "measurements": {
+          "distance D-Cb / S-L1-07-05": {
+            "declared": 6.564807,
+            "measured": 6.564807,
+            "tolerance": 1e-06,
+            "unit": "A"
+          },
+          "distance D-Cb / S-L1-09-05": {
+            "declared": 6.564807,
+            "measured": 6.564807,
+            "tolerance": 1e-06,
+            "unit": "A"
+          },
+          "xy_offset_from_midpoint D-Cb / S-L1-07-05 / S-L1-09-05": {
+            "declared": 0.0,
+            "measured": 0.0,
+            "tolerance": 1e-06,
+            "unit": "A"
+          },
+          "z_difference D-Cb / S-L1-07-05": {
+            "declared": 6.0,
+            "measured": 6.0,
+            "tolerance": 1e-06,
+            "unit": "A"
+          }
+        },
+        "min_distance_M1_to_tool_A": {
+          "H-H": [
+            8.499571,
+            "S-L1-07-07-H1",
+            "D-C8-H2"
+          ],
+          "other": [
+            6.421787,
+            "S-L1-07-03-H1",
+            "D-Cb"
+          ]
+        },
+        "tool_rigidity": {
+          "tolerance_A": 1e-06,
+          "tool_internal_distances_max_abs_change_from_M2_A": 1.292e-08
+        }
+      },
+      "electron_bookkeeping": {
+        "all_electron_count_neutral_atoms": 2977,
+        "all_electron_count_parity": "odd",
+        "composition": {
+          "C": 17,
+          "Ge": 1,
+          "H": 201,
+          "O": 3,
+          "Si": 187
+        },
+        "note": "bookkeeping only; charge and spin not assigned here; no electronic-state claim; deferred to B2"
+      },
+      "evidence_class": "AGENT",
+      "not_computed": "bond order, bond formation or cleavage, electronic state, spin state and stability were not computed; no energy, force or gradient was evaluated; no geometry is relaxed; not compared with the benchmark authors' coordinates [GAP]; not a model of the benchmark geometry; topology words name the construction recipe and constructed distances only",
+      "role": "C7 validation configuration V1",
+      "sha256": "ea48cc26bb6102abcf4c0786861bbf3278d00911252fd41242cb81fe74e98cd2"
+    },
+    "V2-contact-GeC-intact.extxyz": {
+      "atoms": 409,
+      "c7_role": "V2, nominal name \"contact, Ge-C intact\"",
+      "derived_measured_on_written_file": {
+        "M1_block_identical_to_M1_file": true,
+        "lateral_shift_of_D-Cb_from_start_file_A": 1.999662,
+        "measurements": {
+          "angle_to_outward D-Cb / S-L1-07-05 / S-L1-05-05 / S-L2-07-04 / S-L2-07-06": {
+            "declared": 0.0,
+            "measured": 0.0,
+            "tolerance": 0.0001,
+            "unit": "deg"
+          },
+          "distance D-Cb / S-L1-07-05": {
+            "declared": 1.87,
+            "measured": 1.87,
+            "tolerance": 1e-06,
+            "unit": "A"
+          },
+          "distance D-Cb / S-L1-09-05": {
+            "declared": null,
+            "measured": 4.98046,
+            "tolerance": null,
+            "unit": "A"
+          },
+          "distance D-Ge1 / D-Ca": {
+            "declared": 1.836863,
+            "measured": 1.836864,
+            "tolerance": 1e-06,
+            "unit": "A"
+          }
+        },
+        "min_distance_M1_to_tool_excluding_declared_contact_A": {
+          "H-H": [
+            4.165083,
+            "S-L1-07-07-H1",
+            "D-C8-H2"
+          ],
+          "other": [
+            3.004839,
+            "S-L1-07-05",
+            "D-Ca"
+          ]
+        },
+        "tool_rigidity": {
+          "tolerance_A": 1e-06,
+          "tool_internal_distances_max_abs_change_from_M2_A": 1.224e-08
+        }
+      },
+      "electron_bookkeeping": {
+        "all_electron_count_neutral_atoms": 2977,
+        "all_electron_count_parity": "odd",
+        "composition": {
+          "C": 17,
+          "Ge": 1,
+          "H": 201,
+          "O": 3,
+          "Si": 187
+        },
+        "note": "bookkeeping only; charge and spin not assigned here; no electronic-state claim; deferred to B2"
+      },
+      "evidence_class": "AGENT",
+      "not_computed": "bond order, bond formation or cleavage, electronic state, spin state and stability were not computed; no energy, force or gradient was evaluated; no geometry is relaxed; not compared with the benchmark authors' coordinates [GAP]; not a model of the benchmark geometry; topology words name the construction recipe and constructed distances only",
+      "role": "C7 validation configuration V2",
+      "sha256": "f1a4e075cf4e239a4fac3805cc45e078e8fff362bacdd90d53c45d54222210be"
+    },
+    "V3-pendent-C2-GeC-broken.extxyz": {
+      "atoms": 409,
+      "c7_role": "V3, nominal name \"pendent C2 with Ge-C broken\"",
+      "derived_measured_on_written_file": {
+        "D-Ge1_D-Ca_over_Ge_plus_C_covalent_radii": 1.702473,
+        "M1_block_identical_to_M1_file": true,
+        "kept_atoms_identical_to_V2_file": true,
+        "measurements": {
+          "distance D-Cb / S-L1-07-05": {
+            "declared": 1.87,
+            "measured": 1.87,
+            "tolerance": 1e-06,
+            "unit": "A"
+          },
+          "distance D-Ge1 / D-Ca": {
+            "declared": 3.336847,
+            "measured": 3.336847,
+            "tolerance": 1e-06,
+            "unit": "A"
+          }
+        },
+        "min_distance_translated_atoms_to_M1_or_kept_atoms_A": {
+          "H-H": [
+            5.599376,
+            "D-C8-H2",
+            "S-L1-07-07-H1"
+          ],
+          "other": [
+            4.503391,
+            "D-C2",
+            "D-Ca"
+          ]
+        },
+        "translated_atoms": {
+          "count": 46,
+          "max_abs_deviation_from_declared_vector_A": 0.0,
+          "tolerance_A": 1e-06
+        }
+      },
+      "electron_bookkeeping": {
+        "all_electron_count_neutral_atoms": 2977,
+        "all_electron_count_parity": "odd",
+        "composition": {
+          "C": 17,
+          "Ge": 1,
+          "H": 201,
+          "O": 3,
+          "Si": 187
+        },
+        "note": "bookkeeping only; charge and spin not assigned here; no electronic-state claim; deferred to B2"
+      },
+      "evidence_class": "AGENT",
+      "not_computed": "bond order, bond formation or cleavage, electronic state, spin state and stability were not computed; no energy, force or gradient was evaluated; no geometry is relaxed; not compared with the benchmark authors' coordinates [GAP]; not a model of the benchmark geometry; topology words name the construction recipe and constructed distances only",
+      "role": "C7 validation configuration V3",
+      "sha256": "6d722a44787cbfb7a25d87dc2f6b33ae79a5ff8b1c416d966f6cb7ddf78043c1"
+    },
+    "start-combined.extxyz": {
+      "atoms": 409,
+      "c7_role": "not a C7 configuration",
+      "derived_measured_on_written_file": {
+        "measurements": {
+          "distance D-Cb / S-L1-07-05": {
+            "declared": 6.564807,
+            "measured": 6.564807,
+            "tolerance": 1e-06,
+            "unit": "A"
+          },
+          "distance D-Cb / S-L1-09-05": {
+            "declared": 6.564807,
+            "measured": 6.564807,
+            "tolerance": 1e-06,
+            "unit": "A"
+          },
+          "xy_offset_from_midpoint D-Cb / S-L1-07-05 / S-L1-09-05": {
+            "declared": 0.0,
+            "measured": 0.0,
+            "tolerance": 1e-06,
+            "unit": "A"
+          },
+          "z_difference D-Cb / S-L1-07-05": {
+            "declared": 6.0,
+            "measured": 6.0,
+            "tolerance": 1e-06,
+            "unit": "A"
+          }
+        },
+        "min_distance_M1_to_tool_A": {
+          "H-H": [
+            8.499571,
+            "S-L1-07-07-H1",
+            "D-C8-H2"
+          ],
+          "other": [
+            6.421787,
+            "S-L1-07-03-H1",
+            "D-Cb"
+          ]
+        },
+        "tool_rigidity": {
+          "tolerance_A": 1e-06,
+          "tool_internal_distances_max_abs_change_from_M2_A": 1.292e-08
+        }
+      },
+      "electron_bookkeeping": {
+        "all_electron_count_neutral_atoms": 2977,
+        "all_electron_count_parity": "odd",
+        "composition": {
+          "C": 17,
+          "Ge": 1,
+          "H": 201,
+          "O": 3,
+          "Si": 187
+        },
+        "note": "bookkeeping only; charge and spin not assigned here; no electronic-state claim; deferred to B2"
+      },
+      "evidence_class": "AGENT",
+      "not_computed": "bond order, bond formation or cleavage, electronic state, spin state and stability were not computed; no energy, force or gradient was evaluated; no geometry is relaxed; not compared with the benchmark authors' coordinates [GAP]; not a model of the benchmark geometry; topology words name the construction recipe and constructed distances only",
+      "role": "start of the approach branch (combined M1 + M2)",
+      "sha256": "f5e45282b638a6569b926c4aa1a402e5fa7c9e25e2db12820dbc3ef33b959ca5"
+    }
+  },
+  "generator": "tools/build_ms001_geometries.py",
+  "generator_sha256": "bb1b2a99b352bc773c3e858d4aac3cd0596597b5cf87dedbc1182f933ee9ab13",
+  "m1_construction": {
+    "constructed_coordination_checked": "3 at the two unterminated Si sites, 4 at every other Si, 1 at every H",
+    "counts": {
+      "H": 174,
+      "H_cap": 136,
+      "H_dimer": 38,
+      "Si": 187,
+      "Si_by_layer": [
+        40,
+        48,
+        54,
+        45
+      ],
+      "total": 361
+    },
+    "declared_construction_parameters": {
+      "dimer_lateral_shift_A": 0.744165425284101,
+      "dimer_rule": "dimer Si-Si distance and both second-layer distances set to the Si-Si constructed distance",
+      "dimer_vertical_drop_A": 0.22214804143748768,
+      "lattice_constant_A": 5.43,
+      "si_si_constructed_distance_A": 2.3512589712747505,
+      "si_si_constructed_distance_rule": "a*sqrt(3)/4",
+      "surface_spacing_A": 3.8395898218429525
+    },
+    "dimer_axis": "x",
+    "nominal_outward_direction_rule": "negative normalized sum of unit vectors to the three constructed neighbours",
+    "row_axis": "y",
+    "three_coordinate_site_ids": [
+      "S-L1-07-05",
+      "S-L1-09-05"
+    ],
+    "three_coordinate_site_neighbour_ids": {
+      "S-L1-07-05": [
+        "S-L1-05-05",
+        "S-L2-07-04",
+        "S-L2-07-06"
+      ],
+      "S-L1-09-05": [
+        "S-L1-11-05",
+        "S-L2-09-04",
+        "S-L2-09-06"
+      ]
+    },
+    "three_coordinate_site_note": "two Si sites left unterminated by construction (three constructed neighbours each); \"dangling-bond pair\" is only a nominal name for these sites, not an electronic-state, unpaired-electron or radical claim"
+  },
+  "m2": {
+    "file": "structures/donor-activated-EAOGe-C2-radical.extxyz",
+    "reused": "read by digest, not regenerated",
+    "sha256": "bb7ab3443a99fcdfe47df6a928a07cc45cdd531299051727a5b160493c9186e3"
+  },
+  "measurement_basis": "every derived distance and angle is measured on the coordinates read back from the written file (norms and dot products); each declared value is asserted within 1e-06 A for distances and 0.0001 deg for angles",
+  "not_computed": "bond order, bond formation or cleavage, electronic state, spin state and stability were not computed; no energy, force or gradient was evaluated; no geometry is relaxed; not compared with the benchmark authors' coordinates [GAP]; not a model of the benchmark geometry; topology words name the construction recipe and constructed distances only",
+  "parameters": {
+    "Ge_H_distance_A": 1.51,
+    "Si_H_cap_distance_A": 1.4200000000000002,
+    "covalent_radii_A": {
+      "C": 0.76,
+      "Ge": 1.2,
+      "H": 0.31,
+      "Si": 1.11
+    },
+    "covalent_radii_basis": "ase.data.covalent_radii in ASE 3.29.0 (Cordero et al. 2008)",
+    "declared_contact_distance_Si_C_A": 1.87,
+    "dimer_rows": 4,
+    "dimers_per_row": 5,
+    "lattice_constant_A": 5.43,
+    "lattice_constant_basis": "ase.data.reference_states[Si] in ASE 3.29.0",
+    "pair_column": 2,
+    "pair_rows": [
+      1,
+      2
+    ],
+    "si_layers": 4,
+    "start_Cb_height_A": 6.0,
+    "start_Cb_lateral": "midpoint of the two three-coordinate Si sites",
+    "tool_orientation": "D-Ge1->D-Cb along -z; projection of D-Ge1->D-O1 on xy along +x",
+    "v3_lift_A": 1.5
+  },
+  "software": {
+    "ase": "3.29.0",
+    "numpy": "2.5.3",
+    "python": "3.12.14"
+  },
+  "statement": "Geometric constructions only. No relaxation, optimization, energy, force or gradient evaluation of any kind. not a model of the benchmark geometry; not compared with the benchmark authors coordinates, which have not been obtained [GAP]. Electron counts are bookkeeping on file contents, not electronic-structure results; charge and spin are not assigned here.",
+  "tolerances": {
+    "angle_deg": 0.0001,
+    "distance_A": 1e-06,
+    "ideal_tetrahedral_angle_deg": 109.47122063449069
+  }
+}

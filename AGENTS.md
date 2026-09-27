@@ -2,9 +2,10 @@
 
 This repository contains public, provenance-first research material on computational models of mechanically
 controlled chemistry. It holds an evidence policy, candidate input structures, a method specification, an engine
-capability record, the complete public MS-000 feasibility package with its closure record, figure renderers,
-provenance manifests and the record of one stopped engine-validation attempt (`results/e01/`), with its
-postmortem and installed-build survey.
+capability record, the complete public MS-000 feasibility package with its closure record, the MS-001 Stage 0
+package for scope option B (definitions with independent review approval and Lead acceptance, human approval of
+C4 pending, and geometrically built input structures), figure renderers, provenance manifests and the record of one
+stopped engine-validation attempt (`results/e01/`), with its postmortem and installed-build survey.
 That attempt is closed as technically blocked and scientifically indeterminate. The repository contains no
 converged quantum-chemistry results. The
 [README](README.md) describes the scientific scope. This document sets out the conventions that contributors, and
@@ -21,8 +22,10 @@ automated agents in particular, are expected to follow.
 | `docs/e01-method-specification.md` | Prospective specification of the first calculation, kept as the preparation record |
 | `docs/engine-capability-status.md` | What archived engine sources and the installed build establish, and what remains unverified |
 | `docs/ms-000/` | Public adaptation of the complete MS-000 feasibility package, including its source ledger, ASE smoke-test record and closure record |
+| `docs/ms-001/` | MS-001 Stage 0 package (scope option B): authorization record, provenance wiring test, coupling route, method declaration, drive protocol, tolerances, validation set, failure record, source ledger and freeze record |
+| `structures/ms-001/` | MS-001 Stage 0 geometries (`[AGENT]`, built geometrically, unrelaxed) with their record of declared choices and measured construction values |
 | `results/e01/` | The stopped and closed E-01 attempt: report, postmortem and installed-build survey, machine-readable outcome, configuration used and redacted engine output |
-| `tools/` | Deterministic renderers of Figures 1 and 2, with their input tables |
+| `tools/` | Deterministic renderers of Figures 1 and 2, with their input tables; the MS-001 Stage 0 geometry generator; the C3 provenance wiring driver |
 | `provenance/EXPORT-MANIFEST.md` | SHA256 and derivation of every public file |
 | `.agents/RESEARCH-STATE.md` | Research-state record: intended end state, gates, status, open issues and next work |
 
@@ -66,7 +69,18 @@ claims of readiness are not given for software that this repository does not pro
 installed build, whether a header declaration, a symbol-table definition or a dynamic export, is not claimed as
 ABI compatibility, initialization or callability. The MS-000 gate, whatever its disposition, is a feasibility
 judgement on a plan. It is not described as readiness for faithful reproduction, as parity validation, as physical
-evidence or as authorization of MS-001, and neither MS-001 scope option is described as selected.
+evidence or as authorization of MS-001.
+
+A person has authorized MS-001 scope option B for Stage 0 only. That authorization is not described as readiness,
+as parity or as authorization of Stage 1. Option A is not described as authorized, and its faithful-reproduction
+readiness remains blocked. The MS-001 Stage 0 package is further restricted as follows:
+- **Definitions.** Its definitions have independent review approval and Lead acceptance. They are not described
+  as approved by a person until the human approval of C4 is recorded, nor as physically validated, and their
+  acceptance does not upgrade any evidence label.
+- **Geometries.** Its geometries are not described as relaxed or validated, nor as a model of the benchmark
+  geometry.
+- **Coupling.** No composition of GFN0-xTB with ωB97X-D3 is described as demonstrated.
+- **The wiring job.** The provenance wiring job is not described as chemistry or method evidence.
 
 ## Adding or changing content
 

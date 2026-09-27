@@ -3,7 +3,9 @@
 This catalogue lists the references, method sources, structure-generation inputs and figures used by the main
 repository narrative, with direct links, versions, locators, uses and limitations. The full MS-000 software
 assessment uses a larger retrieval set, catalogued separately in the
-[MS-000 source ledger](ms-000/SOURCE-LEDGER.md). The numbering here is shared by the main documents in the
+[MS-000 source ledger](ms-000/SOURCE-LEDGER.md); the MS-001 Stage 0 retrievals are catalogued in the
+[MS-001 Stage 0 source ledger](ms-001/SOURCE-LEDGER.md) and summarized in Section 9 (entries [28] to [30]). The
+numbering here is shared by the main documents in the
 repository. The catalogue contains no converged quantum-chemistry values. The project's only
 quantum-chemistry attempt, E-01, stopped before any SCF iteration was reported and is closed as technically
 blocked and scientifically indeterminate. Its records are entries [20] and [21], and the dispersion library it
@@ -155,7 +157,9 @@ arXiv:2607.19488v1, submitted 21 July 2026.
 - **Basis:** the introduction was link-checked on 2026-09-23; installation and licence are recorded.
 - **Limitations:** the `stable` URL is mutable and does not prove an installed version. The project used an
   installed AiiDA 2.9.2 only to store hashed records of the E-01 preparation and run [21]; it was not used to
-  execute calculations, and storage of records is not evidence of a scientific result.
+  execute calculations, and storage of records is not evidence of a scientific result. In MS-001 Stage 0, a separate
+  project-local AiiDA 2.9.2 profile ran one trivial non-chemistry job, integer addition in bash, as the provenance
+  wiring test [30]; that job is software evidence only.
 
 **[13]** RDKit, used for the donor embeddings (version 2026.03.6 in the file headers; the documentation page
 identifies 2026.03.6).
@@ -445,3 +449,64 @@ description and SHA256 in [postmortem.md](../results/e01/postmortem.md).
   recomputed and matched.
 - **Limitations:** the records close the attempt as run. They establish no cause of the abort, no chemical result,
   no exclusion of disk capacity and no demonstration of the source-level pathway.
+
+## 9. MS-001 Stage 0 sources
+
+The exhaustive Stage 0 retrieval record is the [MS-001 Stage 0 source ledger](ms-001/SOURCE-LEDGER.md). It gives
+the URL, version, locator, access time, HTTP result and retrieved-byte SHA256 of each item. The entries below
+summarize it for the narrative catalogue.
+
+**[28]** Stage 0 documentation and source retrievals, 2026-09-26: 73 retrievals, 71 obtained and 2 not.
+- **Links and versions:**
+  - AiiDA documentation at the version-pinned URL for 2.9.2;
+  - the CP2K 2026.2-branch manual, and CP2K data and source files from the `support/v2026.2` branch;
+  - the Py-ChemShell 25.0 manual;
+  - Psi4 source files at tag `v1.11`; simple-dftd3 files at tag `v1.6.0`; qcengine files at tag `v0.51.0`, which
+    are byte-identical to those installed with the project's Psi4 build; and libxc source at tag `7.0.0`;
+  - the `aiida-cp2k` 2.1.1 PyPI record and source archive;
+  - docs.ase-lib.org pages, which were found not to match ASE 3.29.0.
+
+  Each item is listed in the [ledger](ms-001/SOURCE-LEDGER.md).
+- **Content:** the facts used to review the ASE and AiiDA data models, compare the three coupling routes, declare
+  both method levels and their numerical settings, and declare the drive, tolerances and validation set. Among them:
+  - CP2K's GFN0 selector (`GFN_TYPE 0`, default 1);
+  - the libxc ωB97X-D3 parameters, 1.0, −0.804272 and 0.25;
+  - CP2K's hard-coded D3 zero-damping sr8 = 1.0, against rs8 = 1.094 in the simple-dftd3 table;
+  - the def2-TZVP basis entries in both engines;
+  - the dispersion-input contract from Psi4 through qcengine to simple-dftd3, and the Psi4 driver rule on SCF
+    convergence defaults;
+  - the documented optimizer and SCF defaults.
+- **Used in:** [docs/ms-001](ms-001/README.md).
+- **Basis:** inspected at the locators given in the ledger.
+- **Limitations:** the defining ωB97X-D3 paper (doi:10.1021/ct300715s) was not obtained (HTTP 403), and one
+  Py-ChemShell page returned 404. Documentation establishes documented behaviour only. Nothing here demonstrates
+  that a route or setting works on this system, and nothing here is a parity claim.
+
+**[29]** Installed source files read locally for Stage 0.
+- **Content:** twelve source-ID rows covering thirteen files from the project-local ASE 3.29.0, aiida-core 2.9.2
+  and disk-objectstore 1.5.0 installations and from the `aiida-cp2k` 2.1.1 source archive. They cover extxyz I/O,
+  the covalent-radius and lattice tables, the `diamond100` builder, `SimpleQMMM`, `StructureData`, the transport
+  login-shell default, repository hashing and the `aiida-cp2k` input and parser code. One row, `S0-aiida-src-add`,
+  covers two files: the arithmetic calculation and its parser. Each file is identified by its own SHA256 and its
+  archive's SHA256 in the [ledger](ms-001/SOURCE-LEDGER.md).
+- **Used in:** [C3](ms-001/C3-PROVENANCE-WIRING.md), [C2](ms-001/C2-COUPLING-ROUTE.md),
+  [C4](ms-001/C4-TOLERANCES-AND-CONVERGENCE.md) and the [geometry record](../structures/ms-001/README.md).
+- **Basis:** inspected. The files were read and their digests were recorded.
+- **Limitations:** source reading establishes what the code states, not runtime behaviour, except where the C3 job
+  measured it.
+
+**[30]** Project records of MS-001 Stage 0 (scope option B), 2026-09-26.
+- **Content:** the Stage 0 package in [docs/ms-001](ms-001/README.md):
+  - the authorization record;
+  - the provenance wiring test on one trivial non-chemistry AiiDA job, which finished with exit status 0;
+  - the coupling-route selection, the two-level declaration, the drive protocol, the tolerances and
+    numerical-convergence protocol, and the validation set;
+  - the failure record and the freeze record.
+
+  With it go the geometries in [structures/ms-001](../structures/ms-001/README.md), built by
+  [`tools/build_ms001_geometries.py`](../tools/build_ms001_geometries.py), and the wiring driver
+  [`tools/c3_provenance_wiring.py`](../tools/c3_provenance_wiring.py).
+- **Basis:** new records of this project, identified by SHA256 in the freeze record and the export manifest.
+- **Limitations:** every model, setting and threshold is `[AGENT]`, a declared deviation. The records contain no
+  energy, force, gradient or optimized structure. Parity with the benchmark is unknown. The definitions have
+  independent review approval and Lead acceptance, human approval of C4 is pending, and Stage 1 is not authorized.

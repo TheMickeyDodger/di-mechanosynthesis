@@ -1,0 +1,12 @@
+10
+Properties=species:S:1:pos:R:3:atom_id:S:1:role:S:1 model_role="C7 P2 cross-engine test molecule" origin=agent-proposed/geometric-construction evidence_class=AGENT optimization="geometric construction only; no relaxation, optimization, energy, force or gradient evaluation" not_computed="bond order, bond formation or cleavage, electronic state, spin state and stability were not computed; no energy, force or gradient was evaluated; no geometry is relaxed; not compared with the benchmark authors' coordinates [GAP]; not a model of the benchmark geometry; topology words name the construction recipe and constructed distances only" stability_claim=none units=Angstrom benchmark_relation="not a model of the benchmark geometry; not compared with the benchmark authors coordinates, which have not been obtained [GAP]" charge_multiplicity="not assigned here; no electronic-state claim; assignment deferred to B2" generator=tools/build_ms001_geometries.py generator_sha256=bb1b2a99b352bc773c3e858d4aac3cd0596597b5cf87dedbc1182f933ee9ab13 ase_version=3.29.0 numpy_version=2.5.3 c7_role="P2 test molecule" molecule="H3Ge-C-C-SiH3 geometry (Ge, two C and Si collinear)" electron_bookkeeping="composition C2 H6 Ge Si; all-electron count of the neutral atoms 64, parity even; bookkeeping only" construction_rule="Ge, C, C, Si collinear on z; each H at the ideal tetrahedral angle to the bonded C direction; SiH3 staggered against GeH3" pbc="F F F"
+Ge       0.00000000       0.00000000       0.00000000 P2-Ge1 P2-molecule
+C        0.00000000       0.00000000       1.83686349 P2-Ca P2-molecule
+C        0.00000000       0.00000000       3.02188309 P2-Cb P2-molecule
+Si       0.00000000       0.00000000       4.89188309 P2-Si1 P2-molecule
+H        1.42364165       0.00000000      -0.50333333 P2-Ge1-H1 P2-molecule
+H       -0.71182083       1.23290984      -0.50333333 P2-Ge1-H2 P2-molecule
+H       -0.71182083      -1.23290984      -0.50333333 P2-Ge1-H3 P2-molecule
+H        0.66939442       1.15942514       5.36521642 P2-Si1-H1 P2-molecule
+H       -1.33878884       0.00000000       5.36521642 P2-Si1-H2 P2-molecule
+H        0.66939442      -1.15942514       5.36521642 P2-Si1-H3 P2-molecule

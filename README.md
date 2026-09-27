@@ -141,6 +141,25 @@ initialization or callability, and the installed type widths that a diagnostic w
 [26]. Whether the
 `wB97X-D3` entry is equivalent to the functional used in the benchmark calculations has not been established.
 
+A person has authorized MS-001 under scope option B, the declared-deviation study, for Stage 0 only. Stage 0
+defines and freezes a study setup and runs no chemistry. Faithful reproduction (option A) remains BLOCKED, parity
+with the benchmark is unknown, and Stage 1 has not started.
+
+The Stage 0 package in [docs/ms-001](docs/ms-001/README.md) records:
+- a provenance wiring test on one trivial non-chemistry AiiDA job;
+- a coupling route selected from the documented candidates, with P3b left open;
+- a two-level method declaration and a drive protocol;
+- tolerances and a numerical-convergence protocol;
+- a validation set, whose geometries were built geometrically without relaxation in
+  [structures/ms-001](structures/ms-001/README.md) [28–30].
+
+Every model and setting in it is agent-proposed. Its [freeze record](docs/ms-001/STAGE0-FREEZE-RECORD.md) gives the
+disposition of each Stage 0 item. An independent review accepted C1 and returned the other items for correction.
+After further corrections, the latest independent review approved the corrected definition package, and Lead
+acceptance is recorded. Human approval of C4 is still pending, so Stage 0 is not closed. The acceptance covers
+definitions only and is not physical validation; it changes no evidence label. C3 readiness and N8 remain BLOCKED,
+and Stage 1 remains BLOCKED until a separate authorization is given and its prerequisites hold.
+
 ## Evidence classification and provenance
 
 Scientific claims are classified by their underlying evidence as experimentally demonstrated (`[EXP]`),
@@ -168,19 +187,19 @@ The table lists each tool with its current status in the project. Numbers refer 
 
 | Tool | Status here | Role |
 |---|---|---|
-| RDKit [13]; ASE [14] | Used in preparation, without quantum chemistry | Donor-candidate embeddings; structure building and extxyz input and output |
+| RDKit [13]; ASE [14] | Used in preparation, without quantum chemistry; ASE 3.29.0 also built the MS-001 Stage 0 geometries geometrically [30] | Donor-candidate embeddings; structure building and extxyz input and output |
 | Psi4 1.11 [6] | Installed from conda-forge in a project-local environment [20]; installation and basis construction checked; the E-01 precursor SCF aborted during integral setup [21]; a source-level postmortem and a static survey of the installed build identified no cause [25, 26] | Electronic-structure engine for the first calculation |
 | simple-dftd3 1.6.0 [22] | Installed with Psi4 [20]; exercised in a dispersion-only check without SCF | D3 dispersion term of ωB97X-D3 |
-| AiiDA [12] | Used to store the hashed E-01 preparation and run records; not used to execute calculations | Computational provenance |
+| AiiDA [12] | Used to store the hashed E-01 preparation and run records. In MS-001 Stage 0 it ran one trivial non-chemistry job as a provenance wiring test [30]; it has run no chemistry calculation | Computational provenance |
 | xtb [15] | Candidate, documentation only | GFN0-xTB, the benchmark's QM/MM partner method; the xtb documentation describes a GFN0 parameter file |
-| CP2K [16] | Candidate, documentation only | Periodic and QM/MM engine whose manual documents an internal GFN0-xTB option |
+| CP2K [16] | Declared in MS-001 Stage 0 as the engine for both levels and the coupling route [28, 30]; documentation only, not installed | Periodic and QM/MM engine whose manual documents an internal GFN0-xTB option |
 | tblite [17] | Candidate, documentation only | Tight-binding library whose documentation lists GFN1-xTB, GFN2-xTB and IPEA1-xTB but not GFN0; not a substitute for the GFN0 route |
 | QCFractal [18]; OVITO [19] | Candidates, documentation only | Alternative workflow store (deferred); rendering of computed coordinates |
 
 ## Repository contents
 
-The public export covers the donor candidates, their documentation, the E-01 result, and the adapted MS-000
-feasibility package. The surface-model coordinate files and the project's private working records are omitted,
+The public export covers the donor candidates, their documentation, the E-01 result, the adapted MS-000
+feasibility package and the MS-001 Stage 0 package. The surface-model coordinate files and the project's private working records are omitted,
 and the manifest lists each omission with its reason.
 
 | Path | Contents |
@@ -193,6 +212,10 @@ and the manifest lists each omission with its reason.
 | [docs/engine-capability-status.md](docs/engine-capability-status.md) | Capabilities of Psi4 1.11 as established, or not, by archived primary sources and the installed build |
 | [docs/ms-000/](docs/ms-000/README.md) | Complete public MS-000 feasibility package: compute spike, architecture, evidence policy, software landscape, source ledger and ASE smoke record |
 | [docs/ms-000/CLOSURE.md](docs/ms-000/CLOSURE.md) | MS-000 closure record: all six feasibility criteria met and gate PASS; dependency classes, unresolved gaps and the stage preconditions of both MS-001 scope options |
+| [docs/ms-001/](docs/ms-001/README.md) | MS-001 Stage 0 package, scope option B: authorization record, provenance wiring test, coupling route, method declaration, drive protocol, tolerances, validation set, failure record, source ledger and freeze record; independent review approval and Lead acceptance recorded, human approval of C4 pending |
+| [structures/ms-001/](structures/ms-001/README.md) | MS-001 Stage 0 geometries: model M1, the start configuration, validation configurations V1–V3 and the P2 test molecule, built geometrically and unrelaxed |
+| [tools/build_ms001_geometries.py](tools/build_ms001_geometries.py) | Deterministic generator of the MS-001 Stage 0 geometries; it measures and asserts every reported distance and angle |
+| [tools/c3_provenance_wiring.py](tools/c3_provenance_wiring.py) | Driver of the C3 provenance wiring test, one trivial non-chemistry AiiDA job |
 | [results/e01/README.md](results/e01/README.md) | E-01 result: the stopped attempt, runtime observations, hypotheses and diagnostic closeout |
 | [results/e01/postmortem.md](results/e01/postmortem.md) | E-01 postmortem and installed-build survey: the conditional source-level hypothesis, survey coverage and limits, and remaining gaps |
 | [results/e01/outcome.json](results/e01/outcome.json) | Machine-readable E-01 outcome with source hashes |
@@ -226,6 +249,6 @@ export pending redistribution review. Work that builds on the benchmark should c
 3. Blue, B. *et al.* Towards Atom-by-Atom Fabrication: Mechanosynthetic donation and abstraction.
    arXiv:2606.13876 (2026). <https://doi.org/10.48550/arXiv.2606.13876>
 
-References [4] to [27], covering further literature, software documentation, source files and the project's own
-E-01 records, are catalogued with versions, locators, verification basis and limitations in
+References [4] to [30], covering further literature, software documentation, source files and the project's own
+E-01 and MS-001 Stage 0 records, are catalogued with versions, locators, verification basis and limitations in
 [docs/SOURCES.md](docs/SOURCES.md), which uses the same numbering.

@@ -44,7 +44,9 @@ setting and threshold in it is `[AGENT]`, a declared deviation.
 | C4 approval | [C4-HUMAN-APPROVAL.md](C4-HUMAN-APPROVAL.md) | The human approval of C4 on 2026-09-27, bound to path, commit and SHA256, with its scope, the limits that stand and the qualification of C4's frozen opening bullet |
 | C7 | [C7-VALIDATION-SET.md](C7-VALIDATION-SET.md) | Validation configurations, the components tested by the finite-difference checks, the P2 test molecule and its isolated-molecule treatment, and the Stage 2 checkpoint selectors |
 | Failures | [FAILURE-RECORD.md](FAILURE-RECORD.md) | Geometry attempt 1 (failed before writing anything) and attempt 2 (superseded for a metadata defect), both retained |
-| Sources | [SOURCE-LEDGER.md](SOURCE-LEDGER.md) | Every source used, with URL, version, locator, access time and the digest of the retrieved bytes |
+| Sources | [SOURCE-LEDGER.md](SOURCE-LEDGER.md) | Every source used, with URL, version, locator, access time and the digest of the retrieved bytes; a dated section of 2026-09-27 for the source resolution |
+| Source resolution | [SOURCE-RESOLUTION.md](SOURCE-RESOLUTION.md) | The dispositions of the five source definitions required before Stage 1, read from version-matched CP2K 2026.2 and Psi4 v1.11 source (2026-09-27) |
+| C4 revision options | [C4-PROPOSED-REVISION-01.md](C4-PROPOSED-REVISION-01.md) | Options for a decision on N8 under C4 §3, proposed and not applied or approved (2026-09-27) |
 | Freeze | [STAGE0-FREEZE-RECORD.md](STAGE0-FREEZE-RECORD.md) | Path, SHA256 and evidence label of every frozen artifact |
 
 ## Open items, by when they must be settled
@@ -61,7 +63,15 @@ None of these is claimed. The categories match the
     for `OMEGA`, the normalization of single-primitive basis coefficients, the printed representations that N8
     compares, and whether the compiled Psi4 SCF and gradient steps use any fitting basis under the declared settings
     (B2 §6). N8 is BLOCKED until both compared representations, and with them the combined formatting allowance r,
-    are defined (C4 row 10).
+    are defined (C4 row 10). *Updated 2026-09-27:* the [source resolution record](SOURCE-RESOLUTION.md#3-dispositions)
+    gives these dispositions.
+    - `OMEGA` and the compiled Psi4 steps are `ESTABLISHED FROM VERSION-MATCHED SOURCE`. The first covers CP2K's
+      unit and conversion semantics only. The second covers the tagged-source behaviour only; the installed
+      binary's build provenance and runtime conformance remain open.
+    - G4, normalization and the N8 representations are `PARTIALLY ESTABLISHED`. The remaining pieces are the dftd4
+      source to be declared, the Libint2 version of the Psi4 build, and, for N8, the rounding of formatted output
+      and a definitional question in C4 row 10 ([options, not applied](C4-PROPOSED-REVISION-01.md)).
+    - N8 remains BLOCKED and has not been run. This prerequisite does not yet hold.
 - **Dependencies within Stage 1.**
   - CP2K installation and build identity, including its libxc version.
   - The five route capabilities of C2 §5, items 1 to 5.

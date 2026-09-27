@@ -23,7 +23,7 @@ automated agents in particular, are expected to follow.
 | `docs/e01-method-specification.md` | Prospective specification of the first calculation, kept as the preparation record |
 | `docs/engine-capability-status.md` | What archived engine sources and the installed build establish, and what remains unverified |
 | `docs/ms-000/` | Public adaptation of the complete MS-000 feasibility package, including its source ledger, ASE smoke-test record and closure record |
-| `docs/ms-001/` | MS-001 Stage 0 package (scope option B): authorization record, provenance wiring test, coupling route, method declaration, drive protocol, tolerances, validation set, failure record, source ledger, freeze record and C4 human approval record |
+| `docs/ms-001/` | MS-001 Stage 0 package (scope option B): authorization record, provenance wiring test, coupling route, method declaration, drive protocol, tolerances, validation set, failure record, source ledger, freeze record, C4 human approval record, source resolution record and proposed C4 revision options (not applied) |
 | `structures/ms-001/` | MS-001 Stage 0 geometries (`[AGENT]`, built geometrically, unrelaxed) with their record of declared choices and measured construction values |
 | `results/e01/` | The stopped and closed E-01 attempt: report, postmortem and installed-build survey, machine-readable outcome, configuration used and redacted engine output |
 | `tools/` | Deterministic renderers of Figures 1 and 2, with their input tables; the MS-001 Stage 0 geometry generator; the C3 provenance wiring driver |

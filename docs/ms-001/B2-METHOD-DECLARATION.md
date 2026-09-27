@@ -52,6 +52,23 @@ The electron counts are bookkeeping on file contents. Whether CP2K's GFN0-xTB ac
 | Parameter provenance (P1) | Each GFN0 run record must carry: the selector line as passed; CP2K's printed banner and version; the output line that names the method actually used; and the parameter provenance. The XTB manual page documents no GFN0 parameter file or parameter identifier for the internal implementation [S0-cp2k-xtb], so parameter provenance through CP2K is **`[GAP]` (closure gap G4)**. It must be closed from version-matched CP2K source (the file and revision that hold the GFN0 parameters, with its digest) before Stage 1b records P1. Until then P1 records the field as missing, and C5 is unmet |
 | Silent-fallback rule | A run whose output does not identify GFN0 as the method is a correctness failure (spike §4, P1). It is never a result |
 
+**Source annotation, 2026-09-27 (G4).** This annotation changes no declaration or label; the `[GAP]` of G4 stands for
+P1. The [source resolution record, §4](SOURCE-RESOLUTION.md#4-g4-gfn0-parameter-provenance-through-cp2k) reads the
+CP2K 2026.2 release source and gives G4 the disposition `PARTIALLY ESTABLISHED`.
+- **Per-element parameters.** They come from the release data file `data/xTB0_parameters` (SHA256
+  `278461ca…`), which GFN0 uses when no parameter file name is given.
+- **Global constants.** They are hard-coded in source.
+- **Dispersion.** It is D4. Its reference data come from the external dftd4 library. The release's toolchain has
+  two routes to dftd4, each with its own archive: a standalone dftd4 4.2.0 archive, and a tblite 0.6.0 archive whose
+  bundled dftd4 it patches, the bundled source's identity not examined. The release does not fix the dftd4 a build
+  uses.
+- **What a run's output shows.** It names the parameter file without path or digest, and it cannot print GFN0
+  per-element parameters: the `SUBSYS/PRINT/KINDS/POTENTIAL` print key aborts with GFN0.
+- **Keywords the GFN0 path does not use.** CP2K sets `COULOMB_INTERACTION` and `CHECK_ATOMIC_CHARGES`, listed above
+  as documented defaults, to false for GFN0 and does not read them.
+- **Remaining.** A declaration of the dftd4 source through the revision sequence. The bytes a run loads remain P1
+  run provenance within Stage 1.
+
 ## 4. ωB97X-D3 level (sub-force_eval E1)
 
 | Item | Declaration and source |
@@ -68,6 +85,16 @@ The electron counts are bookkeeping on file contents. Whether CP2K's GFN0-xTB ac
 | SCF algorithm (E1) | Diagonalization: `SCF/DIAGONALIZATION` switched on explicitly with `ALGORITHM STANDARD`, which is the documented default; the section itself is off unless requested [S0-cp2k-scf-diag]. `SCF/MIXING` on with `METHOD DIRECT_P_MIXING` and `ALPHA 0.4`, the documented defaults, set explicitly [S0-cp2k-scf-mixing]. The `SCF/OT` section is not used; it is off by default [S0-cp2k-scf-ot]. `ADDED_MOS 0` (default) and no `SMEAR` section [S0-cp2k-scf]. These are frozen and not discovered from the run |
 | Effective energy and gradient controls (E1) | Energies and forces come from the same converged SCF. The controls that govern both are set explicitly at the production rung: `EPS_SCF 1.0e-5`, `EPS_DEFAULT 1.0e-10`, `EPS_SCHWARZ 1.0e-10` and `EPS_SCHWARZ_FORCES 1.0e-6` (the screening threshold applied to exchange forces). The CP2K 2026.2 pages retrieved document no automatic tightening of these for force evaluations, so the declared values are the effective ones. Whether an undocumented override exists is `UNVERIFIED` and is checked against the printed input echo of the first Stage 1 run |
 | Auxiliary basis (E1) | No auxiliary or fitting basis is declared for the converged E1 energy and forces. Exact four-centre exchange is used: the optional `HF/RI` subsection [S0-cp2k-hf] and the optional `DFT/AUXILIARY_DENSITY_MATRIX_METHOD` and `DFT/DENSITY_FITTING` subsections [S0-cp2k-dft] are not included. The initial-guess generators used by the repeats of C4 N3 affect only the starting wavefunction. `EHT` is documented as using "the EHT (gfn0-xTB) code" [S0-cp2k-scf]. Whether `ATOMIC` or `EHT` build any internal basis of their own is not established |
+
+**Source annotation, 2026-09-27 (OMEGA).** This annotation changes no declaration or label. The
+[source resolution record, §5](SOURCE-RESOLUTION.md#5-omega-unit-and-conversion-in-cp2k) reads the CP2K 2026.2 release
+source and gives CP2K's unit and conversion semantics of `OMEGA` the disposition
+`ESTABLISHED FROM VERSION-MATCHED SOURCE`.
+- **The source statement.** The keyword has no unit and is not converted.
+- **The project's inference.** The exchange kernels combine ω² with Gaussian exponents in bohr⁻², so `OMEGA 0.25`
+  acts as 0.25 bohr⁻¹. This is an inference from the cited expressions.
+- **Not touched.** The reading of the scale factors above stays `UNVERIFIED`, the defining reference stays `[GAP]`,
+  and the libxc version stays `[GAP]`.
 
 ## 5. Non-periodic treatment (all three sub-force_evals)
 
@@ -103,6 +130,21 @@ in CP2K 2026.2 `EMSL_BASIS_SETS` [S0-cp2k-emsl-basis] and Psi4 v1.11 `def2-tzvp.
 - That normalization behaviour is not established from the retrieved documentation (`UNVERIFIED`). N2 requires it
   to be confirmed before a P2 comparison is used.
 
+**Source annotation, 2026-09-27 (normalization and compiled steps).** This annotation changes no declaration or
+label. The `UNVERIFIED` statements above keep their wording, and what an installed build does stays unverified. The
+[source resolution record](SOURCE-RESOLUTION.md) reads the version-matched source:
+- **Normalization** ([§6](SOURCE-RESOLUTION.md#6-basis-normalization-in-cp2k-and-psi4), `PARTIALLY ESTABLISHED`).
+  - CP2K 2026.2 normalizes primitives and contracted functions, so a positive single-primitive coefficient is scaled
+    away.
+  - In Psi4 v1.11 the DFT-grid coefficients are normalized by Psi4 source.
+  - Psi4's integral coefficients are normalized inside Libint2, read only at Libint v2.8.1. That is a version Psi4
+    names as its source pin and minimum, not the version of any build.
+- **Compiled steps** ([§8](SOURCE-RESOLUTION.md#8-psi4-compiled-steps-and-fitting-bases),
+  `ESTABLISHED FROM VERSION-MATCHED SOURCE` for the tagged-source behaviour). Under the settings declared above, the
+  Psi4 v1.11 source of the SAD atomic solver, the SCF exchange builder, `is_c_hybrid()` and `core.scfgrad` constructs
+  and passes no auxiliary or fitting basis. The build provenance and the runtime conformance of the installed binary
+  remain open.
+
 ## 7. Basis and core treatment per element
 
 | Element | In the frozen configurations | ωB97X-D3 in CP2K 2026.2 | ωB97X-D3 in Psi4 1.11 (P2) | GFN0-xTB |
@@ -130,6 +172,21 @@ any Stage 1 calculation, or recorded as reviewed-blocked, so that no Stage 1 inp
 - The printed representations that N8 compares (C4, row 10).
 - Whether the compiled Psi4 v1.11 steps named in Section 6 (the SAD atomic solver, `is_c_hybrid()` and
   `core.scfgrad`) use any fitting basis under the declared settings (`UNVERIFIED`).
+
+*Dated annotation, 2026-09-27.* The five items above have these dispositions in the
+[source resolution record](SOURCE-RESOLUTION.md#3-dispositions). No item above is deleted and no label changes.
+1. **G4.** `PARTIALLY ESTABLISHED`. The dftd4 source is to be declared; run provenance stays in Stage 1.
+2. **`OMEGA`.** `ESTABLISHED FROM VERSION-MATCHED SOURCE`, for CP2K's unit and conversion semantics only.
+3. **Normalization.** `PARTIALLY ESTABLISHED`. The Libint2 version of the Psi4 build remains open.
+4. **N8 representations.** `PARTIALLY ESTABLISHED`.
+   - No separate, direct record of the gradient `GEO_OPT` uses is written.
+   - Whether a force record can serve as N8's record (i) is a definitional question for C4.
+   - The rounding of formatted output is not fixed by source.
+   - N8 stays BLOCKED and has not been run.
+5. **Compiled Psi4 steps.** `ESTABLISHED FROM VERSION-MATCHED SOURCE`, for the behaviour the v1.11 tagged source
+   defines. The installed binary's build provenance and runtime conformance remain open.
+
+This prerequisite therefore still does not hold. Stage 1 remains BLOCKED and is not authorized.
 
 **Dependencies within Stage 1.** These can be settled only by Stage 1 work after installation, and they gate
 specific Stage 1b checks:

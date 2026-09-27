@@ -194,7 +194,7 @@ The table lists each tool with its current status in the project. Numbers refer 
 | simple-dftd3 1.6.0 [22] | Installed with Psi4 [20]; exercised in a dispersion-only check without SCF | D3 dispersion term of ωB97X-D3 |
 | AiiDA [12] | Used to store the hashed E-01 preparation and run records. In MS-001 Stage 0 it ran one trivial non-chemistry job as a provenance wiring test [30]; it has run no chemistry calculation | Computational provenance |
 | xtb [15] | Candidate, documentation only | GFN0-xTB, the benchmark's QM/MM partner method; the xtb documentation describes a GFN0 parameter file |
-| CP2K [16] | Declared in MS-001 Stage 0 as the engine for both levels and the coupling route [28, 30]; documentation only, not installed | Periodic and QM/MM engine whose manual documents an internal GFN0-xTB option |
+| CP2K [16] | Declared in MS-001 Stage 0 as the engine for both levels and the coupling route [28, 30]; documentation and, since 2026-09-27, release source read [31]; not installed | Periodic and QM/MM engine whose manual documents an internal GFN0-xTB option |
 | tblite [17] | Candidate, documentation only | Tight-binding library whose documentation lists GFN1-xTB, GFN2-xTB and IPEA1-xTB but not GFN0; not a substitute for the GFN0 route |
 | QCFractal [18]; OVITO [19] | Candidates, documentation only | Alternative workflow store (deferred); rendering of computed coordinates |
 
@@ -251,6 +251,6 @@ export pending redistribution review. Work that builds on the benchmark should c
 3. Blue, B. *et al.* Towards Atom-by-Atom Fabrication: Mechanosynthetic donation and abstraction.
    arXiv:2606.13876 (2026). <https://doi.org/10.48550/arXiv.2606.13876>
 
-References [4] to [30], covering further literature, software documentation, source files and the project's own
-E-01 and MS-001 Stage 0 records, are catalogued with versions, locators, verification basis and limitations in
+References [4] to [31], covering further literature, software documentation, source files and the project's own
+E-01 and MS-001 records, are catalogued with versions, locators, verification basis and limitations in
 [docs/SOURCES.md](docs/SOURCES.md), which uses the same numbering.

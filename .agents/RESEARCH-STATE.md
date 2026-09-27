@@ -142,7 +142,17 @@ The full catalogue, with links, locators and verification basis, is in [docs/SOU
       unit for `OMEGA`; the normalization of single-primitive basis coefficients; the printed representations
       compared by N8, which stays BLOCKED until both compared representations and the combined formatting allowance
       r of C4 row 10 are defined; and whether the compiled Psi4 SCF and gradient steps use any fitting basis under
-      the declared settings.
+      the declared settings. *Updated 2026-09-27:* the
+      [source resolution record](../docs/ms-001/SOURCE-RESOLUTION.md#3-dispositions) gives these dispositions.
+      - `OMEGA` (CP2K's unit and conversion semantics only) and the compiled Psi4 steps (tagged-source behaviour
+        only) are established from version-matched source.
+      - G4, normalization and the N8 representations are partially established. The remaining pieces are the
+        dftd4 source to be declared, the Libint2 version of the Psi4 build, and, for N8, the rounding of formatted
+        output and a definitional question in C4 row 10.
+      - Options for that question are recorded as a proposal, not applied
+        ([C4-PROPOSED-REVISION-01.md](../docs/ms-001/C4-PROPOSED-REVISION-01.md)).
+      - The installed Psi4 binary's build provenance and runtime conformance remain open.
+      - This prerequisite still does not hold. N8 remains BLOCKED and has not been run.
   - **Dependencies within Stage 1.**
     - CP2K installation and build identity, including the libxc version it links.
     - The undocumented route capabilities: link atoms and mixed methods in CP2K `MIXED`, the numerical mixing
@@ -192,7 +202,13 @@ definitions; the closure authorizes nothing. The next bounded work is:
 1. Settling, from version-matched source, the definitions that are prerequisites to starting Stage 1: G4, the unit
    of `OMEGA`, basis normalization, the N8 representations, with them the combined formatting allowance r of N8, and
    the compiled Psi4 fitting-basis steps. Closing the C3 blockers, which needs a new wiring test under its own
-   authorization.
+   authorization. *Updated 2026-09-27:* the source reading is done as far as version-matched source permits
+   ([source resolution record](../docs/ms-001/SOURCE-RESOLUTION.md)). What remains of this item:
+   - a declaration of the dftd4 source for G4 through the revision sequence;
+   - a static read, under its own authorization, of the Libint2 version and the build record of the installed
+     Psi4;
+   - a human decision under C4 §3 on N8's definition, from the options recorded as a proposal;
+   - the C3 blockers.
 2. Only after a separate authorization, Stage 1: installing CP2K and running the calibration and
    method-validation calculations of Stage 1a and 1b, including the demonstration of the coupling route.
 
@@ -239,3 +255,4 @@ restatement. Superseded statements are corrected in place and noted in the log r
 | 2026-09-26 | Renewed independent review of the MS-001 Stage 0 package: canonical decision REJECT. Five further corrections were made without any calculation or geometry regeneration. The Psi4 guess and fitting-basis settings were declared from version-matched source, with the compiled steps `UNVERIFIED` and added as a prerequisite to starting Stage 1. The geometric Si–C trigger that controls the drive was separated from event E1, which keeps its N6 energy criterion. The zero-accepted-step case was defined as blocking. A source-count wording was corrected, and the freeze record and export manifest were rebound. Superseded in place: the MS-001 Stage 0 row, the open-items entry and the next-work list. Stage 1 stays BLOCKED and option A stays BLOCKED. |
 | 2026-09-26 | Independent review approval of the corrected MS-001 Stage 0 definition package, and Lead acceptance recorded. Further independent reviews had recorded REJECT for the checkpoint S comparison and then for the persistence of E3; both were corrected without any calculation or geometry regeneration, and the latest independent review recorded the canonical decision APPROVE. Human approval of C4 remains PENDING, so Stage 0 is not closed. This update is status-only: no definition, evidence label or gate changed. Stage 1 stays BLOCKED and unauthorized, C3 readiness and N8 stay BLOCKED, option A stays BLOCKED and MS-000 remains a feasibility PASS only. P1, P2, P3b, C5 and C6 remain unestablished, and E3's minimum persistence Δd_min = 0.20 Å remains an arbitrary `[AGENT]` declaration without physical validation, as the declared-deviations list now states. Superseded in place: the MS-001 Stage 0 row, the open-items entry and the next-work list. |
 | 2026-09-27 | A person approved C4, the tolerances and numerical-convergence protocol of MS-001 Stage 0, as the prospective numerical protocol of scope option B, Stage 0, bound to commit `bd3d16a5173b19e3461817171487a106eea3173c` and SHA256 `707c7f72564e6bd2bae2a8a0e5acf2c13dd86e048ca624858d147514cffbb68d`, with the records C4 references as they stood at that commit. The decision is recorded in `docs/ms-001/C4-HUMAN-APPROVAL.md`, and Stage 0 is closed as a set of frozen prospective definitions. C4 is byte-identical; its opening Approval bullet, which still reads PENDING, is retained as the frozen text of the approved bytes and superseded by the approval record. The one gate that changed is the human approval of C4. No scientific or readiness gate, definition or evidence label changed: Stage 1 stays BLOCKED and unauthorized, C3 readiness and N8 stay BLOCKED, option A stays BLOCKED and MS-000 remains a feasibility PASS only. P1, P2, P3b, C5 and C6 remain unestablished, and Δd_min = 0.20 Å remains an arbitrary `[AGENT]` declaration without physical validation. Superseded in place: the date line, the MS-001 Stage 0 row, the open-items entry and the next-work list, whose first item, the human approval of C4, is removed as completed. Earlier log rows are kept as written; their PENDING statements were accurate on their dates. |
+| 2026-09-27 | Source resolution of the five definitions required before Stage 1, from version-matched CP2K 2026.2 release source, Psi4 v1.11 tagged source and Libint v2.8.1 (`docs/ms-001/SOURCE-RESOLUTION.md`). `OMEGA` (CP2K's unit and conversion semantics) and the compiled Psi4 steps (tagged-source behaviour) are established; G4, basis normalization and the N8 representations are partially established. CP2K writes no separate, direct record of the gradient `GEO_OPT` uses; whether a force record can serve as N8's record (i) is recorded as a definitional question, with options for a decision under C4 §3 in `docs/ms-001/C4-PROPOSED-REVISION-01.md`, not applied and not approved. C4 is byte-identical; B2 received dated annotations only; no value, label, gate or dependency changed. Stage 1 stays BLOCKED and unauthorized; N8 stays BLOCKED and has not been run. Superseded in place, with dates: the open-items entry on the five definitions and next-work item 1. |

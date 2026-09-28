@@ -23,7 +23,7 @@ automated agents in particular, are expected to follow.
 | `docs/e01-method-specification.md` | Prospective specification of the first calculation, kept as the preparation record |
 | `docs/engine-capability-status.md` | What archived engine sources and the installed build establish, and what remains unverified |
 | `docs/ms-000/` | Public adaptation of the complete MS-000 feasibility package, including its source ledger, ASE smoke-test record and closure record |
-| `docs/ms-001/` | MS-001 Stage 0 package (scope option B): authorization record, provenance wiring test, coupling route, method declaration, drive protocol, tolerances, validation set, failure record, source ledger, freeze record, C4 human approval record, source resolution record and proposed C4 revision options (not applied); the pre-Stage-1 closure packet with its installed-build audit, proposed G4 dftd4 declaration, N8 decision packet and proposed C3 wiring test (proposals, not applied), and its source ledger |
+| `docs/ms-001/` | MS-001 Stage 0 package (scope option B): authorization record, provenance wiring test, coupling route, method declaration, drive protocol, tolerances, validation set, failure record, source ledger, freeze record, C4 human approval record, the approval records of the N8 revision and of the G4 declaration, source resolution record and proposed C4 revision options (not applied); the pre-Stage-1 closure packet with its installed-build audit, proposed G4 dftd4 declaration, N8 decision packet and proposed C3 wiring test (proposals; the G4 declaration and N8 option O2 were later approved and applied, as the package index records), and its source ledger |
 | `structures/ms-001/` | MS-001 Stage 0 geometries (`[AGENT]`, built geometrically, unrelaxed) with their record of declared choices and measured construction values |
 | `results/e01/` | The stopped and closed E-01 attempt: report, postmortem and installed-build survey, machine-readable outcome, configuration used and redacted engine output |
 | `tools/` | Deterministic renderers of Figures 1 and 2, with their input tables; the MS-001 Stage 0 geometry generator; the C3 provenance wiring driver |
@@ -83,9 +83,19 @@ readiness remains blocked. The MS-001 Stage 0 package is further restricted as f
   and none of them upgrades any evidence label. The
   approval covers C4 as bound, with the records it references as they stood at the bound commit, and not any later
   state of them; a later change follows the revision sequence of C4 §3.
+  In an answer recorded on 2026-09-27, a person approved, in one decision, a revision of C4 that defines N8 as
+  fixed-atom checks, with consequential revisions of B3, C2 and C7, and the declaration of the dftd4 source for G4 in
+  B2, each bound to its exact SHA256
+  ([N8 approval record](docs/ms-001/C4-HUMAN-APPROVAL-02.md);
+  [G4 approval record](docs/ms-001/B2-G4-HUMAN-APPROVAL.md)). The same restrictions apply to
+  them. Neither is described as physical validation, readiness or authorization; N8 is not described as having been
+  run; and the G4 declaration is not described as a build, linkage, loaded-file or runtime property, as equivalence of
+  builds or as P1 provenance.
 - **Frozen C4 text.** The opening Approval bullet of C4 still reads that approval by a person is PENDING. It is the
-  frozen text of the approved bytes, superseded by the approval record, and it is not edited, because an edit would
+  frozen text of the approved bytes, superseded by the approval records, and it is not edited, because an edit would
   create bytes that no person approved.
+  The revision of N8 approved in the answer recorded on 2026-09-27 leaves that bullet unchanged, and its proposed
+  rewrite is unresolved.
 - **Geometries.** Its geometries are not described as relaxed or validated, nor as a model of the benchmark
   geometry.
 - **Coupling.** No composition of GFN0-xTB with ωB97X-D3 is described as demonstrated.

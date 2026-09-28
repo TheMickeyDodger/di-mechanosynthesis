@@ -159,8 +159,8 @@ After further corrections, the latest independent review approved the corrected 
 acceptance is recorded. On 2026-09-27 a person approved C4, the tolerances and numerical-convergence protocol, bound
 to its exact SHA256 ([approval record](docs/ms-001/C4-HUMAN-APPROVAL.md)), and Stage 0 is closed as a set of frozen
 prospective definitions. The acceptance and the approval cover definitions only and are not physical validation or
-readiness; they change no evidence label. C3 readiness and N8 remain BLOCKED, and Stage 1 remains BLOCKED and
-unauthorized until a separate authorization is given and its prerequisites hold.
+readiness; they change no evidence label. C3 readiness remains BLOCKED, N8 has not been run, and Stage 1 remains
+BLOCKED and unauthorized until a separate authorization is given and its prerequisites hold.
 
 A [pre-Stage-1 closure packet](docs/ms-001/PRESTAGE1-CLOSURE-PACKET.md) of 2026-09-27 takes the remaining
 prerequisites as far as static reading allows [32–35]. It contains:
@@ -169,8 +169,19 @@ prerequisites as far as static reading allows [32–35]. It contains:
 - a decision packet on N8;
 - a specification of a proposed non-chemistry wiring test for the C3 blockers.
 
-Every proposal in it is unapplied and awaits a person's decision. No frozen definition changed, nothing was run or
-installed, and Stage 1 remains BLOCKED and unauthorized.
+The packet changed no frozen definition, and nothing was run or installed. Every proposal in it was unapplied when it
+was published; the G4 declaration and option O2 for N8 have since been approved by a person and applied, as noted
+below, and the wiring test W1 awaits its own authorization. Stage 1 remains BLOCKED and unauthorized.
+
+*Updated 2026-09-28:* in one decision a person approved the proposed declaration of the dftd4
+source for G4, now in B2 §3, and the revision of C4 that the N8 decision packet proposes as option O2, with its
+consequential revisions of B3, C2 and C7
+([N8 approval record](docs/ms-001/C4-HUMAN-APPROVAL-02.md);
+[G4 approval record](docs/ms-001/B2-G4-HUMAN-APPROVAL.md)). N8 is defined as fixed-atom
+checks. It has not been run, and its Stage 1 observations are outstanding. The G4 declaration settles the
+source-definition part of G4 only; the bytes a run loads, the dftd4 library a build links and the D4 environment
+settings of a run remain P1 observations within Stage 1. The approval validates nothing physically and changes no
+evidence label, and nothing was built, installed or run.
 
 ## Evidence classification and provenance
 
@@ -205,7 +216,7 @@ The table lists each tool with its current status in the project. Numbers refer 
 | AiiDA [12] | Used to store the hashed E-01 preparation and run records. In MS-001 Stage 0 it ran one trivial non-chemistry job as a provenance wiring test [30]; it has run no chemistry calculation | Computational provenance |
 | xtb [15] | Candidate, documentation only | GFN0-xTB, the benchmark's QM/MM partner method; the xtb documentation describes a GFN0 parameter file |
 | CP2K [16] | Declared in MS-001 Stage 0 as the engine for both levels and the coupling route [28, 30]; documentation and, since 2026-09-27, release source read [31]; not installed | Periodic and QM/MM engine whose manual documents an internal GFN0-xTB option |
-| tblite [17] | Candidate; documentation and, since 2026-09-27, its 0.6.0 source archive read as a possible provider of the dftd4 library for CP2K [33]; not installed | Tight-binding library whose documentation lists GFN1-xTB, GFN2-xTB and IPEA1-xTB but not GFN0; not a substitute for the GFN0 route |
+| tblite [17] | Declared on 2026-09-28 as the source archive of the dftd4 library of the declared CP2K route (B2 §3); documentation and, since 2026-09-27, its 0.6.0 source archive read [33]; not installed | Tight-binding library whose documentation lists GFN1-xTB, GFN2-xTB and IPEA1-xTB but not GFN0; not a substitute for the GFN0 route |
 | QCFractal [18]; OVITO [19] | Candidates, documentation only | Alternative workflow store (deferred); rendering of computed coordinates |
 
 ## Repository contents
@@ -225,7 +236,7 @@ and the manifest lists each omission with its reason.
 | [docs/ms-000/](docs/ms-000/README.md) | Complete public MS-000 feasibility package: compute spike, architecture, evidence policy, software landscape, source ledger and ASE smoke record |
 | [docs/ms-000/CLOSURE.md](docs/ms-000/CLOSURE.md) | MS-000 closure record: all six feasibility criteria met and gate PASS; dependency classes, unresolved gaps and the stage preconditions of both MS-001 scope options |
 | [docs/ms-001/](docs/ms-001/README.md) | MS-001 Stage 0 package, scope option B: authorization record, provenance wiring test, coupling route, method declaration, drive protocol, tolerances, validation set, failure record, source ledger, freeze record and C4 human approval record; independent review approval and Lead acceptance recorded, C4 approved by a person on 2026-09-27, Stage 0 closed as frozen prospective definitions and Stage 1 BLOCKED |
-| [docs/ms-001/PRESTAGE1-CLOSURE-PACKET.md](docs/ms-001/PRESTAGE1-CLOSURE-PACKET.md) | Pre-Stage-1 closure packet: installed-build audit, proposed G4 dftd4 declaration, N8 decision packet, proposed C3 wiring test W1, consolidated readiness table and supplementary source ledger; every proposal unapplied, Stage 1 BLOCKED |
+| [docs/ms-001/PRESTAGE1-CLOSURE-PACKET.md](docs/ms-001/PRESTAGE1-CLOSURE-PACKET.md) | Pre-Stage-1 closure packet: installed-build audit, proposed G4 dftd4 declaration, N8 decision packet, proposed C3 wiring test W1, consolidated readiness table and supplementary source ledger; G4 declaration and N8 option O2 later approved and applied, W1 awaiting authorization, Stage 1 BLOCKED |
 | [structures/ms-001/](structures/ms-001/README.md) | MS-001 Stage 0 geometries: model M1, the start configuration, validation configurations V1–V3 and the P2 test molecule, built geometrically and unrelaxed |
 | [tools/build_ms001_geometries.py](tools/build_ms001_geometries.py) | Deterministic generator of the MS-001 Stage 0 geometries; it measures and asserts every reported distance and angle |
 | [tools/c3_provenance_wiring.py](tools/c3_provenance_wiring.py) | Driver of the C3 provenance wiring test, one trivial non-chemistry AiiDA job |

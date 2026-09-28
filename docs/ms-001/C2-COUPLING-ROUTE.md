@@ -98,8 +98,11 @@ Item 6 is the Stage 2 gate C6.
    mix.
 5. **ωB97X-D3 with exact exchange in GAPW.** The HF pages retrieved state no restriction and no support for
    all-electron GAPW [S0-cp2k-hf; S0-cp2k-hf-ip; S0-cp2k-hf-screening].
-6. **The composite as a whole.** Correctness of the coupled energy and gradient, including link-atom chain-rule
-   terms and constraint projection, is validated only by C6 in Stage 1.
+6. **The composite as a whole.** Correctness of the coupled energy and gradient, including link-atom chain-rule terms,
+   is validated only by C6 in Stage 1. For the fixed-atom constraint, C6 checks through N8 that the fixed components
+   print as zero and that the fixed coordinates print as their input values. That the constraint leaves every other
+   component unchanged rests on version-matched source reading only (source resolution record, §7) and is not
+   validated at run time.
 
 ## 6. Relation to other items
 

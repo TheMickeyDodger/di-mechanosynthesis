@@ -33,11 +33,13 @@ No value below is presented as physically justified. No rigorous error bound is 
 | 7 | E3(iii) interaction and stabilization | **Retained INDETERMINATE by declaration under this scheme; no reference is computed.** Spike §8.6 requires the fragment reference "at the same z". In B3 the imposed drive value is d, the translation of H_M1. The reported quantity is D − z0, where D is the H_T-to-H_M1 separation. The EAOGe fragment contains the tool handle H_T, so separating it (for example by +10 Å along z) leaves d unchanged but changes the reported D, and so D − z0, by the same amount. No reference in this model keeps both d and D − z0 fixed while separating the fragments, so the same-z requirement cannot be met as the spike states it. The threshold that would have applied (−0.10 eV) is not used | E3(iii) is reported INDETERMINATE on every step. No stabilization claim is made. E3(i) and E3(ii) are unaffected |
 | 8 | P2 cross-engine agreement | Budgets B_E = 1.0e-4 hartree for the energy difference and B_F = 1.0e-4 hartree/bohr per force component. These are declarations, not derived or validated uncertainties | N7: pass, fail or indeterminate per comparison. P2 is established only if every comparison passes. A common representation or regime that cannot be demonstrated is blocking |
 | 9 | Finite-difference checks, constituent levels and composite coupled gradient | Budget B = 5.0e-4 hartree/bohr per gradient component. Steps h = 0.02 bohr, h/2 = 0.01 bohr and h/4 = 0.005 bohr. Regime interval for q: [3.0, 5.0]. The tested components are listed in [C7 §2](C7-VALIDATION-SET.md#2-components-tested-by-the-finite-difference-checks) | N5: PASS is required at every tested component of every validation configuration. The scheme is accepted for Stage 2 only if the composite check passes. FAIL returns the route to Stage 0; INDETERMINATE is blocking |
-| 10 | Constraint projection | **N8 is BLOCKED pending definition.** N8 compares two recorded quantities: (i) the projected gradient that GEO_OPT uses, and (ii) the analytic composite gradient after the constraints are applied. The record that carries (i) in CP2K 2026.2 is not identified in the retrieved documentation (`UNVERIFIED`). For (ii), `FORCE_EVAL/PRINT/FORCES` has an `NDIGITS` keyword (default 8 [S0-cp2k-print-forces]), but the printed representation (numeric format, units as printed, rounding or truncation) is not established. The combined formatting allowance r = r_(i) + r_(ii) therefore cannot be defined for both records. The budget B_P = 1.0e-6 hartree/bohr is declared and kept | N8 is not run and has no outcome until both representations and r are defined from version-matched source, before Stage 1 begins (a prerequisite to starting Stage 1, through the revision sequence). Until then every consumer of N8 is blocked |
+| 10 | Constraint projection | **N8 checks the fixed-atom constraint on the records that exist.** In CP2K 2026.2 the gradient that GEO_OPT uses is, by source, the exact negation of the constrained composite force array in memory, and no separate record of it is written. N8 uses four records of each run it covers. (a) The force record: `FORCE_EVAL/PRINT/FORCES` of the top-level `MIXED` force_eval, switched on, with `FILENAME __STD_OUT__`, `NDIGITS 8`, `FORCE_UNIT hartree/bohr` and `EACH/GEO_OPT 1`, so that every component is printed in `ES15.8` in the main output; `PRINT/FORCES` is not enabled in any sub-force_eval. (b) The coordinate record: `MOTION/PRINT/TRAJECTORY`, switched on, with `FORMAT XMOL`, `UNIT angstrom` and `EACH/GEO_OPT 1`, so that every coordinate is printed in `F20.10`. (c) The iteration record: the optimizer's `OPT\| Step number` reports in the main output. (d) The input record: the run's retained input coordinates, written in ångström with exactly ten decimal places, in the atom order that every frozen combined file shares, with the `atom_id` of every atom in the run's identity sidecar (C3, F4). That the constraint leaves the retained components unchanged is source-defined behaviour and is not tested at run time. The budget B_P = 1.0e-6 hartree/bohr is not used by N8. | N8 is applied to the constrained GEO_OPT runs of C7 §2: one run from each of V1, V2 and V3, with the fixed sets H_M1 and H_T of B3 §1 and the settings of B3 §3. The outcome of a run is FAIL if any check of the §2 rule fails on a judged record; otherwise INDETERMINATE if any part of the run is INDETERMINATE; otherwise PASS. INDETERMINATE is blocking. |
 | 11 | Step-size sensitivity | No numeric tolerance. Steps 0.20 Å and 0.05 Å against the base 0.10 Å. The deterministic window W_b of [B3 §5](B3-DRIVE-PROTOCOL.md#5-checkpoints-declared-here-applied-in-stage-2) applies. It is anchored on the geometric triggers T_A and T_R, never on event E1, with the rules for early and missing triggers, short or terminated branches, endpoints and retraction eligibility. **Zero accepted steps:** if step 0 of A, or the first step of R, is not accepted, no J_b, anchor or window exists; the branch check and checkpoint S for that branch are INDETERMINATE (blocking); no sensitivity re-run is made; and no dependent branch starts (R is recorded as not started when A has no accepted step) | At checkpoint S, the window is released only if the ordered first occurrences of the inherited events E1, E2, E3 and E4 are identical across the three runs, each event judged under its full criterion in B3 §5: E1 with its N6-resolved energy sign (row 3), and E2 with its persistent Si–C bond and intact Si–Si bonds at the anchoring Si. E3 counts only where its pendent-state condition persists over Δd_min = 0.20 Å (row 5), and it is placed at the first step of that span; an isolated E3 hit is not an occurrence. A match of geometric lists alone never releases it, and neither does a match of isolated E3 hits. S is changed or INDETERMINATE, and quarantines from s_b onward as spike §8.5 defines, if any of these occurs: a changed order; a terminated re-run; a window of fewer than three accepted steps; or a compared event that is INDETERMINATE at any step of any run. Such an event can come from an indeterminate cutoff judgement, a missing energy or N6 value, an E1 sign that N6 cannot resolve, or an E3 whose persistence cannot be established inside the interval |
 
-Which CP2K output records the projected gradient used by GEO_OPT, and therefore the recorded values that N8
-compares, is `UNVERIFIED`. If no such record exists, N8 is indeterminate and blocking.
+In CP2K 2026.2 no output records the optimizer's gradient array directly. By source it is the exact negation of the
+constrained composite force array in memory, which `FORCE_EVAL/PRINT/FORCES` renders in decimal form (source
+resolution record, §7). N8 is defined on that rendering and on the other records of row 10, and it compares no two
+records of the gradient.
 
 ## 2. Numerical-convergence protocol
 
@@ -135,17 +137,61 @@ isolated-molecule treatment (B2 §5; C7 §3).
 - **Outcome.** P2 is established only if every comparison passes. A pass establishes internal consistency only: two
   engines that share a definitional error would still agree.
 
-**N8, constraint projection. BLOCKED pending definition (row 10).** The rule below is frozen, but it cannot be
-applied until the representations of both compared records, and the combined formatting allowance r, are defined
-from version-matched CP2K source:
-- **Fixed atoms.** Fixed-atom coordinates must be identical in the recorded output before and after a constrained
-  step, and the components the constraints remove must be zero in the recorded projected gradient; otherwise the
-  check fails.
-- **Retained components.** These are compared with the analytic gradient after the constraints are applied. With
-  difference Δ, r = r_(i) + r_(ii) (undefined until row 10 is resolved) and B_P = 1.0e-6 hartree/bohr: PASS if
-  |Δ| + r ≤ B_P; FAIL if |Δ| − r > B_P; otherwise INDETERMINATE, which is blocking.
+**N8, constraint projection: fixed-atom checks.** Applied to each run named in row 10, on the records of row 10.
+- **Iterations.** The `OPT| Step number` reports define the run's iterations. Their numbers must run 0, 1, …, K
+  without gap or repetition, with K ≥ 1. The run must have reported convergence and ended normally; otherwise the run
+  is INDETERMINATE.
+  - *Force-bearing evaluations.* A top-level `Atomic` force block that precedes the report of iteration 0 belongs to
+    iteration 0. One that lies between the reports of iterations k − 1 and k belongs to iteration k. Every iteration 0
+    to K must have at least one force block. More than one is allowed, and every block is judged.
+  - *The final reevaluation.* The energy-only reevaluation after convergence prints no force block. None is required
+    after the report of K, and one that appears there makes the run INDETERMINATE.
+  - *Coordinate frames.* A frame belongs to the iteration named in its title. Exactly one frame is required for each
+    iteration 1 to K, exactly one for K + 1, the frame written after the final reevaluation, and none for iteration 0.
+  - *Completeness.* A missing force block for iterations 0 to K, or a missing, unexpected or repeated frame, makes the
+    run INDETERMINATE. Because K ≥ 1 and convergence are required, every run that can pass has at least two frames. A
+    run with no frame or a single frame cannot pass.
+- **Identity and fixed set.** The fixed set is H_M1 and H_T of B3 §1, 141 atoms, taken by `atom_id` from the run's
+  identity sidecar. The input record binds each position in the shared atom order to one `atom_id`. N8 relies on the
+  correspondence that the i-th input atom is the atom printed with index i in the force record and on the i-th line of
+  every coordinate frame. Stage 1 must establish that correspondence for the build and input form used. Until it has,
+  identity cannot be established, and the run is INDETERMINATE. Agreement of atom counts, element sequences and
+  printed indices is a necessary consistency check. It is never proof of identity: it cannot detect an exchange of
+  atoms of the same element.
+- **Fixed components.** In every judged force block, each of the x, y and z fields of every fixed atom must parse as a
+  finite number with a zero significand, printed `0.00000000E+00` with either sign. A field that parses as a finite
+  number with a non-zero significand fails the check. The check concerns the printed value only.
+- **Fixed coordinates.** In every judged frame, each of the three coordinates of every fixed atom must be
+  character-identical to that atom's ten-decimal input string. A difference fails the check. This comparison is judged
+  only on a build for which Stage 1 has shown that a coordinate that does not change prints identically to its
+  ten-decimal input string. Otherwise the fixed-coordinate check is INDETERMINATE. Equality of printed strings does
+  not prove equality in memory.
+- **Record integrity.** A record, block or frame that is empty, unparseable, non-finite, overflowed or inconsistent
+  with the atom order is INDETERMINATE, and its content is not judged.
+- **Outcome.** FAIL if any check on a judged record fails; otherwise INDETERMINATE if any part of the run is
+  INDETERMINATE; otherwise PASS. INDETERMINATE is blocking.
 
-While r is undefined, N8 has no outcome, and C6 (which requires N8) cannot be met.
+No retained-component comparison is made. C6 requires N8 to PASS on each run named in row 10.
+
+**Stage 1 observations for N8.** These observations are required before any N8 outcome. They are made on the build
+that Stage 1 installs, under its own authorization, and none of them is a current observation.
+1. **Zero components.** A component that is `0.0_dp` in memory prints with a zero significand in the force record,
+   with either sign accepted.
+2. **Non-zero components.** A non-zero component prints with a non-zero significand, including the
+   three-digit-exponent form that `ES` editing uses without the letter `E`.
+3. **Non-finite values.** Non-finite values print in a form that the parser rejects.
+4. **Unchanged coordinates.** A coordinate that does not change prints identically to its ten-decimal input string.
+5. **Atom correspondence.** The i-th input atom is the atom printed with index i in the force record and on the i-th
+   line of each frame.
+6. **The iteration structure of S7 and S7a.** Force blocks, cycle reports and frames appear as S7 and S7a describe,
+   including the absence of a force block after the final reevaluation. The top-level `Atomic` force block is
+   distinguishable from any other force block in the main output. S7 and S7a are the rows of those names in the
+   source-fact table of the N8 decision packet, §1 (`docs/ms-001/N8-DECISION-PACKET.md`, SHA256
+   `f726b5bb49c1458b504b7fd0a7e400cf75d36bbd78c2bf9945583414ae42ca92`), which reads them from the CP2K 2026.2 release
+   source.
+
+If an observation fails or cannot be made, N8 is INDETERMINATE on that build until the definition is revised through
+C4 §3.
 
 Where a quantity cannot be resolved, the outcome is INDETERMINATE and blocking, never a pass. That covers a missing
 regime or common representation, a noise-limited difference and an unresolvable recorded precision.

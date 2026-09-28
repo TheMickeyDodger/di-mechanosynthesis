@@ -43,7 +43,8 @@ V2 and V3. They include the boundary and link-host atoms of the declared partiti
   - the components of the six listed atoms that are in S;
   - the link atoms on the `D-C2`–`D-C3` and `S-L1-07-05`–`S-L2-07-04` cuts, each treated as an ordinary atom of
     the subset.
-- **Constraint projection (N8).** Tested on V1, V2 and V3 with the fixed sets H_M1 and H_T of B3 §1.
+- **Fixed-atom checks (N8).** Tested on V1, V2 and V3 with the fixed sets H_M1 and H_T of B3 §1, in the constrained
+  GEO_OPT runs that C4 row 10 names. Retained components are not compared.
 
 ## 3. The P2 test molecule
 

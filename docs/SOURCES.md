@@ -7,7 +7,8 @@ assessment uses a larger retrieval set, catalogued separately in the
 [MS-001 Stage 0 source ledger](ms-001/SOURCE-LEDGER.md) and summarized in Section 9 (entries [28] to [31]). The
 sources of the MS-001 pre-Stage-1 closure packet are catalogued in the
 [pre-Stage-1 source ledger](ms-001/PRESTAGE1-SOURCE-LEDGER.md) and summarized in Section 10 (entries [32] to [35]).
-The numbering here is shared by the main documents in the
+Revisions of the Stage 0 definitions approved by a person since then are listed in Section 11 (entry [36]). The
+numbering here is shared by the main documents in the
 repository. The catalogue contains no converged quantum-chemistry values. The project's only
 quantum-chemistry attempt, E-01, stopped before any SCF iteration was reported and is closed as technically
 blocked and scientifically indeterminate. Its records are entries [20] and [21], and the dispersion library it
@@ -549,6 +550,11 @@ summarize it for the narrative catalogue.
   - Libint v2.8.1 is not shown to be the version of any build.
   - The dftd4 source that the declared route uses, the rounding of formatted output and the Libint2 version of the
     Psi4 build remain open. So do C4's definitional question on N8 and the build provenance of the installed Psi4.
+  - *2026-09-28:* the dftd4 source that the declared route uses is declared in B2 §3, and C4's
+    definitional question on N8 is settled by a revision of C4, both approved by a person in one decision
+    ([N8 approval record](ms-001/C4-HUMAN-APPROVAL-02.md);
+    [G4 approval record](ms-001/B2-G4-HUMAN-APPROVAL.md)). The rounding of formatted output
+    is still not fixed by source, and the P1 identity provenance of G4 remains within Stage 1.
   - Nothing here is physical evidence or parity, upgrades an evidence label, or authorizes Stage 1.
 
 ## 10. MS-001 pre-Stage-1 closure sources
@@ -588,7 +594,9 @@ summarize it.
     route does not.
   - By source tracing, CP2K's GFN0 D4 path with its defaults reaches none of the patched routines.
   - Dependency resolution depends on switches that neither toolchain script sets.
-- **Used in.** [G4-DFTD4-DECLARATION-PROPOSAL.md](ms-001/G4-DFTD4-DECLARATION-PROPOSAL.md).
+- **Used in.** [G4-DFTD4-DECLARATION-PROPOSAL.md](ms-001/G4-DFTD4-DECLARATION-PROPOSAL.md), and, since
+  2026-09-28, the declaration of the dftd4 source in
+  [B2 §3](ms-001/B2-METHOD-DECLARATION.md#3-gfn0-xtb-level-sub-force_evals-e2-and-e3).
 - **Basis.** Inspected. Every member was checked before unpacking, and both trees were compared file by file with
   SHA256 and Git blob SHA1. Patch applicability was checked by dry run only.
 - **Limitations.**
@@ -619,6 +627,27 @@ summarize it.
 - **Basis.** New records of this project, identified by SHA256 in the export manifest.
 - **Limitations.**
   - Every recommendation, candidate text and specification is `[AGENT]`, and none is applied or approved.
+  - *2026-09-28:* the proposed G4 declaration and option O2 of the N8 decision packet were
+    approved by a person in one decision and applied, to B2 §3 and to C4, B3, C2 and C7
+    ([N8 approval record](ms-001/C4-HUMAN-APPROVAL-02.md);
+    [G4 approval record](ms-001/B2-G4-HUMAN-APPROVAL.md)). The packet's records themselves
+    are unchanged.
   - The frozen Stage 0 records, including C4 and its approval record, are byte-identical.
   - Nothing here is physical evidence or upgrades an evidence label.
+  - Stage 1 remains BLOCKED and is not authorized.
+
+## 11. MS-001 revisions approved by a person
+
+**[36]** Project records of the revisions of MS-001 Stage 0 definitions approved by a person in one decision, in an answer
+recorded on 2026-09-27.
+- **Records.**
+  - The revision of C4 that defines N8 as fixed-atom checks, with the consequential revisions of B3, C2 and C7, and
+    its [approval record](ms-001/C4-HUMAN-APPROVAL-02.md).
+  - The revision of B2 that declares the dftd4 source for G4 in B2 §3, and its
+    [approval record](ms-001/B2-G4-HUMAN-APPROVAL.md).
+- **Basis.** New records of this project, identified by SHA256 in the export manifest and bound in the
+  [freeze record](ms-001/STAGE0-FREEZE-RECORD.md#2-frozen-artifacts).
+- **Limitations.**
+  - Each approval binds exact bytes by path and SHA256. It validates nothing physically and upgrades no evidence
+    label.
   - Stage 1 remains BLOCKED and is not authorized.

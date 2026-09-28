@@ -69,6 +69,40 @@ CP2K 2026.2 release source and gives G4 the disposition `PARTIALLY ESTABLISHED`.
 - **Remaining.** A declaration of the dftd4 source through the revision sequence. The bytes a run loads remain P1
   run provenance within Stage 1.
 
+**Declared dftd4 source for G4.** The dftd4 library of the declared CP2K 2026.2 route is built from the tblite 0.6.0
+source archive `tblite-0.6.0.tar.xz`, SHA256 `372281aedb89234168d00eb691addb303197a9462a9c55d145c835f2cf5e8b42`, as
+pinned by the CP2K 2026.2 toolchain script `tools/toolchain/scripts/stage8/install_tblite.sh`. Its bundled
+`subprojects/dftd4` is dftd4 4.2.0, byte-identical in all 166 files to the corresponding files of
+`dftd4-4.2.0.tar.xz`, SHA256 `467e024071510ad82b862c66c383c2ebc164fc1140e15dfc79f48d2f999fd184`. Patch state: the CP2K
+2026.2 patch `dftd4-4.2.0-gradient-fixes.patch`, SHA256
+`5335cb7d02a8c3141f28967ef61418f425fb1e638d51fe75618b700321d9087a`, is applied to `subprojects/dftd4` with
+`patch -l -p1`, and `simple-dftd3-1.4.0-gradient-fixes.patch`, SHA256
+`6a20b4622821018954a204a33dcb2128ddfaec04a37f3b4a625a71058ba2a40b`, to `subprojects/s-dftd3`, exactly as that script
+does. Dependencies: the five bundled library dependencies dftd4, mctc-lib, multicharge, toml-f and simple-dftd3 are
+resolved from tblite's bundled `subprojects/`, and from no installed package, pkg-config module, earlier target or
+network fetch. The build is configured in a fresh build directory with `-Dtblite-dependency-method=subproject`. No
+package-specific `*_FIND_METHOD` variable is set for any of the five, unless it is set to `subproject`. No target
+named for any of them exists before tblite's own lookup. The fail-closed condition is the build's own record, not the
+switch: the retained configure output must show `Include <package> from subprojects` for each of the five, and none of
+`Found installed package`, `Found <package> via pkg-config` or `Retrieving <package>` for any of them. Otherwise the
+build does not conform to this declaration. A P1 run record must also give the digests of the four patched dftd4 files
+after patching and the identity of the dftd4 library that CP2K links. This declaration covers only these five bundled
+libraries; it does not cover toolchain, compiler, BLAS, LAPACK or OpenMP dependencies. The archive identity, the patch
+identity and the dependency resolution are three separate parts of this declaration.
+
+**Provenance and scope of the declaration above.** It is the declaration of the dftd4 source that the source
+annotation above names as remaining. Its text is the candidate declaration of the
+[G4 proposal, §6](G4-DFTD4-DECLARATION-PROPOSAL.md#6-recommendation-and-candidate-declaration), adopted without that
+candidate's parenthesis for an approval date. The identities it names are recorded, with their locators, in the
+[pre-Stage-1 source ledger](PRESTAGE1-SOURCE-LEDGER.md). The declaration is `[AGENT]`, over `[LIT]` archive, patch and
+toolchain identities, and it declares the source-definition part of G4 only. Text identity of the traced dftd4 source
+subset is not functional equivalence of builds, and nothing here states what a build contains, links, loads or
+computes. The loaded parameter bytes, the linked dftd4 library and the D4 environment settings of a run remain P1
+observations within Stage 1, and the `[GAP]` of G4 for P1 in the table above stands. The declaration takes effect only
+through the revision sequence of C4 §3. Whether and when a person approved it is recorded outside this record, in an
+approval record bound to the exact digest of this record, and not here. It authorizes nothing and is not readiness for
+Stage 1.
+
 ## 4. ωB97X-D3 level (sub-force_eval E1)
 
 | Item | Declaration and source |

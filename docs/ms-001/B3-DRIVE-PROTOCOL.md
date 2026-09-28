@@ -47,7 +47,7 @@ Atom identifiers and 1-based indices refer to the frozen files in
 | Stopping criteria | The documented defaults for CP2K 2026.2 [S0-cp2k-geo-opt]: `MAX_FORCE 4.5e-4` hartree/bohr, `RMS_FORCE 3.0e-4` hartree/bohr, `MAX_DR 3.0e-3` bohr, `RMS_DR 1.5e-3` bohr and `MAX_ITER 200`. They are stopping criteria and not accuracy bounds (C4, row 1) |
 | Constraints | `MOTION/CONSTRAINT/FIXED_ATOMS` with `LIST` giving the 141 indices of H_M1 and H_T, and `COMPONENTS_TO_FIX XYZ` (the default) [S0-cp2k-fixed-atoms] |
 | Acceptance | A step is accepted only if GEO_OPT reports convergence within `MAX_ITER` and every SCF of every sub-force_eval converged to `EPS_SCF` within `MAX_SCF` (B2 §4; C4, row 2). The maximum residual force of every accepted step is reported and is never tuned (spike §8.5) |
-| Constraint projection | Verified in Stage 1 by N8 (C4 §3) |
+| Constraint projection | The fixed-atom checks of N8 (C4 §2 and row 10), on the constrained runs of C7 §2. That the constraint leaves the other components unchanged is source-defined behaviour and is not tested at run time |
 
 ## 4. Branch bookkeeping
 

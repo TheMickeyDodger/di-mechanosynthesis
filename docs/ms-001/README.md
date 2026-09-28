@@ -42,6 +42,8 @@ setting and threshold in it is `[AGENT]`, a declared deviation.
 | B3 | [B3-DRIVE-PROTOCOL.md](B3-DRIVE-PROTOCOL.md) | Fixed atom sets by id, rigid displacement, the base, coarser and finer steps, branches, per-step relaxation, bookkeeping and checkpoint selectors; NEB excluded as a substitute |
 | C4 | [C4-TOLERANCES-AND-CONVERGENCE.md](C4-TOLERANCES-AND-CONVERGENCE.md) | Every row of the spike's §8.6 tolerance table instantiated, the protocol N1–N8, and the binding revision sequence |
 | C4 approval | [C4-HUMAN-APPROVAL.md](C4-HUMAN-APPROVAL.md) | The human approval of C4 on 2026-09-27, bound to path, commit and SHA256, with its scope, the limits that stand and the qualification of C4's frozen opening bullet |
+| C4 approval, revision | [C4-HUMAN-APPROVAL-02.md](C4-HUMAN-APPROVAL-02.md) | The human approval of the revision of C4 that defines N8 as fixed-atom checks, with the consequential revisions of B3, C2 and C7, bound to their paths and SHA256 |
+| B2 approval, G4 | [B2-G4-HUMAN-APPROVAL.md](B2-G4-HUMAN-APPROVAL.md) | The human approval of the revision of B2 that declares the dftd4 source for G4, bound to its path and SHA256 |
 | C7 | [C7-VALIDATION-SET.md](C7-VALIDATION-SET.md) | Validation configurations, the components tested by the finite-difference checks, the P2 test molecule and its isolated-molecule treatment, and the Stage 2 checkpoint selectors |
 | Failures | [FAILURE-RECORD.md](FAILURE-RECORD.md) | Geometry attempt 1 (failed before writing anything) and attempt 2 (superseded for a metadata defect), both retained |
 | Sources | [SOURCE-LEDGER.md](SOURCE-LEDGER.md) | Every source used, with URL, version, locator, access time and the digest of the retrieved bytes; a dated section of 2026-09-27 for the source resolution |
@@ -72,6 +74,14 @@ None of these is claimed. The categories match the
       source to be declared, the Libint2 version of the Psi4 build, and, for N8, the rounding of formatted output
       and a definitional question in C4 row 10 ([options, not applied](C4-PROPOSED-REVISION-01.md)).
     - N8 remains BLOCKED and has not been run. This prerequisite does not yet hold.
+    - *Updated 2026-09-28:* a person approved a revision of C4 that defines N8 as fixed-atom
+      checks ([C4-HUMAN-APPROVAL-02.md](C4-HUMAN-APPROVAL-02.md)). N8 is no longer blocked by its definition. It has not
+      been run, and its Stage 1 observations are outstanding. Whether this prerequisite holds depends on the other
+      definitions listed here.
+    - *Updated 2026-09-28:* a person approved the declaration of the dftd4 source for G4
+      in B2 §3 ([B2-G4-HUMAN-APPROVAL.md](B2-G4-HUMAN-APPROVAL.md)). The source-definition part of G4 is settled by it;
+      P1 identity provenance remains within Stage 1. Whether this prerequisite holds depends on the other
+      definitions listed here.
 - **Dependencies within Stage 1.**
   - CP2K installation and build identity, including its libxc version.
   - The five route capabilities of C2 §5, items 1 to 5.

@@ -190,6 +190,15 @@ normalization remains partially established, and binary provenance and runtime c
 prospective P2 build-declaration decision package can be prepared, but no build is declared or approved here.
 Stage 1 remains BLOCKED and unauthorized.
 
+*P2 build-declaration decision packet, 2026-09-28 (proposal only):* a
+[decision packet](docs/ms-001/P2-PSI4-BUILD-DECISION-PACKET.md) and its
+[source ledger](docs/ms-001/P2-PSI4-BUILD-SOURCE-LEDGER.md) [38] prepare a person's decision on whether to declare the
+exact conda-forge `osx-arm64` package `psi4-1.11-py314h53d0584_1`, with its exactly pinned Libint package, as the
+Psi4 build that P2 uses. The packet recommends approval as an `[AGENT]` proposal and maps the records a later
+approval would change. No build is declared, and no option is chosen, approved or applied. Basis normalization
+remains partially established, and binary provenance and runtime conformance stay open. Stage 1 remains BLOCKED and
+unauthorized.
+
 ## Evidence classification and provenance
 
 Scientific claims are classified by their underlying evidence as experimentally demonstrated (`[EXP]`),
@@ -280,6 +289,6 @@ export pending redistribution review. Work that builds on the benchmark should c
 3. Blue, B. *et al.* Towards Atom-by-Atom Fabrication: Mechanosynthetic donation and abstraction.
    arXiv:2606.13876 (2026). <https://doi.org/10.48550/arXiv.2606.13876>
 
-References [4] to [37], covering further literature, software documentation, source files and the project's own
+References [4] to [38], covering further literature, software documentation, source files and the project's own
 E-01 and MS-001 records, are catalogued with versions, locators, verification basis and limitations in
 [docs/SOURCES.md](docs/SOURCES.md), which uses the same numbering.

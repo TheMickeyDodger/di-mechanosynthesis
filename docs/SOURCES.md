@@ -670,3 +670,27 @@ package metadata, locally reverified and read on 2026-09-28.
   remain open; normalization stays PARTIALLY ESTABLISHED. No physical validity, parity or readiness is established,
   no P2 build is declared, no evidence label is upgraded and no later stage is authorized. The human-adopted source
   resolution and earlier source ledger are unchanged; this is a separate supplement.
+
+## 13. P2 build-declaration decision packet
+
+**[38]** Project records of the P2 Psi4 build-declaration decision packet, 2026-09-28.
+- **Records.** The [decision packet](ms-001/P2-PSI4-BUILD-DECISION-PACKET.md) and its
+  [source ledger](ms-001/P2-PSI4-BUILD-SOURCE-LEDGER.md).
+- **Content.** A decision prepared for a person: whether to declare the exact conda-forge `osx-arm64` package
+  `psi4-1.11-py314h53d0584_1`, archive SHA256 `92d4aeb73fe7027bd239a656cf353461490420d76096ae762bd9f1c29ed4da10`,
+  with its exactly pinned Libint package `libint-2.13.1-h5a0831b_0`, archive SHA256
+  `ca18cdfd0b0271e059a214d4d2786dfe88f0bc317b014e6abe1747b6d782cb6f`, as the Psi4 build that P2 uses. It gives the
+  evidence for and against, the options, one `[AGENT]` recommendation, exact candidate text for B2 §6, validity
+  conditions and a map of every record that a later approval would change, including a fresh adoption of the revised
+  B2 by C4, B3, C2 and C7.
+- **Basis.** New records of this project, identified by SHA256 in the export manifest. Every claim is located in
+  records already committed, chiefly [32] and [37] and the E-01 records [20] and [21]. No installed file, archive,
+  installation or engine was newly read, retrieved, installed or run; committed public records were the only inputs.
+- **Limitations.**
+  - A proposal only. No build is declared, and no option is chosen, approved or applied. B2, C4 and every approval
+    record are unchanged.
+  - Package identity is not proof of compiler inputs, source-to-binary correspondence, linkage, runtime conformance,
+    numerical agreement, readiness, parity or physical validity. Basis normalization remains PARTIALLY ESTABLISHED.
+  - The E-01 stop is recorded without inference about P2 in either direction.
+  - No evidence label is upgraded. Stage 1, Stage 1a, Stage 1b and Stage 2 remain unauthorized, and Stage 1 remains
+    BLOCKED.

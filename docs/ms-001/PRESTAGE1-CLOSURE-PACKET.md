@@ -12,6 +12,13 @@ runtime conformance remain open. A separate prospective P2 build-declaration dec
 Stage 1, Stage 1a, Stage 1b and Stage 2 remain unauthorized, and option A remains BLOCKED. New sources are in a
 [new companion ledger](RECIPE-METADATA-SOURCE-LEDGER.md); the human-adopted earlier ledger is unchanged.
 
+**Dated status supplement, 2026-09-28 (P2 build).** The decision on the Psi4 build that P2 uses, listed in Section 3
+below as not proposed here, is now prepared separately in the
+[P2 build-declaration decision packet](P2-PSI4-BUILD-DECISION-PACKET.md), with its
+[source ledger](P2-PSI4-BUILD-SOURCE-LEDGER.md). That packet is a proposal only: no build is declared, and no option
+is chosen, approved or applied. The dispositions and tables below are historical and unchanged. Basis normalization
+remains PARTIALLY ESTABLISHED, and Stage 1 remains BLOCKED and unauthorized.
+
 This packet takes the remaining prerequisites to starting Stage 1 as far as they can go without running scientific
 software, changing a frozen definition or starting the C3 wiring test. It prepares the decisions that remain for a
 person. It also specifies, on exact terms, a proposed next non-chemistry wiring test, which would need its own

@@ -166,7 +166,7 @@ established.
 | C3 provenance wiring | `docs/ms-001/C3-PROVENANCE-WIRING.md` | `cd0ffcc37d40fbb82a0801a2685335c68fdde08e8f6fc6c6d31e3ff76fe2723d` | Software wiring evidence only, with no chemistry class. The field set is `[AGENT]`; coverage gaps are `[GAP]` |
 | Failure record | `docs/ms-001/FAILURE-RECORD.md` | `3e5724c6786c0cb68bc7ee311608303945f4dbc95e4de2fae503b164c4151187` | The failure-record provenance field (evidence policy §4) |
 | Source ledger | `docs/ms-001/SOURCE-LEDGER.md` | `4d46ff84ffe0767f5ded9d202b935836007cd9d4243647bc438353664f44142c` | `[LIT]` provenance record |
-| Package index | `docs/ms-001/README.md` | `1288f41ab9bdcfdacede9fe433fe43842521f6202d6d4347ed8c511f5094bd94` | Navigation. Updated 2026-09-28 for recipe-audit status and links only; previous digest `18f2ef3c0000addeaddd4d04dafaa0341943b6c81bb9602f44bc549390746335`. No definition, evidence label or gate changed |
+| Package index | `docs/ms-001/README.md` | `b3d536f59ad07bb3143d8abffd95501e4b31b4d738fe526f67ac8a90ecb8e147` | Navigation. Updated 2026-09-28 for recipe-audit status and links, previous digest `18f2ef3c0000addeaddd4d04dafaa0341943b6c81bb9602f44bc549390746335`; then updated 2026-09-28 for the status of the P2 build-declaration proposal and links only, previous digest `1288f41ab9bdcfdacede9fe433fe43842521f6202d6d4347ed8c511f5094bd94`. No definition, evidence label or gate changed |
 | Geometry record (document) | `structures/ms-001/README.md` | `4cc6cc42660a0dd439f9d0c018aba0cbdea933b0d734fb163cec2442ac97aba6` | `[AGENT]` choices; `[GAP]` benchmark relation |
 | Geometry record (machine-readable) | `structures/ms-001/geometry-record.json` | `43ef99bc795b600c834f9bf5a7590ee3dd6600bc8f1a65354f849120a5f55e74` | `[AGENT]`. Measured construction values establish internal consistency only |
 | B1 model M1 | `structures/ms-001/M1-build-site.extxyz` | `c9374642d5e1cd4509b83cc9c48adbdbe1de1821df949f8700b55f53c0ff0aea` | `[AGENT]` |
@@ -233,3 +233,16 @@ only. Normalization remains PARTIALLY ESTABLISHED; binary provenance and runtime
 build is declared. Only the package-index navigation digest above is refreshed; every approved definition,
 human-adopted reference and other artifact binding is unchanged. W1 remains unrun, C4-j and B3-b deferred, and
 Stage 1/1a/1b and Stage 2 unauthorized. Scope option A remains BLOCKED.
+
+## 6. P2 build-declaration proposal status supplement, 2026-09-28
+
+The [P2 build-declaration decision packet](P2-PSI4-BUILD-DECISION-PACKET.md) and its
+[source ledger](P2-PSI4-BUILD-SOURCE-LEDGER.md) prepare a person's decision on declaring the exact conda-forge
+`osx-arm64` package `psi4-1.11-py314h53d0584_1`, with its exactly pinned Libint package, as the Psi4 build that P2
+uses. They are proposals only and are not Stage 0 definitions, so they are not bound in Section 2. No build is
+declared, and no option is chosen, approved or applied. B2 stays at the digest bound in Section 2, and C4, B3, C2, C7,
+every approval record and every human-adopted reference are unchanged. Only the package-index navigation digest above
+is refreshed. The packet records that an approved declaration would change B2's whole-file digest and would therefore
+need a fresh adoption of the revised B2 by C4, B3, C2 and C7; nothing of that is applied here. Basis normalization
+remains PARTIALLY ESTABLISHED. W1 remains unrun, C4-j and B3-b deferred, and Stage 1/1a/1b and Stage 2 unauthorized.
+Scope option A remains BLOCKED.

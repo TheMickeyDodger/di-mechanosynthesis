@@ -40,6 +40,16 @@ Preparing a separate prospective P2 declaration package is now supportable as an
 build is declared here. W1 remains unrun, C4-j and B3-b deferred, and Stage 1/1a/1b and Stage 2 unauthorized.
 The earlier dated dispositions below remain historical, with the new audit giving the current recipe findings.
 
+**P2 build-declaration decision packet, 2026-09-28 (proposal only).** The
+[P2 build-declaration decision packet](P2-PSI4-BUILD-DECISION-PACKET.md) and its
+[source ledger](P2-PSI4-BUILD-SOURCE-LEDGER.md) prepare a person's decision on whether to declare the exact
+conda-forge `osx-arm64` package `psi4-1.11-py314h53d0584_1`, with its exactly pinned Libint package
+`libint-2.13.1-h5a0831b_0`, as the Psi4 build that P2 uses. The packet recommends approval as an `[AGENT]` proposal,
+gives exact candidate text for B2 §6 and maps every record a later approval would change, including a fresh adoption of
+the revised B2 by C4, B3, C2 and C7. No build is declared, and no option is chosen, approved or applied; B2, C4 and
+every approval record are unchanged. Basis normalization remains PARTIALLY ESTABLISHED. W1 remains unrun, C4-j and
+B3-b deferred, and Stage 1/1a/1b and Stage 2 unauthorized.
+
 | Item | Record | What it contains |
 |---|---|---|
 | C1 | [C1-AUTHORIZATION.md](C1-AUTHORIZATION.md) | The authorization of option B, Stage 0 only, dated and kept separate from the MS-000 gate |

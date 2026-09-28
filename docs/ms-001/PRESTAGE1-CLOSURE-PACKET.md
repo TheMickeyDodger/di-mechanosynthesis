@@ -2,6 +2,16 @@
 
 Date: 2026-09-27. MS-001 scope option B, after the closure of Stage 0 and the source resolution.
 
+**Dated status supplement, 2026-09-28.** The packet below retains its historical dispositions and proposals.
+The human-approved G4 and N8 revisions are recorded in the [package index](README.md). The newly completed
+[recipe metadata audit](RECIPE-METADATA-AUDIT.md) closes the unread-metadata gap, identifies declared source,
+patch and build requirements, and confirms the exact Libint package as both a Psi4 host requirement and a run pin
+(`[LIT]` software provenance). Basis normalization remains PARTIALLY ESTABLISHED; actual binary provenance and
+runtime conformance remain open. A separate prospective P2 build-declaration decision package can now be prepared
+(`[AGENT]`), but no declaration is made or approved here. W1 remains unrun; C4-j and B3-b remain deferred.
+Stage 1, Stage 1a, Stage 1b and Stage 2 remain unauthorized, and option A remains BLOCKED. New sources are in a
+[new companion ledger](RECIPE-METADATA-SOURCE-LEDGER.md); the human-adopted earlier ledger is unchanged.
+
 This packet takes the remaining prerequisites to starting Stage 1 as far as they can go without running scientific
 software, changing a frozen definition or starting the C3 wiring test. It prepares the decisions that remain for a
 person. It also specifies, on exact terms, a proposed next non-chemistry wiring test, which would need its own

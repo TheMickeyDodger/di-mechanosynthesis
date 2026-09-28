@@ -32,6 +32,14 @@ setting and threshold in it is `[AGENT]`, a declared deviation.
 
 ## Records
 
+**Recipe audit update, 2026-09-28.** The [installed recipe metadata audit](RECIPE-METADATA-AUDIT.md) and its
+[source ledger](RECIPE-METADATA-SOURCE-LEDGER.md) close the unread-recipe gap. `[LIT]` metadata records Psi4's exact
+Libint package in both host and run requirements and identifies declared source digests, patches and build settings.
+Normalization remains PARTIALLY ESTABLISHED; compiled-binary provenance and runtime conformance remain open.
+Preparing a separate prospective P2 declaration package is now supportable as an `[AGENT]` recommendation; no
+build is declared here. W1 remains unrun, C4-j and B3-b deferred, and Stage 1/1a/1b and Stage 2 unauthorized.
+The earlier dated dispositions below remain historical, with the new audit giving the current recipe findings.
+
 | Item | Record | What it contains |
 |---|---|---|
 | C1 | [C1-AUTHORIZATION.md](C1-AUTHORIZATION.md) | The authorization of option B, Stage 0 only, dated and kept separate from the MS-000 gate |

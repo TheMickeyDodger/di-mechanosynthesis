@@ -183,6 +183,13 @@ source-definition part of G4 only; the bytes a run loads, the dftd4 library a bu
 settings of a run remain P1 observations within Stage 1. The approval validates nothing physically and changes no
 evidence label, and nothing was built, installed or run.
 
+*Recipe metadata audit, 2026-09-28:* the exact retained Psi4 and Libint package recipes are now read and
+[documented](docs/ms-001/RECIPE-METADATA-AUDIT.md) [37]. They declare the exact Libint package as both a Psi4 host
+requirement and a run pin. Source digests, patch identities and build settings are established as metadata only;
+normalization remains partially established, and binary provenance and runtime conformance stay open. A separate
+prospective P2 build-declaration decision package can be prepared, but no build is declared or approved here.
+Stage 1 remains BLOCKED and unauthorized.
+
 ## Evidence classification and provenance
 
 Scientific claims are classified by their underlying evidence as experimentally demonstrated (`[EXP]`),
@@ -273,6 +280,6 @@ export pending redistribution review. Work that builds on the benchmark should c
 3. Blue, B. *et al.* Towards Atom-by-Atom Fabrication: Mechanosynthetic donation and abstraction.
    arXiv:2606.13876 (2026). <https://doi.org/10.48550/arXiv.2606.13876>
 
-References [4] to [35], covering further literature, software documentation, source files and the project's own
+References [4] to [37], covering further literature, software documentation, source files and the project's own
 E-01 and MS-001 records, are catalogued with versions, locators, verification basis and limitations in
 [docs/SOURCES.md](docs/SOURCES.md), which uses the same numbering.

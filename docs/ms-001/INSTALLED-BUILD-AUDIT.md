@@ -2,6 +2,14 @@
 
 Date: 2026-09-27. MS-001 scope option B, before Stage 1.
 
+**Dated supplement, 2026-09-28.** The original audit below is retained as written. Its unread-recipe gap is now
+closed by the [recipe metadata audit](RECIPE-METADATA-AUDIT.md) and [companion ledger](RECIPE-METADATA-SOURCE-LEDGER.md).
+`[LIT]` metadata establishes the exact Libint pin in both Psi4 host and run requirements, source-archive and patch
+declarations, and build variants. It does not establish actual compiler inputs, binary/source correspondence or
+runtime conformance. Normalization remains PARTIALLY ESTABLISHED. The original decode failure and earlier
+unresolved dispositions below are historical; the dated supplement carries the current disposition. No P2 build
+is declared, no evidence label is upgraded and no stage is authorized.
+
 This record reports a bounded, read-only static audit of the project-local Psi4 1.11 environment in which E-01 ran,
 called "the E-01 build" below. It asks two things. Which Libint2 package does that build carry? And what do its package
 records establish about the source and build of Libint2 and Psi4? It relates the answer to the open item on

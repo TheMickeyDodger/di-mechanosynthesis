@@ -166,7 +166,7 @@ established.
 | C3 provenance wiring | `docs/ms-001/C3-PROVENANCE-WIRING.md` | `cd0ffcc37d40fbb82a0801a2685335c68fdde08e8f6fc6c6d31e3ff76fe2723d` | Software wiring evidence only, with no chemistry class. The field set is `[AGENT]`; coverage gaps are `[GAP]` |
 | Failure record | `docs/ms-001/FAILURE-RECORD.md` | `3e5724c6786c0cb68bc7ee311608303945f4dbc95e4de2fae503b164c4151187` | The failure-record provenance field (evidence policy §4) |
 | Source ledger | `docs/ms-001/SOURCE-LEDGER.md` | `4d46ff84ffe0767f5ded9d202b935836007cd9d4243647bc438353664f44142c` | `[LIT]` provenance record |
-| Package index | `docs/ms-001/README.md` | `18f2ef3c0000addeaddd4d04dafaa0341943b6c81bb9602f44bc549390746335` | Navigation |
+| Package index | `docs/ms-001/README.md` | `1288f41ab9bdcfdacede9fe433fe43842521f6202d6d4347ed8c511f5094bd94` | Navigation. Updated 2026-09-28 for recipe-audit status and links only; previous digest `18f2ef3c0000addeaddd4d04dafaa0341943b6c81bb9602f44bc549390746335`. No definition, evidence label or gate changed |
 | Geometry record (document) | `structures/ms-001/README.md` | `4cc6cc42660a0dd439f9d0c018aba0cbdea933b0d734fb163cec2442ac97aba6` | `[AGENT]` choices; `[GAP]` benchmark relation |
 | Geometry record (machine-readable) | `structures/ms-001/geometry-record.json` | `43ef99bc795b600c834f9bf5a7590ee3dd6600bc8f1a65354f849120a5f55e74` | `[AGENT]`. Measured construction values establish internal consistency only |
 | B1 model M1 | `structures/ms-001/M1-build-site.extxyz` | `c9374642d5e1cd4509b83cc9c48adbdbe1de1821df949f8700b55f53c0ff0aea` | `[AGENT]` |
@@ -224,3 +224,12 @@ SHA256 only.
 | Post-documentation geometry validation (120 assertions, all passing; the original validator is unchanged) | `8fc825603aec3fbb901f0ded43b102c88df93bd0f60bfe7ac4b830641292e65b` |
 | Measure-then-assert check of the Pass B values against their sources, rerun on the corrected records (121 assertions, all passing; log of attempt 5, earlier logs retained) | `a0494accdb58b2195f7b46ff56ec06766c913c7f06ce6bf46b18d4fa37644b60` |
 | Tool rigidity per combined file (start, V1 and V2 below 1.3e-8 Å; V3 at 1.500000 Å between its two groups) | `7c5ea7f65d2b88db7db86c184e9c8092821a177f2825dc388ab28760b8766d8e` |
+
+
+## 5. Recipe audit status supplement, 2026-09-28
+
+The [recipe metadata audit](RECIPE-METADATA-AUDIT.md) closes the unread-recipe gap with `[LIT]` software provenance
+only. Normalization remains PARTIALLY ESTABLISHED; binary provenance and runtime conformance remain open. No P2
+build is declared. Only the package-index navigation digest above is refreshed; every approved definition,
+human-adopted reference and other artifact binding is unchanged. W1 remains unrun, C4-j and B3-b deferred, and
+Stage 1/1a/1b and Stage 2 unauthorized. Scope option A remains BLOCKED.

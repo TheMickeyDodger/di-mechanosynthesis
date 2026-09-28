@@ -651,3 +651,22 @@ recorded on 2026-09-27.
   - Each approval binds exact bytes by path and SHA256. It validates nothing physically and upgrades no evidence
     label.
   - Stage 1 remains BLOCKED and is not authorized.
+
+
+## 12. Installed recipe metadata audit
+
+**[37]** Exact retained conda-forge Psi4 1.11 `py314h53d0584_1` and Libint 2.13.1 `h5a0831b_0`
+package metadata, locally reverified and read on 2026-09-28.
+- **Identity and locators.** The [new companion ledger](ms-001/RECIPE-METADATA-SOURCE-LEDGER.md) records archive URLs,
+  exact sizes/digests, both compressed and decoded metadata identities, all 47 regular members, private validation
+  code/report digests, observed times and retained failures. Exact claim locators are in the
+  [audit](ms-001/RECIPE-METADATA-AUDIT.md).
+- **Verification basis.** Existing archive digests and prior copies match; bounded local decoding, raw-tar/PAX
+  checks, strict JSON, file hashes and independent read-only safety rechecks pass. No source was retrieved.
+- **What it supports.** `[LIT]` software provenance: recipe source URLs/digests, patch contents, declared
+  build/host/run requirements, variants and metadata discrepancies. The P2 preparation recommendation is `[AGENT]`.
+- **Limitations.** Declared upstream source archives were not independently read or compared here. Recipes and test
+  instructions are not execution records. Compiler inputs, actual build/source correspondence and runtime conformance
+  remain open; normalization stays PARTIALLY ESTABLISHED. No physical validity, parity or readiness is established,
+  no P2 build is declared, no evidence label is upgraded and no later stage is authorized. The human-adopted source
+  resolution and earlier source ledger are unchanged; this is a separate supplement.

@@ -7,7 +7,7 @@ assessment uses a larger retrieval set, catalogued separately in the
 [MS-001 Stage 0 source ledger](ms-001/SOURCE-LEDGER.md) and summarized in Section 9 (entries [28] to [31]). The
 sources of the MS-001 pre-Stage-1 closure packet are catalogued in the
 [pre-Stage-1 source ledger](ms-001/PRESTAGE1-SOURCE-LEDGER.md) and summarized in Section 10 (entries [32] to [35]).
-Revisions of the Stage 0 definitions approved by a person since then are listed in Section 11 (entry [36]). The
+Revisions of the Stage 0 definitions approved by a person since then are listed in Sections 11 and 14 (entries [36] and [39]). The
 numbering here is shared by the main documents in the
 repository. The catalogue contains no converged quantum-chemistry values. The project's only
 quantum-chemistry attempt, E-01, stopped before any SCF iteration was reported and is closed as technically
@@ -689,8 +689,29 @@ package metadata, locally reverified and read on 2026-09-28.
 - **Limitations.**
   - A proposal only. No build is declared, and no option is chosen, approved or applied. B2, C4 and every approval
     record are unchanged.
+  - In an answer recorded on 2026-09-28, a person approved the declaration. It is applied to B2 §6, with the fresh
+    adoption of the revised B2 by C4, B3, C2 and C7 ([approval record](ms-001/B2-P2-BUILD-HUMAN-APPROVAL.md); entry
+    [39]). The packet's records themselves are unchanged.
   - Package identity is not proof of compiler inputs, source-to-binary correspondence, linkage, runtime conformance,
     numerical agreement, readiness, parity or physical validity. Basis normalization remains PARTIALLY ESTABLISHED.
   - The E-01 stop is recorded without inference about P2 in either direction.
   - No evidence label is upgraded. Stage 1, Stage 1a, Stage 1b and Stage 2 remain unauthorized, and Stage 1 remains
     BLOCKED.
+
+## 14. MS-001 P2 build revision approved by a person
+
+**[39]** Project records of the revision of B2 that declares the Psi4 build for P2, approved by a person in one
+decision with C4, B3, C2 and C7 at their unchanged digests, in an answer recorded on 2026-09-28.
+- **Records.**
+  - The revision of B2 that declares, in
+    [B2 §6](ms-001/B2-METHOD-DECLARATION.md#6-second-implementation-for-the-p2-check), the Psi4 build that P2 uses.
+  - Its [approval record](ms-001/B2-P2-BUILD-HUMAN-APPROVAL.md), which also records the approval of C4, B3, C2 and
+    C7 at their unchanged digests with the revised B2 adopted.
+- **Basis.** New records of this project, identified by SHA256 in the export manifest and bound in the
+  [freeze record](ms-001/STAGE0-FREEZE-RECORD.md#2-frozen-artifacts).
+- **Limitations.**
+  - The approval binds exact bytes by path and SHA256. It settles the selection of the P2 build only, validates
+    nothing physically and upgrades no evidence label.
+  - Package identity is not proof of compiler inputs, source-to-binary correspondence, linkage, runtime conformance,
+    numerical agreement, readiness, parity or physical validity. Basis normalization remains PARTIALLY ESTABLISHED.
+  - Stage 1 remains BLOCKED and is not authorized.

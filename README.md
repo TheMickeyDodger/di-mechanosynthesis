@@ -199,6 +199,15 @@ approval would change. No build is declared, and no option is chosen, approved o
 remains partially established, and binary provenance and runtime conformance stay open. Stage 1 remains BLOCKED and
 unauthorized.
 
+*P2 build approval, 2026-09-28:* a person approved the revision of B2 that declares, in B2 §6, the Psi4 build that
+P2 uses: the exact conda-forge `osx-arm64` package `psi4-1.11-py314h53d0584_1` with its exactly pinned Libint
+package `libint-2.13.1-h5a0831b_0`, each identified by archive SHA256; and, in the same decision, C4, B3, C2 and C7
+at their unchanged digests with the revised B2 adopted
+([P2 build approval record](docs/ms-001/B2-P2-BUILD-HUMAN-APPROVAL.md)) [39]. It settles the selection of the P2
+build only. Basis normalization remains partially established, and the build provenance and runtime conformance of
+the compiled Psi4 steps remain open. The approval validates nothing physically and changes no evidence label,
+nothing was built, installed or run, and Stage 1 remains BLOCKED and unauthorized.
+
 ## Evidence classification and provenance
 
 Scientific claims are classified by their underlying evidence as experimentally demonstrated (`[EXP]`),
@@ -289,6 +298,6 @@ export pending redistribution review. Work that builds on the benchmark should c
 3. Blue, B. *et al.* Towards Atom-by-Atom Fabrication: Mechanosynthetic donation and abstraction.
    arXiv:2606.13876 (2026). <https://doi.org/10.48550/arXiv.2606.13876>
 
-References [4] to [38], covering further literature, software documentation, source files and the project's own
+References [4] to [39], covering further literature, software documentation, source files and the project's own
 E-01 and MS-001 records, are catalogued with versions, locators, verification basis and limitations in
 [docs/SOURCES.md](docs/SOURCES.md), which uses the same numbering.

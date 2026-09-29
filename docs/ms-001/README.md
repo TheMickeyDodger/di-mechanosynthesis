@@ -62,6 +62,7 @@ B3-b deferred, and Stage 1/1a/1b and Stage 2 unauthorized.
 | C4 approval | [C4-HUMAN-APPROVAL.md](C4-HUMAN-APPROVAL.md) | The human approval of C4 on 2026-09-27, bound to path, commit and SHA256, with its scope, the limits that stand and the qualification of C4's frozen opening bullet |
 | C4 approval, revision | [C4-HUMAN-APPROVAL-02.md](C4-HUMAN-APPROVAL-02.md) | The human approval of the revision of C4 that defines N8 as fixed-atom checks, with the consequential revisions of B3, C2 and C7, bound to their paths and SHA256 |
 | B2 approval, G4 | [B2-G4-HUMAN-APPROVAL.md](B2-G4-HUMAN-APPROVAL.md) | The human approval of the revision of B2 that declares the dftd4 source for G4, bound to its path and SHA256 |
+| B2 approval, P2 build | [B2-P2-BUILD-HUMAN-APPROVAL.md](B2-P2-BUILD-HUMAN-APPROVAL.md) | The human approval of the revision of B2 that declares the Psi4 build for P2, with the fresh adoption of the revised B2 by C4, B3, C2 and C7, bound to their paths and SHA256 |
 | C7 | [C7-VALIDATION-SET.md](C7-VALIDATION-SET.md) | Validation configurations, the components tested by the finite-difference checks, the P2 test molecule and its isolated-molecule treatment, and the Stage 2 checkpoint selectors |
 | Failures | [FAILURE-RECORD.md](FAILURE-RECORD.md) | Geometry attempt 1 (failed before writing anything) and attempt 2 (superseded for a metadata defect), both retained |
 | Sources | [SOURCE-LEDGER.md](SOURCE-LEDGER.md) | Every source used, with URL, version, locator, access time and the digest of the retrieved bytes; a dated section of 2026-09-27 for the source resolution |
@@ -100,6 +101,7 @@ None of these is claimed. The categories match the
       in B2 §3 ([B2-G4-HUMAN-APPROVAL.md](B2-G4-HUMAN-APPROVAL.md)). The source-definition part of G4 is settled by it;
       P1 identity provenance remains within Stage 1. Whether this prerequisite holds depends on the other
       definitions listed here.
+    - *Updated 2026-09-28:* a person approved a revision of B2 that declares the Psi4 build for P2 in B2 §6 ([B2-P2-BUILD-HUMAN-APPROVAL.md](B2-P2-BUILD-HUMAN-APPROVAL.md)): the conda-forge `osx-arm64` package `psi4-1.11-py314h53d0584_1` with its exactly pinned Libint package `libint-2.13.1-h5a0831b_0`, each identified by archive SHA256. It settles the selection of the P2 build only. Basis normalization remains `PARTIALLY ESTABLISHED`, and the build provenance and runtime conformance of the compiled Psi4 steps remain open. Whether this prerequisite holds depends on the other definitions listed here.
 - **Dependencies within Stage 1.**
   - CP2K installation and build identity, including its libxc version.
   - The five route capabilities of C2 §5, items 1 to 5.

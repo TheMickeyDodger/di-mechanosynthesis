@@ -1,0 +1,208 @@
+{
+  "record": "MS-001 W1 provenance wiring test: pre-run executability determination",
+  "record_document": "docs/ms-001/W1-PRE-RUN-DETERMINATION.md",
+  "date": "2026-09-29",
+  "scope": "MS-001 scope option B; W1 only",
+  "specification": {
+    "path": "docs/ms-001/C3-WIRING-TEST-PROPOSAL.md",
+    "sha256": "92cdd0277316dec63992accd663fc9eba37662464f3e4217b459769158f22158",
+    "changed": false
+  },
+  "baseline_commit": "989e566b6009e9ca7c78c8b11a5e6efbe9f551fd",
+  "disposition": "W1 BLOCKED before execution",
+  "disposition_is_not": ["PASS", "INDETERMINATE", "an executed W1 failure"],
+  "w1_run": false,
+  "created": {
+    "aiida_imported": false,
+    "aiida_profile": false,
+    "computer": false,
+    "code": false,
+    "calcjob_nodes": 0,
+    "w1_driver_or_job_class_written": false
+  },
+  "chemistry": {
+    "engine_run": false,
+    "calculation": false,
+    "installation": false,
+    "network_retrieval": false,
+    "chemistry_output": false
+  },
+  "evidence_class_note": "Every observation is a software or environment observation of this project; no chemistry evidence class applies. Mechanism statements marked AGENT are inferences. Proposals are AGENT.",
+  "blockers": [
+    {
+      "id": "W1-BLOCKER-E2",
+      "title": "The runner's environment holds a name outside the declared five-variable allow-list",
+      "requirement_locator": "C3-WIRING-TEST-PROPOSAL.md section 5, item 1",
+      "requirement_quote": "The runner records `os.environ` at start, and its names must equal `env_policy.allow_list` exactly.",
+      "observed": {
+        "parent_environment_names": ["AIIDA_PATH", "LC_ALL", "PATH", "PYTHONNOUSERSITE", "TMPDIR"],
+        "runner_os_environ_names_observed": ["AIIDA_PATH", "LC_ALL", "PATH", "PYTHONNOUSERSITE", "TMPDIR", "__CF_USER_TEXT_ENCODING"],
+        "observation_points": ["startup script, after import os and import sys", "with -S, after import os,sys"],
+        "inherited_by_child_usr_bin_env": true,
+        "reaches_simulated_shell_chain_env_output": true,
+        "bash_without_python_shows_name": false,
+        "interpreter_binary_sha256": "bc56ea9cdc0fface1eb75712f871a454324f6cbfec4e30311b197f208a7f3d07",
+        "interpreter_binary_links_corefoundation": true
+      },
+      "not_established": [
+        "when the name first appears in the process",
+        "the cause of the name; the CoreFoundation mechanism is an AGENT inference and linkage is not established causation"
+      ],
+      "consequences": [
+        "section 5 item 1 cannot hold",
+        "section 7 criterion 4, first bullet, cannot hold",
+        "section 8 stop condition 2 would trigger at the runner's first record",
+        "the section 3 payload-record environment rule is indicated to fail, from a simulation without AiiDA"
+      ],
+      "independent_of": ["W1-BLOCKER-E1"]
+    },
+    {
+      "id": "W1-BLOCKER-E1",
+      "title": "Tracked-driver declaration versus the no-delivery boundary",
+      "requirement_locator": "C3-WIRING-TEST-PROPOSAL.md section 2, row Class and module",
+      "requirement_quote": "Both files are tracked at the declared commit, and their bytes are also inputs of each job (Section 4)",
+      "observed": {
+        "tools/w1_driver.py_at_baseline": false,
+        "tools/w1_job.py_at_baseline": false,
+        "commit_authorized": false,
+        "staging_satisfies_declaration": false
+      },
+      "note": "A declared requirement is disposed as blocking even though no section 7 criterion or section 8 stop condition repeats it. Untracked capture is a proposed revision only.",
+      "independent_of": ["W1-BLOCKER-E2"]
+    }
+  ],
+  "unresolved_requirements": [
+    {
+      "id": "U-F1P",
+      "blocking": true,
+      "requirement_locator": "C3-WIRING-TEST-PROPOSAL.md section 4, Ignored and private files",
+      "requirement_quote": "The list is built two ways, from the loaded modules whose files lie in the repository and from a declared list. A difference between the two stops the test.",
+      "observation": "The Stage 0 environment, and so its site-packages, lies inside the repository working tree under its git-ignored private area; section 4 states no exemption for it.",
+      "open_points": [
+        "the point in the run at which the loaded-module list is taken",
+        "the treatment of module files first loaded after the single capture",
+        "whether compiled extension modules count as source",
+        "no conforming capture design, and no runner import set on which a declared list could be based, was established"
+      ],
+      "impossibility_claimed": false
+    }
+  ],
+  "c3_blockers_closed": [],
+  "c3_readiness": "BLOCKED",
+  "boundaries_preserved": {
+    "F9": "remains a dependency within Stage 1; no W1 job existed or failed, and no F9 demonstration is claimed",
+    "F10": "remains with the orchestration layer",
+    "F11": "carries labels only",
+    "basis_normalization": "outside W1; remains PARTIALLY ESTABLISHED",
+    "psi4_runtime_conformance": "outside W1; remains open",
+    "stage_1": "BLOCKED and not authorized",
+    "stages_1a_1b_2": "not authorized",
+    "scope_option_A": "BLOCKED"
+  },
+  "other_observations": {
+    "installed_distributions": 89,
+    "status_counts": {"locked-verified": 88, "not-in-lock": 1, "locked-wheel-unavailable": 0},
+    "not_in_lock": [{"name": "pip", "version": "25.0.1"}],
+    "wheel_record_file_comparisons": 10914,
+    "wheel_record_mismatches_or_missing": 0,
+    "installed_record_failures": 0,
+    "key_distributions": {
+      "aiida-core": {"version": "2.9.2", "status": "locked-verified", "wheel_sha256": "72ec503b427936a00a5b5d81ae7224b40e42065373e95def2795ccecded77bdd"},
+      "ase": {"version": "3.29.0", "status": "locked-verified", "wheel_sha256": "7b9dd103f007810339c24acfee2f6b677c0c48443b21d3c98e52959246cf4ebf"},
+      "numpy": {"version": "2.5.3", "status": "locked-verified", "wheel_sha256": "a72f874bc9e10e4b8f80426fb49716d5141f64442a0c8418065093ec8017fbb0"}
+    },
+    "site_packages_modules_loaded_at_startup": 0,
+    "pth_files_at_top_level_of_environment_site_packages": 0,
+    "pth_search_scope": "top level of the environment's site-packages only",
+    "lock_sha256": "813b2d9adc6c986626f8a84373b91ae2be0bd9157d7547f9bc43d1a4a6ed80b8",
+    "frozen_input_sha256": "bb7ab3443a99fcdfe47df6a928a07cc45cdd531299051727a5b160493c9186e3",
+    "tracked_files_equal_to_baseline_at_determination": 75,
+    "bash_resolves_to": "/bin/bash"
+  },
+  "dispositions_as_of": "the freeze of the package inventory that the record's review binds, 2026-09-29; no disposition predicts a later decision",
+  "disposition_vocabulary": {
+    "demonstrated": "retained evidence shows the requirement holds; 'before any run' marks a pre-run observation, not a W1 result",
+    "unmet": "evaluated in a W1 run and failed; unused, because no run occurred",
+    "blocked": "pre-run evidence or the no-delivery boundary of the authorization shows the requirement cannot be satisfied as specified; for a stop condition, that it would be triggered",
+    "not reached": "not evaluated at the inventory freeze: for W1's own requirements because W1 was not run; for T7 because the decision is taken outside this record"
+  },
+  "requirement_dispositions": {
+    "section2_4_5_declared_setup": [
+      {"id": "S2-python-environment", "disposition": "demonstrated before any run", "basis": "lock digest and aiida-core and ASE versions and statuses; the runner's read-back of CPython 3.12.14 is not reached"},
+      {"id": "S2-profile-and-storage", "disposition": "not reached", "basis": "no profile created"},
+      {"id": "S2-computer", "disposition": "not reached", "basis": "no computer created"},
+      {"id": "S2-code", "disposition": "not reached", "basis": "no code created"},
+      {"id": "S2-runner", "disposition": "blocked", "basis": "W1-BLOCKER-E2"},
+      {"id": "S2-class-and-module-tracked-drivers", "disposition": "blocked", "basis": "W1-BLOCKER-E1"},
+      {"id": "S2-frozen-input", "disposition": "demonstrated before any run", "basis": "digest equal; 48 atoms; header declares atom_id, map_num and radical_electrons"},
+      {"id": "S2-fixed-set-fixture", "disposition": "demonstrated before any run", "basis": "all six atom_id values present; fixture checks not reached"},
+      {"id": "S4-declared-commit-diff", "disposition": "not reached", "basis": "no capture made"},
+      {"id": "S4-untracked-files", "disposition": "not reached", "basis": "no capture made"},
+      {"id": "S4-ignored-and-private-files", "disposition": "blocked", "basis": "U-F1P, unresolved"},
+      {"id": "S4-one-capture-bytes", "disposition": "not reached", "basis": "no capture made"},
+      {"id": "S5-item1-parent-environment", "disposition": "blocked", "basis": "W1-BLOCKER-E2"},
+      {"id": "S5-item2-transport-no-login", "disposition": "not reached", "basis": "no computer created"},
+      {"id": "S5-item3-job-environment", "disposition": "not reached", "basis": "no job created"},
+      {"id": "S5-presubmit-and-binding", "disposition": "not reached", "basis": "no job created"}
+    ],
+    "section7_acceptance_criteria": [
+      {"criterion": "1", "quote": "Exactly two CalcJob nodes, `w1-job1` and `w1-job2`, finish with exit status 0 and process type `w1_job.W1Job`.", "disposition": "not reached", "basis": "no job created; both blockers prevent a run"},
+      {"criterion": "2", "quote": "Every F4 check of Section 6 passes at every stage, and every negative case fails.", "disposition": "not reached", "basis": "no conversion sequence or checker run"},
+      {"criterion": "3", "quote": "The F1 items resolve from the store as bytes, and their digests are unchanged between the start and the end of the run.", "disposition": "not reached", "basis": "no capture or store; W1-BLOCKER-E1 and U-F1P bear on its preconditions"},
+      {"criterion": "4a", "quote": "the Section 5 environment in the parent, and every payload-record comparison of Section 3;", "disposition": "blocked", "basis": "W1-BLOCKER-E2"},
+      {"criterion": "4b", "quote": "`use_login_shell` false in the effective configuration;", "disposition": "not reached", "basis": "no computer created"},
+      {"criterion": "4c", "quote": "a `presubmit` validation that passed;", "disposition": "not reached", "basis": "no job created"},
+      {"criterion": "4d", "quote": "the three-way byte binding of the submission files that Section 5 requires.", "disposition": "not reached", "basis": "no job created"},
+      {"criterion": "5", "quote": "Each check is made against the declaration, not against another stored copy of the input.", "disposition": "not reached", "basis": "no input node created; pre-run distribution observations are not the run's check"},
+      {"criterion": "6", "quote": "Every repository object of every chain node has a key equal to its SHA256.", "disposition": "not reached", "basis": "no node created"}
+    ],
+    "section8_stop_conditions": [
+      {"n": 1, "quote": "a user-level AiiDA configuration directory appears", "disposition": "not reached", "basis": "AiiDA not imported; no such directory before or after the determination"},
+      {"n": 2, "quote": "any variable outside the Section 5 allow-list is present in the parent", "disposition": "blocked", "basis": "would trigger: W1-BLOCKER-E2"},
+      {"n": 3, "quote": "`use_login_shell` reads back true", "disposition": "not reached", "basis": "no computer created"},
+      {"n": 4, "quote": "the `presubmit` validation raises, or the three copies of a submission file differ", "disposition": "not reached", "basis": "no job created"},
+      {"n": 5, "quote": "the process type differs from `w1_job.W1Job`", "disposition": "not reached", "basis": "no job created"},
+      {"n": 6, "quote": "a code capture changes during the run", "disposition": "not reached", "basis": "no capture made"},
+      {"n": 7, "quote": "a required link is missing", "disposition": "not reached", "basis": "no job created"},
+      {"n": 8, "quote": "a job returns 310, 311 or 312", "disposition": "not reached", "basis": "no job created"},
+      {"n": 9, "quote": "a provenance input fails its Section 3 \"Mandatory contents\" declaration", "disposition": "not reached", "basis": "no input node created"},
+      {"n": 10, "quote": "a comparison that Section 3 declares, and that applies, fails: for the build identity, the host record, the payload record or a loaded module file", "disposition": "blocked", "basis": "payload record indicated to trigger by a simulated shell chain without AiiDA (W1-BLOCKER-E2); not reached for the other comparisons"},
+      {"n": 11, "quote": "a `distributions` entry fits none of the three statuses. A permitted status, and a cached bytecode file, never stop W1 by themselves", "disposition": "not reached", "basis": "all 89 entries fitted a status in the pre-run observation, which is not the run's check"},
+      {"n": 12, "quote": "an F4 check fails", "disposition": "not reached", "basis": "no F4 check run"},
+      {"n": 13, "quote": "a negative case passes", "disposition": "not reached", "basis": "no negative case run"}
+    ],
+    "task_acceptance_criteria_paraphrased": [
+      {"id": "T1", "criterion": "implementation corresponds to the specification; every declared requirement exercised or disposed as unmet or blocking", "disposition": "demonstrated, by disposition, at the inventory freeze", "basis": "no implementation written; every requirement disposed here"},
+      {"id": "T2", "criterion": "profile, computer, code and two-job chain recorded without leaking local identifiers; checks demonstrated or precisely failed", "disposition": "not reached, at the inventory freeze", "basis": "nothing created; precise pre-run blocker recorded"},
+      {"id": "T3", "criterion": "public machine-readable artifacts parse; claims classified and traceable; relative links and anchors resolve", "disposition": "demonstrated, for parsing and links, at the verifier run over the frozen package", "basis": "parsing and links checked by a deterministic verifier over this package, recorded privately; claim classification rests on the record's text and its review, not on a mechanical check"},
+      {"id": "T4", "criterion": "manifest covers every public file except itself with exact SHA256; protected paths unchanged; no chemistry output", "disposition": "demonstrated, at the verifier run over the frozen package", "basis": "as T3"},
+      {"id": "T5", "criterion": "configured check, W1-specific verification with negative controls, privacy scans and inventory and hash checks", "disposition": "demonstrated, for the pre-run package, at the verifier run over the frozen package", "basis": "configured check exit 0; W1-specific checks cover the pre-run evidence and this package only"},
+      {"id": "T6", "criterion": "documentation states the disposition and its effect on C3 and preserves every blocker and boundary", "disposition": "demonstrated, at the inventory freeze, as the record's own statement", "basis": "the record and the navigation and state updates listed in the export manifest; their review is held outside this record, as for T7"},
+      {"id": "T7", "criterion": "independent review approval and Lead acceptance", "disposition": "not reached, at the inventory freeze; the final decisions are held outside this record", "basis": "this record states no review outcome: the review record (F10) is held by the orchestration layer and is never inside the inventory the review binds, so the disposition of T7 is recorded there, not here; no outcome is asserted or predicted"},
+      {"id": "T8", "criterion": "working tree left uncommitted; no push", "disposition": "demonstrated, at the verifier run", "basis": "no commit or push made"}
+    ]
+  },
+  "proposed_revisions_not_applied": {
+    "W1-BLOCKER-E2": ["O1: declare __CF_USER_TEXT_ENCODING as a recorded platform-injected name and verify the launch environment by a separate record (changes acceptance)", "O2: require an interpreter that does not link CoreFoundation (a different environment from the Stage 0 environment the specification declares)"],
+    "W1-BLOCKER-E1": ["R-E1a: capture both drivers as untracked files under section 4 instead of tracked at a commit", "R-E1b: a separate decision by a person to commit the drivers before a run (a delivery decision)"],
+    "U-F1P": ["R-P1: explicit exemption of environment sources from the section 4 private capture", "R-P2: explicit capture design with evaluation point, post-capture loads and extension-module scope"],
+    "status": "AGENT proposals; none chosen, approved or applied"
+  },
+  "not_claimed": [
+    "any W1 run, W1 pass or executed W1 failure",
+    "any F9 demonstration",
+    "closure of any C3 blocker",
+    "any chemistry result, engine behaviour, readiness, parity, physical validation or authorization",
+    "the cause of the environment name",
+    "complete filesystem confinement or an exhaustive audit of actions"
+  ],
+  "limitations": [
+    "three writes fell outside the project's private working area, all outside this repository (one runtime-persisted command output; one agent memory note and one index line); disclosed privately and not cleaned up",
+    "earlier and auxiliary commands are reconstructed; recorded commands are complete",
+    "the determining agent's model is a self-report from its runtime context"
+  ],
+  "private_records": [
+    {"description": "private executability determination, revised after review", "sha256": "2affa5eaa820851f26514d2f34fdd5178a4e7cfba74141e848a62c8621680df4"},
+    {"description": "frozen digest list of the pre-run evidence (30 command records, probe scripts and outputs, recorder)", "sha256": "51d31f90d7e1d837e35189338972f9d0d48b2caac445014b4b192872a5b7a39e"}
+  ]
+}

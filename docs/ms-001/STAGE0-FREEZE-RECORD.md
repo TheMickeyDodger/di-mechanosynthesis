@@ -170,7 +170,7 @@ established.
 | C3 provenance wiring | `docs/ms-001/C3-PROVENANCE-WIRING.md` | `cd0ffcc37d40fbb82a0801a2685335c68fdde08e8f6fc6c6d31e3ff76fe2723d` | Software wiring evidence only, with no chemistry class. The field set is `[AGENT]`; coverage gaps are `[GAP]` |
 | Failure record | `docs/ms-001/FAILURE-RECORD.md` | `3e5724c6786c0cb68bc7ee311608303945f4dbc95e4de2fae503b164c4151187` | The failure-record provenance field (evidence policy §4) |
 | Source ledger | `docs/ms-001/SOURCE-LEDGER.md` | `4d46ff84ffe0767f5ded9d202b935836007cd9d4243647bc438353664f44142c` | `[LIT]` provenance record |
-| Package index | `docs/ms-001/README.md` | `7cd1c9ca97d4a4a8006593218d9ccf87cc4526b45c9b5de099e06a3b1d97565e` | Navigation. Updated 2026-09-28 for recipe-audit status and links, previous digest `18f2ef3c0000addeaddd4d04dafaa0341943b6c81bb9602f44bc549390746335`; then updated 2026-09-28 for the status of the P2 build-declaration proposal and links only, previous digest `1288f41ab9bdcfdacede9fe433fe43842521f6202d6d4347ed8c511f5094bd94`; then updated for the approval, recorded on 2026-09-28, of the declaration of the Psi4 build for P2, with one dated sub-bullet and one Records-table row, previous digest `b3d536f59ad07bb3143d8abffd95501e4b31b4d738fe526f67ac8a90ecb8e147`. No definition, evidence label or gate changed |
+| Package index | `docs/ms-001/README.md` | `c8c828ae3ee1899c43f0e0050afd997b45c489458b9434818d77e8deda743419` | Navigation. Updated 2026-09-28 for recipe-audit status and links, previous digest `18f2ef3c0000addeaddd4d04dafaa0341943b6c81bb9602f44bc549390746335`; then updated 2026-09-28 for the status of the P2 build-declaration proposal and links only, previous digest `1288f41ab9bdcfdacede9fe433fe43842521f6202d6d4347ed8c511f5094bd94`; then updated for the approval, recorded on 2026-09-28, of the declaration of the Psi4 build for P2, with one dated sub-bullet and one Records-table row, previous digest `b3d536f59ad07bb3143d8abffd95501e4b31b4d738fe526f67ac8a90ecb8e147`; then updated 2026-09-29 for the W1 pre-run determination, with one dated paragraph, one dated sub-bullet and one Records-table row, previous digest `7cd1c9ca97d4a4a8006593218d9ccf87cc4526b45c9b5de099e06a3b1d97565e`. No definition, evidence label or gate changed |
 | Geometry record (document) | `structures/ms-001/README.md` | `4cc6cc42660a0dd439f9d0c018aba0cbdea933b0d734fb163cec2442ac97aba6` | `[AGENT]` choices; `[GAP]` benchmark relation |
 | Geometry record (machine-readable) | `structures/ms-001/geometry-record.json` | `43ef99bc795b600c834f9bf5a7590ee3dd6600bc8f1a65354f849120a5f55e74` | `[AGENT]`. Measured construction values establish internal consistency only |
 | B1 model M1 | `structures/ms-001/M1-build-site.extxyz` | `c9374642d5e1cd4509b83cc9c48adbdbe1de1821df949f8700b55f53c0ff0aea` | `[AGENT]` |
@@ -250,3 +250,16 @@ is refreshed. The packet records that an approved declaration would change B2's 
 need a fresh adoption of the revised B2 by C4, B3, C2 and C7; nothing of that is applied here. Basis normalization
 remains PARTIALLY ESTABLISHED. W1 remains unrun, C4-j and B3-b deferred, and Stage 1/1a/1b and Stage 2 unauthorized.
 Scope option A remains BLOCKED.
+
+## 7. W1 pre-run determination status supplement, 2026-09-29
+
+A person authorized W1, the wiring test specified in [C3-WIRING-TEST-PROPOSAL.md](C3-WIRING-TEST-PROPOSAL.md). A
+pre-run executability determination recorded it as **W1 BLOCKED before execution**
+([W1 record](W1-PRE-RUN-DETERMINATION.md)). There are two independent blockers: the runner's interpreter environment
+holds a name outside the declared allow-list, and the tracked-driver declaration conflicts with the no-delivery
+boundary. One further requirement is unresolved. W1 was not run, and no AiiDA profile, computer, code or job was
+created. The W1 record and its outcome file are not Stage 0 definitions, so they are not bound in Section 2. The
+specification, C4 with its opening Approval bullet, every approval record, every human-adopted reference and every
+artifact bound in Section 2 are unchanged. Only the package-index navigation digest above is refreshed. None of the C3
+blockers is closed, and C3 readiness remains BLOCKED. C4-j and B3-b remain deferred. Stage 1 remains BLOCKED and
+unauthorized, and Stages 1a, 1b and 2 are unauthorized. Scope option A remains BLOCKED.

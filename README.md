@@ -171,7 +171,8 @@ prerequisites as far as static reading allows [32–35]. It contains:
 
 The packet changed no frozen definition, and nothing was run or installed. Every proposal in it was unapplied when it
 was published; the G4 declaration and option O2 for N8 have since been approved by a person and applied, as noted
-below, and the wiring test W1 awaits its own authorization. Stage 1 remains BLOCKED and unauthorized.
+below, and the wiring test W1, since authorized, was blocked before execution and not run, as noted below. Stage 1
+remains BLOCKED and unauthorized.
 
 *Updated 2026-09-28:* in one decision a person approved the proposed declaration of the dftd4
 source for G4, now in B2 §3, and the revision of C4 that the N8 decision packet proposes as option O2, with its
@@ -207,6 +208,18 @@ at their unchanged digests with the revised B2 adopted
 build only. Basis normalization remains partially established, and the build provenance and runtime conformance of
 the compiled Psi4 steps remain open. The approval validates nothing physically and changes no evidence label,
 nothing was built, installed or run, and Stage 1 remains BLOCKED and unauthorized.
+
+*W1 pre-run determination, 2026-09-29:* a person authorized the wiring test W1. Before anything was implemented, a
+pre-run executability determination found that W1 cannot be executed to a pass as specified within that
+authorization ([W1 record](docs/ms-001/W1-PRE-RUN-DETERMINATION.md)) [40]. There are two independent reasons:
+- the Stage 0 interpreter's environment holds a name outside the declared five-variable allow-list;
+- the declaration that both drivers are tracked at a commit conflicts with the no-delivery boundary.
+
+A third requirement, the capture of ignored or private sources, is unresolved. The disposition is W1 BLOCKED before
+execution. W1 was not run, no AiiDA profile, computer, code or job was created, and no chemistry, engine run,
+calculation or installation took place. Proposed revisions of the specification are recorded for a person's
+decision; none is applied, and the specification is unchanged. None of the C3 blockers is closed, C3 readiness
+remains BLOCKED, and Stage 1 remains BLOCKED and unauthorized.
 
 ## Evidence classification and provenance
 
@@ -261,7 +274,9 @@ and the manifest lists each omission with its reason.
 | [docs/ms-000/](docs/ms-000/README.md) | Complete public MS-000 feasibility package: compute spike, architecture, evidence policy, software landscape, source ledger and ASE smoke record |
 | [docs/ms-000/CLOSURE.md](docs/ms-000/CLOSURE.md) | MS-000 closure record: all six feasibility criteria met and gate PASS; dependency classes, unresolved gaps and the stage preconditions of both MS-001 scope options |
 | [docs/ms-001/](docs/ms-001/README.md) | MS-001 Stage 0 package, scope option B: authorization record, provenance wiring test, coupling route, method declaration, drive protocol, tolerances, validation set, failure record, source ledger, freeze record and C4 human approval record; independent review approval and Lead acceptance recorded, C4 approved by a person on 2026-09-27, Stage 0 closed as frozen prospective definitions and Stage 1 BLOCKED |
-| [docs/ms-001/PRESTAGE1-CLOSURE-PACKET.md](docs/ms-001/PRESTAGE1-CLOSURE-PACKET.md) | Pre-Stage-1 closure packet: installed-build audit, proposed G4 dftd4 declaration, N8 decision packet, proposed C3 wiring test W1, consolidated readiness table and supplementary source ledger; G4 declaration and N8 option O2 later approved and applied, W1 awaiting authorization, Stage 1 BLOCKED |
+| [docs/ms-001/PRESTAGE1-CLOSURE-PACKET.md](docs/ms-001/PRESTAGE1-CLOSURE-PACKET.md) | Pre-Stage-1 closure packet: installed-build audit, proposed G4 dftd4 declaration, N8 decision packet, proposed C3 wiring test W1, consolidated readiness table and supplementary source ledger; G4 declaration and N8 option O2 later approved and applied, W1 later authorized and blocked before execution (not run), Stage 1 BLOCKED |
+| [docs/ms-001/W1-PRE-RUN-DETERMINATION.md](docs/ms-001/W1-PRE-RUN-DETERMINATION.md) | Pre-run executability determination of the wiring test W1 (2026-09-29): W1 BLOCKED before execution and not run, two independent blockers, one unresolved requirement, dispositions of every acceptance criterion and stop condition, proposed revisions not applied; closes no C3 blocker |
+| [docs/ms-001/w1-outcome.json](docs/ms-001/w1-outcome.json) | Machine-readable W1 outcome: disposition, blockers and requirement dispositions |
 | [structures/ms-001/](structures/ms-001/README.md) | MS-001 Stage 0 geometries: model M1, the start configuration, validation configurations V1–V3 and the P2 test molecule, built geometrically and unrelaxed |
 | [tools/build_ms001_geometries.py](tools/build_ms001_geometries.py) | Deterministic generator of the MS-001 Stage 0 geometries; it measures and asserts every reported distance and angle |
 | [tools/c3_provenance_wiring.py](tools/c3_provenance_wiring.py) | Driver of the C3 provenance wiring test, one trivial non-chemistry AiiDA job |
@@ -298,6 +313,6 @@ export pending redistribution review. Work that builds on the benchmark should c
 3. Blue, B. *et al.* Towards Atom-by-Atom Fabrication: Mechanosynthetic donation and abstraction.
    arXiv:2606.13876 (2026). <https://doi.org/10.48550/arXiv.2606.13876>
 
-References [4] to [39], covering further literature, software documentation, source files and the project's own
+References [4] to [40], covering further literature, software documentation, source files and the project's own
 E-01 and MS-001 records, are catalogued with versions, locators, verification basis and limitations in
 [docs/SOURCES.md](docs/SOURCES.md), which uses the same numbering.

@@ -7,7 +7,8 @@ assessment uses a larger retrieval set, catalogued separately in the
 [MS-001 Stage 0 source ledger](ms-001/SOURCE-LEDGER.md) and summarized in Section 9 (entries [28] to [31]). The
 sources of the MS-001 pre-Stage-1 closure packet are catalogued in the
 [pre-Stage-1 source ledger](ms-001/PRESTAGE1-SOURCE-LEDGER.md) and summarized in Section 10 (entries [32] to [35]).
-Revisions of the Stage 0 definitions approved by a person since then are listed in Sections 11 and 14 (entries [36] and [39]). The
+Revisions of the Stage 0 definitions approved by a person since then are listed in Sections 11 and 14 (entries [36] and [39]).
+The pre-run determination of the wiring test W1, which cites no external source, is listed in Section 15 (entry [40]). The
 numbering here is shared by the main documents in the
 repository. The catalogue contains no converged quantum-chemistry values. The project's only
 quantum-chemistry attempt, E-01, stopped before any SCF iteration was reported and is closed as technically
@@ -715,3 +716,27 @@ decision with C4, B3, C2 and C7 at their unchanged digests, in an answer recorde
   - Package identity is not proof of compiler inputs, source-to-binary correspondence, linkage, runtime conformance,
     numerical agreement, readiness, parity or physical validity. Basis normalization remains PARTIALLY ESTABLISHED.
   - Stage 1 remains BLOCKED and is not authorized.
+
+## 15. MS-001 W1 pre-run determination
+
+**[40]** Project records of the pre-run executability determination of the wiring test W1, 2026-09-29.
+- **Records.**
+  - The [W1 record](ms-001/W1-PRE-RUN-DETERMINATION.md), whose disposition is W1 BLOCKED before execution.
+  - Its [machine-readable outcome](ms-001/w1-outcome.json).
+- **Content.**
+  - Two independent blockers: the runner's interpreter environment against the declared allow-list, and the
+    tracked-driver declaration against the no-delivery boundary.
+  - One unresolved requirement: the capture of ignored or private sources.
+  - The disposition of every acceptance criterion and stop condition of the
+    [W1 specification](ms-001/C3-WIRING-TEST-PROPOSAL.md).
+  - Proposed revisions, none applied.
+- **Basis.** New records of this project, identified by SHA256 in the export manifest. They are written from private
+  command and probe records of read-only inspection, hashing and interpreter-startup probes of the installed Stage 0
+  environment on the project host. Those records are bound by SHA256 in the W1 record. No external source was
+  retrieved or cited.
+- **Limitations.**
+  - W1 was not run. No AiiDA profile, computer, code or job was created, and AiiDA was not imported.
+  - The observations are software and environment observations only. They show nothing about chemistry, and no
+    chemistry evidence class applies.
+  - The cause of the environment name that blocks W1 is an `[AGENT]` inference, not an established fact.
+  - None of the C3 blockers is closed. Stage 1 remains BLOCKED and is not authorized.

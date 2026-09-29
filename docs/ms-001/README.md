@@ -32,6 +32,19 @@ setting and threshold in it is `[AGENT]`, a declared deviation.
 
 ## Records
 
+**W1 pre-run determination, 2026-09-29.** A person authorized W1, the wiring test specified in
+[C3-WIRING-TEST-PROPOSAL.md](C3-WIRING-TEST-PROPOSAL.md). A pre-run executability determination found that W1 cannot
+be executed to a pass as specified within that authorization, for two independent reasons:
+- the runner's interpreter environment holds a name outside the declared five-variable allow-list;
+- the declaration that both drivers are tracked at a commit conflicts with the no-delivery boundary.
+
+A third requirement, the capture of ignored or private sources, is unresolved. The disposition is **W1 BLOCKED before
+execution**: W1 was not run, no AiiDA profile, computer, code or job was created, and no chemistry was done. The
+[W1 record](W1-PRE-RUN-DETERMINATION.md) and its [machine-readable outcome](w1-outcome.json) give the evidence, the
+disposition of every acceptance criterion and stop condition, and proposed revisions, none of them applied. It closes
+none of the C3 blockers, and the specification is unchanged. C3 readiness remains BLOCKED, and Stage 1 remains
+BLOCKED and unauthorized.
+
 **Recipe audit update, 2026-09-28.** The [installed recipe metadata audit](RECIPE-METADATA-AUDIT.md) and its
 [source ledger](RECIPE-METADATA-SOURCE-LEDGER.md) close the unread-recipe gap. `[LIT]` metadata records Psi4's exact
 Libint package in both host and run requirements and identifies declared source digests, patches and build settings.
@@ -69,6 +82,7 @@ B3-b deferred, and Stage 1/1a/1b and Stage 2 unauthorized.
 | Source resolution | [SOURCE-RESOLUTION.md](SOURCE-RESOLUTION.md) | The dispositions of the five source definitions required before Stage 1, read from version-matched CP2K 2026.2 and Psi4 v1.11 source (2026-09-27) |
 | C4 revision options | [C4-PROPOSED-REVISION-01.md](C4-PROPOSED-REVISION-01.md) | Options for a decision on N8 under C4 §3, proposed and not applied or approved (2026-09-27) |
 | Freeze | [STAGE0-FREEZE-RECORD.md](STAGE0-FREEZE-RECORD.md) | Path, SHA256 and evidence label of every frozen artifact |
+| W1 | [W1-PRE-RUN-DETERMINATION.md](W1-PRE-RUN-DETERMINATION.md); [w1-outcome.json](w1-outcome.json) | The pre-run executability determination of W1 (2026-09-29): W1 BLOCKED before execution and not run, with two independent blockers, one unresolved requirement, dispositions of every acceptance criterion and stop condition, and proposed revisions, none applied |
 
 ## Open items, by when they must be settled
 
@@ -80,6 +94,8 @@ None of these is claimed. The categories match the
     items, and the human approval of C4, are recorded; they authorize nothing.
   - The C3 blockers: identity-chain survival, the remaining provenance extensions, and the login-shell environment
     gap ([C3 §5](C3-PROVENANCE-WIRING.md#5-coverage-table)).
+    - *Updated 2026-09-29:* W1 was authorized, and was blocked before execution by a pre-run determination
+      ([W1 record](W1-PRE-RUN-DETERMINATION.md)). It was not run and closes none of these blockers, which all stand.
   - Five definitions to settle from version-matched source: GFN0 parameter provenance through CP2K (G4), CP2K's unit
     for `OMEGA`, the normalization of single-primitive basis coefficients, the printed representations that N8
     compares, and whether the compiled Psi4 SCF and gradient steps use any fitting basis under the declared settings

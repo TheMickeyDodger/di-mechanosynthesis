@@ -1,0 +1,325 @@
+{
+  "record": "MS-001 W1 provenance wiring test: pre-run executability determination 02, under specification revision 01",
+  "record_document": "docs/ms-001/W1-PRE-RUN-DETERMINATION-02.md",
+  "date": "2026-10-04",
+  "scope": "MS-001 scope option B; W1 only",
+  "specification": {
+    "path": "docs/ms-001/C3-WIRING-TEST-PROPOSAL.md",
+    "revision": "01",
+    "sha256": "29c71ff6d89d9f26bc1ef997ed80719d975f1f986226330e54a28af760b9a347",
+    "bytes": 70753,
+    "approval_record": "docs/ms-001/W1-REVISION-01-HUMAN-APPROVAL.md",
+    "base_sha256_superseded": "92cdd0277316dec63992accd663fc9eba37662464f3e4217b459769158f22158",
+    "patch_sha256": "ed8a0dfd9891709c65c24eb4ec28ea80dff0fd4a54d94d0be6813b9ca3b450a7"
+  },
+  "order": {
+    "postdates_application": true,
+    "statement": "the base bytes were replaced by the approved revision 01 and the specification read back with the revised digest before the first probe began",
+    "base_sha256": "92cdd0277316dec63992accd663fc9eba37662464f3e4217b459769158f22158",
+    "base_bytes": 45998,
+    "revised_sha256": "29c71ff6d89d9f26bc1ef997ed80719d975f1f986226330e54a28af760b9a347",
+    "revised_bytes": 70753
+  },
+  "previous_determination": {
+    "record_document": "docs/ms-001/W1-PRE-RUN-DETERMINATION.md",
+    "outcome": "docs/ms-001/w1-outcome.json",
+    "date": "2026-09-29",
+    "under_specification_sha256": "92cdd0277316dec63992accd663fc9eba37662464f3e4217b459769158f22158",
+    "disposition": "W1 BLOCKED before execution",
+    "status": "preserved unchanged as the result under the superseded base specification; not rewritten, so the files carry no supersession note themselves; the supersession is stated in this outcome, in the second determination, in the package index and in the export manifest",
+    "record_document_sha256": "a808f51f4593e4556174b67b91f1fb865d010a724d2ee1cd4d53463d73488809",
+    "outcome_sha256": "63e47e2fab6306c62218b33663cb48221e41012366fdc0fc6367121e9f34400d"
+  },
+  "probed_state": {
+    "head": "af7a8983a7a4c3d52c882ff9a2f63923823e85f6",
+    "tracked_files_changed_from_head": 7,
+    "untracked_files": 2,
+    "note": "after the application and before this record and the other documentary files of the application were written"
+  },
+  "disposition": "INDETERMINATE before execution",
+  "disposition_is_not": [
+    "PASS",
+    "BLOCKED",
+    "readiness",
+    "an executed W1 failure"
+  ],
+  "disposition_reasons": [
+    "no probed prerequisite blocks under the revised text",
+    "requirements observable only by importing AiiDA or running W1 remain untested, chiefly the carriage of the declared superset through each job's folder, input manifest and binding"
+  ],
+  "w1_run": false,
+  "created": {
+    "aiida_imported": false,
+    "ase_imported": false,
+    "numpy_imported": false,
+    "aiida_profile": false,
+    "computer": false,
+    "code": false,
+    "calcjob_nodes": 0,
+    "w1_driver_or_job_class_written": false
+  },
+  "chemistry": {
+    "engine_run": false,
+    "calculation": false,
+    "installation": false,
+    "network_retrieval": false,
+    "chemistry_output": false
+  },
+  "git": {
+    "commit_created": false,
+    "staged": false,
+    "pushed": false
+  },
+  "evidence_class_note": "Every observation is a software or environment observation of this project; no chemistry evidence class applies. Statements marked AGENT are inferences.",
+  "earlier_blockers": [
+    {
+      "id": "W1-BLOCKER-E2",
+      "status_under_revision_01": "no longer blocks as specified",
+      "requirement_locator": "C3-WIRING-TEST-PROPOSAL.md section 5, item 1 (three records) and section 3, env_policy.platform_injected",
+      "observations": {
+        "launcher_record_names": [
+          "AIIDA_PATH",
+          "LC_ALL",
+          "PATH",
+          "PYTHONNOUSERSITE",
+          "TMPDIR"
+        ],
+        "interpreter_record_names_at_start": [
+          "AIIDA_PATH",
+          "LC_ALL",
+          "PATH",
+          "PYTHONNOUSERSITE",
+          "TMPDIR",
+          "__CF_USER_TEXT_ENCODING"
+        ],
+        "interpreter_record_unchanged_at_end": true,
+        "allow_list_values_equal_launcher_record": true,
+        "child_env_explicit_names": [
+          "AIIDA_PATH",
+          "LC_ALL",
+          "PATH",
+          "PYTHONNOUSERSITE",
+          "TMPDIR"
+        ],
+        "simulated_payload_env_names": [
+          "AIIDA_PATH",
+          "LC_ALL",
+          "OMP_NUM_THREADS",
+          "PATH",
+          "PWD",
+          "PYTHONNOUSERSITE",
+          "SHLVL",
+          "TMPDIR",
+          "_",
+          "__CF_USER_TEXT_ENCODING"
+        ],
+        "simulated_payload_record_conforms": true
+      },
+      "not_established": [
+        "the cause and first appearance of the injected name (AGENT inference only)",
+        "the run's own records",
+        "the payload record of a real job"
+      ]
+    },
+    {
+      "id": "W1-BLOCKER-E1",
+      "status_under_revision_01": "no longer blocks as specified",
+      "requirement_locator": "C3-WIRING-TEST-PROPOSAL.md section 2, row Class and module",
+      "observations": {
+        "tools/w1_driver.py_exists": false,
+        "tools/w1_job.py_exists": false,
+        "tools/__pycache__exists": false
+      },
+      "remaining_prerequisite": "the two driver files must be written under a separate authorization of a W1 run (packet section 10.2, item 4)"
+    },
+    {
+      "id": "U-F1P",
+      "status_under_revision_01": "no longer blocks as specified",
+      "requirement_locator": "C3-WIRING-TEST-PROPOSAL.md section 4, The environment, as a declared superset",
+      "observations": {
+        "superset_files": 18448,
+        "superset_bytes": 374182654,
+        "kinds": {
+          "py": 6834,
+          "pyc": 6834,
+          "so": 180,
+          "dylib": 33,
+          "other": 4567
+        },
+        "equal_to_packet_S2": true,
+        "path_rule_problems": 0,
+        "symlinks_or_nonregular": 0,
+        "pth_files": 0,
+        "editable_finders": 0,
+        "egg_links": 0,
+        "startup_modules_from_site_packages": 0,
+        "probe_directory_on_import_path": "yes: the probe script directory, which lies in the git-ignored private area outside site-packages; a W1 run would put tools/ there instead",
+        "other_import_path_entries_into_ignored_area_outside_site_packages": 0
+      },
+      "untested": [
+        "whether every module aiida-core loads falls into a permitted class of section 3"
+      ]
+    }
+  ],
+  "section_10_2_item_3": [
+    {
+      "item": "launcher and interpreter records under -E -s -B",
+      "status": "verified at the probed state",
+      "python": "CPython 3.12.14",
+      "executable_relative_to_prefix": "bin/python",
+      "interpreter_sha256": "bc56ea9cdc0fface1eb75712f871a454324f6cbfec4e30311b197f208a7f3d07"
+    },
+    {
+      "item": "sys.flags.dont_write_bytecode",
+      "status": "verified at the probed state",
+      "value": 1,
+      "bytecode_listing": {
+        "files": 7216,
+        "site_packages": 6834,
+        "base_prefix": 382,
+        "tools": 0,
+        "sha256": "9cdbd1ded667ad803f5783a769bb6fe1ff951d21d37a062eb640faf804869a1a",
+        "stable_across_probes": true
+      },
+      "not_shown": "that -B prevents a write: all 40 source-loaded modules of the probes already had cached bytecode, and the rest were built in (33), frozen (17) or without a file; no import of a source module without a cached bytecode file was tested, so the equal listings do not demonstrate suppression of bytecode writing"
+    },
+    {
+      "item": "declared Git invocations and configuration bounds",
+      "status": "verified at the probed state",
+      "git_version": "git version 2.39.5 (Apple Git-154)",
+      "all_exit_zero": true,
+      "no_error_output": true,
+      "two_rounds_identical": true,
+      "config_entries": 12,
+      "config_all_origin_repository": true,
+      "forbidden_keys": 0,
+      "info_attributes": false,
+      "gitattributes_directories": 3,
+      "gitattributes_offending": 0,
+      "info_exclude_rules": 1,
+      "object_format": "sha1",
+      "git_path_index": ".git/index",
+      "index_entries": 77,
+      "nonzero_stage": 0,
+      "gitlinks": 0,
+      "debug_flags_zero": "77 of 77",
+      "index_and_untracked_paths_regular": true,
+      "raw_index_sha256_before_and_after": "8e12f22521a8d144f4a31d3547340959a90766e62a978099204bcaf950f688f9",
+      "probe_defect": "the first flags evaluation tested for lines beginning with 'flags:' and counted no field; a re-parse of the retained output without any Git command found 77 fields, all 0; both results retained"
+    },
+    {
+      "item": "user-level observation paths",
+      "status": "verified at the probed state, over seconds",
+      "paths_observable_without_error": 11,
+      "absent": [
+        ".aiida",
+        ".ase"
+      ],
+      "observations_equal": true,
+      "expanduser_without_home_equals_password_database_home": true,
+      "untested": "stability over the length of a run"
+    },
+    {
+      "item": "carriage of the declared superset through each job's folder, input manifest and binding",
+      "status": "untested requirement",
+      "reason": "not observable without importing AiiDA and running a job; neither was done",
+      "static_source_reading": [
+        {
+          "file": "aiida/engine/daemon/execmanager.py",
+          "sha256": "92c2b1d96b96c2594bd03673f1b3af72714209097bd3c5b2d0ebeff220a12dbd",
+          "installed_record_match": true,
+          "lines": "245-273, 335-392, 393-400"
+        },
+        {
+          "file": "aiida/engine/processes/calcjobs/calcjob.py",
+          "sha256": "7ebd9157f19d7e04144d88cf18ce631d675dcecdde0c413b7a2a909616efbe2e",
+          "installed_record_match": true,
+          "lines": "932-935"
+        },
+        {
+          "file": "aiida/common/folders.py",
+          "sha256": "5a707f11cd24a3f07cf7e43d9444d63ba202bda61cd3ff1a4f8c8b5dd44132c9",
+          "installed_record_match": true,
+          "lines": "403-415"
+        }
+      ],
+      "agent_inferences": [
+        "W1Job would have to write every F1 input, code_private included, into the sandbox folder; local_copy_list items are not stored in the job node's repository",
+        "each job would then hold the superset in its sandbox folder, its node repository and its work directory, beside the code_private input node"
+      ],
+      "repository_filesystem_free_bytes_at_probe": 554070908928
+    }
+  ],
+  "other_untested": [
+    "aiida-core behaviour without HOME and its late imports",
+    "per-distribution RECORD checks (not repeated; first observed 2026-09-29)",
+    "every run-time record: profile, computer read-back, presubmit validation, real payload record, run-end comparisons"
+  ],
+  "c3_blockers_closed": [],
+  "c3_readiness": "BLOCKED",
+  "stage_1": "BLOCKED and not authorized; stages 1a, 1b and 2 not authorized; scope option A BLOCKED",
+  "w1_run_requires": [
+    "separate authorization by a person covering writing tools/w1_driver.py and tools/w1_job.py and creating the W1 profile, computer and code",
+    "an unchanged working tree, tool-settings file and user-level top-level entries during the run"
+  ],
+  "disposition_vocabulary": {
+    "demonstrated": "retained evidence shows the requirement holds; 'before any run' marks a pre-run observation, not a W1 result",
+    "unmet": "evaluated in a W1 run and failed; unused",
+    "blocked": "pre-run evidence shows the requirement cannot be satisfied; unused here",
+    "not reached": "not evaluated, because W1 was not run"
+  },
+  "requirement_dispositions": {
+    "acceptance_criteria": {
+      "1": "not reached",
+      "2": "not reached",
+      "3": "not reached",
+      "4": "not reached",
+      "5": "not reached",
+      "6": "not reached",
+      "7": "not reached"
+    },
+    "stop_conditions": {
+      "1": "not reached",
+      "2": "not reached; not indicated",
+      "3": "not reached",
+      "4": "not reached",
+      "5": "not reached",
+      "6": "not reached; preconditions hold at the probed state",
+      "7": "not reached",
+      "8": "not reached",
+      "9": "not reached",
+      "10": "not reached; not indicated for the payload record (simulation without AiiDA)",
+      "11": "not reached",
+      "12": "not reached",
+      "13": "not reached",
+      "14": "not reached",
+      "15": "not reached"
+    }
+  },
+  "not_claimed": [
+    "any W1 run, W1 pass or executed W1 failure",
+    "that W1 can be executed to a pass",
+    "any F9 demonstration",
+    "closure of any C3 blocker",
+    "that -B prevents bytecode writes",
+    "the cause of the injected environment name",
+    "any chemistry result, engine behaviour, readiness, parity, physical validation or authorization"
+  ],
+  "limitations": [
+    "two helper invocations of the operating system's Python ran before bytecode writing was disabled for them; whether that interpreter wrote to its cache outside this repository is not established",
+    "the agent runtime may have kept records outside this repository, not inspected",
+    "during the orchestration layer's startup for this task, an attempted cleanup of a previous orchestration workspace failed and one local orchestration metadata file was lost; a minimal replacement mapping was built later from current observations; it is new metadata, not a recovery, and the original file's exact bytes are irrecoverable",
+    "this determination cleaned up nothing, neither contents outside this repository nor the evidence of earlier incidents; no complete filesystem confinement, no absence of cleanup attempts by any party and no exhaustive audit is claimed",
+    "model: configured value and runtime self-report only; neither is an attestation"
+  ],
+  "private_records": [
+    {
+      "description": "frozen digest list of the private evidence, version 02, 102 files; version 01 retained",
+      "sha256": "83d1f7db02e883e8f47ea0efcb8293d9758934cecdd3016ea839ac79047c976f"
+    },
+    {
+      "description": "site-packages listing",
+      "sha256": "0934e6deb864c2aa9d56117486348ef183d85d00080d381d8fbde04d4032d497"
+    }
+  ]
+}

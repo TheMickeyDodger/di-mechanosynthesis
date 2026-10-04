@@ -32,6 +32,27 @@ setting and threshold in it is `[AGENT]`, a declared deviation.
 
 ## Records
 
+**W1 specification revision 01 approved and applied, and pre-run determination 02, 2026-10-04.** In an answer
+recorded on 2026-10-04, a person approved revision 01 of the [W1 specification](C3-WIRING-TEST-PROPOSAL.md), bound to
+its exact SHA256, and the approved bytes were applied unchanged ([approval record](W1-REVISION-01-HUMAN-APPROVAL.md)).
+A renewed pre-run executability determination under the revised text is **INDETERMINATE before execution**
+([determination 02](W1-PRE-RUN-DETERMINATION-02.md); [machine-readable outcome](w1-outcome-02.json)).
+W1-BLOCKER-E2, W1-BLOCKER-E1 and U-F1P no longer block as specified, and every probed prerequisite holds at the
+probed state. Whether the job machinery carries the declared superset through each job, and the other requirements
+that only a run can show, remain untested. W1 was not run: no AiiDA profile, computer, code or job was created, and
+AiiDA was not imported. A W1 run needs a separate authorization by a person. The approval is not readiness and
+authorizes nothing further, and no C3 blocker is closed. C3 readiness remains BLOCKED, and Stage 1 remains BLOCKED
+and unauthorized.
+
+**W1 specification revision decision packet, 2026-10-04 (proposal; approved afterwards).** The
+[W1 revision decision packet](W1-REVISION-DECISION-PACKET.md) prepares a person's decision on revision 01 of the
+[W1 specification](C3-WIRING-TEST-PROPOSAL.md). The revision would resolve or dispose W1-BLOCKER-E2, W1-BLOCKER-E1,
+the unresolved capture requirement U-F1P and seven coupled gaps. The packet recommends one combination as an `[AGENT]`
+proposal, gives exact replacement text marked UNAPPLIED, and binds the base, the prospective revised specification
+and the patch by SHA256 for a decision on exact bytes. As prepared, nothing in it was chosen, approved or applied, and
+it left the specification unchanged. The packet itself is unchanged; the later approval and application are recorded
+above.
+
 **W1 pre-run determination, 2026-09-29.** A person authorized W1, the wiring test specified in
 [C3-WIRING-TEST-PROPOSAL.md](C3-WIRING-TEST-PROPOSAL.md). A pre-run executability determination found that W1 cannot
 be executed to a pass as specified within that authorization, for two independent reasons:
@@ -42,8 +63,11 @@ A third requirement, the capture of ignored or private sources, is unresolved. T
 execution**: W1 was not run, no AiiDA profile, computer, code or job was created, and no chemistry was done. The
 [W1 record](W1-PRE-RUN-DETERMINATION.md) and its [machine-readable outcome](w1-outcome.json) give the evidence, the
 disposition of every acceptance criterion and stop condition, and proposed revisions, none of them applied. It closes
-none of the C3 blockers, and the specification is unchanged. C3 readiness remains BLOCKED, and Stage 1 remains
-BLOCKED and unauthorized.
+none of the C3 blockers, and it left the specification unchanged. It is the result under the specification of
+2026-09-27, which revision 01 supersedes. Both files keep their bytes and carry no note of the supersession
+themselves: the W1 record at SHA256 `a808f51f4593e4556174b67b91f1fb865d010a724d2ee1cd4d53463d73488809` and the
+outcome at SHA256 `63e47e2fab6306c62218b33663cb48221e41012366fdc0fc6367121e9f34400d`. Determination 02, above, is the
+result under revision 01. C3 readiness remains BLOCKED, and Stage 1 remains BLOCKED and unauthorized.
 
 **Recipe audit update, 2026-09-28.** The [installed recipe metadata audit](RECIPE-METADATA-AUDIT.md) and its
 [source ledger](RECIPE-METADATA-SOURCE-LEDGER.md) close the unread-recipe gap. `[LIT]` metadata records Psi4's exact
@@ -82,7 +106,10 @@ B3-b deferred, and Stage 1/1a/1b and Stage 2 unauthorized.
 | Source resolution | [SOURCE-RESOLUTION.md](SOURCE-RESOLUTION.md) | The dispositions of the five source definitions required before Stage 1, read from version-matched CP2K 2026.2 and Psi4 v1.11 source (2026-09-27) |
 | C4 revision options | [C4-PROPOSED-REVISION-01.md](C4-PROPOSED-REVISION-01.md) | Options for a decision on N8 under C4 §3, proposed and not applied or approved (2026-09-27) |
 | Freeze | [STAGE0-FREEZE-RECORD.md](STAGE0-FREEZE-RECORD.md) | Path, SHA256 and evidence label of every frozen artifact |
-| W1 | [W1-PRE-RUN-DETERMINATION.md](W1-PRE-RUN-DETERMINATION.md); [w1-outcome.json](w1-outcome.json) | The pre-run executability determination of W1 (2026-09-29): W1 BLOCKED before execution and not run, with two independent blockers, one unresolved requirement, dispositions of every acceptance criterion and stop condition, and proposed revisions, none applied |
+| W1 | [W1-PRE-RUN-DETERMINATION.md](W1-PRE-RUN-DETERMINATION.md); [w1-outcome.json](w1-outcome.json) | The pre-run executability determination of W1 (2026-09-29), under the specification of 2026-09-27: W1 BLOCKED before execution and not run, with two independent blockers, one unresolved requirement, dispositions of every acceptance criterion and stop condition, and proposed revisions, none applied by that record. Preserved unchanged, at SHA256 `a808f51f…8809` and `63e47e2f…400d`, as the result under that text, which revision 01 supersedes |
+| W1 revision | [W1-REVISION-DECISION-PACKET.md](W1-REVISION-DECISION-PACKET.md) | The decision packet for revision 01 of the W1 specification (2026-10-04): options, one `[AGENT]` recommendation, exact replacement text marked UNAPPLIED, the bound base, revised and patch digests, and the decision a person can take; nothing applied by the packet |
+| W1 revision approval | [W1-REVISION-01-HUMAN-APPROVAL.md](W1-REVISION-01-HUMAN-APPROVAL.md) | The human approval of revision 01 of the W1 specification, recorded on 2026-10-04 and bound to the base, revised and patch digests, with the record of its fail-closed application and what the approval does not do |
+| W1, determination 02 | [W1-PRE-RUN-DETERMINATION-02.md](W1-PRE-RUN-DETERMINATION-02.md); [w1-outcome-02.json](w1-outcome-02.json) | The pre-run executability determination of W1 under revision 01 (2026-10-04): INDETERMINATE before execution and not run, with the earlier blockers disposed, the prerequisites of the packet's §10.2 verified or named as untested, and dispositions of every acceptance criterion and stop condition |
 
 ## Open items, by when they must be settled
 
@@ -96,6 +123,10 @@ None of these is claimed. The categories match the
     gap ([C3 §5](C3-PROVENANCE-WIRING.md#5-coverage-table)).
     - *Updated 2026-09-29:* W1 was authorized, and was blocked before execution by a pre-run determination
       ([W1 record](W1-PRE-RUN-DETERMINATION.md)). It was not run and closes none of these blockers, which all stand.
+    - *Updated 2026-10-04:* revision 01 of the W1 specification was approved and applied
+      ([approval record](W1-REVISION-01-HUMAN-APPROVAL.md)), and a renewed pre-run determination under it is
+      INDETERMINATE ([determination 02](W1-PRE-RUN-DETERMINATION-02.md)). W1 was not run and closes none of these
+      blockers, which all stand. A run needs a separate authorization.
   - Five definitions to settle from version-matched source: GFN0 parameter provenance through CP2K (G4), CP2K's unit
     for `OMEGA`, the normalization of single-primitive basis coefficients, the printed representations that N8
     compares, and whether the compiled Psi4 SCF and gradient steps use any fitting basis under the declared settings

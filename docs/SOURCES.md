@@ -8,7 +8,10 @@ assessment uses a larger retrieval set, catalogued separately in the
 sources of the MS-001 pre-Stage-1 closure packet are catalogued in the
 [pre-Stage-1 source ledger](ms-001/PRESTAGE1-SOURCE-LEDGER.md) and summarized in Section 10 (entries [32] to [35]).
 Revisions of the Stage 0 definitions approved by a person since then are listed in Sections 11 and 14 (entries [36] and [39]).
-The pre-run determination of the wiring test W1, which cites no external source, is listed in Section 15 (entry [40]). The
+The pre-run determination of the wiring test W1, which cites no external source, is listed in Section 15 (entry [40]).
+The decision packet on revision 01 of the W1 specification is listed in Section 16 (entry [41]). The approval and
+application of that revision are listed in Section 17 (entry [42]), and the second W1 pre-run determination, under the
+revised text, in Section 18 (entry [43]). The
 numbering here is shared by the main documents in the
 repository. The catalogue contains no converged quantum-chemistry values. The project's only
 quantum-chemistry attempt, E-01, stopped before any SCF iteration was reported and is closed as technically
@@ -633,6 +636,9 @@ summarize it.
     ([N8 approval record](ms-001/C4-HUMAN-APPROVAL-02.md);
     [G4 approval record](ms-001/B2-G4-HUMAN-APPROVAL.md)). The packet's records themselves
     are unchanged.
+  - *2026-10-04:* revision 01 of the proposed C3 wiring test W1 was approved by a person and applied to the W1
+    specification itself (entry [42]). That record therefore no longer holds its text of 2026-09-27, which stays
+    identifiable by SHA256 `92cdd0277316dec63992accd663fc9eba37662464f3e4217b459769158f22158`.
   - The frozen Stage 0 records, including C4 and its approval record, are byte-identical.
   - Nothing here is physical evidence or upgrades an evidence label.
   - Stage 1 remains BLOCKED and is not authorized.
@@ -740,3 +746,75 @@ decision with C4, B3, C2 and C7 at their unchanged digests, in an answer recorde
     chemistry evidence class applies.
   - The cause of the environment name that blocks W1 is an `[AGENT]` inference, not an established fact.
   - None of the C3 blockers is closed. Stage 1 remains BLOCKED and is not authorized.
+  - *2026-10-04:* these records are the result under the specification of 2026-09-27 and are unchanged. The
+    specification was revised afterwards (entry [42]), and the determination under the revised text is entry [43].
+
+## 16. MS-001 W1 specification revision decision packet
+
+**[41]** Project record of the decision packet on revision 01 of the W1 specification, 2026-10-04.
+- **Records.** The [decision packet](ms-001/W1-REVISION-DECISION-PACKET.md).
+- **Content.**
+  - Options, an `[AGENT]` recommendation and rejection reasons for W1-BLOCKER-E2, W1-BLOCKER-E1, U-F1P and seven
+    coupled gaps of the [W1 specification](ms-001/C3-WIRING-TEST-PROPOSAL.md).
+  - Exact replacement text, marked UNAPPLIED, with a declared rule that reconstructs the revised bytes from the packet
+    and the base file.
+  - The SHA256 and byte sizes of the base, of the prospective revised specification and of the patch between them,
+    which are retained privately, and the decision a person can take on those bytes.
+- **Basis.** A new record of this project, identified by SHA256 in the export manifest. Two members of the
+  aiida-core 2.9.2 wheel of entry [34] were read as text, without extraction, installation or import:
+  `aiida/manage/configuration/settings.py`, a member not cited before, and `aiida/transports/plugins/local.py`.
+  Their member digests are given in the packet. The other inputs are read-only inspections of this repository's Git
+  index and configuration under declared environments, a commit-free measurement on temporary index files, file
+  counts of the Stage 0 environment and a read of the frozen input file, all bound privately by SHA256. No source was
+  retrieved.
+- **Limitations.**
+  - A proposal only. Nothing is chosen, approved or applied, and the specification is unchanged.
+  - The source facts describe aiida-core source text, not its behaviour on the host. AiiDA was not imported.
+  - The observations are software and environment observations. No chemistry evidence class applies.
+  - W1 remains BLOCKED before execution and unrun, and none of the C3 blockers is closed. Stage 1 remains BLOCKED and
+    is not authorized.
+  - *2026-10-04:* the revision was approved by a person and applied afterwards (entry [42]). The packet is unchanged,
+    and its statements are accurate as of its preparation.
+
+## 17. MS-001 W1 specification revision 01 approved by a person
+
+**[42]** Project records of revision 01 of the W1 specification, approved by a person in an answer recorded on
+2026-10-04, and of its application.
+- **Records.**
+  - The [W1 specification](ms-001/C3-WIRING-TEST-PROPOSAL.md), revision 01, SHA256
+    `29c71ff6d89d9f26bc1ef997ed80719d975f1f986226330e54a28af760b9a347`.
+  - Its [approval record](ms-001/W1-REVISION-01-HUMAN-APPROVAL.md), which binds the base, revised and patch digests
+    and records the fail-closed application of the approved bytes.
+- **Basis.** New records of this project, identified by SHA256 in the export manifest. The revised bytes are those
+  bound by the decision packet (entry [41]). The patch is retained privately. No source was retrieved.
+- **Limitations.**
+  - The approval binds exact bytes by path and SHA256. It settles the text of the W1 specification only, validates
+    nothing physically and upgrades no evidence label.
+  - It authorizes no W1 run, no writing of the W1 drivers, no AiiDA profile or job, no installation and no commit.
+  - W1 remains unrun, and none of the C3 blockers is closed. Stage 1 remains BLOCKED and is not authorized.
+
+## 18. MS-001 W1 pre-run determination 02, under revision 01
+
+**[43]** Project records of the second pre-run executability determination of the wiring test W1, under revision 01
+of its specification, 2026-10-04.
+- **Records.**
+  - The [second W1 record](ms-001/W1-PRE-RUN-DETERMINATION-02.md), whose disposition is INDETERMINATE before
+    execution.
+  - Its [machine-readable outcome](ms-001/w1-outcome-02.json).
+- **Content.**
+  - The earlier blockers W1-BLOCKER-E2 and W1-BLOCKER-E1 and the requirement U-F1P, disposed under the revised text.
+  - The prerequisites of the decision packet's §10.2, item 3, each verified at the probed state or named as an
+    untested requirement, the carriage of the declared superset through the job machinery among the latter.
+  - The disposition of every acceptance criterion and stop condition of the revised specification.
+- **Basis.** New records of this project, identified by SHA256 in the export manifest. They are written from private
+  command and probe records of read-only inspection, hashing, interpreter-startup probes, a shell-chain simulation
+  without AiiDA and the declared read-only Git invocations, on the project host. Three source files of the installed
+  aiida-core 2.9.2, the distribution of entry [34], were read as text, without import. Their SHA256 values match their
+  installed `RECORD` entries and are given in the record. The private records are bound by SHA256 in the record. No
+  external source was retrieved.
+- **Limitations.**
+  - W1 was not run. No AiiDA profile, computer, code or job was created, and AiiDA, ASE and NumPy were not imported.
+  - The observations are software and environment observations only. They show nothing about chemistry, and no
+    chemistry evidence class applies. The statements about job carriage are `[AGENT]` inferences from source text.
+  - INDETERMINATE is not readiness and predicts no pass. None of the C3 blockers is closed. Stage 1 remains BLOCKED
+    and is not authorized.

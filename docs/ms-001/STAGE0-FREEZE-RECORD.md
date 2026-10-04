@@ -170,7 +170,7 @@ established.
 | C3 provenance wiring | `docs/ms-001/C3-PROVENANCE-WIRING.md` | `cd0ffcc37d40fbb82a0801a2685335c68fdde08e8f6fc6c6d31e3ff76fe2723d` | Software wiring evidence only, with no chemistry class. The field set is `[AGENT]`; coverage gaps are `[GAP]` |
 | Failure record | `docs/ms-001/FAILURE-RECORD.md` | `3e5724c6786c0cb68bc7ee311608303945f4dbc95e4de2fae503b164c4151187` | The failure-record provenance field (evidence policy §4) |
 | Source ledger | `docs/ms-001/SOURCE-LEDGER.md` | `4d46ff84ffe0767f5ded9d202b935836007cd9d4243647bc438353664f44142c` | `[LIT]` provenance record |
-| Package index | `docs/ms-001/README.md` | `c8c828ae3ee1899c43f0e0050afd997b45c489458b9434818d77e8deda743419` | Navigation. Updated 2026-09-28 for recipe-audit status and links, previous digest `18f2ef3c0000addeaddd4d04dafaa0341943b6c81bb9602f44bc549390746335`; then updated 2026-09-28 for the status of the P2 build-declaration proposal and links only, previous digest `1288f41ab9bdcfdacede9fe433fe43842521f6202d6d4347ed8c511f5094bd94`; then updated for the approval, recorded on 2026-09-28, of the declaration of the Psi4 build for P2, with one dated sub-bullet and one Records-table row, previous digest `b3d536f59ad07bb3143d8abffd95501e4b31b4d738fe526f67ac8a90ecb8e147`; then updated 2026-09-29 for the W1 pre-run determination, with one dated paragraph, one dated sub-bullet and one Records-table row, previous digest `7cd1c9ca97d4a4a8006593218d9ccf87cc4526b45c9b5de099e06a3b1d97565e`. No definition, evidence label or gate changed |
+| Package index | `docs/ms-001/README.md` | `adfca0bd9aa6f66ab80bb2b35c02b517593e49d88b500be1f71d0f5cc3b77c61` | Navigation. Updated 2026-09-28 for recipe-audit status and links, previous digest `18f2ef3c0000addeaddd4d04dafaa0341943b6c81bb9602f44bc549390746335`; then updated 2026-09-28 for the status of the P2 build-declaration proposal and links only, previous digest `1288f41ab9bdcfdacede9fe433fe43842521f6202d6d4347ed8c511f5094bd94`; then updated for the approval, recorded on 2026-09-28, of the declaration of the Psi4 build for P2, with one dated sub-bullet and one Records-table row, previous digest `b3d536f59ad07bb3143d8abffd95501e4b31b4d738fe526f67ac8a90ecb8e147`; then updated 2026-09-29 for the W1 pre-run determination, with one dated paragraph, one dated sub-bullet and one Records-table row, previous digest `7cd1c9ca97d4a4a8006593218d9ccf87cc4526b45c9b5de099e06a3b1d97565e`; then updated 2026-10-04 for the W1 specification revision decision packet, with one dated paragraph and one Records-table row, previous digest `c8c828ae3ee1899c43f0e0050afd997b45c489458b9434818d77e8deda743419`; then updated 2026-10-04 for the approval and application of W1 specification revision 01 and the second W1 pre-run determination, with one dated paragraph, one dated sub-bullet, two Records-table rows and status wording in the paragraphs and rows of the packet and of the first determination, previous digest `91b0b474e79738d67cb94af65700c6610d2d319dd4726ce1aab24870a3ef3560`. No definition, evidence label or gate changed |
 | Geometry record (document) | `structures/ms-001/README.md` | `4cc6cc42660a0dd439f9d0c018aba0cbdea933b0d734fb163cec2442ac97aba6` | `[AGENT]` choices; `[GAP]` benchmark relation |
 | Geometry record (machine-readable) | `structures/ms-001/geometry-record.json` | `43ef99bc795b600c834f9bf5a7590ee3dd6600bc8f1a65354f849120a5f55e74` | `[AGENT]`. Measured construction values establish internal consistency only |
 | B1 model M1 | `structures/ms-001/M1-build-site.extxyz` | `c9374642d5e1cd4509b83cc9c48adbdbe1de1821df949f8700b55f53c0ff0aea` | `[AGENT]` |
@@ -261,5 +261,34 @@ boundary. One further requirement is unresolved. W1 was not run, and no AiiDA pr
 created. The W1 record and its outcome file are not Stage 0 definitions, so they are not bound in Section 2. The
 specification, C4 with its opening Approval bullet, every approval record, every human-adopted reference and every
 artifact bound in Section 2 are unchanged. Only the package-index navigation digest above is refreshed. None of the C3
+blockers is closed, and C3 readiness remains BLOCKED. C4-j and B3-b remain deferred. Stage 1 remains BLOCKED and
+unauthorized, and Stages 1a, 1b and 2 are unauthorized. Scope option A remains BLOCKED.
+
+## 8. W1 specification revision decision packet status supplement, 2026-10-04
+
+The [W1 revision decision packet](W1-REVISION-DECISION-PACKET.md) prepares a person's decision on revision 01 of
+[C3-WIRING-TEST-PROPOSAL.md](C3-WIRING-TEST-PROPOSAL.md), the W1 specification. It binds the base specification, the
+prospective revised specification and the patch between them by SHA256 and byte size, so that a person can approve,
+reject or ask to change exact bytes. It is a proposal only and is not a Stage 0 definition, so it is not bound in
+Section 2. No option is chosen, approved or applied. The specification, C4 with its opening Approval bullet, every
+approval record, every human-adopted reference and every frozen definition and other artifact bound in Section 2 are
+unchanged, except the package index: it changed, for navigation only, and only its navigation binding above is
+refreshed, with the superseded digest kept inline. W1 remains BLOCKED before execution and unrun, none of the C3
+blockers is closed, and C3 readiness remains BLOCKED. C4-j and B3-b remain deferred. Stage 1 remains BLOCKED and
+unauthorized, and Stages 1a, 1b and 2 are unauthorized. Scope option A remains BLOCKED.
+
+## 9. W1 specification revision 01 application status supplement, 2026-10-04
+
+In an answer recorded on 2026-10-04, a person approved revision 01 of
+[C3-WIRING-TEST-PROPOSAL.md](C3-WIRING-TEST-PROPOSAL.md), the W1 specification, at SHA256
+`29c71ff6d89d9f26bc1ef997ed80719d975f1f986226330e54a28af760b9a347`, and the approved bytes were applied unchanged
+([approval record](W1-REVISION-01-HUMAN-APPROVAL.md)). A renewed pre-run determination under the revised text is
+INDETERMINATE before execution ([determination 02](W1-PRE-RUN-DETERMINATION-02.md)). W1 was not run, and no AiiDA
+profile, computer, code or job was created. The W1 specification, its approval record, the second determination and
+its outcome file are not Stage 0 definitions, so they are not bound in Section 2. The first determination and its
+outcome file are unchanged, as the result under the specification of 2026-09-27, and so is the decision packet. C4
+with its opening Approval bullet, every earlier approval record, every human-adopted reference and every frozen
+definition and other artifact bound in Section 2 are unchanged, except the package index: it changed, for navigation
+only, and only its navigation binding above is refreshed, with the superseded digest kept inline. None of the C3
 blockers is closed, and C3 readiness remains BLOCKED. C4-j and B3-b remain deferred. Stage 1 remains BLOCKED and
 unauthorized, and Stages 1a, 1b and 2 are unauthorized. Scope option A remains BLOCKED.

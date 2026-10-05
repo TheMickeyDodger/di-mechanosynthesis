@@ -11,7 +11,8 @@ Revisions of the Stage 0 definitions approved by a person since then are listed 
 The pre-run determination of the wiring test W1, which cites no external source, is listed in Section 15 (entry [40]).
 The decision packet on revision 01 of the W1 specification is listed in Section 16 (entry [41]). The approval and
 application of that revision are listed in Section 17 (entry [42]), and the second W1 pre-run determination, under the
-revised text, in Section 18 (entry [43]). The
+revised text, in Section 18 (entry [43]). The one run of W1, which stopped under §8 condition S10, is listed in
+Section 19 (entry [44]). The
 numbering here is shared by the main documents in the
 repository. The catalogue contains no converged quantum-chemistry values. The project's only
 quantum-chemistry attempt, E-01, stopped before any SCF iteration was reported and is closed as technically
@@ -818,3 +819,26 @@ of its specification, 2026-10-04.
     chemistry evidence class applies. The statements about job carriage are `[AGENT]` inferences from source text.
   - INDETERMINATE is not readiness and predicts no pass. None of the C3 blockers is closed. Stage 1 remains BLOCKED
     and is not authorized.
+
+## 19. MS-001 W1 run, stopped under §8 condition S10
+
+**[44]** Project records of the one run of the wiring test W1, under revision 01 of its specification, 2026-10-04.
+- **Records.**
+  - The [W1 run record](ms-001/W1-RUN-RECORD.md), whose outcome is STOPPED under §8 condition S10.
+  - Its [machine-readable outcome](ms-001/w1-run-outcome.json).
+- **Content.**
+  - The phases the run executed and the stop at the input point's module classification, repeated at the run end.
+  - What was created, absent because never created, empty as observed and not queried.
+  - The state of every acceptance criterion and stop condition, and F1 to F11 coverage.
+  - The null closure inventory, and the separately labelled post-stop retained-evidence inventory bound by SHA256.
+- **Basis.** New records of this project, identified by SHA256 in the export manifest. They are written from the
+  run's own private records and the post-stop retained-evidence inventory, both bound by SHA256 in the record. The run
+  used the installed aiida-core 2.9.2, the distribution of entry [34], in the Stage 0 environment. No external source
+  was retrieved.
+- **Limitations.**
+  - The run stopped at the input point. No computer, code, input node or job was created, and no submission, payload,
+    retrieval, F4 sequence or negative case was run.
+  - The observations are software and environment observations only. They show nothing about chemistry, and no
+    chemistry evidence class applies.
+  - The stop is not readiness, and W1 did not pass. None of the C3 blockers is closed. Stage 1 remains BLOCKED and is
+    not authorized.

@@ -26,7 +26,7 @@ automated agents in particular, are expected to follow.
 | `docs/ms-001/` | MS-001 Stage 0 package (scope option B): authorization record, provenance wiring test, coupling route, method declaration, drive protocol, tolerances, validation set, failure record, source ledger, freeze record, C4 human approval record, the approval records of the N8 revision, of the G4 declaration and of the P2 build declaration, source resolution record and proposed C4 revision options (not applied); the pre-Stage-1 closure packet with its installed-build audit, proposed G4 dftd4 declaration, N8 decision packet and proposed C3 wiring test (proposals; the G4 declaration and N8 option O2 were later approved and applied, as the package index records), and its source ledger |
 | `structures/ms-001/` | MS-001 Stage 0 geometries (`[AGENT]`, built geometrically, unrelaxed) with their record of declared choices and measured construction values |
 | `results/e01/` | The stopped and closed E-01 attempt: report, postmortem and installed-build survey, machine-readable outcome, configuration used and redacted engine output |
-| `tools/` | Deterministic renderers of Figures 1 and 2, with their input tables; the MS-001 Stage 0 geometry generator; the C3 provenance wiring driver |
+| `tools/` | Deterministic renderers of Figures 1 and 2, with their input tables; the MS-001 Stage 0 geometry generator; the C3 provenance wiring driver; the W1 wiring-test driver and job class, published as run (untracked) |
 | `provenance/EXPORT-MANIFEST.md` | SHA256 and derivation of every public file |
 | `.agents/RESEARCH-STATE.md` | Research-state record: intended end state, gates, status, open issues and next work |
 

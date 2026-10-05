@@ -171,8 +171,9 @@ prerequisites as far as static reading allows [32–35]. It contains:
 
 The packet changed no frozen definition, and nothing was run or installed. Every proposal in it was unapplied when it
 was published; the G4 declaration and option O2 for N8 have since been approved by a person and applied, as noted
-below, and the wiring test W1, since authorized, was blocked before execution and not run, and its specification was
-later revised with a person's approval, as noted below. Stage 1 remains BLOCKED and unauthorized.
+below, and the wiring test W1, since authorized, was first blocked before execution, its specification was later
+revised with a person's approval, and it then ran once and stopped, as noted below. Stage 1 remains BLOCKED and
+unauthorized.
 
 *Updated 2026-09-28:* in one decision a person approved the proposed declaration of the dftd4
 source for G4, now in B2 §3, and the revision of C4 that the N8 decision packet proposes as option O2, with its
@@ -229,7 +230,8 @@ recommends one combination as an `[AGENT]` proposal, and binds the base, the pro
 the patch by SHA256, so that a person can decide on exact bytes. As prepared, nothing in it was chosen, approved or
 applied, and the packet is unchanged.
 
-*W1 specification revision 01 approved and applied, 2026-10-04:* in an answer recorded on 2026-10-04, a person
+*W1 specification revision 01 approved and applied, 2026-10-04 (historical: the position as of determination 02,
+before the run):* in an answer recorded on 2026-10-04, a person
 approved revision 01 of the W1 specification, bound to its exact SHA256, and the approved bytes were applied
 unchanged ([W1 revision approval record](docs/ms-001/W1-REVISION-01-HUMAN-APPROVAL.md)) [42]. A renewed pre-run
 determination under the revised text is INDETERMINATE before execution
@@ -239,6 +241,17 @@ declared copy of the environment's files through each job, and the other require
 remain untested. W1 was not run, no AiiDA profile, computer, code or job was created, and AiiDA was not imported. A
 run needs a separate authorization by a person. None of the C3 blockers is closed, C3 readiness remains BLOCKED, and
 Stage 1 remains BLOCKED and unauthorized.
+
+*W1 run, 2026-10-04 (current status):* a person authorized one strict attempt of W1 and its possible early stop, so
+the separate authorization that the paragraph above names was given for this one attempt only. It is spent and is not
+a standing authorization for anything further. W1 ran once and **stopped** under §8 condition **S10**: at the input
+point, the module classification found 11 entries of `sys.modules` that fit no declared class, and the same check
+failed again at the run end ([W1 run record](docs/ms-001/W1-RUN-RECORD.md);
+[machine-readable outcome](docs/ms-001/w1-run-outcome.json)) [44]. The W1 AiiDA profile was created. The computer,
+the code, the input nodes and both CalcJob nodes were not created, because the stop came first. Acceptance criterion 5
+is unmet and the other six are not reached. The driver produced no closure inventory: that field of the result is
+null. This is a software wiring observation only, with no chemistry evidence class. No C3 blocker is closed and C3
+readiness remains BLOCKED. Stage 1 and scope option A remain BLOCKED, and Stage 1 is not authorized.
 
 ## Evidence classification and provenance
 
@@ -300,9 +313,13 @@ and the manifest lists each omission with its reason.
 | [docs/ms-001/W1-REVISION-01-HUMAN-APPROVAL.md](docs/ms-001/W1-REVISION-01-HUMAN-APPROVAL.md) | Human approval of revision 01 of the W1 specification (recorded 2026-10-04), bound to the base, revised and patch digests, with the record of its fail-closed application |
 | [docs/ms-001/W1-PRE-RUN-DETERMINATION-02.md](docs/ms-001/W1-PRE-RUN-DETERMINATION-02.md) | Pre-run executability determination of W1 under revision 01 (2026-10-04): INDETERMINATE before execution and not run, earlier blockers disposed, prerequisites verified or named as untested |
 | [docs/ms-001/w1-outcome-02.json](docs/ms-001/w1-outcome-02.json) | Machine-readable outcome of the second W1 pre-run determination |
+| [docs/ms-001/W1-RUN-RECORD.md](docs/ms-001/W1-RUN-RECORD.md) | The one W1 run (2026-10-04), stopped under §8 condition S10 at the input point: the phases executed, the outcome, the S10 observations, what was created, absent, empty or not queried, every acceptance criterion and stop condition, F1 to F11 coverage, a null closure inventory, and the limits; supersedes nothing |
+| [docs/ms-001/w1-run-outcome.json](docs/ms-001/w1-run-outcome.json) | Machine-readable outcome of the W1 run |
 | [structures/ms-001/](structures/ms-001/README.md) | MS-001 Stage 0 geometries: model M1, the start configuration, validation configurations V1–V3 and the P2 test molecule, built geometrically and unrelaxed |
 | [tools/build_ms001_geometries.py](tools/build_ms001_geometries.py) | Deterministic generator of the MS-001 Stage 0 geometries; it measures and asserts every reported distance and angle |
 | [tools/c3_provenance_wiring.py](tools/c3_provenance_wiring.py) | Driver of the C3 provenance wiring test, one trivial non-chemistry AiiDA job |
+| [tools/w1_driver.py](tools/w1_driver.py) | Driver of the wiring test W1 (launcher, runner and checker), published exactly as run on 2026-10-04 and untracked, as the W1 specification permits; see the [W1 run record](docs/ms-001/W1-RUN-RECORD.md) |
+| [tools/w1_job.py](tools/w1_job.py) | The W1 CalcJob class `W1Job`, published exactly as run and untracked; no job of it was created in the one run |
 | [results/e01/README.md](results/e01/README.md) | E-01 result: the stopped attempt, runtime observations, hypotheses and diagnostic closeout |
 | [results/e01/postmortem.md](results/e01/postmortem.md) | E-01 postmortem and installed-build survey: the conditional source-level hypothesis, survey coverage and limits, and remaining gaps |
 | [results/e01/outcome.json](results/e01/outcome.json) | Machine-readable E-01 outcome with source hashes |
@@ -336,6 +353,6 @@ export pending redistribution review. Work that builds on the benchmark should c
 3. Blue, B. *et al.* Towards Atom-by-Atom Fabrication: Mechanosynthetic donation and abstraction.
    arXiv:2606.13876 (2026). <https://doi.org/10.48550/arXiv.2606.13876>
 
-References [4] to [43], covering further literature, software documentation, source files and the project's own
+References [4] to [44], covering further literature, software documentation, source files and the project's own
 E-01 and MS-001 records, are catalogued with versions, locators, verification basis and limitations in
 [docs/SOURCES.md](docs/SOURCES.md), which uses the same numbering.

@@ -3,7 +3,10 @@
 This package holds the Stage 0 definitions of MS-001 under scope option B, the declared-deviation prospective study
 ([MS-000 compute spike §5](../ms-000/MS-000-COMPUTE-SPIKE.md#5-reproduction-readiness-and-scope-options)). Stage 0
 defines and freezes the model, the method scheme, the drive, the tolerances and the validation set. It runs no
-chemistry: the only execution was a provenance wiring test on a trivial job that adds two integers.
+chemistry. The only job that has run is a provenance wiring test on a trivial job that adds two integers. Since then,
+as of 2026-10-04, there has been one bounded non-chemistry run of the wiring test W1. It stopped at the input point,
+after creating its AiiDA profile and before any computer, code, input node or job existed, so it ran no job
+([W1 run record](W1-RUN-RECORD.md)).
 
 **What this package does not establish.**
 - **Only Stage 0 of option B is authorized** ([C1](C1-AUTHORIZATION.md)).
@@ -31,6 +34,21 @@ The package contains no energy, force, gradient, optimized structure or other ph
 setting and threshold in it is `[AGENT]`, a declared deviation.
 
 ## Records
+
+**W1 run, 2026-10-04 (current status).** A person authorized one strict attempt of W1 and its possible early stop.
+That authorization covered this attempt only and is spent. W1 ran once and **stopped** under §8 condition **S10**: at
+the input point, the module classification found 11 entries of `sys.modules` that fit no declared class, and the same
+check failed again at the run end ([W1 run record](W1-RUN-RECORD.md); [machine-readable outcome](w1-run-outcome.json)).
+- **Created and absent.** The W1 AiiDA profile was created. The computer, the code, the 17 input nodes and both CalcJob
+  nodes were never created.
+- **Criteria.** Acceptance criterion 5 is unmet, and the other six are not reached.
+- **No closure inventory.** The driver produced none; that field of the result is null, and no value is substituted
+  for it.
+- **Gates.** This is a software wiring observation only. No C3 blocker is closed, and C3 readiness remains BLOCKED.
+  Stage 1 remains BLOCKED and unauthorized, and scope option A remains BLOCKED.
+
+The two pre-run determinations below describe the position before the run and keep their bytes. The W1 run record
+supersedes nothing.
 
 **W1 specification revision 01 approved and applied, and pre-run determination 02, 2026-10-04.** In an answer
 recorded on 2026-10-04, a person approved revision 01 of the [W1 specification](C3-WIRING-TEST-PROPOSAL.md), bound to
@@ -110,6 +128,7 @@ B3-b deferred, and Stage 1/1a/1b and Stage 2 unauthorized.
 | W1 revision | [W1-REVISION-DECISION-PACKET.md](W1-REVISION-DECISION-PACKET.md) | The decision packet for revision 01 of the W1 specification (2026-10-04): options, one `[AGENT]` recommendation, exact replacement text marked UNAPPLIED, the bound base, revised and patch digests, and the decision a person can take; nothing applied by the packet |
 | W1 revision approval | [W1-REVISION-01-HUMAN-APPROVAL.md](W1-REVISION-01-HUMAN-APPROVAL.md) | The human approval of revision 01 of the W1 specification, recorded on 2026-10-04 and bound to the base, revised and patch digests, with the record of its fail-closed application and what the approval does not do |
 | W1, determination 02 | [W1-PRE-RUN-DETERMINATION-02.md](W1-PRE-RUN-DETERMINATION-02.md); [w1-outcome-02.json](w1-outcome-02.json) | The pre-run executability determination of W1 under revision 01 (2026-10-04): INDETERMINATE before execution and not run, with the earlier blockers disposed, the prerequisites of the packet's §10.2 verified or named as untested, and dispositions of every acceptance criterion and stop condition |
+| W1, run | [W1-RUN-RECORD.md](W1-RUN-RECORD.md); [w1-run-outcome.json](w1-run-outcome.json) | The one W1 run (2026-10-04), stopped under §8 condition S10 at the input point. It gives the phases executed, the S10 observations, what was created, absent, empty or not queried, the state of every acceptance criterion and stop condition, F1 to F11 coverage, the null closure inventory and the post-stop retained-evidence inventory bound by digest, and the limits. It supersedes nothing |
 
 ## Open items, by when they must be settled
 
@@ -127,6 +146,9 @@ None of these is claimed. The categories match the
       ([approval record](W1-REVISION-01-HUMAN-APPROVAL.md)), and a renewed pre-run determination under it is
       INDETERMINATE ([determination 02](W1-PRE-RUN-DETERMINATION-02.md)). W1 was not run and closes none of these
       blockers, which all stand. A run needs a separate authorization.
+    - *Updated 2026-10-04, after the run:* W1 ran once, under an authorization for that one attempt, and stopped under
+      §8 condition S10 at the input point ([W1 run record](W1-RUN-RECORD.md)). It closes none of these blockers, which
+      all stand.
   - Five definitions to settle from version-matched source: GFN0 parameter provenance through CP2K (G4), CP2K's unit
     for `OMEGA`, the normalization of single-primitive basis coefficients, the printed representations that N8
     compares, and whether the compiled Psi4 SCF and gradient steps use any fitting basis under the declared settings

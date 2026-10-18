@@ -1,0 +1,39 @@
+{
+  "schema": "di-mechanosynthesis/h2-r2-platform-identity/1",
+  "status": {
+    "execution_status": "NOT_RUN",
+    "evidence_label": "[AGENT]",
+    "authorization": "NONE",
+    "human_approval": "PENDING",
+    "note": "Static identity of the two platform facts the route-R2 sandbox profile depends on, observed on 2026-10-10 by reading and hashing files only (no system tool was run). The R2 driver re-checks both before launch, immediately before spawn and after the process ends; a difference blocks launch or gives QUARANTINE. This record is not a capability, not readiness and not an approval."
+  },
+  "observed_utc_date": "2026-10-10",
+  "sandbox_exec": {
+    "path": "/usr/bin/sandbox-exec",
+    "size": 135136,
+    "sha256": "58839ef01b4eef8aac0d2aa8f9d1c074ae45aafe3533965b030672450064acc8",
+    "checked_by_driver": "regular file, not a symbolic link, executable, size and SHA256 equal to this record, path equal to the driver's constant"
+  },
+  "operating_system": {
+    "source": "/System/Library/CoreServices/SystemVersion.plist, read with plistlib",
+    "ProductName": "macOS",
+    "ProductVersion": "27.0.1",
+    "ProductBuildVersion": "26A434",
+    "checked_by_driver": "ProductVersion and ProductBuildVersion equal to this record"
+  },
+  "documentation": {
+    "reference": "docs/SOURCES.md entry [55]; digests re-checked on 2026-10-10 and unchanged",
+    "sha256": {
+      "sandbox-exec(1)": "0d264f72dc6a8e0db5474840f33b512542c469beb109ed146c17055da287336b",
+      "sandbox(7)": "9043d9296715714f95b4de6c5f88a5436c5cc3b83b62641327212078c5c69b04",
+      "sandboxd(8)": "88177c5ed67c8e43f35cd9995e5724526bc656e8b996a9cb8084cd5780bc6698",
+      "SDK sandbox.h": "5baa98c212110d6323f7d73f4b42b0072a4c66a826a46c8bfd8fb850305f9416"
+    },
+    "what_it_establishes": "sandbox-exec and sandbox_init are deprecated; new processes inherit the sandbox of their parent; restrictions are enforced when resources are acquired, so descriptors opened before the sandbox stay usable",
+    "what_it_does_not_establish": "the custom-profile language, including the meaning of network*, file-write*, subpath, literal and param"
+  },
+  "limits": [
+    "Fixture observations of the profile ([56]) hold for this sandbox-exec digest on this OS build only; a deprecated facility may change or disappear in a later build.",
+    "Equality of these two facts does not show that the profile behaves for the engine as it did for the fixtures."
+  ]
+}

@@ -1,0 +1,157 @@
+{
+ "schema": "di-mechanosynthesis/h2-run-outcome/1",
+ "job_id": "H2-A-01",
+ "phase": "A",
+ "route": "R2",
+ "status": "STOP_UNRUN",
+ "stage": "launch assignment blocked before delivery",
+ "status_meaning": "An orchestration stop before launch. It is not a driver tier (not BLOCK_LAUNCH, STOP_BEFORE_ENERGY, FAILED, QUARANTINE or COMPLETED_PENDING_REVIEW), not an engine failure and not chemistry evidence.",
+ "run_invocations": 0,
+ "engine_processes": 0,
+ "engine_processes_note": "No engine process was started at any time.",
+ "attempt_directory_created": false,
+ "runs_root_entries_after_stop": [],
+ "driver_tier": null,
+ "driver_tier_note": "The driver's run mode was never invoked, so no driver tier exists.",
+ "scientific_result": null,
+ "scientific_result_note": "No run took place: no energies, no SCF data and no engine output exist.",
+ "guard_reason_verbatim": "Permission for this action was denied by the Claude Code auto mode classifier. Reason: [Code from External].",
+ "guard_event": {
+  "refused_by": "the automatic permission check of the agent client that was delegating the run",
+  "refused_command": "the command that would have handed the run assignment to the executing agent",
+  "assignment_delivered": false,
+  "time_utc": "not exposed; after the coordination release at 2026-10-10T22:20:15Z and before the stop disposition at 2026-10-10T22:22:57Z"
+ },
+ "authorization": {
+  "answer_verbatim": "yes, authorized",
+  "question_verbatim": "Do you authorize exactly one H₂ RHF/STO-3G attempt at 1.4 bohr, bounded to 300 seconds, one thread, 50 SCF iterations and zero retries—and explicitly accept M1: 500 MiB is an engine setting, not an OS memory cap? Environment, loader or sandbox incompatibility may stop and consume that attempt, as packet §5 describes.",
+  "receipt_time_utc": "2026-10-10T22:02:47.000087+00:00",
+  "receipt_time_qualifier": "the time the separate orchestration system recorded the answer on receipt; not an independently measured time of the answer; the identity of the person was not independently established",
+  "record": "docs/learning/h2/phase-a-r2/H2-A-01-HUMAN-RUN-AUTHORIZATION.md",
+  "run_decision_packet": {
+   "path": "docs/learning/h2/phase-a-r2/H2-A-R2-RUN-DECISION-PACKET.md",
+   "sha256": "eea5cfaaf459adcb82373de1cd317493837431b8acbd327f7a09a6dee9d8edfe"
+  },
+  "run_proposal_02": {
+   "path": "docs/learning/h2/phase-a-r2/H2-A-R2-RUN-PROPOSAL-02.md",
+   "sha256": "a9c11ba494eb9384d348b180c8ddb7cb64cbb258ae040a411a16510628640408"
+  },
+  "M1": "ACCEPTED, not resolved: 500 MiB is an engine setting, not an operating-system memory limit",
+  "max_attempts": 1,
+  "retries": 0,
+  "settings": {
+   "method": "RHF",
+   "basis": "STO-3G",
+   "R_bohr": 1.4,
+   "wall_bound_s": 300,
+   "threads": 1,
+   "maxiter": 50,
+   "engine_memory_setting": "500 MiB"
+  },
+  "exclusions": [
+   "Phase B",
+   "second attempt or retry",
+   "changed settings or fallback engine",
+   "installation/build/source retrieval",
+   "external network or system changes",
+   "W1/AiiDA/MS001/Stage1/optionA",
+   "staging/commit/push/merge/deploy/publication"
+  ],
+  "exercised": false
+ },
+ "invocation_numerically_unspent": true,
+ "launch_permission_remaining_in_task": false,
+ "authorization_carried_forward": false,
+ "future_attempt": "Whether any future attempt is authorized is for the people directing the project.",
+ "not_taken": [
+  "no retry",
+  "no rewording or redelivery of the run assignment",
+  "no alternate delivery route or engine invocation",
+  "no permission, setting or policy change",
+  "no human reconfirmation requested"
+ ],
+ "prerequisites_prepared": {
+  "runs_root_created_empty": true,
+  "code_provenance_written": true,
+  "code_provenance_note": "written by the driver's code-provenance mode, which starts no engine process and runs read-only Git queries as child processes",
+  "static_preflight": "one run; every check passed (34 of 34); started no engine process; by reading the exact driver code, its preflight path contains no process-creation call, a source-level statement, not an observation of the processes that ran; a static pass is not readiness, loaded identity or runtime identity",
+  "driver_schema_authorization_record": "prepared from the reply; passed an independent interlock check; never presented to the driver's run mode",
+  "independent_readiness_verification": "every check passed (56 of 56); no run"
+ },
+ "timeline_utc": [
+  {
+   "utc": "2026-10-10T22:02:47Z",
+   "event": "the person's reply recorded on receipt"
+  },
+  {
+   "utc": "2026-10-10T22:12:10Z",
+   "event": "empty runs root created"
+  },
+  {
+   "utc": "2026-10-10T22:12:35Z",
+   "event": "fresh code-provenance record written by the driver's code-provenance mode; no engine process; read-only Git queries as child processes"
+  },
+  {
+   "utc": "2026-10-10T22:12:57Z",
+   "event": "one static preflight; every check passed; no engine process started"
+  },
+  {
+   "utc": "2026-10-10T22:14:13Z",
+   "event": "driver-schema authorization record prepared (the file's modification time; no time is recorded inside the record)"
+  },
+  {
+   "utc": "2026-10-10T22:15:25Z",
+   "event": "static recomputation of every interlock condition against that record passed"
+  },
+  {
+   "utc": "2026-10-10T22:18:42Z",
+   "event": "independent readiness verification; every check passed (56 of 56)"
+  },
+  {
+   "utc": "2026-10-10T22:19:41Z",
+   "event": "readiness record written"
+  },
+  {
+   "utc": "2026-10-10T22:20:15Z",
+   "event": "coordination release of the single invocation; not new human authority"
+  },
+  {
+   "utc": "not exposed",
+   "event": "the client's permission check refused delivery of the run assignment"
+  },
+  {
+   "utc": "2026-10-10T22:22:57Z",
+   "event": "stop disposition STOP_UNRUN; launch scope of the task ended"
+  }
+ ],
+ "open_items": {
+  "M1": "accepted by the person, not resolved",
+  "E1": "open; not observed",
+  "libint_load_name_risk": "open; not observed",
+  "engine_under_sandbox_profile": "open; not observed",
+  "loaded_identity": "open; not observed",
+  "P4_meaning_of_reported_total_energy": "open",
+  "source_to_binary_correspondence": "open"
+ },
+ "gates": {
+  "H2": "no result; NOT_RUN",
+  "phase_B": "not authorized",
+  "W1": "STOPPED (S10)",
+  "E01": "technically BLOCKED and scientifically INDETERMINATE",
+  "C3_readiness": "BLOCKED",
+  "MS001_stage1": "BLOCKED",
+  "option_A": "BLOCKED"
+ },
+ "review_status": "independent review pending",
+ "evidence_label": "none: a process record of a stop before launch; no chemistry evidence class applies",
+ "limits": [
+  "[AGENT] record written from private task records identified by SHA256 in provenance.json",
+  "the static preflight read and hashed files only; it is not loaded or runtime identity and not readiness",
+  "the driver-schema authorization record is checked by bytes and fields only and cannot show that a person authorized anything; the authority is the person's recorded reply",
+  "nothing about the engine, the sandbox profile or the engine environment was tested",
+  "this record does not carry the authorization forward and authorizes nothing"
+ ],
+ "sources": [
+  "docs/SOURCES.md entry [58]"
+ ]
+}

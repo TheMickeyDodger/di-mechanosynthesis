@@ -1,0 +1,270 @@
+{
+ "schema": "di-mechanosynthesis/h2-run-provenance/1",
+ "record": "H2-A-01-continuation-01",
+ "job_id": "H2-A-01",
+ "route": "R2",
+ "status": "STOP_UNRUN",
+ "repository_head": "deb02407307f4339099dcd4f25ba8af88e448656",
+ "review_status": "independent review pending",
+ "governing_public_files": {
+  "note": "repository-relative paths; each digest was checked on disk against the archived baseline before use; all are unchanged by this revision",
+  "files": [
+   {
+    "role": "run-decision packet",
+    "path": "docs/learning/h2/phase-a-r2/H2-A-R2-RUN-DECISION-PACKET.md",
+    "sha256": "eea5cfaaf459adcb82373de1cd317493837431b8acbd327f7a09a6dee9d8edfe"
+   },
+   {
+    "role": "run proposal 02",
+    "path": "docs/learning/h2/phase-a-r2/H2-A-R2-RUN-PROPOSAL-02.md",
+    "sha256": "a9c11ba494eb9384d348b180c8ddb7cb64cbb258ae040a411a16510628640408"
+   },
+   {
+    "role": "route-R2 driver",
+    "path": "docs/learning/h2/phase-a-r2/h2_phase_a_r2_driver.py",
+    "sha256": "0b3172f8388b0f0c053a2b7a6945394e7e796aae8b14d0228447d7bc860af9b6"
+   },
+   {
+    "role": "route-R2 method revision",
+    "path": "docs/learning/h2/phase-a-r2/H2-R2-METHOD-REVISION.md",
+    "sha256": "9498019a23a8fa1542788b17126b91e3fff93ada49639856f6599e3afc8aecdc"
+   },
+   {
+    "role": "human approval record of the method revision",
+    "path": "docs/learning/h2/phase-a-r2/H2-R2-METHOD-HUMAN-APPROVAL.md",
+    "sha256": "e4897a80869bc04d6ece9a8be75673085e18ddb1b07df1df5e71fd4b76f10d7c"
+   },
+   {
+    "role": "first authorization record",
+    "path": "docs/learning/h2/phase-a-r2/H2-A-01-HUMAN-RUN-AUTHORIZATION.md",
+    "sha256": "1f628d0af634ff78bf1a2786cdc3cf93982c3eef7b6cd5131de8a749846141a7"
+   },
+   {
+    "role": "earlier stop record, report",
+    "path": "results/h2/H2-A-01/README.md",
+    "sha256": "b5bd466cdbaf9a3674d79236bcd6a28a4fe09459c2fe98b03abd1e07e89b47f0"
+   },
+   {
+    "role": "earlier stop record, outcome",
+    "path": "results/h2/H2-A-01/outcome.json",
+    "sha256": "37a18489494a4a226739288e053f616e28044e184e824c43e5563230baed39ae"
+   },
+   {
+    "role": "earlier stop record, provenance",
+    "path": "results/h2/H2-A-01/provenance.json",
+    "sha256": "df903d60ba3432d47b437ed0006ce771d74f7d1bf6b7239d01efe5b322d61e42"
+   }
+  ]
+ },
+ "private_source_records": [
+  {
+   "description": "the person's reply \"approved. Keep going.\" as recorded on receipt by the orchestration system, with its context, interpretation, permission scope, exclusions and limits; not itself a driver-schema authorization",
+   "sha256": "907909171d2053faac283aba229982d63a0fb1734164c870eeb652d165ec513a"
+  },
+  {
+   "description": "the operator handoff that sets out the continuation and the supported permission route: one exact, non-wildcard, temporary allow rule for the single delegation command, added and removed by the orchestration operator only after release",
+   "sha256": "39df6564283ea73e7d78cf64564f05b0d597c7372d0d82e2341123da1fd13d05"
+  },
+  {
+   "description": "the operator's archived baseline of the public files",
+   "sha256": "5f44885641eccdcedab16a30cfb7ab2664395c29d36c96cd9cd440431317aaf2"
+  },
+  {
+   "description": "the earlier authorization: the person's answer and the question it answered, as recorded on receipt, with M1 accepted",
+   "sha256": "bd67c57e82f0ca0199df434060def9ccd7c8e2c7e4a3c21bcd84d044c189abe3"
+  },
+  {
+   "description": "the supervising agent's static check of the 115 public files against the archived baseline",
+   "sha256": "02fb8fe99fd6e3fc7a076ecc1c511192814d2f6f60f760ed25278d663211fee7"
+  },
+  {
+   "description": "the supervising agent's check of the earlier task's closure references",
+   "sha256": "b210efdf158625e127768af7d45db06e3fd7fa823ab519f46e4912cd6a59da09"
+  },
+  {
+   "description": "the read-only observation that the coordinating agent's client loads the repository-local settings source; the settings file unchanged and no rule added",
+   "sha256": "4ca10bd61747afd62ec64319f4879414b756d73d93c775b9327df3bfc4387fbc"
+  },
+  {
+   "description": "the supervising agent's record of its reading of the official permissions and settings documentation",
+   "sha256": "e68367a6f3e69f175c88f06e56223d32e01be2e37cfd62d81f9dd089ad5e5f86"
+  },
+  {
+   "description": "the supervising agent's process observations, whose item 4 records the web-tool fetch of the official documentation; it also records administrative syntax and transport corrections, which are not scientific execution and not retries of the stopped request",
+   "sha256": "39f1f6d98267fd56c9e168adce9032c2ae6db9286fb682d27cc9885e0d4d3360"
+  },
+  {
+   "description": "the supervising agent's persisted statement of the three documentation URLs and the access date; not the original web-tool transcript or captured page content",
+   "sha256": "855fc60651d0ad2841a3a77f3da1f6c03c92584117a4972ee15e90b6587c402b"
+  },
+  {
+   "description": "the orchestration operator's process and observability record, private limit evidence: no permission mutation, the safeguard stop a distinct terminal stop, no recovery of the unproduced account of O1, and the supported lifecycle of the completed task",
+   "sha256": "7bade0246722e5725241591645e7a7402d10ad39d47a12667daf0e4075d1e6b0"
+  },
+  {
+   "description": "the private preparation instructions delivered to the executing agent (preparation only, no run)",
+   "sha256": "26083412bf3eb51c7529c8208e2d8b9019fe98da6f2bdf3a7fda393a9d43471c"
+  },
+  {
+   "description": "the supervising agent's record of defect 1, found before evaluation",
+   "sha256": "4ddd7cf621f8adfe72fdfc74e5cf6bcf5b7e8d17e1f7a9e84a59fc8d669530ed"
+  },
+  {
+   "description": "the prospective erratum for defect 1",
+   "sha256": "60e68b0da0641279e171e9b8aeb77f9b158bd11dcd682041112591a41769d494"
+  },
+  {
+   "description": "the executing agent's pause note, with its read-only runs-root observation and its list of the commands it ran, including O1",
+   "sha256": "8d86653fad03e98b5404d12b51159efc345a8f5bc63d224c15202615d3e9c168"
+  },
+  {
+   "description": "the executing agent's addendum: it held before the first recorded step and asked for a decision on defect 2",
+   "sha256": "e571bab0f5e132dfb078cb1c07e0fcb8c68cb709b971b74e7dffd8f6a93e68ca"
+  },
+  {
+   "description": "the coordinating agent's proposed disposition of defect 2, drafted and not delivered",
+   "sha256": "0e7a4ca820435fade1ac9171d4f4a3ef7d27f8cfe417c704f54cd1c328624598"
+  },
+  {
+   "description": "the proposed correction for defect 2, drafted and not delivered",
+   "sha256": "eef1a095a7b437d1356dddcf46b9b491500ba0b553be5e7d3c4ac22817a64b47"
+  },
+  {
+   "description": "the coordinating agent's record of O1 and of the safeguard stop",
+   "sha256": "e1a08f197fa3ab7fccf2b4d8ad49c02e2d118811451fcb6cd9099386f3c7500c"
+  },
+  {
+   "description": "the clarification of that record, which withdraws its statements about any recovery of session records and states the missing account, the unestablished purpose of O1 and the unknown cause of the stop as permanent limits",
+   "sha256": "181fcff0d96da3ef0a8a1a7919c0898b46bcf105c50a2d3de52861c9d947c5aa"
+  },
+  {
+   "description": "the terminal capture showing the safeguard notice and the executing agent's statement",
+   "sha256": "07d93aa31f8283e358b8bb8f7bf0c9d14a092d95e003bf0c92670d61782c41c5"
+  },
+  {
+   "description": "the orchestration operator's terminal disposition: a binding safeguard event; execution scope STOP_UNRUN",
+   "sha256": "8f92edd4b3f997ca6aace859fe8b470b0c0d703e520d419ce30157462cbb5e88"
+  },
+  {
+   "description": "the supervising agent's terminal stop direction",
+   "sha256": "05e32fe55c5a97508ef375e5705fcdd96570400cf2cd2f3ab580a0d33dac8d4d"
+  },
+  {
+   "description": "the observed state after the stop: zero driver invocations and engine processes, no permission granted, no launch released, runs root present, canonical and empty, attempt absent, settings, configuration, HEAD, branch and index unchanged",
+   "sha256": "e6a6e6774d96e39ff53dbb39f149940e5b78a6230946327df3c924bc28f4f1c4"
+  },
+  {
+   "description": "the brief for these records",
+   "sha256": "b09adac02c06e287dd7b8faba1379123e9a684d511129b05ce0b5d6d509bdc58"
+  },
+  {
+   "description": "the second addition to that brief, on documentation retrieval and network wording",
+   "sha256": "b5f196c33cf4c6f4d0a06882977973abfd3717c887baba1e1e1be8cc6818b0ad"
+  },
+  {
+   "description": "the third addition to that brief, on the scope of statements about retries, the documentation source, the operator's process record and measured times",
+   "sha256": "631b44b360ec42400d136c0adb81021127042a0afa8604c08f8e327ab0676542"
+  },
+  {
+   "description": "the archived byte copies of the six integration files before this revision",
+   "sha256": "3dafdfd758e302d2da6b0d98aaaae54a46c4a4cd8c1a6d76274948a8b056e64b"
+  },
+  {
+   "description": "the executing agent's report of the reporting work; records the one client-managed background output file, which it did not read",
+   "sha256": "643c3fd91c790625fbd847159c464ef34df0ce1e5f79d48113759f55726a0538"
+  },
+  {
+   "description": "the correction brief for the first independent review round, on the temporary-output limit",
+   "sha256": "1231e8969f4959b0704c845008b43e238138971a653cf8b0300b465a5a312cbc"
+  }
+ ],
+ "documentation_consulted": {
+  "by": "the supervising agent, through its web tool, for the supported permission-resolution route",
+  "accessed": "2026-10-11",
+  "pages": [
+   {
+    "url": "https://code.claude.com/docs/en/permissions",
+    "topic": "permission rule syntax, Bash rules, managing permissions",
+    "named_in": "the persisted statement of the three documentation URLs and the access date, and the earlier documentation record"
+   },
+   {
+    "url": "https://code.claude.com/docs/en/settings",
+    "topic": "the project-local settings source and its root resolution",
+    "named_in": "the persisted statement of the three documentation URLs and the access date, and the earlier documentation record"
+   },
+   {
+    "url": "https://code.claude.com/docs/en/interactive-mode",
+    "topic": "the /status command",
+    "named_in": "the persisted statement of the three documentation URLs and the access date"
+   }
+  ],
+  "limits": [
+   "the supervising agent's persisted statement of the three documentation URLs and the access date is not the original web-tool transcript or captured page content; nothing is claimed about the pages beyond what that statement says",
+   "used to map the client's displayed settings-source class to the repository-local settings file; the documents do not show that the installed client behaves exactly as documented",
+   "documentation retrieval, not a scientific source; no chemistry source was retrieved; no evidence label changes",
+   "host and agent-client network traffic was not measured, and no claim about it is made; the engine was never executed"
+  ]
+ },
+ "derivation": [
+  "results/h2/H2-A-01-continuation-01/README.md, outcome.json and this file are [AGENT] records written by the executing agent from the private source records listed here, after each digest was checked",
+  "the reply and the two verbatim strings of the safeguard event are copied from the reply record and the terminal capture; the displayed notice is joined from four display lines with single spaces, without the client's leading bullet marker, and keeps its typographic middle dot",
+  "the facts about O1 are those established in the coordinating agent's record of O1 and of the stop, as clarified; the executing agent's description of O1 is quoted from its own pause note and labelled as its statement",
+  "the facts about the documentation retrieval are those of the second and third additions to the brief and the supervising agent's records; a first addition, delivered as a prompt and not as a file, directed the citation of the clarification, and a note to the third addition, also delivered as a prompt, directed how the persisted statement of the documentation URLs is described",
+  "timeline times are measured values only, labelled with their kind: receipt time, recorded utc, file modification time or capture time; unmeasured estimates are not used; delivery times of instructions and requests were not recorded, so an event without a recorded time is given bounds or marked not recorded"
+ ],
+ "redaction": [
+  "no absolute or private paths, user or host names, emails, or session, task, pane or agent-instance identifiers",
+  "roles are named by description only",
+  "private records are cited by description and SHA256 only",
+  "no raw directory is published: no run output exists"
+ ],
+ "integration_files_changed": [
+  {
+   "path": ".agents/RESEARCH-STATE.md",
+   "original_sha256": "36a413c9e8caed90141edad18f5f2cad894ae9fb46f3b9c452ce123b3072d126",
+   "new_sha256": "7d4ea6f865d3c1ae9246a4b634de7c4128144d02108618fe7885437468e888e2"
+  },
+  {
+   "path": "README.md",
+   "original_sha256": "976ec31980d91cf3c061f8add7e6d3c0936d4854dd8e6681f953a138d63a9706",
+   "new_sha256": "8a95e46e9931269d7fc843e23b18ddd3cfd08db464f909991b3ac9a883d53ca5"
+  },
+  {
+   "path": "AGENTS.md",
+   "original_sha256": "157b9894a9cd3ad07b02d4574019d4792dc4d60bbdbbc14d4313f54f4e92c187",
+   "new_sha256": "257c51e119736dd9831e28f96ac1be95cf8c8f3a5315d58e4bba90cb3cb6ee0c"
+  },
+  {
+   "path": "docs/SOURCES.md",
+   "original_sha256": "c0cb3a4aa01fd5c5c78bfe838d3a27c7d3e780e50158bb627f1d59dca513297c",
+   "new_sha256": "b20d2fe940255d3c443da9cc1f98d2453bb90786ac131b56428d333bee8d1336"
+  },
+  {
+   "path": "docs/learning/h2/README.md",
+   "original_sha256": "5efeed0bd6cd15c0f4f835f942366e2d8ac7b2f970a4f4f8fdaf9790ec899580",
+   "new_sha256": "2a8c3b1bc6e72a45b158ce7366e6cac2a8f42c6a505e1562a0821705283bb061"
+  },
+  {
+   "path": "provenance/EXPORT-MANIFEST.md",
+   "original_sha256": "07530087b7faa8972a7c5398892d12dc5565a2b63ac18c0303a21833f62233a5",
+   "new_sha256": null,
+   "note": "the manifest binds this file's digest, so only its original digest is recorded here"
+  }
+ ],
+ "new_files": {
+  "paths": [
+   "results/h2/H2-A-01-continuation-01/README.md",
+   "results/h2/H2-A-01-continuation-01/outcome.json",
+   "results/h2/H2-A-01-continuation-01/provenance.json"
+  ],
+  "note": "their digests are recorded only in the export manifest, so that no digest cycle arises"
+ },
+ "limits": [
+  "the missing account of O1, the unestablished purpose of O1 and the unknown cause of the safeguard stop are permanent limits",
+  "the displayed safeguard notice is evidence that the client reported a stop; no backend, model or classifier mechanism, identity or cause is established or attested",
+  "counts are scoped to observed task activity; they are not a whole-machine audit",
+  "in general, where the agent clients keep temporary or cache files is not established; one exception was reported: during the reporting work after the stop, the executing agent reported ([AGENT]) that its client moved one long-running read-only check to the background and wrote that task's output to one client-managed file outside the repository; the executing agent stopped the task and did not read the file; the path is kept in private records; other destinations are not established, and no filesystem inspection verified the report",
+  "no run took place: nothing about the engine, the sandbox profile or the engine environment was observed",
+  "this record authorizes nothing and does not carry any authorization forward"
+ ]
+}

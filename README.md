@@ -253,6 +253,34 @@ is unmet and the other six are not reached. The driver produced no closure inven
 null. This is a software wiring observation only, with no chemistry evidence class. No C3 blocker is closed and C3
 readiness remains BLOCKED. Stage 1 and scope option A remain BLOCKED, and Stage 1 is not authorized.
 
+*H2 learning track, 2026-10-10 (preparation only):* A separate learning package in
+[docs/learning/h2/](docs/learning/h2/README.md) explains what a fixed-nuclei restricted Hartree–Fock (RHF) calculation
+of H2 varies, and gives a prospective, unrun method specification with its unresolved prerequisites. All of its
+settings are `[AGENT]`. No calculation, engine run or scientific-software installation was performed for it, and it
+contains no computed values. It is not readiness and authorizes nothing. A concrete Phase A run proposal for one job,
+with a control driver, payload, input, static identity record, tests and a decision packet, is in
+[docs/learning/h2/phase-a/](docs/learning/h2/phase-a/H2-A-01-RUN-PROPOSAL.md). Its independent review recorded the
+canonical decision APPROVE for its exact bytes, and Lead acceptance is recorded; both are private task records. This
+approves a preparation package only. It is not an authorization, readiness or a run. The proposal's P8 row, which
+reads that the package's independent review is pending, is kept unchanged as the frozen text of the reviewed bytes and
+is superseded by this status. It is not runnable: its driver refuses every launch while the network and installation
+prerequisite is unresolved, and resolving that needs revised bytes, a renewed review and a person's decision. For
+that job, launched by a separate route-R2 driver only, a person approved on 2026-10-10 a method revision that replaces
+the no-network stop condition with prevention by a bound sandbox profile, without detection
+([approval record](docs/learning/h2/phase-a-r2/H2-R2-METHOD-HUMAN-APPROVAL.md)). That approval is not a run
+authorization. A person then authorized exactly one attempt of that job on 2026-10-10, accepting that its 500 MiB
+engine memory setting is not an operating-system limit
+([authorization record](docs/learning/h2/phase-a-r2/H2-A-01-HUMAN-RUN-AUTHORIZATION.md)). It was not exercised: the
+run stopped as STOP_UNRUN before launch, because the automatic permission check of the agent client that was
+delegating the run refused delivery of the run assignment. The driver's `run` mode was never invoked and no engine
+process existed ([stop record](results/h2/H2-A-01/README.md)). STOP_UNRUN is an orchestration stop, not an engine
+failure or chemistry evidence. On 2026-10-11 a person replied "approved. Keep going." to the report of that stop, and
+a continuation of the same unchanged attempt began in a new task. It stopped as STOP_UNRUN during preparation, before
+the driver was invoked in any mode, after the executing agent's client displayed a safeguard notice whose cause is not
+known. The permission rule it would have used was never added, and no engine process was started
+([continuation stop record](results/h2/H2-A-01-continuation-01/README.md)). No launch permission remains, H2 has no
+result and Phase B is not authorized. W1, E-01, C3 readiness, Stage 1 and scope option A are unchanged.
+
 ## Evidence classification and provenance
 
 Scientific claims are classified by their underlying evidence as experimentally demonstrated (`[EXP]`),
@@ -292,8 +320,8 @@ The table lists each tool with its current status in the project. Numbers refer 
 ## Repository contents
 
 The public export covers the donor candidates, their documentation, the E-01 result, the adapted MS-000
-feasibility package and the MS-001 Stage 0 package. The surface-model coordinate files and the project's private working records are omitted,
-and the manifest lists each omission with its reason.
+feasibility package, the MS-001 Stage 0 package, the H2 learning package, the H2-A-01 stop record and the stop record of its continuation. The surface-model coordinate files and
+the project's private working records are omitted, and the manifest lists each omission with its reason.
 
 | Path | Contents |
 |---|---|
@@ -315,6 +343,7 @@ and the manifest lists each omission with its reason.
 | [docs/ms-001/w1-outcome-02.json](docs/ms-001/w1-outcome-02.json) | Machine-readable outcome of the second W1 pre-run determination |
 | [docs/ms-001/W1-RUN-RECORD.md](docs/ms-001/W1-RUN-RECORD.md) | The one W1 run (2026-10-04), stopped under §8 condition S10 at the input point: the phases executed, the outcome, the S10 observations, what was created, absent, empty or not queried, every acceptance criterion and stop condition, F1 to F11 coverage, a null closure inventory, and the limits; supersedes nothing |
 | [docs/ms-001/w1-run-outcome.json](docs/ms-001/w1-run-outcome.json) | Machine-readable outcome of the W1 run |
+| [docs/learning/h2/](docs/learning/h2/README.md) | H2 learning package: a lesson, a prospective, unrun method specification with its parameters, and a Phase A run proposal whose driver refuses launch; no results |
 | [structures/ms-001/](structures/ms-001/README.md) | MS-001 Stage 0 geometries: model M1, the start configuration, validation configurations V1–V3 and the P2 test molecule, built geometrically and unrelaxed |
 | [tools/build_ms001_geometries.py](tools/build_ms001_geometries.py) | Deterministic generator of the MS-001 Stage 0 geometries; it measures and asserts every reported distance and angle |
 | [tools/c3_provenance_wiring.py](tools/c3_provenance_wiring.py) | Driver of the C3 provenance wiring test, one trivial non-chemistry AiiDA job |
@@ -325,6 +354,8 @@ and the manifest lists each omission with its reason.
 | [results/e01/outcome.json](results/e01/outcome.json) | Machine-readable E-01 outcome with source hashes |
 | [results/e01/method-config.json](results/e01/method-config.json) | Method and environment configuration used by E-01 |
 | [results/e01/raw/](results/e01/raw/) | Engine output, error text, job input and classification of the precursor, redacted where stated |
+| [results/h2/H2-A-01/](results/h2/H2-A-01/README.md) | H2-A-01 stop record: the one authorized attempt stopped as STOP_UNRUN before launch, with no run invocation and no engine process; machine-readable outcome and provenance; no results |
+| [results/h2/H2-A-01-continuation-01/](results/h2/H2-A-01-continuation-01/README.md) | Stop record of the continuation of that attempt (2026-10-11): STOP_UNRUN during preparation, before any driver invocation, with no engine process; machine-readable outcome and provenance; no results |
 | [docs/figures/activated-donor.svg](docs/figures/activated-donor.svg) | Figure 1 |
 | [docs/figures/benchmark-outcomes.svg](docs/figures/benchmark-outcomes.svg) | Figure 2 |
 | [tools/render_donor_plate.py](tools/render_donor_plate.py) | Figure 1 renderer, with its bond table [tools/activated-donor-bonds.tsv](tools/activated-donor-bonds.tsv) |
@@ -353,6 +384,6 @@ export pending redistribution review. Work that builds on the benchmark should c
 3. Blue, B. *et al.* Towards Atom-by-Atom Fabrication: Mechanosynthetic donation and abstraction.
    arXiv:2606.13876 (2026). <https://doi.org/10.48550/arXiv.2606.13876>
 
-References [4] to [44], covering further literature, software documentation, source files and the project's own
-E-01 and MS-001 records, are catalogued with versions, locators, verification basis and limitations in
-[docs/SOURCES.md](docs/SOURCES.md), which uses the same numbering.
+References [4] to [51], covering further literature, software documentation, source files and the project's own
+E-01 and MS-001 records, and the sources of the H2 learning package, are catalogued with versions, locators,
+verification basis and limitations in [docs/SOURCES.md](docs/SOURCES.md), which uses the same numbering.

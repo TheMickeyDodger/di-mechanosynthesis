@@ -1,0 +1,14 @@
+; H2 route-R2 sandbox profile for job H2-A-01. PROPOSED, [AGENT]; human approval PENDING; authorizes nothing.
+; The custom-profile language of sandbox-exec is not documented in any installed source. What network*, file-write*,
+; subpath, literal and param do here is fixture-observed only, on one OS build (docs/SOURCES.md [56]).
+; The R2 driver passes H2_PAYLOAD_DIR and H2_SCRATCH_DIR with -D as canonical attempt paths. Without them the
+; profile was observed to be rejected before the command started.
+(version 1)
+(allow default)
+(deny network*)
+(deny file-write*)
+(allow file-write*
+    (subpath (param "H2_PAYLOAD_DIR"))
+    (subpath (param "H2_SCRATCH_DIR"))
+    ; /dev/null discards what is written. Refusing it made subprocess.DEVNULL fail in the fixture ([56]).
+    (literal "/dev/null"))

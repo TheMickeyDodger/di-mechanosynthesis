@@ -1,0 +1,388 @@
+{
+  "schema": "di-mechanosynthesis/h2-phase-a-static-identity/1",
+  "status": {
+    "kind": "static identity record: package records, file bytes and digests, version-matched source comparison",
+    "evidence_note": "Static observations of installed files and cached sources. They are not loaded or runtime identity, not source-to-binary correspondence, not a capability, not readiness and not authorization. No file in <PREFIX> was executed, imported or loaded.",
+    "observed_utc": "2026-10-10T13:19:06Z",
+    "authority": "bounded static inspection authorized by a person on 2026-10-10 (private record, bound by digest in the task evidence)"
+  },
+  "prefix": "<PREFIX>",
+  "declared_build_b2_section_6": {
+    "psi4": {
+      "name": "psi4",
+      "version": "1.11",
+      "build": "py314h53d0584_1",
+      "build_number": 1,
+      "channel": "conda-forge",
+      "subdir": "osx-arm64",
+      "sha256": "92d4aeb73fe7027bd239a656cf353461490420d76096ae762bd9f1c29ed4da10"
+    },
+    "libint": {
+      "name": "libint",
+      "version": "2.13.1",
+      "build": "h5a0831b_0",
+      "build_number": 0,
+      "channel": "conda-forge",
+      "subdir": "osx-arm64",
+      "sha256": "ca18cdfd0b0271e059a214d4d2786dfe88f0bc317b014e6abe1747b6d782cb6f"
+    },
+    "shell_h_sha256": "e0aa1e87e7cccc05c84955c9cf496fdccee2caad92c8c3e3b7f41fedd9a99c9e",
+    "locator": "docs/ms-001/B2-METHOD-DECLARATION.md section 6",
+    "b2_sha256": "6cf0bceb932e53c6395b1c170bd2319beb246108991c2715abf635f223add1e0"
+  },
+  "installed_package_records": {
+    "psi4": {
+      "record": "<PREFIX>/conda-meta/psi4-1.11-py314h53d0584_1.json",
+      "record_sha256": "853149d1b89fa4ca2ae2768de9a4e66220c0a93fab339f6520d51ea71fc1b4f2",
+      "record_size": 2759029,
+      "fields": {
+        "name": "psi4",
+        "version": "1.11",
+        "build": "py314h53d0584_1",
+        "build_number": 1,
+        "channel": "conda-forge",
+        "subdir": "osx-arm64",
+        "sha256": "92d4aeb73fe7027bd239a656cf353461490420d76096ae762bd9f1c29ed4da10"
+      },
+      "equals_b2_section_6": true
+    },
+    "libint": {
+      "record": "<PREFIX>/conda-meta/libint-2.13.1-h5a0831b_0.json",
+      "record_sha256": "7cb2b345fecc86f890da13f971ec3cd1c03ee5d6aa8907d2326adefa2d4b634b",
+      "record_size": 67513,
+      "fields": {
+        "name": "libint",
+        "version": "2.13.1",
+        "build": "h5a0831b_0",
+        "build_number": 0,
+        "channel": "conda-forge",
+        "subdir": "osx-arm64",
+        "sha256": "ca18cdfd0b0271e059a214d4d2786dfe88f0bc317b014e6abe1747b6d782cb6f"
+      },
+      "equals_b2_section_6": true
+    },
+    "python": {
+      "record": "<PREFIX>/conda-meta/python-3.14.7-h0ae1c2c_106_cp314.json",
+      "record_sha256": "965fef16008c97465ebfb69a09959271fccf0f235fdf939813a7db3a7bf8cb66",
+      "record_size": 857454,
+      "fields": {
+        "name": "python",
+        "version": "3.14.7",
+        "build": "h0ae1c2c_106_cp314",
+        "build_number": 106,
+        "channel": "conda-forge",
+        "subdir": "osx-arm64",
+        "sha256": "5ffc8349ca089ec5ac39ad36a095323ad177ebe05cbfc690c1e135560cfd68b7"
+      }
+    },
+    "qcelemental": {
+      "record": "<PREFIX>/conda-meta/qcelemental-0.51.2-pyhd8ed1ab_0.json",
+      "record_sha256": "11ce26fb06f5e1fe50e2090ba30f642a2f58f997e1d65f4611565727dc6e0052",
+      "record_size": 94749,
+      "fields": {
+        "name": "qcelemental",
+        "version": "0.51.2",
+        "build": "pyhd8ed1ab_0",
+        "build_number": 0,
+        "channel": "conda-forge",
+        "subdir": "noarch",
+        "sha256": "009e8ae61cc04e11f878effe6c30f61934016305cd2542da9e17f97e49e73602"
+      }
+    },
+    "qcengine": {
+      "record": "<PREFIX>/conda-meta/qcengine-0.51.0-pyhd8ed1ab_0.json",
+      "record_sha256": "997dbd657b4f50c18687d021807c2c00541cd1ce1fb0406eca64d9e9f4b41f46",
+      "record_size": 87761,
+      "fields": {
+        "name": "qcengine",
+        "version": "0.51.0",
+        "build": "pyhd8ed1ab_0",
+        "build_number": 0,
+        "channel": "conda-forge",
+        "subdir": "noarch",
+        "sha256": "f131ba77e52c620038677cba41ade91f3a4838156809efe22355640e7633f88c"
+      }
+    }
+  },
+  "installed_files": [
+    {
+      "path": "<PREFIX>/share/psi4/basis/sto-3g.gbs",
+      "type": "regular",
+      "size": 31774,
+      "sha256": "b472adfbcd0d87e1fd054963b8073a95b5ec265e8b0fd46951a56005f0f227d7",
+      "stable_read": true,
+      "relation": "equal to the declared archive's path record and to the v1.11 tagged-source file"
+    },
+    {
+      "path": "<PREFIX>/include/libint2/shell.h",
+      "type": "regular",
+      "size": 53810,
+      "sha256": "e0aa1e87e7cccc05c84955c9cf496fdccee2caad92c8c3e3b7f41fedd9a99c9e",
+      "stable_read": true,
+      "relation": "equal to the B2 section 6 declared digest and to the declared Libint archive's path record"
+    },
+    {
+      "path": "<PREFIX>/lib/libint2.dylib",
+      "type": "regular",
+      "size": 321327760,
+      "sha256": "964aff2a18e0948684e62102389a31eb2d09b83ef60b7c4bcc62e959131aa367",
+      "stable_read": true,
+      "relation": "regular file; equal to the declared Libint archive's path record"
+    },
+    {
+      "path": "<PREFIX>/lib/python3.14/site-packages/psi4/core.cpython-314-darwin.so",
+      "type": "regular",
+      "size": 37500848,
+      "sha256": "0d12c8cda49e2cfe75cea563a2fe51889fa61b88c7b5234beb165b9b54805d99",
+      "stable_read": true,
+      "relation": "differs from the declared archive's path record (archive digest and size below, binary file with a prefix placeholder); equal to the installed record's sha256_in_prefix and to the E-01 observation; correspondence with the archive file is not shown"
+    },
+    {
+      "path": "<PREFIX>/bin/python3.14",
+      "type": "regular",
+      "size": 6216512,
+      "sha256": "5bac0535500ca7fe507749fbcf28e3f731dea4dabf1400f7df7f5dd26691c66a",
+      "stable_read": true,
+      "relation": "regular file; the interpreter; not part of the B2 declaration; not executed"
+    },
+    {
+      "path": "<PREFIX>/bin/python3",
+      "type": "symlink",
+      "size": 10,
+      "readlink": "python3.14",
+      "resolves_to": "<PREFIX>/bin/python3.14",
+      "relation": "symbolic link inside the prefix; not executed"
+    },
+    {
+      "path": "<PREFIX>/bin/python",
+      "type": "symlink",
+      "size": 10,
+      "readlink": "python3.14",
+      "resolves_to": "<PREFIX>/bin/python3.14",
+      "relation": "symbolic link inside the prefix; not executed"
+    }
+  ],
+  "declared_archive_path_records": {
+    "basis": "cached info/paths.json of each declared archive, provenance and digests in SOURCES [37] (docs/ms-001/RECIPE-METADATA-SOURCE-LEDGER.md)",
+    "psi4_paths_json_sha256": "42dd9797ecb2c72a2f489de611afffaee0095a8786eca06c7a55112abc51ffd8",
+    "psi4_info_tar_zst_sha256": "69b4a8390d9768f40222bdc7f35d4f15a1e8ca6125d3d680b6c43cae85ad8d2f",
+    "libint_paths_json_sha256": "18ab7ef1396d687ed7f89629f80eae614a9ddd184384fc5f8cfc48793830d9b9",
+    "libint_info_tar_zst_sha256": "c05ac158e20ecbd16f648badb3eb5e1dcfcbf67ff71c731c72f061e65909b3d1",
+    "share/psi4/basis/sto-3g.gbs": {
+      "sha256": "b472adfbcd0d87e1fd054963b8073a95b5ec265e8b0fd46951a56005f0f227d7",
+      "size_in_bytes": 31774
+    },
+    "lib/python3.14/site-packages/psi4/core.cpython-314-darwin.so": {
+      "sha256": "088794202013b17ddd5163845fdb81896bca70946383b158b85125180099bb98",
+      "size_in_bytes": 37483872,
+      "file_mode": "binary",
+      "prefix_placeholder_present": true
+    },
+    "include/libint2/shell.h": {
+      "sha256": "e0aa1e87e7cccc05c84955c9cf496fdccee2caad92c8c3e3b7f41fedd9a99c9e",
+      "size_in_bytes": 53810
+    },
+    "lib/libint2.dylib": {
+      "sha256": "964aff2a18e0948684e62102389a31eb2d09b83ef60b7c4bcc62e959131aa367",
+      "size_in_bytes": 321327760
+    }
+  },
+  "installed_record_paths_data_core_so": {
+    "sha256": "088794202013b17ddd5163845fdb81896bca70946383b158b85125180099bb98",
+    "sha256_in_prefix": "0d12c8cda49e2cfe75cea563a2fe51889fa61b88c7b5234beb165b9b54805d99",
+    "size_in_bytes": 37483872,
+    "note": "the installed psi4 record lists the archive digest and a separate in-prefix digest for this file; the in-prefix digest equals the observed installed bytes. This is the installer's record, not proof of what changed or of correspondence"
+  },
+  "tagged_source": {
+    "identity": "Psi4 v1.11 tag commit f16f4ea2ff2351cc2ab877d9b3887fcf81c2a670, GitHub-generated archive SHA256 040e843efd4e70d286d8705e501bd2be5c7f1f855ec439eb8a27e6565af50266 (docs/ms-001/SOURCE-RESOLUTION.md section 2; SOURCES [31])",
+    "python_files": [
+      {
+        "path": "<PREFIX>/lib/python3.14/site-packages/psi4/__init__.py",
+        "installed_sha256": "ade6206759331dd08922407c66d4f5b3f22db2e806304064cbfa3533ee4c21c8",
+        "v1_11_tagged_source": "psi4/__init__.py",
+        "tagged_sha256": "71f6176b786afbae1405665f2cfca993e5d1eb856094f8c902dcdffe5437fd5b",
+        "byte_equal": false,
+        "difference": "differs only in CMake-configured lines: the install-path and directory variables (lines 41-45) and the add-on switches and paths (lines 112-123); the configured install-prefix string is a build-host path outside <PREFIX>, used only to compute relative locations (tagged source lines 46-59)"
+      },
+      {
+        "path": "<PREFIX>/lib/python3.14/site-packages/psi4/metadata.py",
+        "installed_sha256": "83a9953f82e9581e37defd5d5818d95fc1fdb3e55e0e305d90a72592c744d560",
+        "v1_11_tagged_source": "psi4/metadata.py",
+        "tagged_sha256": "d894363bcb5882c7071f56c961307542764b4c36e3e89fa2ae166aafafa7719d",
+        "byte_equal": false,
+        "difference": "generated version metadata; __version__ = '1.11' and __version_long = '1.11+zzzzzzz' as in the tag; version_formatter and release flags added by the build"
+      },
+      {
+        "path": "<PREFIX>/lib/python3.14/site-packages/psi4/extras.py",
+        "installed_sha256": "1a92dd928245c9f388cff10f9e11024c6b67d3f26c7708703c9a4d734a2dbd1f",
+        "v1_11_tagged_source": "psi4/extras.py",
+        "tagged_sha256": "43c43cf8eb0f34344d396eca67f9af5aa3f3c6cc47b08c042540ac624873f387",
+        "byte_equal": false,
+        "difference": "differs only in CMake-configured add-on switches (tagged source lines 147-182)"
+      },
+      {
+        "path": "<PREFIX>/lib/python3.14/site-packages/psi4/driver/driver.py",
+        "installed_sha256": "7d2485decb726bf62f18ca5f6c624b6dbc36d540dc9fbe2187a232189be13db6",
+        "v1_11_tagged_source": "psi4/driver/driver.py",
+        "tagged_sha256": "7d2485decb726bf62f18ca5f6c624b6dbc36d540dc9fbe2187a232189be13db6",
+        "byte_equal": true
+      },
+      {
+        "path": "<PREFIX>/lib/python3.14/site-packages/psi4/driver/driver_util.py",
+        "installed_sha256": "f7e8118f835d5c669526089abf03321ca33b9e0b220f0d24ed9360e0cdb6219c",
+        "v1_11_tagged_source": "psi4/driver/driver_util.py",
+        "tagged_sha256": "f7e8118f835d5c669526089abf03321ca33b9e0b220f0d24ed9360e0cdb6219c",
+        "byte_equal": true
+      },
+      {
+        "path": "<PREFIX>/lib/python3.14/site-packages/psi4/driver/task_planner.py",
+        "installed_sha256": "4edad5a6c11616d2fd6c7b694155973f7ca1fe28688ef58af90a339a02e593c8",
+        "v1_11_tagged_source": "psi4/driver/task_planner.py",
+        "tagged_sha256": "4edad5a6c11616d2fd6c7b694155973f7ca1fe28688ef58af90a339a02e593c8",
+        "byte_equal": true
+      },
+      {
+        "path": "<PREFIX>/lib/python3.14/site-packages/psi4/driver/molutil.py",
+        "installed_sha256": "22833848bf3f426a2de6b5d7dc0f12b215546cfd8e9812abf251c8d6dde47765",
+        "v1_11_tagged_source": "psi4/driver/molutil.py",
+        "tagged_sha256": "22833848bf3f426a2de6b5d7dc0f12b215546cfd8e9812abf251c8d6dde47765",
+        "byte_equal": true
+      },
+      {
+        "path": "<PREFIX>/lib/python3.14/site-packages/psi4/driver/p4util/util.py",
+        "installed_sha256": "adf6035d1212b3382d041a3b93133bc68eb2befebdeb64312643c82325aad929",
+        "v1_11_tagged_source": "psi4/driver/p4util/util.py",
+        "tagged_sha256": "adf6035d1212b3382d041a3b93133bc68eb2befebdeb64312643c82325aad929",
+        "byte_equal": true
+      },
+      {
+        "path": "<PREFIX>/lib/python3.14/site-packages/psi4/driver/p4util/python_helpers.py",
+        "installed_sha256": "0c39ba0ef11a32fb1a4e921dae64213e5af38ab69d9007170ace44113c49574f",
+        "v1_11_tagged_source": "psi4/driver/p4util/python_helpers.py",
+        "tagged_sha256": "0c39ba0ef11a32fb1a4e921dae64213e5af38ab69d9007170ace44113c49574f",
+        "byte_equal": true
+      },
+      {
+        "path": "<PREFIX>/lib/python3.14/site-packages/psi4/driver/p4util/exceptions.py",
+        "installed_sha256": "886800298ca7f6501b40e2826485029a9d163fcb75b9a14cc1c13463c00b56e1",
+        "v1_11_tagged_source": "psi4/driver/p4util/exceptions.py",
+        "tagged_sha256": "886800298ca7f6501b40e2826485029a9d163fcb75b9a14cc1c13463c00b56e1",
+        "byte_equal": true
+      },
+      {
+        "path": "<PREFIX>/lib/python3.14/site-packages/psi4/driver/qcdb/libmintsbasisset.py",
+        "installed_sha256": "e5db94ed9c886f59fcc845c63844354ae6904b183530b4a44942704afedb4933",
+        "v1_11_tagged_source": "psi4/driver/qcdb/libmintsbasisset.py",
+        "tagged_sha256": "e5db94ed9c886f59fcc845c63844354ae6904b183530b4a44942704afedb4933",
+        "byte_equal": true
+      },
+      {
+        "path": "<PREFIX>/lib/python3.14/site-packages/psi4/driver/qcdb/psiutil.py",
+        "installed_sha256": "a994946136c987a4638b50c048ec0e23da4b8738ebc6d41375ef04a9c634e0df",
+        "v1_11_tagged_source": "psi4/driver/qcdb/psiutil.py",
+        "tagged_sha256": "a994946136c987a4638b50c048ec0e23da4b8738ebc6d41375ef04a9c634e0df",
+        "byte_equal": true
+      },
+      {
+        "path": "<PREFIX>/lib/python3.14/site-packages/psi4/driver/procrouting/proc_table.py",
+        "installed_sha256": "23b3c7a5691145c61702748d77b60a5172bcebed7fd4bfda8f10d3ad4e08cd48",
+        "v1_11_tagged_source": "psi4/driver/procrouting/proc_table.py",
+        "tagged_sha256": "23b3c7a5691145c61702748d77b60a5172bcebed7fd4bfda8f10d3ad4e08cd48",
+        "byte_equal": true
+      },
+      {
+        "path": "<PREFIX>/lib/python3.14/site-packages/psi4/driver/procrouting/proc.py",
+        "installed_sha256": "98ac648d84cc4587ec034b9207d3c6fbc3cd74df4c0409a85478e5467c0dd408",
+        "v1_11_tagged_source": "psi4/driver/procrouting/proc.py",
+        "tagged_sha256": "98ac648d84cc4587ec034b9207d3c6fbc3cd74df4c0409a85478e5467c0dd408",
+        "byte_equal": true
+      },
+      {
+        "path": "<PREFIX>/lib/python3.14/site-packages/psi4/driver/procrouting/scf_proc/scf_iterator.py",
+        "installed_sha256": "4de3bf96fb09d46d2ad7cace03dbad667068e00526edf4adf4ea00df60d7aa8a",
+        "v1_11_tagged_source": "psi4/driver/procrouting/scf_proc/scf_iterator.py",
+        "tagged_sha256": "4de3bf96fb09d46d2ad7cace03dbad667068e00526edf4adf4ea00df60d7aa8a",
+        "byte_equal": true
+      },
+      {
+        "path": "<PREFIX>/lib/python3.14/site-packages/psi4/driver/procrouting/scf_proc/subclass_methods.py",
+        "installed_sha256": "e53c2412bc23b3730364db5c359df7aff41f14a7399e64777aae51ab2cd876c9",
+        "v1_11_tagged_source": "psi4/driver/procrouting/scf_proc/subclass_methods.py",
+        "tagged_sha256": "e53c2412bc23b3730364db5c359df7aff41f14a7399e64777aae51ab2cd876c9",
+        "byte_equal": true
+      }
+    ],
+    "sto_3g_gbs_sha256": "b472adfbcd0d87e1fd054963b8073a95b5ec265e8b0fd46951a56005f0f227d7"
+  },
+  "sto_3g_hydrogen": {
+    "installed_equals_archive_record_equals_tagged_source": true,
+    "installed_H_exponent_coefficient": [
+      [
+        "3.42525091",
+        "0.15432897"
+      ],
+      [
+        "0.62391373",
+        "0.53532814"
+      ],
+      [
+        "0.16885540",
+        "0.44463454"
+      ]
+    ],
+    "reference_50_H_exponent_coefficient": [
+      [
+        "3.425250914",
+        "0.1543289673"
+      ],
+      [
+        "0.6239137298",
+        "0.5353281423"
+      ],
+      [
+        "0.1688554040",
+        "0.4446345422"
+      ]
+    ],
+    "reference_50_sha256": "29e91651bf30b0c4ec847384a2fe03157a47886ce3ef5faa669de70d73402779",
+    "max_abs_difference_per_primitive": [
+      "4E-9",
+      "2.3E-9",
+      "4.0E-9"
+    ],
+    "installed_equals_reference_50_rounded_to_8_decimals": true,
+    "normalization": "PARTIALLY ESTABLISHED (docs/ms-001/SOURCE-RESOLUTION.md section 6); this comparison is of file text only"
+  },
+  "disk_usage_prefix_filesystem_free_bytes": 596690956288,
+  "preflight_expectations": {
+    "note": "values the driver's static preflight re-checks immediately before any launch; a mismatch blocks launch",
+    "package_records": {
+      "psi4": {
+        "name": "psi4",
+        "version": "1.11",
+        "build": "py314h53d0584_1",
+        "build_number": 1,
+        "channel": "conda-forge",
+        "subdir": "osx-arm64",
+        "sha256": "92d4aeb73fe7027bd239a656cf353461490420d76096ae762bd9f1c29ed4da10"
+      },
+      "libint": {
+        "name": "libint",
+        "version": "2.13.1",
+        "build": "h5a0831b_0",
+        "build_number": 0,
+        "channel": "conda-forge",
+        "subdir": "osx-arm64",
+        "sha256": "ca18cdfd0b0271e059a214d4d2786dfe88f0bc317b014e6abe1747b6d782cb6f"
+      }
+    },
+    "sha256": {
+      "include/libint2/shell.h": "e0aa1e87e7cccc05c84955c9cf496fdccee2caad92c8c3e3b7f41fedd9a99c9e",
+      "share/psi4/basis/sto-3g.gbs": "b472adfbcd0d87e1fd054963b8073a95b5ec265e8b0fd46951a56005f0f227d7",
+      "lib/libint2.dylib": "964aff2a18e0948684e62102389a31eb2d09b83ef60b7c4bcc62e959131aa367",
+      "lib/python3.14/site-packages/psi4/core.cpython-314-darwin.so": "0d12c8cda49e2cfe75cea563a2fe51889fa61b88c7b5234beb165b9b54805d99",
+      "bin/python3.14": "5bac0535500ca7fe507749fbcf28e3f731dea4dabf1400f7df7f5dd26691c66a"
+    },
+    "interpreter": "bin/python3.14"
+  }
+}

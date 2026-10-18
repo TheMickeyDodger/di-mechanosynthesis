@@ -1,0 +1,705 @@
+{
+  "record": "MS-001 W1 provenance wiring test: the one run, stopped under section 8 condition S10",
+  "record_document": "docs/ms-001/W1-RUN-RECORD.md",
+  "date": "2026-10-04",
+  "timezone": "UTC-04:00",
+  "scope": "MS-001 scope option B; W1 only",
+  "supersedes": [],
+  "unchanged_records": [
+    "docs/ms-001/W1-PRE-RUN-DETERMINATION.md",
+    "docs/ms-001/w1-outcome.json",
+    "docs/ms-001/W1-PRE-RUN-DETERMINATION-02.md",
+    "docs/ms-001/w1-outcome-02.json",
+    "docs/ms-001/C3-WIRING-TEST-PROPOSAL.md",
+    "docs/ms-001/W1-REVISION-01-HUMAN-APPROVAL.md",
+    "every other approval record and every frozen Stage 0 definition"
+  ],
+  "specification": {
+    "path": "docs/ms-001/C3-WIRING-TEST-PROPOSAL.md",
+    "revision": "01",
+    "sha256": "29c71ff6d89d9f26bc1ef997ed80719d975f1f986226330e54a28af760b9a347",
+    "approval_record": "docs/ms-001/W1-REVISION-01-HUMAN-APPROVAL.md"
+  },
+  "authorization": {
+    "scope": "one strict attempt of W1 and its possible early stop, authorized by a person; the authorization for this task covered writing tools/w1_driver.py and tools/w1_job.py",
+    "held_by": "the orchestration layer, privately",
+    "spent": true,
+    "standing_authorization_for_anything_further": false,
+    "pre_run_review": "an independent review approved the exact driver bytes before the launch; a pre-run check, not W1 evidence and not readiness"
+  },
+  "w1_run": true,
+  "attempts": 1,
+  "rerun": false,
+  "repaired_adjusted_waived_or_exempted": false,
+  "drivers_as_run": {
+    "published": true,
+    "published_as_run": true,
+    "tracked": false,
+    "untracked_as_permitted_by": "section 2 of the specification",
+    "frozen": true,
+    "in_export_manifest": true,
+    "files": [
+      {
+        "path": "tools/w1_driver.py",
+        "sha256": "ea3b7e40aec2e64373cde7002de0344d16d3624ebd3d33eff5d12b8470d35c3a",
+        "bytes": 214951
+      },
+      {
+        "path": "tools/w1_job.py",
+        "sha256": "41622c64e074b2a23e404e6bc5a8f6ea2f31de55132a3b6736451c1b0ce9bc88",
+        "bytes": 28290
+      }
+    ],
+    "captured_copies_equal": true,
+    "content_classification": {
+      "local_paths_user_names_host_names_credentials_or_session_identifiers": "none",
+      "account_string": "one synthetic placeholder on the reserved .invalid top-level domain, used as the profile's default user",
+      "work_area_names": "portable paths relative to the repository"
+    }
+  },
+  "launch": {
+    "invocation": "<environment>/bin/python -E -s -B tools/w1_driver.py launch, from the repository root",
+    "background_execution": {
+      "state": "established",
+      "basis": "the retained launch command and the tool's response: the launcher was started through the agent tool's background mode"
+    },
+    "detached": "not established",
+    "session_detachment": {
+      "state": "not established",
+      "recorded_launcher_session": "not detached: PermissionError",
+      "recorded_by": "the launcher record, when the launcher's call to os.setsid() raised",
+      "establishes_only": "that the os.setsid() call raised PermissionError",
+      "does_not_establish": [
+        "successful OS session detachment",
+        "whether the launcher already had a session of its own",
+        "that the launcher was not detached"
+      ],
+      "effect_on_outcome": "none: the outcome, the empty operational list and every criterion and stop-condition state are as recorded"
+    },
+    "runner_environment": "exactly the five declared names of section 5",
+    "started": "22:08:18",
+    "ended": "22:08:31",
+    "ceiling_reached": false,
+    "interrupted": false
+  },
+  "phases_executed": {
+    "before_the_stop": [
+      "launcher record and first user-level observation",
+      "interpreter record at the runner's start",
+      "first F3 build-identity reading and host record",
+      "section 4 capture, with the declared Git invocations, the copy of the site-packages superset and the project files, and all four listings",
+      "import of w1_job and of aiida-core; creation and loading of the W1 profile",
+      "module listing at the input point and its classification, where S10 fired and the job sequence stopped"
+    ],
+    "after_the_stop_not_credited": [
+      "run-end readings retained as section 8 requires: second module listing and classification, interpreter record at the end, second build-identity and host-record readings, run-end section 4 comparisons with their Git invocations and listings, user-level AiiDA directory check",
+      "second user-level observation and the result record"
+    ],
+    "what_the_stop_ended": "the job sequence"
+  },
+  "outcome": {
+    "result_format": "w1-result-4",
+    "outcome": "STOPPED: Section 8 condition(s) S10",
+    "section8_conditions_fired": [
+      "S10"
+    ],
+    "first_stop": {
+      "condition": "S10",
+      "check": "modules.input_point",
+      "phase": "input point",
+      "sequence": 7,
+      "after_first_stop": false
+    },
+    "stops": [
+      {
+        "condition": "S10",
+        "check": "modules.input_point",
+        "phase": "input point",
+        "sequence": 7,
+        "after_first_stop": false
+      },
+      {
+        "condition": "S10",
+        "check": "modules.run_end",
+        "phase": "run end",
+        "sequence": 13,
+        "after_first_stop": true
+      }
+    ],
+    "runner_phase_reached": "input point",
+    "runner_ended": "Section 8 stop: module classes at the input point",
+    "runner_exit": 1,
+    "interrupted": false,
+    "operational": [],
+    "ceiling": null,
+    "record_source": "the runner's own result record",
+    "journal": {
+      "entries": 39,
+      "error": null,
+      "unreadable_lines": 0,
+      "last_phase": "run end"
+    },
+    "merged_from_journal": {
+      "checks": [],
+      "not_reached": [],
+      "operational": 0,
+      "stops": 0
+    },
+    "reconstructed_from_durable_checks": [],
+    "record_problems": [],
+    "not_reached_checks_with_reasons": 18,
+    "closure_inventory_sha256": null
+  },
+  "s10_observations": {
+    "entries_listed_at_input_point": 1690,
+    "classes": {
+      "environment packages": 1385,
+      "no file": 93,
+      "standard library": 199,
+      "project": 2,
+      "unassigned": 11
+    },
+    "project_files": [
+      "tools/w1_driver.py",
+      "tools/w1_job.py"
+    ],
+    "unestablished": 0,
+    "unassigned_entries": [
+      {
+        "entries": [
+          "typing.io",
+          "typing.re"
+        ],
+        "reason": "a non-module object (typing._DeprecatedType) with no module file that is not built-in, frozen or a namespace module"
+      },
+      {
+        "entries": [
+          "pyexpat.errors",
+          "pyexpat.model",
+          "xml.parsers.expat.errors",
+          "xml.parsers.expat.model"
+        ],
+        "reason": "a module with no module file that is not built-in, frozen or a namespace module"
+      },
+      {
+        "entries": [
+          "_cython_3_1_4",
+          "_cython_3_2_9",
+          "_cython_3_2_9limited_fastcallnofinalize",
+          "_cython_3_3_0",
+          "cython_runtime"
+        ],
+        "reason": "a module with no module file that is not built-in, frozen or a namespace module"
+      }
+    ],
+    "rule": "an unassigned entry fails its class check (interpretation I-2 of the reviewed plan) and fires S10",
+    "typing_entries_disclosed_before_the_run": true,
+    "exemption_made": false,
+    "run_end_classification_identical": true,
+    "first_listed_at_run_end": 0,
+    "cause_of_missing_module_files": "not established"
+  },
+  "ending_kinds": {
+    "section8_stops": [
+      "S10 at modules.input_point (first stop)",
+      "S10 at modules.run_end (after the first stop)"
+    ],
+    "section7_criterion_failures": [
+      "criterion 5"
+    ],
+    "not_reached": [
+      "criteria 1, 2, 3, 4, 6 and 7"
+    ],
+    "operational_stops": []
+  },
+  "state_vocabulary": {
+    "created": "made by the run and present",
+    "absent_never_created": "never made, because the stop came first; no record exists",
+    "empty_as_observed": "a directory observed to hold 0 files",
+    "not_queried": "no query was made; the value is unknown, and no count is asserted, zero included"
+  },
+  "created": {
+    "aiida_profile": {
+      "name": "w1",
+      "storage_backend": "core.sqlite_dos",
+      "process_control_backend": null,
+      "location": "a new configuration directory in the project's git-ignored private area",
+      "default_user_address": "the synthetic placeholder on the reserved .invalid domain that the published driver declares; it identifies no person and no machine"
+    },
+    "private_identifiers_not_published": [
+      "the profile's UUID",
+      "the absolute path of the configuration directory",
+      "its access process-identifier file",
+      "the host name",
+      "the resolved interpreter path"
+    ],
+    "private_identifiers_location": "the private run records, not the drivers",
+    "configuration_directory_listing_entries": {
+      "capture_point": 0,
+      "run_end": 9
+    }
+  },
+  "absent_never_created": [
+    "computer w1-local-nologin",
+    "code w1-bash",
+    "the 17 input nodes",
+    "CalcJob node w1-job1",
+    "CalcJob node w1-job2"
+  ],
+  "empty_as_observed": {
+    "job_work_directory_area_files": 0,
+    "temporary_directory_files": 0,
+    "observed": "after the run, as a filesystem observation"
+  },
+  "not_queried": [
+    "the number of nodes, CalcJob nodes or other objects in the profile's store: chain.calcjob_nodes is among the 18 not-reached checks, so the driver made no such query, and none was made afterwards; the value is unknown, no count is asserted, zero included, and none is inferred from the store's files"
+  ],
+  "steps_not_performed": [
+    "computer, code and input nodes",
+    "submission script",
+    "presubmit validation",
+    "upload",
+    "payload execution",
+    "retrieval",
+    "parsing",
+    "F4 conversion sequence",
+    "negative cases",
+    "three-way submission binding",
+    "closure inventory"
+  ],
+  "steps_performed": {
+    "before_the_stop": [
+      "the section 4 capture"
+    ],
+    "after_the_stop_not_credited": [
+      "the run-end readings: module listing and classification, build-identity, host-record, interpreter and section 4 readings",
+      "the second user-level observation"
+    ]
+  },
+  "empty_code_diff": {
+    "captured_code_diff_bytes": 0,
+    "tracked_diff_empty": true,
+    "fixture_diff_guard": "fixture_diff, the section 4 guard against a vacuous pass on an empty diff, is among the 18 not-reached checks and was never exercised",
+    "verified_f1_result": false
+  },
+  "closure_inventory": {
+    "closure_inventory_sha256": null,
+    "produced_by_driver": false,
+    "reason": "no chain of jobs was built",
+    "substitute_value": "none"
+  },
+  "post_stop_retained_evidence_inventory": {
+    "label": "post-stop retained-evidence inventory, version 02",
+    "is_not": [
+      "the section 9 closure inventory",
+      "a value or substitute for closure_inventory_sha256, which is null and untouched"
+    ],
+    "published": false,
+    "sha256": "959d87ddc4687d843c50379d8aba0738da366c15c5deae09c082f3fb1e1059c0",
+    "bytes": 10614,
+    "made": "after the stop, from retained bytes and the filesystem only, with no AiiDA import, query or object; frozen before the final review; it holds no hash of itself and no review or verdict",
+    "categories": {
+      "directly_inventoried": {
+        "files": 57,
+        "content": "the 52 run records, the four capture-time and four run-end listings among them; the captured code diff (0 bytes); the captured lock file; the three captured untracked files"
+      },
+      "transitively_bound_through_a_listing": {
+        "site_packages_superset": {
+          "files": 18448,
+          "bytes": 374182654,
+          "bound_by": [
+            "capture-time environment listing",
+            "run-end environment listing"
+          ],
+          "listing_lines": 18448,
+          "listings_identical": true
+        },
+        "bytecode_files": {
+          "entries": 7216,
+          "bound_by": [
+            "capture-time bytecode listing",
+            "run-end bytecode listing"
+          ],
+          "listings_identical": true,
+          "copied_into_run_area": false
+        },
+        "configuration_directory": {
+          "entries_capture_point": 0,
+          "entries_run_end": 9,
+          "bound_by": [
+            "capture-time configuration listing",
+            "run-end configuration listing"
+          ]
+        },
+        "capture_total_measured": {
+          "files": 18453,
+          "bytes": 374438151
+        }
+      },
+      "excluded_mutable_or_runtime_owned": {
+        "files": 9,
+        "kinds": [
+          "a process-identifier file",
+          "the configuration file and three rotated configuration backups, carrying private identifiers",
+          "a runtime log",
+          "the store's database and two container files, mutable store state"
+        ],
+        "retained_on_disk": true,
+        "paths_and_identifiers": "private"
+      },
+      "states_kept_apart": [
+        "empty as observed: job work-directory area and temporary directory, 0 files each",
+        "not queried: object counts in the profile's store",
+        "absent because never created: computer, code, 17 input nodes, two CalcJob nodes"
+      ]
+    },
+    "version_01": {
+      "sha256": "a0d8fe6f485e1fde30de0ff19bcc2446e45ae34af41b830846406e4afa6876ad",
+      "content": "the 52 run records only",
+      "status": "retained unchanged; superseded by version 02 as the inventory to bind"
+    }
+  },
+  "criteria_vocabulary": {
+    "check_groups": "each check is made before the first stop, made after the first stop (a retained observation, recorded as such, earning no acceptance credit toward any criterion), or never made",
+    "after_first_stop_not_credited": "the key lists checks made after the first stop: retained observations with no acceptance credit; a failure among them remains recorded",
+    "unmet": "a check of the criterion was made before any other stop had fired, and it failed",
+    "not reached": "no check of the criterion failed before the first stop, and at least one was not made before it; a pass before the stop does not make the criterion demonstrated; a pass after the stop earns no credit, and a failure after the stop remains recorded as an observation",
+    "demonstrated": "unused"
+  },
+  "acceptance_criteria": {
+    "1": {
+      "state": "not reached",
+      "before_first_stop": [],
+      "after_first_stop_not_credited": [],
+      "never_made": ["job1.finished_ok", "job2.finished_ok", "job1.process_type", "job2.process_type", "job1.links", "job2.links", "chain.calcjob_nodes", "chain.job2_from_job1"]
+    },
+    "2": {
+      "state": "not reached",
+      "before_first_stop": ["capture.frozen_input passed"],
+      "after_first_stop_not_credited": [],
+      "never_made": ["f4.sidecar_built", "f4.T0", "f4.S1", "job1.f4", "job2.f4", "f4.sidecar_carriage", "negative_cases"]
+    },
+    "3": {
+      "state": "not reached",
+      "before_first_stop": ["interpreter.dont_write_bytecode passed", "capture.preconditions passed"],
+      "after_first_stop_not_credited": ["runend.section4 held"],
+      "never_made": ["inputs.f1_equal_capture", "f1.resolve_bytes", "f1.inputs_of_both_jobs"]
+    },
+    "4": {
+      "state": "not reached",
+      "before_first_stop": ["launcher.record passed", "interpreter.record_start passed"],
+      "after_first_stop_not_credited": ["interpreter.record_end passed"],
+      "never_made": ["job1.payload_record", "job2.payload_record", "computer.readback", "computer.declared_configuration", "job1.presubmit", "job2.presubmit", "job1.binding", "job2.binding", "job1.submission_inventory", "job2.submission_inventory", "job1.options_and_uuids", "job2.options_and_uuids"]
+    },
+    "5": {
+      "state": "unmet",
+      "before_first_stop": ["f3.first_reading passed", "modules.input_point failed (S10, the first stop)"],
+      "after_first_stop_not_credited": ["runend.build_identity passed", "runend.host_record passed", "modules.run_end failed (S10)"],
+      "never_made": ["inputs.mandatory_contents", "job1.mandatory_contents", "job2.mandatory_contents", "runend.mandatory_contents", "job1.input_manifest", "job2.input_manifest"]
+    },
+    "6": {
+      "state": "not reached",
+      "before_first_stop": [],
+      "after_first_stop_not_credited": [],
+      "never_made": ["repository_keys"]
+    },
+    "7": {
+      "state": "not reached",
+      "before_first_stop": ["user_level.aiida_dir_after_import passed"],
+      "after_first_stop_not_credited": ["user_level.aiida_dir_at_run_end passed", "user_level: the two observations were equal"],
+      "never_made": ["fixture_diff"]
+    }
+  },
+  "stop_condition_vocabulary": {
+    "fired": "it fired at a check made before any other stop; that check was the first stop",
+    "did not fire before the stop; incomplete": "at least one check that can fire it was made before the first stop and every such check passed; at least one other check that can fire it was made only after the stop, or never",
+    "not evaluated before the stop": "no check that can fire it was made before the first stop; checks made after the stop are listed as retained observations",
+    "never evaluated": "no check that can fire it was made at all",
+    "rules": [
+      "no state says that a condition did not hold",
+      "never evaluated is not did not hold",
+      "a check made after the first stop is a retained observation, recorded as such: it earns no acceptance credit toward any section 7 criterion; a pass after the stop does not turn incomplete coverage of a condition into a finding that the condition did not hold; and a failure observed after the stop remains recorded, as the second S10 at the run-end module classification is, recorded as a fired condition",
+      "no condition had every one of its checks made before the stop, so a state of evaluated before the stop, did not fire applies to none"
+    ]
+  },
+  "stop_conditions": {
+    "S01": {
+      "state": "did not fire before the stop; incomplete",
+      "before_first_stop": ["user_level.aiida_dir_after_import passed"],
+      "after_first_stop_not_credited": ["user_level.aiida_dir_at_run_end passed", "user_level: the two observations were equal"],
+      "never_made": []
+    },
+    "S02": {
+      "state": "did not fire before the stop; incomplete",
+      "before_first_stop": ["launcher.record passed", "interpreter.record_start passed"],
+      "after_first_stop_not_credited": ["interpreter.record_end passed"],
+      "never_made": []
+    },
+    "S03": {
+      "state": "never evaluated",
+      "before_first_stop": [],
+      "after_first_stop_not_credited": [],
+      "never_made": ["computer.readback"]
+    },
+    "S04": {
+      "state": "never evaluated",
+      "before_first_stop": [],
+      "after_first_stop_not_credited": [],
+      "never_made": ["job1.presubmit", "job2.presubmit", "job1.binding", "job2.binding", "job1.finished_ok", "job2.finished_ok"]
+    },
+    "S05": {
+      "state": "never evaluated",
+      "before_first_stop": [],
+      "after_first_stop_not_credited": [],
+      "never_made": ["job1.process_type", "job2.process_type"]
+    },
+    "S06": {
+      "state": "did not fire before the stop; incomplete",
+      "before_first_stop": ["capture.preconditions passed"],
+      "after_first_stop_not_credited": ["runend.section4 held"],
+      "never_made": ["inputs.f1_equal_capture"]
+    },
+    "S07": {
+      "state": "never evaluated",
+      "before_first_stop": [],
+      "after_first_stop_not_credited": [],
+      "never_made": ["job1.links", "job2.links", "chain.job2_from_job1"]
+    },
+    "S08": {
+      "state": "never evaluated",
+      "before_first_stop": [],
+      "after_first_stop_not_credited": [],
+      "never_made": ["job1.finished_ok", "job2.finished_ok"]
+    },
+    "S09": {
+      "state": "never evaluated",
+      "before_first_stop": [],
+      "after_first_stop_not_credited": [],
+      "never_made": ["inputs.mandatory_contents", "job1.mandatory_contents", "job2.mandatory_contents", "runend.mandatory_contents"]
+    },
+    "S10": {
+      "state": "fired",
+      "before_first_stop": ["f3.first_reading passed", "modules.input_point failed: the first stop"],
+      "after_first_stop_not_credited": ["runend.build_identity passed", "runend.host_record passed", "modules.run_end failed"],
+      "never_made": ["job1.payload_record", "job2.payload_record"]
+    },
+    "S11": {
+      "state": "did not fire before the stop; incomplete",
+      "before_first_stop": ["f3.first_reading passed"],
+      "after_first_stop_not_credited": ["runend.build_identity passed"],
+      "never_made": []
+    },
+    "S12": {
+      "state": "did not fire before the stop; incomplete",
+      "before_first_stop": ["capture.frozen_input passed"],
+      "after_first_stop_not_credited": [],
+      "never_made": ["f4.sidecar_built", "f4.T0", "f4.S1", "job1.f4", "job2.f4", "f4.sidecar_carriage"]
+    },
+    "S13": {
+      "state": "never evaluated",
+      "before_first_stop": [],
+      "after_first_stop_not_credited": [],
+      "never_made": ["negative_cases"]
+    },
+    "S14": {
+      "state": "not evaluated before the stop",
+      "before_first_stop": [],
+      "after_first_stop_not_credited": ["modules.run_end: no entry first listed at the run end"],
+      "never_made": []
+    },
+    "S15": {
+      "state": "never evaluated",
+      "before_first_stop": [],
+      "after_first_stop_not_credited": [],
+      "never_made": ["fixture_diff"]
+    }
+  },
+  "f_coverage_vocabulary": {
+    "demonstrated": "shown by this run's credited evidence; unused",
+    "unmet": "evaluated before the stop and failed; unused at field level",
+    "blocked": "shown impossible as specified; unused",
+    "not reached": "not evaluated before the stop",
+    "standing limit": "outside what W1 can establish"
+  },
+  "f_coverage": {
+    "F1": {
+      "disposition": "not reached",
+      "this_run": "capture made before the stop and retained privately: a 0-byte code diff (the tracked diff was empty), three untracked files, an 18448-file superset; the empty diff is not a verified F1 result, because fixture_diff, its guard, was never exercised; no input node; the section 3 module-class requirement is unmet (S10)",
+      "residual_blocker": "C3 blocker 2 (F1) stands"
+    },
+    "F2": {
+      "disposition": "not reached",
+      "this_run": "no job, computer or code",
+      "residual_blocker": "C3 blocker 2 (F2) stands"
+    },
+    "F3": {
+      "disposition": "not reached",
+      "this_run": "first reading passed before the stop: 89 distributions, 88 locked-verified and 1 not-in-lock; aiida-core 2.9.2, ASE 3.29.0 and NumPy 2.5.3 at their declared values; lock digest as declared; no input node; the run-end reading equalled the first after the stop and is not credited; the section 3 module-class requirement is unmet (S10)",
+      "residual_blocker": "C3 blocker 2 (F3) stands"
+    },
+    "F4": {
+      "disposition": "not reached",
+      "this_run": "the frozen input matched its digest at the capture; no sidecar, conversion stage, job or negative case existed",
+      "residual_blocker": "C3 blocker 1 (F4) stands"
+    },
+    "F5": {
+      "disposition": "not reached",
+      "this_run": "no input node",
+      "residual_blocker": "C3 blocker 2 (F5) stands"
+    },
+    "F6": {
+      "disposition": "not reached",
+      "this_run": "no input node",
+      "residual_blocker": "C3 blocker 2 (F6) stands"
+    },
+    "F7": {
+      "disposition": "not reached",
+      "this_run": "before the stop, the launcher record and the interpreter record at start conformed, with the platform-injected name permitted by section 5 in the interpreter record; the interpreter record at end conformed after the stop, not credited; no computer existed, so the no-login setting was never read back; no payload ran",
+      "residual_blocker": "C3 blocker 3 (F7, D2) stands"
+    },
+    "F8": {
+      "disposition": "not reached",
+      "this_run": "no input node",
+      "residual_blocker": "C3 blocker 2 (F8) stands"
+    },
+    "F9": {
+      "disposition": "standing limit",
+      "this_run": "no job existed and none failed; this stop is the driver's, before any job, and is not an F9 demonstration",
+      "residual_blocker": "remains a dependency within Stage 1"
+    },
+    "F10": {
+      "disposition": "standing limit",
+      "this_run": "unchanged",
+      "residual_blocker": "remains with the orchestration layer"
+    },
+    "F11": {
+      "disposition": "not reached; standing limit on scientific validity",
+      "this_run": "no input node",
+      "residual_blocker": "C3 blocker 2 (F11) stands"
+    }
+  },
+  "other_observations": {
+    "credited": false,
+    "section4_preconditions_held_at_capture_before_the_stop": 14,
+    "untracked_listing_at_capture": [
+      ".claude/settings.local.json",
+      "tools/w1_driver.py",
+      "tools/w1_job.py"
+    ],
+    "run_end_section4_comparisons_all_held_after_the_stop": true,
+    "site_packages_listing_entries": 18448,
+    "bytecode_listing_entries": 7216,
+    "listings_identical_capture_and_run_end": true,
+    "interpreter": {
+      "implementation": "CPython",
+      "version": "3.12.14",
+      "executable_relative_to_prefix": "bin/python",
+      "flags": "-E -s -B",
+      "dont_write_bytecode": 1,
+      "platform_injected_name_present": "in the record at start, before the stop, and in the record at end, after it",
+      "platform_injected_value": "private"
+    },
+    "host_record": {
+      "values_observed_at_first_reading_before_the_stop": 4,
+      "run_end_reading_equal_after_the_stop": true,
+      "values": "private"
+    },
+    "user_level": {
+      "paths_observable": 11,
+      "second_observation_equal_to_first_after_the_stop": true,
+      "user_level_aiida_directory": "absent at both observations"
+    },
+    "tool_settings_file_unchanged": "same SHA256 immediately before the launch and after the run; an observation of the implementing agent outside the run's checks, not a W1 check"
+  },
+  "c3_blockers_closed": [],
+  "c3_readiness": "BLOCKED",
+  "stage_1": "BLOCKED and not authorized; stages 1a, 1b and 2 not authorized; scope option A BLOCKED",
+  "next_decisions": "an exemption of unclassifiable entries or a revision of the specification would need a person's decision; none is sought by this record",
+  "chemistry": {
+    "engine_run": false,
+    "calculation": false,
+    "installation": false,
+    "network_retrieval": false,
+    "chemistry_output": false
+  },
+  "git": {
+    "commit_created": false,
+    "staged": false,
+    "pushed": false
+  },
+  "evidence_class_note": "Every observation is a software or environment observation of this project; no chemistry evidence class applies.",
+  "not_claimed": [
+    "a W1 pass, or that W1 can be executed to a pass",
+    "that any stop condition did not hold",
+    "that the empty code diff is a verified F1 result",
+    "any F1 to F8 or F11 carriage through a job chain, the no-login observation of F7, or any F4 identity check",
+    "any F9 demonstration",
+    "closure of any C3 blocker",
+    "the cause of the missing module files of the 11 unassigned entries",
+    "the number of objects in the profile's store",
+    "any in-driver closure inventory",
+    "any chemistry result, engine behaviour, readiness, parity, physical validation or authorization",
+    "any upgrade of an evidence label"
+  ],
+  "limitations": [
+    "the pre-run checks (static verifier, synthetic harness, mutation check, repository checks), run by the implementing agent and by the orchestration layer, used extracted copies of the driver functions on synthetic inputs and synthetic fixtures; they are not W1 evidence, and their coverage of the full phase routines and of a real SIGKILL was structural and call-site only; the run itself executed every phase it reached and needed no SIGKILL",
+    "process incident: the orchestration layer's coordinating agent kept scratch outside this repository and ran a recursive deletion and a pattern-matched process termination there, of unestablished scope",
+    "process incident: the coordinating agent appended to the reviewer's charter during an active review",
+    "process incident: the coordinating agent wrote a fabricated digest whose original value is unrecoverable",
+    "process incident: the coordinating agent made a stale parent binding with a second hand-written digest; both values are retained",
+    "process incident: the coordinating agent dispatched a packet with one sentence false as written; the packet was not mutated",
+    "process incident: the implementing agent deleted an undelivered draft result; it is not reconstructed and is excluded from established evidence",
+    "process incident: after a guard refused one of its edit commands, the implementing agent wrote two helper scripts outside this repository and ran each once as a workaround; this was not runtime logging, and the guard-match mechanism is inferred, not established",
+    "the execution counts of two later helper scripts inside this repository cannot be settled by repository-local evidence and remain open",
+    "model: configuration and each agent's own report only; neither is an attestation",
+    "no complete filesystem confinement and no exhaustive audit of actions is claimed"
+  ],
+  "evidence_bound_by_digest": [
+    {
+      "description": "post-stop retained-evidence inventory, version 02 (not the section 9 closure inventory; not a value for the null closure_inventory_sha256)",
+      "sha256": "959d87ddc4687d843c50379d8aba0738da366c15c5deae09c082f3fb1e1059c0"
+    },
+    {
+      "description": "post-stop evidence inventory, version 01, the 52 run records only; retained and superseded",
+      "sha256": "a0d8fe6f485e1fde30de0ff19bcc2446e45ae34af41b830846406e4afa6876ad"
+    },
+    {
+      "description": "result record",
+      "sha256": "d7f0bb37088323abf2b8da6d2ca985f4ad0566b524e975df8da79ea10e5b844a"
+    },
+    {
+      "description": "runner's own result record",
+      "sha256": "340f3fca5064eeaf2a89023b6929a9c5c0c316a8c837361fecaaac7e11113ae4"
+    },
+    {
+      "description": "runner's durable journal, 39 entries",
+      "sha256": "6673ae619bea9702315f50c2ebd494b1057e8b3a198db425fcf45aaf507d259b"
+    },
+    {
+      "description": "module classification at the input point and, byte-identical, at the run end",
+      "sha256": "1779c111f6a2557848e36318cb2d049c2af274a7dea13e8d186fee7173ee31f5"
+    },
+    {
+      "description": "site-packages listing at the capture point and at the run end",
+      "sha256": "0934e6deb864c2aa9d56117486348ef183d85d00080d381d8fbde04d4032d497"
+    },
+    {
+      "description": "bytecode listing at the capture point and at the run end",
+      "sha256": "9cdbd1ded667ad803f5783a769bb6fe1ff951d21d37a062eb640faf804869a1a"
+    },
+    {
+      "description": "interpreter binary that the environment's bin/python resolves to",
+      "sha256": "bc56ea9cdc0fface1eb75712f871a454324f6cbfec4e30311b197f208a7f3d07"
+    },
+    {
+      "description": "captured lock file, equal to the declared lock digest",
+      "sha256": "813b2d9adc6c986626f8a84373b91ae2be0bd9157d7547f9bc43d1a4a6ed80b8"
+    }
+  ],
+  "sources": {
+    "external_sources_cited": 0,
+    "retrieved": false,
+    "installed_distribution_entry": "[34] in docs/SOURCES.md",
+    "catalogue_entry": "[44] in docs/SOURCES.md"
+  }
+}

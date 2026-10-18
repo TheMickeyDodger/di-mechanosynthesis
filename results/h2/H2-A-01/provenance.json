@@ -1,0 +1,395 @@
+{
+ "schema": "di-mechanosynthesis/h2-run-provenance/1",
+ "job_id": "H2-A-01",
+ "route": "R2",
+ "status": "STOP_UNRUN",
+ "repository_head": "deb02407307f4339099dcd4f25ba8af88e448656",
+ "review_status": "independent review pending",
+ "bound_sha256": {
+  "note": "the sixteen interlock keys bound by the run authorization; public paths are relative to docs/learning/h2/; the two private records are described, not pathed",
+  "keys": {
+   "driver": {
+    "path": "phase-a/h2_phase_a_driver.py",
+    "sha256": "6dcb4845e3b4b29f89dc4027274675e24c1152508828b1230857baac58b9aa7d"
+   },
+   "payload": {
+    "path": "phase-a/h2_phase_a_payload.py",
+    "sha256": "7de1d53c70af7a4ff3a71fb5fbcd7cedfec24a7e3eb49d8b27f9d6bf6cc2f69b"
+   },
+   "input": {
+    "path": "phase-a/h2-a-01-input.json",
+    "sha256": "3ca4753312b3f2cd50274d4c8f8dda48de422d691e34bf47784b1602670dc3d3"
+   },
+   "parameters": {
+    "path": "h2-method-parameters.json",
+    "sha256": "2728b0efe2c6dae070346a3d0475857222f02864a6da63859edf4d4e334c156e"
+   },
+   "static_identity": {
+    "path": "phase-a/h2-a-01-static-identity.json",
+    "sha256": "a45ee84d0d28e794ea7f56e7ff74130551fb326c36c7d8353467966ed2c025cc"
+   },
+   "run_proposal": {
+    "path": "phase-a/H2-A-01-RUN-PROPOSAL.md",
+    "sha256": "d9bcb7e186a0ced226478d93470682c6ff84c78abab1f7546eb45bdac551225f"
+   },
+   "decision_packet": {
+    "path": "phase-a/H2-A-01-DECISION-PACKET.md",
+    "sha256": "cfb4a9912114452211e19edadf115816e48359911e05f48d71c54672b72b55e5"
+   },
+   "r2_driver": {
+    "path": "phase-a-r2/h2_phase_a_r2_driver.py",
+    "sha256": "0b3172f8388b0f0c053a2b7a6945394e7e796aae8b14d0228447d7bc860af9b6"
+   },
+   "r2_profile": {
+    "path": "phase-a-r2/h2-r2-sandbox.sb",
+    "sha256": "0768725ab376312c4b22dc83f47b13eeaa67c62dc618dd350c9ab47a2f754d20"
+   },
+   "r2_platform_identity": {
+    "path": "phase-a-r2/h2-r2-platform-identity.json",
+    "sha256": "822fbe69807184f8ac5c180caa74d23b0faca64e055ee4bc09a61c82019f2659"
+   },
+   "r2_method_revision": {
+    "path": "phase-a-r2/H2-R2-METHOD-REVISION.md",
+    "sha256": "9498019a23a8fa1542788b17126b91e3fff93ada49639856f6599e3afc8aecdc"
+   },
+   "r2_run_proposal": {
+    "path": "phase-a-r2/H2-A-R2-RUN-PROPOSAL.md",
+    "sha256": "d0239104596409d8f278449103f413843a225550cbfb91616d25d5b5143c2b2e"
+   },
+   "r2_decision_packet": {
+    "path": "phase-a-r2/H2-A-R2-DECISION-PACKET.md",
+    "sha256": "5ce61f7c97be6db8e332d296d3f54335acb04552296d33eb230ce40cbd9c4083"
+   },
+   "method_revision_approval": {
+    "path": "phase-a-r2/H2-R2-METHOD-HUMAN-APPROVAL.md",
+    "sha256": "e4897a80869bc04d6ece9a8be75673085e18ddb1b07df1df5e71fd4b76f10d7c"
+   },
+   "machine_binding": {
+    "description": "private machine binding, revision R2-01; not published",
+    "sha256": "7a5ac67dd8c6f196955589e8d6e8c0f96240db10c42a01d043974d0feee884b0"
+   },
+   "code_provenance": {
+    "description": "private code-provenance record written fresh by the driver's code-provenance mode; not published",
+    "sha256": "b2ff2ad014ea284076ae9d56125b392947dcaa9200ae9e5e5ee9349744e924fc"
+   }
+  }
+ },
+ "documentary_sha256": {
+  "run_decision_packet": {
+   "path": "phase-a-r2/H2-A-R2-RUN-DECISION-PACKET.md",
+   "sha256": "eea5cfaaf459adcb82373de1cd317493837431b8acbd327f7a09a6dee9d8edfe"
+  },
+  "run_proposal_02": {
+   "path": "phase-a-r2/H2-A-R2-RUN-PROPOSAL-02.md",
+   "sha256": "a9c11ba494eb9384d348b180c8ddb7cb64cbb258ae040a411a16510628640408"
+  }
+ },
+ "private_source_records": [
+  {
+   "description": "the person's answer and the question it answered, as recorded on receipt by the orchestration system",
+   "sha256": "bd67c57e82f0ca0199df434060def9ccd7c8e2c7e4a3c21bcd84d044c189abe3"
+  },
+  {
+   "description": "the operator handoff that delivered the authority and the task boundary",
+   "sha256": "a6dab08223da6f9ce2f20f14b7203bc42c3e9d0211fb4540a3aade224510bec4"
+  },
+  {
+   "description": "the private machine binding, revision R2-01 (interpreter, prefix, runs root, environment and wrapped command)",
+   "sha256": "7a5ac67dd8c6f196955589e8d6e8c0f96240db10c42a01d043974d0feee884b0"
+  },
+  {
+   "description": "the fresh code-provenance record written by the driver's code-provenance mode over the eight covered paths; that mode starts no engine process and runs read-only Git queries as child processes",
+   "sha256": "b2ff2ad014ea284076ae9d56125b392947dcaa9200ae9e5e5ee9349744e924fc"
+  },
+  {
+   "description": "the full report of the one static preflight (driver output)",
+   "sha256": "0df903c81c4422e05bf85c8c6e8d98a99fefffac4435367c46d29402ec17d0fd"
+  },
+  {
+   "description": "the driver-schema authorization record prepared from the reply; never presented to the driver's run mode",
+   "sha256": "d002c75ff69c7572152609be142bfba34b35e6117189417bc7516459215ab261"
+  },
+  {
+   "description": "the static recomputation of every interlock condition against that record",
+   "sha256": "24890aeaeae8386f7adc493481754c4e3db7987b9c5523a1d7ae6340092a395c"
+  },
+  {
+   "description": "the planned run command, recorded and not run",
+   "sha256": "8a967da7715e039a6c10aed84d45eb6ad5b4e71ea1272396f763cd1984105b7d"
+  },
+  {
+   "description": "the prerequisite report of the executing agent",
+   "sha256": "c49108238943fe54ac49616202d1f9d37742f8f4d4f867639501429c2557009a"
+  },
+  {
+   "description": "the independent readiness verification, including an in-process evaluation of the driver's interlock checks without a run",
+   "sha256": "3ce908f684fb08ed99cc2c98697d21cf1d6acc7dafb6f32c7073638a012c2de0"
+  },
+  {
+   "description": "the coordination release of the single invocation; not new human authority",
+   "sha256": "e134d738aa9ff298c1ee7cb0298c962f27190141bf137101bbd9e1c6febd8d97"
+  },
+  {
+   "description": "the run assignment that was prepared and never delivered, retained unchanged",
+   "sha256": "16ebb83af0973c327e6a4acefd6e5470af78a527155211b6046e1f38cc8085f9"
+  },
+  {
+   "description": "the delegating agent's record of the permission refusal, with the reason verbatim and the observed state after it",
+   "sha256": "4f5c47c9b7bdbe70a7c393e974a6fbbbe7ba1a7e4e1a2caae400c7c6f3dc61d1"
+  },
+  {
+   "description": "the delegating agent's record that its proposed disposition was superseded by the terminal stop",
+   "sha256": "6c4b82bad5565aeeb84772cf2164c19392125ac693ee618aa6094e0e67cbc25d"
+  },
+  {
+   "description": "the stop disposition STOP_UNRUN, as originally written (exact bytes recovered; the source of the disposition facts)",
+   "sha256": "a982114308eb90e1679a5564423dc291eb44ea3ed6925d52d701a381b5ea1782"
+  },
+  {
+   "description": "the disclosure of a later overwrite of the stop disposition and of the recovery of its exact original bytes",
+   "sha256": "4e9ff394e5aa425e9ba43f0f95c5e700cb284d18f388c3e14dccd8e5e9d43fb2"
+  },
+  {
+   "description": "the archived byte copies of the six integration files before this revision",
+   "sha256": "4ca34acd010a0a6e785ac5e9f6cac118792420bad381d15df2163b96a337d950"
+  },
+  {
+   "description": "the brief for these records",
+   "sha256": "8db41e630922f14133f74dd363a40099f3a57870d66e41d2c0c7299bafb08cc1"
+  },
+  {
+   "description": "the erratum to that brief",
+   "sha256": "6bcc1bbf01ceef7da9c658c1ac5812f04cf2b91fb15d4c336578ca9850706342"
+  },
+  {
+   "description": "the second erratum to that brief, on the precision of process claims",
+   "sha256": "eda3734da0776b124fb54e7c37b0b33f98ad81ce03131e5b123e71d1ba351e4f"
+  },
+  {
+   "description": "the third erratum to that brief, on network-absence wording, timeline times and source completeness",
+   "sha256": "23c13db69750db8609bba2a8ea34b20035cbf83bb3a4c5cdbc6d45324282e53f"
+  },
+  {
+   "description": "the output record of the independent readiness verification (56 checks), whose recorded time the timeline gives; the readiness record binds it by SHA256",
+   "sha256": "1c203e06633d27826aa81d84cd65f12ace26d67ce3ee0006eb18eacfe8e02939"
+  }
+ ],
+ "superseded_private_version": {
+  "description": "a later version of the stop disposition, written over the original at the same private location; its statement about the non-execution of an earlier capture is incorrect; it is superseded by the disclosure record and is not used as a source",
+  "sha256": "7db084383c56515a4a08ddfa5d41dd5c2012ce5ad59e7704fc9ff1b0fccb0e5c"
+ },
+ "static_preflight": {
+  "utc": "2026-10-10T22:12:57Z",
+  "tier": "PASS",
+  "engine_process_started": false,
+  "process_creation_note": "by reading the exact driver code, the preflight path contains no process-creation call; this is a source-level statement, not an observation of the processes that ran",
+  "checks": [
+   {
+    "id": "bundle.driver",
+    "status": "PASS"
+   },
+   {
+    "id": "bundle.payload",
+    "status": "PASS"
+   },
+   {
+    "id": "bundle.input",
+    "status": "PASS"
+   },
+   {
+    "id": "bundle.parameters",
+    "status": "PASS"
+   },
+   {
+    "id": "bundle.static_identity",
+    "status": "PASS"
+   },
+   {
+    "id": "bundle.run_proposal",
+    "status": "PASS"
+   },
+   {
+    "id": "bundle.decision_packet",
+    "status": "PASS"
+   },
+   {
+    "id": "bundle.parse",
+    "status": "PASS"
+   },
+   {
+    "id": "input.matches_parameters",
+    "status": "PASS"
+   },
+   {
+    "id": "prefix.absolute_normalized",
+    "status": "PASS"
+   },
+   {
+    "id": "interpreter.inside_prefix",
+    "status": "PASS"
+   },
+   {
+    "id": "package.psi4",
+    "status": "PASS"
+   },
+   {
+    "id": "package.libint",
+    "status": "PASS"
+   },
+   {
+    "id": "package.record_names",
+    "status": "PASS"
+   },
+   {
+    "id": "sha256.include/libint2/shell.h",
+    "status": "PASS"
+   },
+   {
+    "id": "sha256.share/psi4/basis/sto-3g.gbs",
+    "status": "PASS"
+   },
+   {
+    "id": "sha256.lib/libint2.dylib",
+    "status": "PASS"
+   },
+   {
+    "id": "sha256.lib/python3.14/site-packages/psi4/core.cpython-314-darwin.so",
+    "status": "PASS"
+   },
+   {
+    "id": "sha256.bin/python3.14",
+    "status": "PASS"
+   },
+   {
+    "id": "runs_root.location",
+    "status": "PASS"
+   },
+   {
+    "id": "attempt.absent",
+    "status": "PASS"
+   },
+   {
+    "id": "free_space.floor",
+    "status": "PASS"
+   },
+   {
+    "id": "r2.accepted_driver_pin",
+    "status": "PASS"
+   },
+   {
+    "id": "r2.bundle.r2_driver",
+    "status": "PASS"
+   },
+   {
+    "id": "r2.bundle.r2_profile",
+    "status": "PASS"
+   },
+   {
+    "id": "r2.bundle.r2_platform_identity",
+    "status": "PASS"
+   },
+   {
+    "id": "r2.bundle.r2_method_revision",
+    "status": "PASS"
+   },
+   {
+    "id": "r2.bundle.r2_run_proposal",
+    "status": "PASS"
+   },
+   {
+    "id": "r2.bundle.r2_decision_packet",
+    "status": "PASS"
+   },
+   {
+    "id": "r2.bundle.method_revision_approval",
+    "status": "PASS"
+   },
+   {
+    "id": "r2.platform_identity.parse",
+    "status": "PASS"
+   },
+   {
+    "id": "r2.sandbox_exec",
+    "status": "PASS"
+   },
+   {
+    "id": "r2.os_build",
+    "status": "PASS"
+   },
+   {
+    "id": "r2.method_revision_decision",
+    "status": "PASS"
+   }
+  ],
+  "replaced_base_checks": [
+   {
+    "id": "network.prerequisite",
+    "status": "FAIL",
+    "detail": "NETWORK_PREREQUISITE_UNRESOLVED",
+    "note": "replaced by r2.method_revision_decision; kept in the report by design"
+   }
+  ],
+  "note": "check identifiers are copied verbatim; those of the sha256 group name prefix-relative files already published in the static identity record; check details, digests, absolute paths and host observations are omitted; a static pass is not readiness, loaded identity or runtime identity"
+ },
+ "derivation": [
+  "results/h2/H2-A-01/README.md, results/h2/H2-A-01/outcome.json, this file and docs/learning/h2/phase-a-r2/H2-A-01-HUMAN-RUN-AUTHORIZATION.md are [AGENT] records written from the private source records listed here, after each digest was checked",
+  "the guard reason, the answer and the question are copied verbatim from the stop disposition and the reply record; the question keeps its typographic characters",
+  "the disposition facts are taken from the stop disposition as originally written, not from the later overwritten version",
+  "the timeline times are those recorded in the private source records, except that the driver-schema authorization record's preparation time is its file modification time, because no time is recorded inside it; the refusal time was not exposed"
+ ],
+ "redaction": [
+  "no absolute or private paths, user or host names, emails, or session, task, pane or agent-instance identifiers",
+  "private records are cited by description and SHA256 only",
+  "the interpreter, prefix, runs root, environment values and wrapped command of the machine binding are not published; the public run proposals give the invocation in placeholder form",
+  "no raw directory is published: no run output exists"
+ ],
+ "integration_files_changed": [
+  {
+   "path": ".agents/RESEARCH-STATE.md",
+   "original_sha256": "a428730127ea84ae18ac079743eb7a0c74a63acace42a25ef29ea4aa0426f1e9",
+   "new_sha256": "36a413c9e8caed90141edad18f5f2cad894ae9fb46f3b9c452ce123b3072d126"
+  },
+  {
+   "path": "README.md",
+   "original_sha256": "c5d92e6abf3387dbde77aaa57533c756a73a221c24d79209f0f02e94a6428f64",
+   "new_sha256": "976ec31980d91cf3c061f8add7e6d3c0936d4854dd8e6681f953a138d63a9706"
+  },
+  {
+   "path": "AGENTS.md",
+   "original_sha256": "99c6005e81f7319ae2735b1102deb1ccf79e1b901bd879195bbee49d9b76910b",
+   "new_sha256": "157b9894a9cd3ad07b02d4574019d4792dc4d60bbdbbc14d4313f54f4e92c187"
+  },
+  {
+   "path": "docs/SOURCES.md",
+   "original_sha256": "5ca2fcab7e94ca2043ddc8e8f69ba237c19c84e9dc0e470c828d1557436f709d",
+   "new_sha256": "c0cb3a4aa01fd5c5c78bfe838d3a27c7d3e780e50158bb627f1d59dca513297c"
+  },
+  {
+   "path": "docs/learning/h2/README.md",
+   "original_sha256": "2c396a95b7f2dbfecff66ebed033f0364c78c92fc9441f7cbec1697f65a017f8",
+   "new_sha256": "5efeed0bd6cd15c0f4f835f942366e2d8ac7b2f970a4f4f8fdaf9790ec899580"
+  },
+  {
+   "path": "provenance/EXPORT-MANIFEST.md",
+   "original_sha256": "2df52c876e45fad341fc875a377dec339565bfd05fb9fd402ba33ee20d99720c",
+   "new_sha256": null,
+   "note": "the manifest binds this file's digest, so only its original digest is recorded here; its new digest is bound later in a private closure record"
+  }
+ ],
+ "new_files": {
+  "paths": [
+   "results/h2/H2-A-01/README.md",
+   "results/h2/H2-A-01/outcome.json",
+   "results/h2/H2-A-01/provenance.json",
+   "docs/learning/h2/phase-a-r2/H2-A-01-HUMAN-RUN-AUTHORIZATION.md"
+  ],
+  "note": "their digests are recorded only in the export manifest, so that no digest cycle arises"
+ },
+ "limits": [
+  "the original stop disposition is identified by its SHA256; a later private version at the same location was overwritten and is superseded by a disclosure record; it is not used as a source",
+  "the stop direction was delivered twice; both deliveries were reporting-only and neither delivered a launch or engine command; the count of run invocations is zero",
+  "no run took place: nothing about the engine, the sandbox profile or the engine environment was observed",
+  "the driver-schema authorization record is checked by bytes and fields only and cannot show that a person authorized anything",
+  "this record authorizes nothing and does not carry the authorization forward"
+ ]
+}

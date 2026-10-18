@@ -1,0 +1,57 @@
+{
+  "schema": "di-mechanosynthesis/h2-phase-a-input/1",
+  "status": {
+    "execution_status": "NOT_RUN",
+    "evidence_label": "[AGENT]",
+    "authorization": "NONE",
+    "note": "Prospective engine input for job H2-A-01. Its consistency with the accepted parameter file is checked by the driver's preflight, not by restatement. It authorizes nothing and is not readiness."
+  },
+  "parameters_file": "../h2-method-parameters.json",
+  "job_id": "H2-A-01",
+  "phase": "A",
+  "method_call": "scf",
+  "molecule": {
+    "R_bohr": 1.4,
+    "units": "bohr",
+    "charge": 0,
+    "multiplicity": 1,
+    "electrons": 2,
+    "atoms": [
+      {"label": "H1", "element": "H", "xyz_bohr": [0.0, 0.0, -0.7]},
+      {"label": "H2", "element": "H", "xyz_bohr": [0.0, 0.0, 0.7]}
+    ]
+  },
+  "molecule_options": {
+    "units": "bohr",
+    "symmetry": "c1",
+    "no_reorient": true,
+    "no_com": true
+  },
+  "engine_options": {
+    "reference": "rhf",
+    "basis": "sto-3g",
+    "guess": "core",
+    "scf_type": "direct",
+    "df_scf_guess": false,
+    "e_convergence": 1e-08,
+    "d_convergence": 1e-08,
+    "maxiter": 50,
+    "fail_on_maxiter": true
+  },
+  "threads": 1,
+  "memory": "500 MiB",
+  "construction": {
+    "note": "[AGENT] values the payload needs to build the molecule with psi4.core.Molecule.from_dict (v1.11 psi4/src/export_mints.cc 228-328) that the accepted parameter file does not state. None of them is a method setting.",
+    "mass_amu": {"H": 1.00782503223},
+    "mass_source": "[AGENT] value of an2masses[1] in the Psi4 v1.11 tagged source, psi4/include/psi4/masses.h line 80; with fix_com and fix_orientation true the frame is not moved, and the mass enters no fixed-nucleus electronic energy (an [AGENT] reading, not a source statement)",
+    "mass_number": {"H": 1},
+    "molrec_provenance": {"creator": "di-mechanosynthesis", "routine": "h2_phase_a_payload.build_molrec", "version": "1"}
+  },
+  "readback_tolerances": {
+    "coordinate_abs_bohr": 1e-12,
+    "coordinate_note": "[AGENT] coordinates are passed in bohr and should be stored as given; this tolerance only absorbs representation noise",
+    "memory_bytes": 524288000,
+    "memory_note": "'500 MiB' parsed by the v1.11 set_memory rule (psi4/driver/p4util/util.py 185-210): 500 x 1024^2 bytes"
+  },
+  "expected_engine_version": "1.11"
+}

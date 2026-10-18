@@ -1,0 +1,268 @@
+{
+ "schema": "di-mechanosynthesis/h2-run-outcome/1",
+ "record": "H2-A-01-continuation-01",
+ "job_id": "H2-A-01",
+ "phase": "A",
+ "route": "R2",
+ "status": "STOP_UNRUN",
+ "stage": "terminal orchestration stop during preparation, before any driver invocation",
+ "status_meaning": "An orchestration stop before any driver invocation. It is not a driver tier (not BLOCK_LAUNCH, STOP_BEFORE_ENERGY, FAILED, QUARANTINE or COMPLETED_PENDING_REVIEW), not an engine failure and not chemistry evidence.",
+ "run_invocations": 0,
+ "run_invocations_across_both_tasks": 0,
+ "driver_invocations_any_mode": 0,
+ "driver_invocations_note": "The driver was not invoked in any mode in this continuation: no code-provenance record, no preflight and no run.",
+ "engine_processes": 0,
+ "engine_processes_note": "No engine process was started; the engine interpreter was never executed.",
+ "attempt_directory_created": false,
+ "runs_root_entries_after_stop": [],
+ "runs_root_note": "Observed read-only after the stop as present, canonical and empty, with no attempt directory. The driver's own runs-root checks were not run in this continuation, and no runs-root prerequisite is claimed as passed.",
+ "driver_tier": null,
+ "driver_tier_note": "The driver was not invoked in any mode, so no driver tier exists.",
+ "scientific_result": null,
+ "scientific_result_note": "No run took place: no energies, no SCF data and no engine output exist.",
+ "permission_rule_added": false,
+ "settings_changed": false,
+ "launch_released": false,
+ "launch_delivered": false,
+ "safeguard_event": {
+  "display_text_verbatim": "Opus 5.5's safeguards stopped the response above · continuing once with that noted",
+  "display_text_note": "four display lines of the executing agent's client, joined with single spaces, without the client's leading bullet marker",
+  "context": "displayed by the executing agent's client in response to the coordinating agent's report-only request for an account of O1 from the executing agent's existing context",
+  "executing_agent_statement_verbatim": "I didn't produce the O1 report. My attempt to answer this request was stopped by a safety classifier, and I won't retry it in any form.",
+  "executing_agent_statement_label": "[AGENT] statement of the executing agent; not an attestation of any mechanism",
+  "report_produced": false,
+  "requested_again": false,
+  "produced_by_another_role": false,
+  "retried": false,
+  "reworded": false,
+  "routed_to_another_role": false,
+  "cause": "not known; not inferred",
+  "mechanism_or_identity": "not independently established and not attested; the displayed notice is evidence that the client reported a stop, not evidence of a backend, model or classifier mechanism, identity or cause",
+  "disposition": "the orchestration operator dispositioned the stop as a binding safeguard event; the continuation's execution scope ended as STOP_UNRUN",
+  "time_utc": "not recorded; after 2026-10-11T01:08:02Z, the file modification time of the executing agent's addendum, which preceded the request, and before 2026-10-11T01:10:58Z, the capture time of the terminal capture",
+  "permanent_limit": "the requested account was not produced; no role will produce, recover or reconstruct it"
+ },
+ "o1": {
+  "command": "echo verify",
+  "command_kind": "one constant-string echo command",
+  "displayed_description_verbatim": "Placeholder to check nothing",
+  "issued": "by the executing agent, with its first SHA256 check of the preparation instructions and before it read them; time not recorded: after 2026-10-11T01:03:52Z, the file modification time of the instructions, and before 2026-10-11T01:07:28Z, the file modification time of the executing agent's pause note",
+  "purpose": "not established",
+  "executing_agent_note_verbatim": "a stray no-op issued alongside step 1, which did nothing",
+  "executing_agent_note_label": "[AGENT] statement of the executing agent in its pause note; not an observation of intent",
+  "claims_not_made": [
+   "that it was harmless",
+   "that it tested a guard, classifier, permission or access check"
+  ],
+  "not_inferred_from": "its exit status, its output or the absence of any launch",
+  "account": "requested by the coordinating agent and not produced (see safeguard_event); the purpose of O1 stays unestablished as a permanent limit"
+ },
+ "instruction_defects": [
+  {
+   "defect": "defect 1, the code-provenance digest",
+   "where": "the private preparation instructions, not the reviewed driver, method, proposal or packet",
+   "description": "a check would have required the fresh code-provenance record's SHA256 to differ from the earlier task's record, although the driver's record is deterministic over an unchanged commit and unchanged bytes and records no timestamp",
+   "found": "by the supervising agent, before evaluation; its record of the defect has the file modification time 2026-10-11T01:06:15Z",
+   "handling": "a prospective erratum, with the file modification time 2026-10-11T01:07:01Z and delivered after that time, made equality the expected result",
+   "evaluated": false
+  },
+  {
+   "defect": "defect 2, runs-root originality",
+   "where": "the private preparation instructions, not the reviewed driver, method, proposal or packet",
+   "description": "a condition required the modification time of the runs root's parent directory to equal that directory's own creation time, which contradicts the logged creation of the runs root inside the parent",
+   "observation": "before any recorded step, the executing agent's read-only observation showed the parent's modification time about 2.24 ms after its creation time; so compared, the literal condition did not hold",
+   "handling": "the executing agent held before the first recorded step and asked for a decision; a correction was drafted by the coordinating agent, not delivered, and became moot with the terminal stop",
+   "runs_root_prerequisite_claimed_passed": false,
+   "note": "the driver's own runs-root checks were not run in this continuation"
+  }
+ ],
+ "human_direction": {
+  "reply_verbatim": "approved. Keep going.",
+  "receipt_time_utc": "2026-10-11T00:56:52.380870+00:00",
+  "receipt_time_qualifier": "the time the orchestration system recorded the reply on receipt; not an independently measured time of the reply; the identity of the person was not independently established",
+  "context": "a reply to the orchestration operator's report of the earlier stop, which had named a supported resolution of the delegation permission check as the next gate",
+  "recorded_as": "direction to continue the same unchanged single attempt of H2-A-01 in a new task, through one exact, non-wildcard, temporary permission rule for the single delegation command, to be added and removed by the orchestration operator only after release; no broad allow, mode change, global setting or bypass",
+  "driver_schema_authorization": false,
+  "earlier_authorization_record": "docs/learning/h2/phase-a-r2/H2-A-01-HUMAN-RUN-AUTHORIZATION.md",
+  "run_decision_packet": {
+   "path": "docs/learning/h2/phase-a-r2/H2-A-R2-RUN-DECISION-PACKET.md",
+   "sha256": "eea5cfaaf459adcb82373de1cd317493837431b8acbd327f7a09a6dee9d8edfe"
+  },
+  "run_proposal_02": {
+   "path": "docs/learning/h2/phase-a-r2/H2-A-R2-RUN-PROPOSAL-02.md",
+   "sha256": "a9c11ba494eb9384d348b180c8ddb7cb64cbb258ae040a411a16510628640408"
+  },
+  "M1": "ACCEPTED by the earlier authorization and unchanged, not resolved: 500 MiB is an engine setting, not an operating-system memory limit",
+  "terms_unchanged": {
+   "max_attempts": 1,
+   "retries": 0,
+   "method": "RHF",
+   "basis": "STO-3G",
+   "R_bohr": 1.4,
+   "wall_bound_s": 300,
+   "threads": 1,
+   "maxiter": 50,
+   "engine_memory_setting": "500 MiB"
+  },
+  "exclusions": [
+   "Phase B",
+   "W1 rerun",
+   "MS001 Stage1/optionA",
+   "new engine/method/settings",
+   "installation/build",
+   "engine network",
+   "outside agent-created notes",
+   "staging/commit/push/merge/deploy/remote publication"
+  ],
+  "exercised": false
+ },
+ "invocation_numerically_unspent": true,
+ "launch_permission_remaining": false,
+ "authorization_carried_forward": false,
+ "future_attempt": "Whether any future attempt is authorized is for the people directing the project.",
+ "not_reached": [
+  "no new driver-schema authorization record",
+  "no code-provenance record",
+  "no preflight",
+  "no exact delegation-command candidate",
+  "no permission grant",
+  "no release"
+ ],
+ "earlier_readiness_checks": "historical records of the earlier task; not presented as fresh for this continuation",
+ "not_taken": [
+  "no permission rule added and no permission, setting, policy or configuration change",
+  "no driver invocation in any mode",
+  "the safeguard-stopped request for an account of O1: not retried, not reworded and not routed to another role; no new request for the account and no production of it by another role",
+  "the launch path: no delegation command prepared for delivery, no permission added, and nothing released, delivered or launched by any route",
+  "no installation, build or system change"
+ ],
+ "administrative_corrections": "Administrative and process corrections did occur and are kept in private records: the prospective erratum to the preparation instructions, and administrative syntax and transport corrections recorded by the supervising agent. They are not scientific execution and not retries of the stopped request.",
+ "baseline_checks": {
+  "public_files": "115 public files equal to the archived baseline, recorded at 2026-10-11T00:59:44Z",
+  "earlier_closure_references": "checked, recorded at 2026-10-11T01:01:52Z"
+ },
+ "settings_source_observation": "at 2026-10-11T01:05:18Z (recorded utc), a read-only observation found that the coordinating agent's client loads the repository-local settings source; the settings file was unchanged and no rule was added; the exact file was mapped from the displayed source class through the official documentation, which does not show that the installed client behaves exactly as documented",
+ "documentation_and_network": {
+  "observed_documentation_retrieval": {
+   "by": "the supervising agent, through its web tool, on 2026-10-11, for the supported permission-resolution route",
+   "pages": [
+    "https://code.claude.com/docs/en/permissions",
+    "https://code.claude.com/docs/en/settings",
+    "https://code.claude.com/docs/en/interactive-mode"
+   ],
+   "note": "all three pages, including the interactive-mode page for the /status command, are named in the supervising agent's persisted statement of the three documentation URLs and the access date, which is not the original web-tool transcript or captured page content; nothing is claimed about the pages beyond what that statement says; the permissions and settings pages are also named in the supervising agent's earlier documentation record; no chemistry source was retrieved; documentation retrieval is not a scientific source and changes no evidence label"
+  },
+  "host_and_client_traffic": "not measured; no claim is made",
+  "engine": "never executed"
+ },
+ "timeline_utc": [
+  {
+   "utc": "2026-10-11T00:56:52Z",
+   "kind": "receipt time",
+   "event": "the reply recorded on receipt"
+  },
+  {
+   "utc": "2026-10-11T00:59:44Z",
+   "kind": "recorded utc",
+   "event": "static check of the 115 public files against the archived baseline"
+  },
+  {
+   "utc": "2026-10-11T01:00:34Z",
+   "kind": "file modification time",
+   "event": "private record of the documentation reading; the retrieval time itself is not recorded"
+  },
+  {
+   "utc": "2026-10-11T01:01:52Z",
+   "kind": "recorded utc",
+   "event": "references of the earlier task's closure checked"
+  },
+  {
+   "utc": "2026-10-11T01:03:52Z",
+   "kind": "file modification time",
+   "event": "preparation instructions (preparation only, no run); delivered to the executing agent after this time"
+  },
+  {
+   "utc": "not recorded",
+   "kind": "not recorded",
+   "event": "O1 issued with the first SHA256 check of those instructions, after 2026-10-11T01:03:52Z and before 2026-10-11T01:07:28Z"
+  },
+  {
+   "utc": "2026-10-11T01:05:18Z",
+   "kind": "recorded utc",
+   "event": "read-only settings-source observation; settings unchanged; no rule added"
+  },
+  {
+   "utc": "2026-10-11T01:06:15Z",
+   "kind": "file modification time",
+   "event": "the supervising agent's record of defect 1, found before evaluation"
+  },
+  {
+   "utc": "2026-10-11T01:07:01Z",
+   "kind": "file modification time",
+   "event": "prospective erratum for defect 1; delivered after this time"
+  },
+  {
+   "utc": "2026-10-11T01:07:28Z",
+   "kind": "file modification time",
+   "event": "the executing agent's pause note, with its read-only runs-root observation (defect 2)"
+  },
+  {
+   "utc": "2026-10-11T01:08:02Z",
+   "kind": "file modification time",
+   "event": "the executing agent's addendum: held before the first recorded step; decision on defect 2 requested"
+  },
+  {
+   "utc": "not recorded",
+   "kind": "not recorded",
+   "event": "the coordinating agent's report-only request for an account of O1, and the safeguard notice displayed in response, both after 2026-10-11T01:08:02Z and before 2026-10-11T01:10:58Z"
+  },
+  {
+   "utc": "2026-10-11T01:10:58Z",
+   "kind": "capture time",
+   "event": "terminal capture of the safeguard notice and the executing agent's statement"
+  },
+  {
+   "utc": "2026-10-11T01:12:25Z",
+   "kind": "file modification time",
+   "event": "the coordinating agent's drafted correction for defect 2, with its proposed disposition; not delivered"
+  },
+  {
+   "utc": "2026-10-11T01:12:40Z",
+   "kind": "recorded utc",
+   "event": "terminal disposition STOP_UNRUN, with the observed state after the stop"
+  }
+ ],
+ "open_items": {
+  "M1": "accepted by the person, not resolved",
+  "E1": "open; not observed",
+  "libint_load_name_risk": "open; not observed",
+  "engine_under_sandbox_profile": "open; not observed",
+  "loaded_identity": "open; not observed",
+  "P4_meaning_of_reported_total_energy": "open",
+  "source_to_binary_correspondence": "open"
+ },
+ "gates": {
+  "H2": "no result; NOT_RUN",
+  "phase_B": "not authorized",
+  "W1": "STOPPED (S10)",
+  "E01": "technically BLOCKED and scientifically INDETERMINATE",
+  "C3_readiness": "BLOCKED",
+  "MS001_stage1": "BLOCKED",
+  "option_A": "BLOCKED"
+ },
+ "review_status": "independent review pending",
+ "evidence_label": "none: a process record of a stop before any driver invocation; no chemistry evidence class applies",
+ "limits": [
+  "[AGENT] record written from private task records identified by SHA256 in provenance.json",
+  "the missing account of O1, the unestablished purpose of O1 and the unknown cause of the safeguard stop are permanent limits",
+  "counts are scoped to observed task activity; they are not a whole-machine audit",
+  "host and agent-client network traffic was not measured, and no claim about it is made",
+  "in general, where the agent clients keep temporary or cache files is not established; one exception was reported: during the reporting work after the stop, the executing agent reported ([AGENT]) that its client moved one long-running read-only check to the background and wrote that task's output to one client-managed file outside the repository; the executing agent stopped the task and did not read the file; the path is kept in private records; other destinations are not established, and no filesystem inspection verified the report",
+  "file modification and capture times are filesystem or capture metadata, not an attestation",
+  "nothing about the engine, the sandbox profile or the engine environment was tested",
+  "this record does not carry any authorization forward and authorizes nothing"
+ ],
+ "sources": [
+  "docs/SOURCES.md entry [59]"
+ ]
+}

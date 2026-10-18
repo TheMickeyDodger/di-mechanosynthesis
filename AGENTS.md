@@ -5,8 +5,11 @@ controlled chemistry. It holds an evidence policy, candidate input structures, a
 capability record, the complete public MS-000 feasibility package with its closure record, the MS-001 Stage 0
 package for scope option B (definitions with independent review approval and Lead acceptance, C4 approved by a
 person on 2026-09-27, Stage 0 closed as a set of frozen prospective definitions, and geometrically built input
-structures), figure renderers, provenance manifests and the record of one stopped engine-validation attempt
-(`results/e01/`), with its postmortem and installed-build survey.
+structures), figure renderers, provenance manifests, an H2 learning package (a lesson, a prospective, unrun
+method specification and a Phase A run proposal whose driver refuses launch), the records of one authorized H2 attempt
+that stopped before launch without being run and of its continuation, which stopped before any driver invocation
+(`results/h2/`), and the record of one stopped engine-validation attempt (`results/e01/`), with its
+postmortem and installed-build survey.
 That attempt is closed as technically blocked and scientifically indeterminate. The repository contains no
 converged quantum-chemistry results. The
 [README](README.md) describes the scientific scope. This document sets out the conventions that contributors, and
@@ -24,9 +27,11 @@ automated agents in particular, are expected to follow.
 | `docs/engine-capability-status.md` | What archived engine sources and the installed build establish, and what remains unverified |
 | `docs/ms-000/` | Public adaptation of the complete MS-000 feasibility package, including its source ledger, ASE smoke-test record and closure record |
 | `docs/ms-001/` | MS-001 Stage 0 package (scope option B): authorization record, provenance wiring test, coupling route, method declaration, drive protocol, tolerances, validation set, failure record, source ledger, freeze record, C4 human approval record, the approval records of the N8 revision, of the G4 declaration and of the P2 build declaration, source resolution record and proposed C4 revision options (not applied); the pre-Stage-1 closure packet with its installed-build audit, proposed G4 dftd4 declaration, N8 decision packet and proposed C3 wiring test (proposals; the G4 declaration and N8 option O2 were later approved and applied, as the package index records), and its source ledger |
+| `docs/learning/h2/` | H2 learning package: lesson, navigation index, prospective unrun method specification and parameter file; Phase A run proposal in `phase-a/` (driver, payload, input, static identity record, tests, decision packet), not authorized and refusing launch; route-R2 method revision in `phase-a-r2/` (driver, sandbox profile, platform identity record, tests, decision packet), approved by a person, with its approval record, a current run proposal and a run-decision packet; its driver binds the approval and refuses every launch without a run authorization; the run authorization record of the one attempt a person authorized on 2026-10-10, not exercised (STOP_UNRUN before launch; no launch permission remains in the task that held it); no results |
 | `structures/ms-001/` | MS-001 Stage 0 geometries (`[AGENT]`, built geometrically, unrelaxed) with their record of declared choices and measured construction values |
 | `results/e01/` | The stopped and closed E-01 attempt: report, postmortem and installed-build survey, machine-readable outcome, configuration used and redacted engine output |
-| `tools/` | Deterministic renderers of Figures 1 and 2, with their input tables; the MS-001 Stage 0 geometry generator; the C3 provenance wiring driver |
+| `results/h2/` | The H2-A-01 stop record: one authorized attempt stopped as STOP_UNRUN before launch, with no run invocation and no engine process; report, machine-readable outcome and provenance; and the stop record of its continuation in `H2-A-01-continuation-01/` (2026-10-11): STOP_UNRUN during preparation, before any driver invocation, with no engine process; report, machine-readable outcome and provenance; no results |
+| `tools/` | Deterministic renderers of Figures 1 and 2, with their input tables; the MS-001 Stage 0 geometry generator; the C3 provenance wiring driver; the W1 wiring-test driver and job class, published as run (untracked) |
 | `provenance/EXPORT-MANIFEST.md` | SHA256 and derivation of every public file |
 | `.agents/RESEARCH-STATE.md` | Research-state record: intended end state, gates, status, open issues and next work |
 
@@ -110,6 +115,10 @@ readiness remains blocked. The MS-001 Stage 0 package is further restricted as f
   geometry.
 - **Coupling.** No composition of GFN0-xTB with ωB97X-D3 is described as demonstrated.
 - **The wiring job.** The provenance wiring job is not described as chemistry or method evidence.
+
+The H2 learning package in `docs/learning/h2/` records no calculation, and its settings are `[AGENT]` proposals. It
+is not described as a result, as readiness, as authorization of a run or as evidence of any learner's mastery. The
+existing P2 build declaration is not described as the engine identity of an H2 calculation or as readiness for one.
 
 ## Adding or changing content
 

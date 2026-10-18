@@ -1,0 +1,320 @@
+{
+  "schema": "di-mechanosynthesis/h2-method-parameters/1",
+  "status": {
+    "execution_status": "NOT_RUN",
+    "evidence_label": "[AGENT]",
+    "authorization": "NONE",
+    "readiness_claimed": false,
+    "note": "Every setting in this document is an [AGENT] proposal for a calculation that has not been run; it is not a measured capability, not a readiness claim, and not an authorization."
+  },
+  "system": {
+    "species": "H2",
+    "charge": 0,
+    "multiplicity": 1,
+    "electrons": 2,
+    "atoms": [
+      {
+        "label": "H1",
+        "element": "H",
+        "position_bohr": "(0, 0, -R/2)"
+      },
+      {
+        "label": "H2",
+        "element": "H",
+        "position_bohr": "(0, 0, +R/2)"
+      }
+    ],
+    "axis": "z",
+    "coordinate_unit": "bohr",
+    "note_nuclei": "Within a job the nuclei never move, so no fixed-atom or optimizer setting applies.",
+    "note_angstrom": "Angstrom values are for orientation only, converted with the CODATA 2022 Bohr radius [51]."
+  },
+  "energy_convention": {
+    "E_elec": "E_elec excludes V_NN and includes electron kinetic energy.",
+    "E_BO": "E_BO = E_elec + V_NN.",
+    "V_NN": "V_NN = 1/R hartree, with R in bohr.",
+    "reported_quantities": "Each run records the engine's reported total energy and the engine's reported nuclear repulsion separately.",
+    "engine_total_meaning": "OPEN until shown for the exact build: which energy the engine's reported total is.",
+    "E_elec_derivation": "E_elec is derived only after the engine's total is shown for the exact build.",
+    "double_counting_guard": "Never add V_NN twice."
+  },
+  "electronic_model": {
+    "method": "RHF",
+    "basis": "STO-3G [50]",
+    "basis_functions_expected": 2,
+    "reason": "[50] shows one contracted s function per H, so H2 has two basis functions and the variational space can be counted by hand; this makes no claim that STO-3G is the smallest standard basis."
+  },
+  "phases": {
+    "A": {
+      "R_bohr": [
+        1.4
+      ],
+      "job_sequence": [
+        {
+          "job_id": "H2-A-01",
+          "R_bohr": 1.4
+        }
+      ],
+      "status": "PROPOSED_NOT_AUTHORIZED",
+      "note": "1.4 bohr is a round value chosen for transparent arithmetic; it is not an equilibrium, not a target, and not an expected minimum."
+    },
+    "B": {
+      "R_bohr": [
+        1.0,
+        1.2,
+        1.4,
+        1.6,
+        1.8,
+        2.0,
+        2.2,
+        2.4,
+        2.6
+      ],
+      "job_sequence": [
+        {
+          "job_id": "H2-B-01",
+          "R_bohr": 1.0
+        },
+        {
+          "job_id": "H2-B-02",
+          "R_bohr": 1.2
+        },
+        {
+          "job_id": "H2-B-03",
+          "R_bohr": 1.4
+        },
+        {
+          "job_id": "H2-B-04",
+          "R_bohr": 1.6
+        },
+        {
+          "job_id": "H2-B-05",
+          "R_bohr": 1.8
+        },
+        {
+          "job_id": "H2-B-06",
+          "R_bohr": 2.0
+        },
+        {
+          "job_id": "H2-B-07",
+          "R_bohr": 2.2
+        },
+        {
+          "job_id": "H2-B-08",
+          "R_bohr": 2.4
+        },
+        {
+          "job_id": "H2-B-09",
+          "R_bohr": 2.6
+        }
+      ],
+      "run_mode": "one at a time",
+      "status": "CONDITIONAL_NOT_AUTHORIZED",
+      "requires": "Only after Phase A has been run under its own authorization and independently reviewed, and only with a person's separate authorization of Phase B.",
+      "note": "H2-B-03 repeats 1.4 bohr as a separate job. The lowest point on the grid is a grid minimum only; no interpolation or fitting is performed."
+    }
+  },
+  "proposed_engine_options": {
+    "reference": {
+      "value": "rhf",
+      "basis_for_choice": "[AGENT] RHF chosen as the reference for a closed-shell singlet with identical alpha and beta densities [48, Spin/Symmetry Treatment]",
+      "version_evidence": "OPEN: semantics not yet shown for the exact H2 build"
+    },
+    "basis": {
+      "value": "sto-3g",
+      "basis_for_choice": "[50] shows one contracted s function per H, so H2 has two basis functions",
+      "version_evidence": "PARTIAL: installed basis bytes not established for the H2 build [31]"
+    },
+    "guess": {
+      "value": "core",
+      "basis_for_choice": "core Hamiltonian start, no electron repulsion [48, Initial Guess]",
+      "version_evidence": "OPEN: not yet shown for the exact H2 build"
+    },
+    "scf_type": {
+      "value": "direct",
+      "basis_for_choice": "exact integrals, no fitting basis",
+      "version_evidence": "PARTIAL: read from version-matched v1.11 source for P2 in docs/ms-001/SOURCE-RESOLUTION.md section 8 [31] and declared in docs/ms-001/B2-METHOD-DECLARATION.md section 6 [30, 39]"
+    },
+    "df_scf_guess": {
+      "value": false,
+      "basis_for_choice": "[AGENT] no density-fitting basis for the SCF guess, consistent with scf_type direct",
+      "version_evidence": "PARTIAL: same source pairing as scf_type [30, 31, 39]"
+    },
+    "e_convergence": {
+      "value": 1e-08,
+      "basis_for_choice": "set explicitly because defaults depend on calculation type [48, Convergence and Algorithm Defaults]",
+      "version_evidence": "OPEN: not yet shown for the exact H2 build"
+    },
+    "d_convergence": {
+      "value": 1e-08,
+      "basis_for_choice": "set explicitly because defaults depend on calculation type [48, Convergence and Algorithm Defaults]",
+      "version_evidence": "OPEN: not yet shown for the exact H2 build"
+    },
+    "maxiter": {
+      "value": 50,
+      "basis_for_choice": "[AGENT] bounded iteration count so a stuck run stops visibly",
+      "version_evidence": "OPEN: not yet shown for the exact H2 build"
+    },
+    "fail_on_maxiter": {
+      "value": true,
+      "basis_for_choice": "[AGENT] a run that reaches the iteration limit must be reported as failed, not converged",
+      "version_evidence": "OPEN: not yet shown for the exact H2 build"
+    },
+    "units": {
+      "value": "bohr",
+      "basis_for_choice": "[AGENT] atomic units keep R transparent in the scan values",
+      "version_evidence": "OPEN: not yet shown for the exact H2 build"
+    },
+    "symmetry": {
+      "value": "c1",
+      "basis_for_choice": "[AGENT] no point-group symmetry assumed, so the two H sites stay as distinct labels",
+      "version_evidence": "OPEN: not yet shown for the exact H2 build"
+    },
+    "no_reorient": {
+      "value": true,
+      "basis_for_choice": "[AGENT] keep the input orientation so coordinates are comparable across jobs",
+      "version_evidence": "OPEN: not yet shown for the exact H2 build"
+    },
+    "no_com": {
+      "value": true,
+      "basis_for_choice": "[AGENT] do not translate to the center of mass, keeping the fixed-R geometry explicit",
+      "version_evidence": "OPEN: not yet shown for the exact H2 build"
+    },
+    "threads": {
+      "value": 1,
+      "basis_for_choice": "[AGENT] single thread for deterministic resource accounting",
+      "version_evidence": "OPEN: not yet shown for the exact H2 build"
+    },
+    "memory": {
+      "value": "500 MiB",
+      "basis_for_choice": "[AGENT] engine-level memory bound for a two-electron system",
+      "version_evidence": "OPEN: engine bound, not an operating-system limit"
+    }
+  },
+  "resource_bounds": {
+    "phase_A_max_jobs": 1,
+    "phase_B_max_jobs": 9,
+    "sequential": true,
+    "threads": 1,
+    "engine_memory_mib": 500,
+    "engine_memory_note": "[AGENT] engine-level bound for the run, not an operating-system limit",
+    "wall_seconds_per_job": 300,
+    "wall_note": "[AGENT] enforced by the driver, not the engine",
+    "automatic_retries": 0,
+    "scratch": {
+      "fresh_empty_directory_per_job": true,
+      "free_space_sampled": "before and after each job",
+      "output_file_sizes_recorded": true
+    }
+  },
+  "stop_conditions": [
+    "nonzero exit",
+    "timeout",
+    "SCF not converged or iteration limit reached",
+    "nonfinite energy",
+    "any reported identity mismatch: engine version or build, method, reference, basis, charge, multiplicity, electron count, basis-function count, atom count, coordinates, units",
+    "missing reported nuclear repulsion",
+    "reported nuclear repulsion differing from 1/R by more than 1e-10 hartree, a geometry and unit integrity check only",
+    "any missing provenance field",
+    "any network access or installation attempt",
+    "rule: stop the sequence, keep all output, mark remaining points NOT_RUN, change no setting"
+  ],
+  "provenance_fields": [
+    "Code identity",
+    "Configuration",
+    "Software version",
+    "Input coordinates and atom identifiers",
+    "Calculation performed",
+    "Random seed (record as none)",
+    "Hardware and environment",
+    "Outputs and hashes",
+    "Failure record",
+    "Review record"
+  ],
+  "prerequisites": [
+    {
+      "id": "P1",
+      "title": "Exact engine build identity for H2",
+      "status": "OPEN",
+      "note": "candidate only: the Psi4 1.11 build declared for P2 in docs/ms-001/B2-METHOD-DECLARATION.md section 6 [39]; not H2 identity or readiness"
+    },
+    {
+      "id": "P2",
+      "title": "Version-matched semantics and defaults of every proposed option",
+      "status": "PARTIAL",
+      "note": "version-matched v1.11 source read in docs/ms-001/SOURCE-RESOLUTION.md section 8 [31]"
+    },
+    {
+      "id": "P3",
+      "title": "Installed STO-3G basis bytes, comparison with [50] and normalization",
+      "status": "PARTIAL",
+      "note": "installed bytes, comparison with [50] and normalization not established [31]"
+    },
+    {
+      "id": "P4",
+      "title": "Meaning of the reported energies",
+      "status": "OPEN",
+      "note": "which energy the engine's reported total is stays OPEN until shown for the exact build"
+    },
+    {
+      "id": "P5",
+      "title": "Hashed driver, input and atom map, exact invocation, no network",
+      "status": "OPEN",
+      "note": "[AGENT] hashes of driver, input and atom map and the exact invocation must be recorded; no network access"
+    },
+    {
+      "id": "P6",
+      "title": "Resource and environment controls",
+      "status": "OPEN",
+      "note": "[AGENT] resource and environment controls must be recorded per job"
+    },
+    {
+      "id": "P7",
+      "title": "Provenance and failure record",
+      "status": "OPEN",
+      "note": "[AGENT] the provenance and failure record must be complete for every job"
+    },
+    {
+      "id": "P8",
+      "title": "Independent review of the concrete run package",
+      "status": "OPEN",
+      "note": "the concrete run package must pass independent review before any run"
+    },
+    {
+      "id": "P9",
+      "title": "A person's separate, bounded run authorization",
+      "status": "OPEN",
+      "note": "a person's separate, bounded authorization is required for any run"
+    }
+  ],
+  "exclusions": [
+    "geometry optimization",
+    "gradients",
+    "frequencies",
+    "UHF",
+    "basis comparison",
+    "correlated methods",
+    "points beyond 2.6 bohr",
+    "stability analysis (the development manual places RHF stability checks on the PK algorithm [48, Stability Analysis])"
+  ],
+  "gates": {
+    "W1": "STOPPED_S10",
+    "E01": "technically BLOCKED and scientifically INDETERMINATE",
+    "E01_note": "the H2 proposal uses DIRECT, so a run would neither exercise nor diagnose the PK path where E-01 aborted [21, 27]",
+    "C3_readiness": "BLOCKED",
+    "MS001_stage1": "BLOCKED",
+    "option_A": "BLOCKED",
+    "next_gate": "a concrete version-bound run proposal, independently reviewed and presented for a person's decision, covering Phase A only, with Phase B a separate later decision"
+  },
+  "sources": [
+    "[21]",
+    "[27]",
+    "[30]",
+    "[31]",
+    "[39]",
+    "[48]",
+    "[50]",
+    "[51]"
+  ],
+  "results": null
+}

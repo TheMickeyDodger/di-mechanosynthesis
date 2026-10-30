@@ -1,0 +1,208 @@
+{
+ "schema": "di-mechanosynthesis/h2-run-outcome/2",
+ "job_id": "H2-A-01",
+ "phase": "A",
+ "route": "R2",
+ "status": "COMPLETED_PENDING_REVIEW",
+ "status_meaning": "The driver's own tier for one authorized attempt that ran to its end with no reason recorded. It is the driver's immutable label, was not rewritten after review, and is not a statement about chemistry.",
+ "driver_tier": "COMPLETED_PENDING_REVIEW",
+ "driver_reasons": [],
+ "run_invocations": 1,
+ "attempts_used": 1,
+ "max_attempts": 1,
+ "retries": 0,
+ "attempt_directory": "H2-A-01",
+ "runs_root_entries_after_run": [
+  "H2-A-01"
+ ],
+ "authorization": {
+  "description": "one bounded attempt authorized by the project owner on 2026-10-29",
+  "date": "2026-10-29",
+  "receipt_time_utc": "2026-10-29T20:19:15Z",
+  "receipt_time_qualifier": "the time the separate orchestration system recorded the decision on receipt; not an independently measured time of the decision; the identity of the person was not independently established",
+  "earlier_authorization_of_2026_10_10": "not exercised (STOP_UNRUN); not carried forward",
+  "M1": "stays accepted but not resolved: 500 MiB is an engine setting, not an operating-system memory limit"
+ },
+ "settings": {
+  "method": "RHF",
+  "basis": "STO-3G",
+  "R_bohr": 1.4,
+  "charge": 0,
+  "multiplicity": 1,
+  "electrons": 2,
+  "scf_type": "DIRECT",
+  "guess": "CORE",
+  "df_scf_guess": 0,
+  "e_convergence": 1e-08,
+  "d_convergence": 1e-08,
+  "maxiter": 50,
+  "fail_on_maxiter": 1,
+  "threads": 1,
+  "engine_memory_setting": "500 MiB",
+  "wall_bound_s": 300
+ },
+ "process": {
+  "exit_code": 0,
+  "timed_out": false,
+  "elapsed_s": 8.903699540998787,
+  "start_utc": "2026-10-29T20:39:49.307807+00:00",
+  "end_utc": "2026-10-29T20:39:58.211526+00:00",
+  "wall_bound_s": 300,
+  "group_members_after_exit": false,
+  "peak_child_rss_raw": 174800896,
+  "peak_child_rss_note": "ru_maxrss of the direct child from wait4; an observation only, unit platform-defined"
+ },
+ "checks": {
+  "initial_preflight": {
+   "checks_passed": 34,
+   "ok": true
+  },
+  "final_preflight": {
+   "checks_passed": 35,
+   "ok": true
+  },
+  "post_run": {
+   "checks_passed": 33,
+   "ok": true
+  },
+  "retained_failed_base_check": {
+   "id": "network.prerequisite",
+   "status": "FAIL",
+   "detail": "NETWORK_PREREQUISITE_UNRESOLVED",
+   "present_in": [
+    "initial_preflight",
+    "final_preflight",
+    "post_run"
+   ],
+   "note": "replaced under the approved route-R2 semantics (prevention by sandbox profile, without detection); not relabelled; no claim about network traffic"
+  }
+ },
+ "recorded_values": {
+  "note": "values are strings, as recorded; hartree",
+  "reported_total_energy_hartree": {
+   "value": "-1.11671432506257",
+   "basis": "engine-reported",
+   "source": "raw/result.json"
+  },
+  "reported_nuclear_repulsion_hartree": {
+   "value": "0.7142857142857143",
+   "basis": "engine-reported",
+   "source": "raw/result.json"
+  },
+  "electronic_energy_hartree": {
+   "value": "-1.8310000393482843",
+   "basis": "independent review's derivation: reported total minus reported nuclear repulsion, for this build",
+   "source": "independent review (private record); not printed by the engine"
+  },
+  "scf_iterations": 2,
+  "converged": true,
+  "converged_basis": "no SCFConvergenceError with FAIL_ON_MAXITER true (v1.11 scf_iterator.py 85-97, 608-609)",
+  "engine_version": "1.11",
+  "single_point": true
+ },
+ "disposition": {
+  "orchestration_run_record_requirement": "recorded as MET on a retained supplied-source basis only: the identifier tuple matches, the result and its full review are bound and durable and not terminal-only, but the external files and whole-store digests were supplied and are not independently checked or authenticated as to current state; ingestion of the result into that system is absent, the approved text does not require it, and it is not claimed",
+  "reviewed_calculation_requirement": "recorded as NOT MET: its provenance clause stays open on the engine's source-code identity; no [COMP-PRED]"
+ },
+ "classification": {
+  "comp_pred_assigned": false,
+  "record": "[AGENT] summary of private task records and of a recorded software output",
+  "numerical_values": "actual software output of one run of the engine, recorded as such; not model-generated",
+  "comp_pred": "NOT GRANTED. [COMP-PRED] needs complete evidence-policy section 4 provenance and independent review (evidence policy section 2). The remaining gap is the engine's source-code identity: source-to-binary correspondence is not established. The classification belongs to the independent review and Lead acceptance, which are recorded privately; this record does not change it."
+ },
+ "host_summary_post_run": {
+  "timing": "captured 2026-10-29T21:37:21Z by a read-only capture, about 57 min 32 s after the launch record's time; not captured by the driver during the run",
+  "architecture": "arm64",
+  "processor_brand": "Apple M5 Pro",
+  "cpus": 18,
+  "core_levels": {
+   "hw.perflevel0.physicalcpu": 6,
+   "hw.perflevel1.physicalcpu": 12,
+   "note": "which level is performance and which is efficiency is an inference, not shown in the capture"
+  },
+  "physical_memory_bytes": 68719476736,
+  "hardware_model": "Mac17,9",
+  "os": "macOS 27.0.1 build 26A434",
+  "kernel": "Darwin 27.0.0",
+  "last_boot_utc": "2026-10-06T01:53:17Z",
+  "supported_by_retained_capture": [
+   "OS product and build",
+   "last boot precedes the launch",
+   "hardware numbers",
+   "host name (not published)"
+  ],
+  "supplied_unverified": [
+   "equality of the recorded sandbox-exec digest with the digest of the installed program at capture time",
+   "existence of the recorded absolute paths at capture time"
+  ],
+  "limits": [
+   "same host is supported by host name, OS build and boot time but not uniquely identified: no serial number or hardware UUID was captured",
+   "the hardware numbers match the host after the run only",
+   "exclusivity of the capture is indeterminate: no independent trace",
+   "load, thermal state and memory pressure at run time are UNOBSERVED"
+  ]
+ },
+ "engine_identity": {
+  "package": "conda-forge psi4 1.11 build py314h53d0584_1",
+  "archive_sha256": "92d4aeb73fe7027bd239a656cf353461490420d76096ae762bd9f1c29ed4da10",
+  "banner_revision": "the build's placeholder, 'Git: Rev {} zzzzzzz' (redacted/psi4-output.dat line 6)",
+  "source_to_binary_correspondence": "NOT ESTABLISHED; the repository catalogue records that the material the project holds cannot establish it (docs/SOURCES.md [31], [37], [52], [53], [54])",
+  "supplied_explanations": {
+   "label": "SUPPLIED: a read-only observation of the external engine environment and package cache, made outside this project's boundary and not read by this project",
+   "core_extension_digest_difference": "conda's declared binary prefix replacement followed by ad hoc re-signing; the installed file matches conda's own install-time record",
+   "banner_placeholder": "the placeholder that the shipped version metadata defines; not a real revision identifier",
+   "limits": [
+    "the supplied evidence does not show tampering or a different build; that is an absence of evidence and not a proved negative",
+    "the patch and re-signing were not reproduced byte for byte",
+    "the digest match is conda's own install-time self-record"
+   ]
+  },
+  "loaded_identity": "the run's own identity record lists 468 loaded images including libint2.dylib at the engine prefix, a runtime observation; a path is not a build identity and the load name encodes no version, so the loaded build, version and source linkage are unresolved",
+  "recorded_core_extension_digest_matches_E01_method_config": true,
+  "recorded_core_extension_digest_note": "one digest agreeing between two records; no whole-build or runtime equivalence is inferred"
+ },
+ "observations_not_explained": {
+  "omp_warning_179": {
+   "text_verbatim": "OMP: Warning #179: Function Can't set size of /tmp file failed:",
+   "locator": "raw/engine.stderr line 1",
+   "status": "INDETERMINATE: cause and numerical impact unknown; harmlessness unproved; convergence does not prove it harmless"
+  },
+  "current_energy_alias": {
+   "status": "[GAP]",
+   "locator": "docs/learning/h2/phase-a/h2_phase_a_payload.py line 445 sets the source text to a literal; not a read-back",
+   "agreement": "the returned value, the printed final energy and the printed total agree (psi4-output.dat lines 177 and 184, psi4-output.log line 3), but the label is not independently proved"
+  },
+  "platform_injected_environment_name": {
+   "value": [
+    "__CF_USER_TEXT_ENCODING"
+   ],
+   "status": "recorded, not interpreted (E1 stays open)"
+  }
+ },
+ "open_items": [
+  "P1",
+  "loaded identity",
+  "Libint load-name question",
+  "E1",
+  "compatibility with the sandbox profile",
+  "source-to-binary correspondence",
+  "M1 accepted but not resolved",
+  "retention and execution completeness INDETERMINATE"
+ ],
+ "not_claimed": [
+  "a dissociation curve",
+  "an optimized or predicted equilibrium bond length, or an optimized geometry",
+  "readiness for any further work",
+  "parity with any other calculation",
+  "a reproduction of, or agreement with, the benchmark study",
+  "validation of any donor, surface, pathway or the E-01 diagnosis",
+  "a [COMP-PRED] class"
+ ],
+ "gates": {
+  "phase_B": "NOT_RUN",
+  "E-01": "technically BLOCKED and scientifically INDETERMINATE and unexplained",
+  "W1": "STOPPED (S10)",
+  "C3_readiness_Stage_1_option_A": "BLOCKED",
+  "delivery": "none"
+ }
+}

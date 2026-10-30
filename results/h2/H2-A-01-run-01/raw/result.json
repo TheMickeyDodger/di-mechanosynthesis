@@ -1,0 +1,61 @@
+{
+ "banner_preserved_after_energy": true,
+ "converged": true,
+ "converged_basis": "no SCFConvergenceError with FAIL_ON_MAXITER true (v1.11 scf_iterator.py 85-97, 608-609)",
+ "energy_call_utc": "2026-10-29T20:39:58.122086+00:00",
+ "energy_called": true,
+ "energy_return_utc": "2026-10-29T20:39:58.152033+00:00",
+ "engine_version": "1.11",
+ "job_id": "H2-A-01",
+ "output_files": [
+  "i1-identity.json",
+  "i2-configuration.json",
+  "i3-basis-geometry.json",
+  "pre-import.json",
+  "psi4-output.dat",
+  "psi4-output.log"
+ ],
+ "post_energy_readback": {
+  "atoms": [
+   {
+    "label": "H1",
+    "xyz_bohr": [
+     0.0,
+     0.0,
+     -0.7
+    ]
+   },
+   {
+    "label": "H2",
+    "xyz_bohr": [
+     0.0,
+     0.0,
+     0.7
+    ]
+   }
+  ],
+  "nalpha": 1,
+  "natom": 2,
+  "nbeta": 1,
+  "nbf": 2,
+  "options": {
+   "basis": "STO-3G",
+   "d_convergence": 1e-08,
+   "df_scf_guess": 0,
+   "e_convergence": 1e-08,
+   "fail_on_maxiter": 1,
+   "guess": "CORE",
+   "maxiter": 50,
+   "reference": "RHF",
+   "scf_type": "DIRECT"
+  },
+  "wavefunction_class": "RHF"
+ },
+ "reported_nuclear_repulsion_hartree": 0.7142857142857143,
+ "reported_total_energy_hartree": -1.11671432506257,
+ "reported_total_energy_source": "return value of psi4.energy (core variable CURRENT ENERGY)",
+ "scf_iterations": 2,
+ "scf_iterations_raw": 2.0,
+ "stage": "energy",
+ "utc": "2026-10-29T20:39:58.152512+00:00"
+}

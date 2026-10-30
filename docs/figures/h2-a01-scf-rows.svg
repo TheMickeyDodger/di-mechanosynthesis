@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="644" viewBox="0 0 720 644" role="img" aria-labelledby="scf-title scf-desc" font-family="Helvetica, Arial, sans-serif">
+  <title id="scf-title">SCF convergence of job H2-A-01: the two printed iterations</title>
+  <desc id="scf-desc">Panel A is a two-point plot of SCF iteration, 1 and 2 only, against the absolute value of the printed Delta E in hartree on a logarithmic axis, with the points joined by one straight segment and a dashed reference line at the recorded E_CONVERGENCE setting 1e-08. The absolute value is a postprocessing transformation; the engine printed signed values. Panel B reproduces the engine's own two printed rows with its own labels Total Energy, Delta E and RMS |[F,P]|: iteration 1: Delta E printed as -1.11671e+00, plotted as the absolute value 1.11671e+00, Total Energy -1.11671432506257, RMS |[F,P]| 1.56620e-16; iteration 2: Delta E printed as -4.44089e-16, plotted as the absolute value 4.44089e-16, Total Energy -1.11671432506257, RMS |[F,P]| 1.56620e-16. There is no iteration 0 and there are no other points.</desc>
+  <rect x="0" y="0" width="720" height="644" fill="#ffffff"/>
+  <text x="30" y="30" font-size="14" font-weight="bold" fill="#1f1f1f">SCF convergence of job H2-A-01: the two printed iterations</text>
+  <text x="30" y="49" font-size="12" fill="#5a5a5a">Source: the engine's printed iteration table (psi4-output.dat lines 151, 153 and 154). Nothing else was sampled.</text>
+  <text x="30" y="80" font-size="13" font-weight="bold" fill="#1f1f1f">A. Absolute value of the printed Delta E, logarithmic axis</text>
+  <line x1="118.0" y1="128.2" x2="458.0" y2="128.2" stroke="#e4e4e4" stroke-width="1"/>
+  <text x="110.0" y="132.2" font-size="12" fill="#5a5a5a" text-anchor="end">1e+00</text>
+  <line x1="118.0" y1="177.1" x2="458.0" y2="177.1" stroke="#e4e4e4" stroke-width="1"/>
+  <text x="110.0" y="181.1" font-size="12" fill="#5a5a5a" text-anchor="end">1e-04</text>
+  <line x1="118.0" y1="226.0" x2="458.0" y2="226.0" stroke="#e4e4e4" stroke-width="1"/>
+  <text x="110.0" y="230.0" font-size="12" fill="#5a5a5a" text-anchor="end">1e-08</text>
+  <line x1="118.0" y1="274.9" x2="458.0" y2="274.9" stroke="#e4e4e4" stroke-width="1"/>
+  <text x="110.0" y="278.9" font-size="12" fill="#5a5a5a" text-anchor="end">1e-12</text>
+  <line x1="118.0" y1="323.8" x2="458.0" y2="323.8" stroke="#e4e4e4" stroke-width="1"/>
+  <text x="110.0" y="327.8" font-size="12" fill="#5a5a5a" text-anchor="end">1e-16</text>
+  <line x1="203.0" y1="116.0" x2="203.0" y2="336.0" stroke="#e4e4e4" stroke-width="1"/>
+  <text x="203.0" y="354.0" font-size="12.5" fill="#1f1f1f" text-anchor="middle">1</text>
+  <line x1="373.0" y1="116.0" x2="373.0" y2="336.0" stroke="#e4e4e4" stroke-width="1"/>
+  <text x="373.0" y="354.0" font-size="12.5" fill="#1f1f1f" text-anchor="middle">2</text>
+  <line x1="118.0" y1="116.0" x2="118.0" y2="336.0" stroke="#5a5a5a" stroke-width="1"/>
+  <line x1="118.0" y1="336.0" x2="458.0" y2="336.0" stroke="#5a5a5a" stroke-width="1"/>
+  <text x="288.0" y="376.0" font-size="12.5" fill="#1f1f1f" text-anchor="middle">SCF iteration (rows 1 and 2 as printed)</text>
+  <text x="118.0" y="106.0" font-size="12" fill="#1f1f1f">absolute value of Delta E (hartree), log scale</text>
+  <line x1="118.0" y1="226.0" x2="458.0" y2="226.0" stroke="#3b3b3b" stroke-width="1.4" stroke-dasharray="6 4"/>
+  <text x="454.0" y="220.0" font-size="11.5" fill="#1f1f1f" text-anchor="end">E_CONVERGENCE 1e-08</text>
+  <line x1="203.0" y1="127.6" x2="373.0" y2="315.9" stroke="#3b3b3b" stroke-width="1.6"/>
+  <circle cx="203.0" cy="127.6" r="6" fill="#127c78" stroke="#ffffff" stroke-width="1.5"/>
+  <text x="214.0" y="132.1" font-size="13" fill="#1f1f1f">1.11671e+00</text>
+  <circle cx="373.0" cy="315.9" r="6" fill="#127c78" stroke="#ffffff" stroke-width="1.5"/>
+  <text x="384.0" y="320.4" font-size="13" fill="#1f1f1f">4.44089e-16</text>
+  <rect x="470.0" y="108.0" width="236" height="112.0" fill="#f2f2f2"/>
+  <rect x="470.0" y="108.0" width="3" height="112.0" fill="#127c78"/>
+  <text x="480.0" y="122.0" font-size="12" fill="#1f1f1f">Postprocessing transformation:</text>
+  <text x="480.0" y="139.0" font-size="12" fill="#1f1f1f">the plotted quantity is the</text>
+  <text x="480.0" y="156.0" font-size="12" fill="#1f1f1f">absolute value of Delta E. The</text>
+  <text x="480.0" y="173.0" font-size="12" fill="#1f1f1f">engine printed signed values,</text>
+  <text x="480.0" y="190.0" font-size="12" fill="#1f1f1f">-1.11671e+00 and -4.44089e-16;</text>
+  <text x="480.0" y="207.0" font-size="12" fill="#1f1f1f">only the minus sign was removed.</text>
+  <text x="480.0" y="251.0" font-size="12" fill="#5a5a5a">Dashed line: the recorded</text>
+  <text x="480.0" y="268.0" font-size="12" fill="#5a5a5a">E_CONVERGENCE setting, shown as</text>
+  <text x="480.0" y="285.0" font-size="12" fill="#5a5a5a">a reference only.</text>
+  <text x="480.0" y="319.0" font-size="12" fill="#5a5a5a">Two points, joined by one segment.</text>
+  <text x="480.0" y="336.0" font-size="12" fill="#5a5a5a">No iteration 0 and no other sample.</text>
+  <text x="30" y="424" font-size="13" font-weight="bold" fill="#1f1f1f">B. The two printed rows, verbatim (signed Delta E)</text>
+  <text x="318.0" y="452.0" font-size="13" font-family="Menlo, Monaco, 'Courier New', monospace" fill="#5a5a5a" text-anchor="end" xml:space="preserve">Total Energy</text>
+  <text x="462.0" y="452.0" font-size="13" font-family="Menlo, Monaco, 'Courier New', monospace" fill="#5a5a5a" text-anchor="end" xml:space="preserve">Delta E</text>
+  <text x="598.0" y="452.0" font-size="13" font-family="Menlo, Monaco, 'Courier New', monospace" fill="#5a5a5a" text-anchor="end" xml:space="preserve">RMS |[F,P]|</text>
+  <line x1="34.0" y1="462.0" x2="676.0" y2="462.0" stroke="#e4e4e4" stroke-width="1"/>
+  <text x="34.0" y="490.0" font-size="13" font-family="Menlo, Monaco, 'Courier New', monospace" fill="#1f1f1f" xml:space="preserve">@RHF iter   1:</text>
+  <text x="318.0" y="490.0" font-size="13" font-family="Menlo, Monaco, 'Courier New', monospace" fill="#1f1f1f" text-anchor="end" xml:space="preserve">-1.11671432506257</text>
+  <text x="462.0" y="490.0" font-size="13" font-family="Menlo, Monaco, 'Courier New', monospace" fill="#1f1f1f" text-anchor="end" xml:space="preserve">-1.11671e+00</text>
+  <text x="598.0" y="490.0" font-size="13" font-family="Menlo, Monaco, 'Courier New', monospace" fill="#1f1f1f" text-anchor="end" xml:space="preserve">1.56620e-16</text>
+  <text x="612.0" y="490.0" font-size="13" font-family="Menlo, Monaco, 'Courier New', monospace" fill="#5a5a5a" xml:space="preserve">DIIS</text>
+  <text x="34.0" y="536.0" font-size="13" font-family="Menlo, Monaco, 'Courier New', monospace" fill="#1f1f1f" xml:space="preserve">@RHF iter   2:</text>
+  <text x="318.0" y="536.0" font-size="13" font-family="Menlo, Monaco, 'Courier New', monospace" fill="#1f1f1f" text-anchor="end" xml:space="preserve">-1.11671432506257</text>
+  <text x="462.0" y="536.0" font-size="13" font-family="Menlo, Monaco, 'Courier New', monospace" fill="#1f1f1f" text-anchor="end" xml:space="preserve">-4.44089e-16</text>
+  <text x="598.0" y="536.0" font-size="13" font-family="Menlo, Monaco, 'Courier New', monospace" fill="#1f1f1f" text-anchor="end" xml:space="preserve">1.56620e-16</text>
+  <text x="612.0" y="536.0" font-size="13" font-family="Menlo, Monaco, 'Courier New', monospace" fill="#5a5a5a" xml:space="preserve">DIIS</text>
+  <text x="266.0" y="518.0" font-size="18" font-weight="bold" fill="#127c78" text-anchor="end">=</text>
+  <text x="546.0" y="518.0" font-size="18" font-weight="bold" fill="#127c78" text-anchor="end">=</text>
+  <text x="30" y="572" font-size="12" fill="#1f1f1f">An = between the rows marks a column whose two printed strings are identical.</text>
+  <text x="30" y="590" font-size="12" fill="#1f1f1f">Delta E is quoted as printed; it is not recomputed from the rounded totals. The engine printed no iteration 0 row.</text>
+  <text x="30" y="608" font-size="12" fill="#5a5a5a">Units: Total Energy and Delta E are energies in hartree (Eh).</text>
+  <text x="30" y="624" font-size="12" font-family="Menlo, Monaco, 'Courier New', monospace" fill="#5a5a5a" xml:space="preserve">RMS |[F,P]| (third column): the engine prints no unit.</text>
+</svg>

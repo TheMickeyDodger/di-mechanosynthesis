@@ -1,0 +1,1963 @@
+{
+ "core_file": "<psi4-prefix>/lib/python3.14/site-packages/psi4/core.cpython-314-darwin.so",
+ "datadir_realpath": "<psi4-prefix>/share/psi4",
+ "loaded_images": [
+  {
+   "path": "<psi4-prefix>/bin/python3.14",
+   "realpath": "<psi4-prefix>/bin/python3.14",
+   "sha256": "5bac0535500ca7fe507749fbcf28e3f731dea4dabf1400f7df7f5dd26691c66a"
+  },
+  {
+   "path": "/usr/lib/libSystem.B.dylib",
+   "realpath": "/usr/lib/libSystem.B.dylib"
+  },
+  {
+   "path": "/usr/lib/system/libcache.dylib",
+   "realpath": "/usr/lib/system/libcache.dylib"
+  },
+  {
+   "path": "/usr/lib/system/libcommonCrypto.dylib",
+   "realpath": "/usr/lib/system/libcommonCrypto.dylib"
+  },
+  {
+   "path": "/usr/lib/system/libcompiler_rt.dylib",
+   "realpath": "/usr/lib/system/libcompiler_rt.dylib"
+  },
+  {
+   "path": "/usr/lib/system/libcopyfile.dylib",
+   "realpath": "/usr/lib/system/libcopyfile.dylib"
+  },
+  {
+   "path": "/usr/lib/system/libcorecrypto.dylib",
+   "realpath": "/usr/lib/system/libcorecrypto.dylib"
+  },
+  {
+   "path": "/usr/lib/system/libdispatch.dylib",
+   "realpath": "/usr/lib/system/libdispatch.dylib"
+  },
+  {
+   "path": "/usr/lib/system/libdyld.dylib",
+   "realpath": "/usr/lib/system/libdyld.dylib"
+  },
+  {
+   "path": "/usr/lib/system/libkeymgr.dylib",
+   "realpath": "/usr/lib/system/libkeymgr.dylib"
+  },
+  {
+   "path": "/usr/lib/system/libmacho.dylib",
+   "realpath": "/usr/lib/system/libmacho.dylib"
+  },
+  {
+   "path": "/usr/lib/system/libquarantine.dylib",
+   "realpath": "/usr/lib/system/libquarantine.dylib"
+  },
+  {
+   "path": "/usr/lib/system/libremovefile.dylib",
+   "realpath": "/usr/lib/system/libremovefile.dylib"
+  },
+  {
+   "path": "/usr/lib/system/libsystem_asl.dylib",
+   "realpath": "/usr/lib/system/libsystem_asl.dylib"
+  },
+  {
+   "path": "/usr/lib/system/libsystem_blocks.dylib",
+   "realpath": "/usr/lib/system/libsystem_blocks.dylib"
+  },
+  {
+   "path": "/usr/lib/system/libsystem_c.dylib",
+   "realpath": "/usr/lib/system/libsystem_c.dylib"
+  },
+  {
+   "path": "/usr/lib/system/libsystem_collections.dylib",
+   "realpath": "/usr/lib/system/libsystem_collections.dylib"
+  },
+  {
+   "path": "/usr/lib/system/libsystem_configuration.dylib",
+   "realpath": "/usr/lib/system/libsystem_configuration.dylib"
+  },
+  {
+   "path": "/usr/lib/system/libsystem_containermanager.dylib",
+   "realpath": "/usr/lib/system/libsystem_containermanager.dylib"
+  },
+  {
+   "path": "/usr/lib/system/libsystem_coreservices.dylib",
+   "realpath": "/usr/lib/system/libsystem_coreservices.dylib"
+  },
+  {
+   "path": "/usr/lib/system/libsystem_darwin.dylib",
+   "realpath": "/usr/lib/system/libsystem_darwin.dylib"
+  },
+  {
+   "path": "/usr/lib/system/libsystem_darwindirectory.dylib",
+   "realpath": "/usr/lib/system/libsystem_darwindirectory.dylib"
+  },
+  {
+   "path": "/usr/lib/system/libsystem_dnssd.dylib",
+   "realpath": "/usr/lib/system/libsystem_dnssd.dylib"
+  },
+  {
+   "path": "/usr/lib/system/libsystem_eligibility.dylib",
+   "realpath": "/usr/lib/system/libsystem_eligibility.dylib"
+  },
+  {
+   "path": "/usr/lib/system/libsystem_featureflags.dylib",
+   "realpath": "/usr/lib/system/libsystem_featureflags.dylib"
+  },
+  {
+   "path": "/usr/lib/system/libsystem_info.dylib",
+   "realpath": "/usr/lib/system/libsystem_info.dylib"
+  },
+  {
+   "path": "/usr/lib/system/libsystem_m.dylib",
+   "realpath": "/usr/lib/system/libsystem_m.dylib"
+  },
+  {
+   "path": "/usr/lib/system/libsystem_malloc.dylib",
+   "realpath": "/usr/lib/system/libsystem_malloc.dylib"
+  },
+  {
+   "path": "/usr/lib/system/libsystem_networkextension.dylib",
+   "realpath": "/usr/lib/system/libsystem_networkextension.dylib"
+  },
+  {
+   "path": "/usr/lib/system/libsystem_notify.dylib",
+   "realpath": "/usr/lib/system/libsystem_notify.dylib"
+  },
+  {
+   "path": "/usr/lib/system/libsystem_sandbox.dylib",
+   "realpath": "/usr/lib/system/libsystem_sandbox.dylib"
+  },
+  {
+   "path": "/usr/lib/system/libsystem_sanitizers.dylib",
+   "realpath": "/usr/lib/system/libsystem_sanitizers.dylib"
+  },
+  {
+   "path": "/usr/lib/system/libsystem_secinit.dylib",
+   "realpath": "/usr/lib/system/libsystem_secinit.dylib"
+  },
+  {
+   "path": "/usr/lib/system/libsystem_kernel.dylib",
+   "realpath": "/usr/lib/system/libsystem_kernel.dylib"
+  },
+  {
+   "path": "/usr/lib/system/libsystem_platform.dylib",
+   "realpath": "/usr/lib/system/libsystem_platform.dylib"
+  },
+  {
+   "path": "/usr/lib/system/libsystem_pthread.dylib",
+   "realpath": "/usr/lib/system/libsystem_pthread.dylib"
+  },
+  {
+   "path": "/usr/lib/system/libsystem_symptoms.dylib",
+   "realpath": "/usr/lib/system/libsystem_symptoms.dylib"
+  },
+  {
+   "path": "/usr/lib/system/libsystem_trace.dylib",
+   "realpath": "/usr/lib/system/libsystem_trace.dylib"
+  },
+  {
+   "path": "/usr/lib/system/libsystem_trial.dylib",
+   "realpath": "/usr/lib/system/libsystem_trial.dylib"
+  },
+  {
+   "path": "/usr/lib/system/libunwind.dylib",
+   "realpath": "/usr/lib/system/libunwind.dylib"
+  },
+  {
+   "path": "/usr/lib/system/libxpc.dylib",
+   "realpath": "/usr/lib/system/libxpc.dylib"
+  },
+  {
+   "path": "/usr/lib/libc++abi.dylib",
+   "realpath": "/usr/lib/libc++abi.dylib"
+  },
+  {
+   "path": "/usr/lib/libobjc.A.dylib",
+   "realpath": "/usr/lib/libobjc.A.dylib"
+  },
+  {
+   "path": "/usr/lib/objc/libobjcMsgSend.dylib",
+   "realpath": "/usr/lib/objc/libobjcMsgSend.dylib"
+  },
+  {
+   "path": "/usr/lib/libRosetta.dylib",
+   "realpath": "/usr/lib/libRosetta.dylib"
+  },
+  {
+   "path": "/usr/lib/libc++.1.dylib",
+   "realpath": "/usr/lib/libc++.1.dylib"
+  },
+  {
+   "path": "/usr/lib/libsharedcache.dylib",
+   "realpath": "/usr/lib/libsharedcache.dylib"
+  },
+  {
+   "path": "/usr/lib/objc/libobjcMsgSend1.dylib",
+   "realpath": "/usr/lib/objc/libobjcMsgSend1.dylib"
+  },
+  {
+   "path": "/usr/lib/objc/libobjcMsgSend2.dylib",
+   "realpath": "/usr/lib/objc/libobjcMsgSend2.dylib"
+  },
+  {
+   "path": "/usr/lib/objc/libobjcMsgSend3.dylib",
+   "realpath": "/usr/lib/objc/libobjcMsgSend3.dylib"
+  },
+  {
+   "path": "/usr/lib/objc/libobjcMsgSend4.dylib",
+   "realpath": "/usr/lib/objc/libobjcMsgSend4.dylib"
+  },
+  {
+   "path": "/usr/lib/objc/libobjcMsgSend5.dylib",
+   "realpath": "/usr/lib/objc/libobjcMsgSend5.dylib"
+  },
+  {
+   "path": "/usr/lib/objc/libobjcMsgSend6.dylib",
+   "realpath": "/usr/lib/objc/libobjcMsgSend6.dylib"
+  },
+  {
+   "path": "/usr/lib/objc/libobjcMsgSend7.dylib",
+   "realpath": "/usr/lib/objc/libobjcMsgSend7.dylib"
+  },
+  {
+   "path": "/usr/lib/objc/libobjcMsgSend8.dylib",
+   "realpath": "/usr/lib/objc/libobjcMsgSend8.dylib"
+  },
+  {
+   "path": "/usr/lib/objc/libobjcMsgSend9.dylib",
+   "realpath": "/usr/lib/objc/libobjcMsgSend9.dylib"
+  },
+  {
+   "path": "/usr/lib/objc/libobjcMsgSend10.dylib",
+   "realpath": "/usr/lib/objc/libobjcMsgSend10.dylib"
+  },
+  {
+   "path": "/usr/lib/objc/libobjcMsgSend11.dylib",
+   "realpath": "/usr/lib/objc/libobjcMsgSend11.dylib"
+  },
+  {
+   "path": "/usr/lib/objc/libobjcMsgSend12.dylib",
+   "realpath": "/usr/lib/objc/libobjcMsgSend12.dylib"
+  },
+  {
+   "path": "/usr/lib/objc/libobjcMsgSend13.dylib",
+   "realpath": "/usr/lib/objc/libobjcMsgSend13.dylib"
+  },
+  {
+   "path": "/usr/lib/objc/libobjcMsgSend14.dylib",
+   "realpath": "/usr/lib/objc/libobjcMsgSend14.dylib"
+  },
+  {
+   "path": "/usr/lib/objc/libobjcMsgSend15.dylib",
+   "realpath": "/usr/lib/objc/libobjcMsgSend15.dylib"
+  },
+  {
+   "path": "/usr/lib/objc/libobjcMsgSend16.dylib",
+   "realpath": "/usr/lib/objc/libobjcMsgSend16.dylib"
+  },
+  {
+   "path": "/usr/lib/objc/libobjcMsgSend17.dylib",
+   "realpath": "/usr/lib/objc/libobjcMsgSend17.dylib"
+  },
+  {
+   "path": "/usr/lib/objc/libobjcMsgSend18.dylib",
+   "realpath": "/usr/lib/objc/libobjcMsgSend18.dylib"
+  },
+  {
+   "path": "/usr/lib/objc/libobjcMsgSend19.dylib",
+   "realpath": "/usr/lib/objc/libobjcMsgSend19.dylib"
+  },
+  {
+   "path": "/usr/lib/objc/libobjcMsgSend20.dylib",
+   "realpath": "/usr/lib/objc/libobjcMsgSend20.dylib"
+  },
+  {
+   "path": "/usr/lib/objc/libobjcMsgSend21.dylib",
+   "realpath": "/usr/lib/objc/libobjcMsgSend21.dylib"
+  },
+  {
+   "path": "/usr/lib/objc/libobjcMsgSend22.dylib",
+   "realpath": "/usr/lib/objc/libobjcMsgSend22.dylib"
+  },
+  {
+   "path": "/usr/lib/objc/libobjcMsgSend23.dylib",
+   "realpath": "/usr/lib/objc/libobjcMsgSend23.dylib"
+  },
+  {
+   "path": "/usr/lib/objc/libobjcMsgSend24.dylib",
+   "realpath": "/usr/lib/objc/libobjcMsgSend24.dylib"
+  },
+  {
+   "path": "/usr/lib/objc/libobjcMsgSend25.dylib",
+   "realpath": "/usr/lib/objc/libobjcMsgSend25.dylib"
+  },
+  {
+   "path": "/usr/lib/objc/libobjcMsgSend26.dylib",
+   "realpath": "/usr/lib/objc/libobjcMsgSend26.dylib"
+  },
+  {
+   "path": "/usr/lib/objc/libobjcMsgSend27.dylib",
+   "realpath": "/usr/lib/objc/libobjcMsgSend27.dylib"
+  },
+  {
+   "path": "/usr/lib/objc/libobjcMsgSend28.dylib",
+   "realpath": "/usr/lib/objc/libobjcMsgSend28.dylib"
+  },
+  {
+   "path": "/usr/lib/objc/libobjcMsgSend29.dylib",
+   "realpath": "/usr/lib/objc/libobjcMsgSend29.dylib"
+  },
+  {
+   "path": "/usr/lib/objc/libobjcMsgSend30.dylib",
+   "realpath": "/usr/lib/objc/libobjcMsgSend30.dylib"
+  },
+  {
+   "path": "/usr/lib/objc/libobjcMsgSend31.dylib",
+   "realpath": "/usr/lib/objc/libobjcMsgSend31.dylib"
+  },
+  {
+   "path": "/usr/lib/objc/libobjcMsgSend32.dylib",
+   "realpath": "/usr/lib/objc/libobjcMsgSend32.dylib"
+  },
+  {
+   "path": "/usr/lib/objc/libobjcMsgSend33.dylib",
+   "realpath": "/usr/lib/objc/libobjcMsgSend33.dylib"
+  },
+  {
+   "path": "/usr/lib/objc/libobjcMsgSend34.dylib",
+   "realpath": "/usr/lib/objc/libobjcMsgSend34.dylib"
+  },
+  {
+   "path": "<psi4-prefix>/lib/python3.14/lib-dynload/_hashlib.cpython-314-darwin.so",
+   "realpath": "<psi4-prefix>/lib/python3.14/lib-dynload/_hashlib.cpython-314-darwin.so",
+   "sha256": "330a0a9187d5c6559b641cd08746ac7e67e4079887f99663429b22ec2a47d37e"
+  },
+  {
+   "path": "<psi4-prefix>/lib/libcrypto.3.dylib",
+   "realpath": "<psi4-prefix>/lib/libcrypto.3.dylib",
+   "sha256": "8fb97eccf98008cb72c01ebe811d78c52700c0fa7627451110344700808255a4"
+  },
+  {
+   "path": "<psi4-prefix>/lib/python3.14/lib-dynload/_blake2.cpython-314-darwin.so",
+   "realpath": "<psi4-prefix>/lib/python3.14/lib-dynload/_blake2.cpython-314-darwin.so",
+   "sha256": "db7620e62b840692302b2b7c52ae89c0ffd69fc15319bea83eb40f6bb4798b25"
+  },
+  {
+   "path": "<psi4-prefix>/lib/python3.14/lib-dynload/_json.cpython-314-darwin.so",
+   "realpath": "<psi4-prefix>/lib/python3.14/lib-dynload/_json.cpython-314-darwin.so",
+   "sha256": "fddd639009f63f254ac5cc19f6c3a864854d37092d3f5b021ddcd1bce4a10b00"
+  },
+  {
+   "path": "<psi4-prefix>/lib/python3.14/lib-dynload/math.cpython-314-darwin.so",
+   "realpath": "<psi4-prefix>/lib/python3.14/lib-dynload/math.cpython-314-darwin.so",
+   "sha256": "bfb4244519d32fd345c7f83eae92ceed859a029d559f6cda9c05b25646de5b9a"
+  },
+  {
+   "path": "<psi4-prefix>/lib/python3.14/lib-dynload/grp.cpython-314-darwin.so",
+   "realpath": "<psi4-prefix>/lib/python3.14/lib-dynload/grp.cpython-314-darwin.so",
+   "sha256": "b69ae96645ac13b8120c727fb42488e86d50fb2a7e4ea3cc25d3a1483c7d546d"
+  },
+  {
+   "path": "<psi4-prefix>/lib/python3.14/lib-dynload/fcntl.cpython-314-darwin.so",
+   "realpath": "<psi4-prefix>/lib/python3.14/lib-dynload/fcntl.cpython-314-darwin.so",
+   "sha256": "6acd91fb6461df2b6983e9a1b4c9cfa82a77680a8350569dcff9ffa441a7366a"
+  },
+  {
+   "path": "<psi4-prefix>/lib/python3.14/site-packages/psi4/core.cpython-314-darwin.so",
+   "realpath": "<psi4-prefix>/lib/python3.14/site-packages/psi4/core.cpython-314-darwin.so",
+   "sha256": "0d12c8cda49e2cfe75cea563a2fe51889fa61b88c7b5234beb165b9b54805d99"
+  },
+  {
+   "path": "<psi4-prefix>/lib/libint2.dylib",
+   "realpath": "<psi4-prefix>/lib/libint2.dylib",
+   "sha256": "964aff2a18e0948684e62102389a31eb2d09b83ef60b7c4bcc62e959131aa367"
+  },
+  {
+   "path": "<psi4-prefix>/lib/libgauxc.dylib",
+   "realpath": "<psi4-prefix>/lib/libgauxc.dylib",
+   "sha256": "6c57035f2d24d7a7b60e2cac1f565d093fb3d1c9432adf11e1abde5b636643b2"
+  },
+  {
+   "path": "<psi4-prefix>/lib/libgg.2.dylib",
+   "realpath": "<psi4-prefix>/lib/libgg.2.dylib",
+   "sha256": "253da2d88a2fb8b1fdca0fff7a0c313d1b56019898d9aea156a3cf87f88bb9bb"
+  },
+  {
+   "path": "<psi4-prefix>/lib/libexchcxx.dylib",
+   "realpath": "<psi4-prefix>/lib/libexchcxx.dylib",
+   "sha256": "e19e01557661e017677b9dbc527604dcdb75452d290e284ffb87bde872a6d237"
+  },
+  {
+   "path": "<psi4-prefix>/lib/libxc.15.dylib",
+   "realpath": "<psi4-prefix>/lib/libxc.15.dylib",
+   "sha256": "0084d06634c6eb2507d871de09237ea1690fc963e670ad593375ff990eb12237"
+  },
+  {
+   "path": "<psi4-prefix>/lib/libecpint.1.dylib",
+   "realpath": "<psi4-prefix>/lib/libecpint.1.dylib",
+   "sha256": "10a9526aed0a98ddb075e99c797bdea4ed1e10b90f3a88049fee28382be5652d"
+  },
+  {
+   "path": "<psi4-prefix>/lib/libdkh.dylib",
+   "realpath": "<psi4-prefix>/lib/libdkh.dylib",
+   "sha256": "bbba3acd9db47b18bccca34ae5b1bfeac253b57b1f6b210760d3830667d42cc3"
+  },
+  {
+   "path": "<psi4-prefix>/lib/libpcm.1.dylib",
+   "realpath": "<psi4-prefix>/lib/libpcm.1.dylib",
+   "sha256": "5cc2dd03cf0aa56912bd1e5e0b678f49c0c0433979b4748ea753679caca5e62e"
+  },
+  {
+   "path": "<psi4-prefix>/lib/libEinsums.1.1.3.dylib",
+   "realpath": "<psi4-prefix>/lib/libEinsums.1.1.3.dylib",
+   "sha256": "371abdf73f69493ebdfba2e4d0268d3b5162e765f28991946ca1190f056e16cf"
+  },
+  {
+   "path": "<psi4-prefix>/lib/libopenblas.0.dylib",
+   "realpath": "<psi4-prefix>/lib/libopenblas.0.dylib",
+   "sha256": "7a89772da7fb86aea4c91eefdbc4e6980fb1f668d77bbc34537503a5d1f29c07"
+  },
+  {
+   "path": "<psi4-prefix>/lib/libspdlog.1.17.0.dylib",
+   "realpath": "<psi4-prefix>/lib/libspdlog.1.17.0.dylib",
+   "sha256": "53620cb1867339547a8573b657fadcb59243de31c62a91d70db58fa0aa7a9ffe"
+  },
+  {
+   "path": "<psi4-prefix>/lib/libz.1.3.2.dylib",
+   "realpath": "<psi4-prefix>/lib/libz.1.3.2.dylib",
+   "sha256": "8020844faf07e3a0a3058cf2eb8cc859ee3981297cdb3f3620db0714e2813b77"
+  },
+  {
+   "path": "<psi4-prefix>/lib/libhdf5.310.dylib",
+   "realpath": "<psi4-prefix>/lib/libhdf5.310.dylib",
+   "sha256": "aeaf6116669de850e6ad1766a58ed45f032e03b81acbf23601fb00dbfa9f0f8a"
+  },
+  {
+   "path": "<psi4-prefix>/lib/libomp.dylib",
+   "realpath": "<psi4-prefix>/lib/libomp.dylib",
+   "sha256": "29d3ffca99315e3fa80bd8bc771260d383c7693f1486657c96e37556ab4c4e45"
+  },
+  {
+   "path": "<psi4-prefix>/lib/libfmt.12.1.0.dylib",
+   "realpath": "<psi4-prefix>/lib/libfmt.12.1.0.dylib",
+   "sha256": "4ad358bea879a784e1e0b8b63a124911a324cef804670b4aab0b72acdb0117c0"
+  },
+  {
+   "path": "<psi4-prefix>/lib/libc++.1.0.dylib",
+   "realpath": "<psi4-prefix>/lib/libc++.1.0.dylib",
+   "sha256": "77850fe8a8aa5dfa55789636db53cf94fd106f9ff68777a2d62f33f6eab38a16"
+  },
+  {
+   "path": "/System/Library/Frameworks/Accelerate.framework/Versions/A/Accelerate",
+   "realpath": "/System/Library/Frameworks/Accelerate.framework/Versions/A/Accelerate"
+  },
+  {
+   "path": "/System/Library/Frameworks/Accelerate.framework/Versions/A/Frameworks/vImage.framework/Versions/A/vImage",
+   "realpath": "/System/Library/Frameworks/Accelerate.framework/Versions/A/Frameworks/vImage.framework/Versions/A/vImage"
+  },
+  {
+   "path": "/System/Library/Frameworks/Accelerate.framework/Versions/A/Frameworks/vecLib.framework/Versions/A/vecLib",
+   "realpath": "/System/Library/Frameworks/Accelerate.framework/Versions/A/Frameworks/vecLib.framework/Versions/A/vecLib"
+  },
+  {
+   "path": "/System/Library/Frameworks/Accelerate.framework/Versions/A/Frameworks/vecLib.framework/Versions/A/libvMisc.dylib",
+   "realpath": "/System/Library/Frameworks/Accelerate.framework/Versions/A/Frameworks/vecLib.framework/Versions/A/libvMisc.dylib"
+  },
+  {
+   "path": "/System/Library/PrivateFrameworks/SoftLinking.framework/Versions/A/SoftLinking",
+   "realpath": "/System/Library/PrivateFrameworks/SoftLinking.framework/Versions/A/SoftLinking"
+  },
+  {
+   "path": "/usr/lib/libcompression.dylib",
+   "realpath": "/usr/lib/libcompression.dylib"
+  },
+  {
+   "path": "/System/Library/Frameworks/Accelerate.framework/Versions/A/Frameworks/vecLib.framework/Versions/A/libBLAS.dylib",
+   "realpath": "/System/Library/Frameworks/Accelerate.framework/Versions/A/Frameworks/vecLib.framework/Versions/A/libBLAS.dylib"
+  },
+  {
+   "path": "/System/Library/Frameworks/CoreVideo.framework/Versions/A/CoreVideo",
+   "realpath": "/System/Library/Frameworks/CoreVideo.framework/Versions/A/CoreVideo"
+  },
+  {
+   "path": "/System/Library/Frameworks/ColorSync.framework/Versions/A/ColorSync",
+   "realpath": "/System/Library/Frameworks/ColorSync.framework/Versions/A/ColorSync"
+  },
+  {
+   "path": "/System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation",
+   "realpath": "/System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation"
+  },
+  {
+   "path": "/System/Library/Frameworks/CoreGraphics.framework/Versions/A/CoreGraphics",
+   "realpath": "/System/Library/Frameworks/CoreGraphics.framework/Versions/A/CoreGraphics"
+  },
+  {
+   "path": "/System/Library/Frameworks/CoreText.framework/Versions/A/CoreText",
+   "realpath": "/System/Library/Frameworks/CoreText.framework/Versions/A/CoreText"
+  },
+  {
+   "path": "/System/Library/Frameworks/ImageIO.framework/Versions/A/ImageIO",
+   "realpath": "/System/Library/Frameworks/ImageIO.framework/Versions/A/ImageIO"
+  },
+  {
+   "path": "/System/Library/Frameworks/CoreServices.framework/Versions/A/CoreServices",
+   "realpath": "/System/Library/Frameworks/CoreServices.framework/Versions/A/CoreServices"
+  },
+  {
+   "path": "/System/Library/PrivateFrameworks/SkyLight.framework/Versions/A/SkyLight",
+   "realpath": "/System/Library/PrivateFrameworks/SkyLight.framework/Versions/A/SkyLight"
+  },
+  {
+   "path": "/System/Library/PrivateFrameworks/ProtocolBuffer.framework/Versions/A/ProtocolBuffer",
+   "realpath": "/System/Library/PrivateFrameworks/ProtocolBuffer.framework/Versions/A/ProtocolBuffer"
+  },
+  {
+   "path": "/usr/lib/libicucore.A.dylib",
+   "realpath": "/usr/lib/libicucore.A.dylib"
+  },
+  {
+   "path": "/System/Library/PrivateFrameworks/CoreAnalytics.framework/Versions/A/CoreAnalytics",
+   "realpath": "/System/Library/PrivateFrameworks/CoreAnalytics.framework/Versions/A/CoreAnalytics"
+  },
+  {
+   "path": "/System/Library/PrivateFrameworks/FontServices.framework/libFontParser.dylib",
+   "realpath": "/System/Library/PrivateFrameworks/FontServices.framework/libFontParser.dylib"
+  },
+  {
+   "path": "/System/Library/Frameworks/IOSurface.framework/Versions/A/IOSurface",
+   "realpath": "/System/Library/Frameworks/IOSurface.framework/Versions/A/IOSurface"
+  },
+  {
+   "path": "/usr/lib/libxml2.2.dylib",
+   "realpath": "/usr/lib/libxml2.2.dylib"
+  },
+  {
+   "path": "/System/Library/Frameworks/CFNetwork.framework/Versions/A/CFNetwork",
+   "realpath": "/System/Library/Frameworks/CFNetwork.framework/Versions/A/CFNetwork"
+  },
+  {
+   "path": "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation",
+   "realpath": "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation"
+  },
+  {
+   "path": "/usr/lib/libz.1.dylib",
+   "realpath": "/usr/lib/libz.1.dylib"
+  },
+  {
+   "path": "/System/Library/Frameworks/Security.framework/Versions/A/Security",
+   "realpath": "/System/Library/Frameworks/Security.framework/Versions/A/Security"
+  },
+  {
+   "path": "/System/Library/PrivateFrameworks/CollectionsInternal.framework/Versions/A/CollectionsInternal",
+   "realpath": "/System/Library/PrivateFrameworks/CollectionsInternal.framework/Versions/A/CollectionsInternal"
+  },
+  {
+   "path": "/usr/lib/swift/libswiftCore.dylib",
+   "realpath": "/usr/lib/swift/libswiftCore.dylib"
+  },
+  {
+   "path": "/usr/lib/swift/libswiftCoreFoundation.dylib",
+   "realpath": "/usr/lib/swift/libswiftCoreFoundation.dylib"
+  },
+  {
+   "path": "/usr/lib/swift/libswiftDispatch.dylib",
+   "realpath": "/usr/lib/swift/libswiftDispatch.dylib"
+  },
+  {
+   "path": "/usr/lib/swift/libswiftIOKit.dylib",
+   "realpath": "/usr/lib/swift/libswiftIOKit.dylib"
+  },
+  {
+   "path": "/usr/lib/swift/libswiftObjectiveC.dylib",
+   "realpath": "/usr/lib/swift/libswiftObjectiveC.dylib"
+  },
+  {
+   "path": "/usr/lib/swift/libswiftXPC.dylib",
+   "realpath": "/usr/lib/swift/libswiftXPC.dylib"
+  },
+  {
+   "path": "/usr/lib/swift/libswift_Builtin_float.dylib",
+   "realpath": "/usr/lib/swift/libswift_Builtin_float.dylib"
+  },
+  {
+   "path": "/System/Library/PrivateFrameworks/BiomeLibrary.framework/Versions/A/BiomeLibrary",
+   "realpath": "/System/Library/PrivateFrameworks/BiomeLibrary.framework/Versions/A/BiomeLibrary"
+  },
+  {
+   "path": "/System/Library/PrivateFrameworks/BaseBoard.framework/Versions/A/BaseBoard",
+   "realpath": "/System/Library/PrivateFrameworks/BaseBoard.framework/Versions/A/BaseBoard"
+  },
+  {
+   "path": "/System/Library/PrivateFrameworks/BoardServices.framework/Versions/A/BoardServices",
+   "realpath": "/System/Library/PrivateFrameworks/BoardServices.framework/Versions/A/BoardServices"
+  },
+  {
+   "path": "/System/Library/PrivateFrameworks/BackBoardServices.framework/Versions/A/BackBoardServices",
+   "realpath": "/System/Library/PrivateFrameworks/BackBoardServices.framework/Versions/A/BackBoardServices"
+  },
+  {
+   "path": "/System/Library/PrivateFrameworks/BackBoardHIDEventFoundation.framework/Versions/A/BackBoardHIDEventFoundation",
+   "realpath": "/System/Library/PrivateFrameworks/BackBoardHIDEventFoundation.framework/Versions/A/BackBoardHIDEventFoundation"
+  },
+  {
+   "path": "/usr/lib/libDiagnosticMessagesClient.dylib",
+   "realpath": "/usr/lib/libDiagnosticMessagesClient.dylib"
+  },
+  {
+   "path": "/System/Library/Frameworks/CoreDisplay.framework/Versions/A/CoreDisplay",
+   "realpath": "/System/Library/Frameworks/CoreDisplay.framework/Versions/A/CoreDisplay"
+  },
+  {
+   "path": "/usr/lib/libbsm.0.dylib",
+   "realpath": "/usr/lib/libbsm.0.dylib"
+  },
+  {
+   "path": "/System/Library/Frameworks/VideoToolbox.framework/Versions/A/VideoToolbox",
+   "realpath": "/System/Library/Frameworks/VideoToolbox.framework/Versions/A/VideoToolbox"
+  },
+  {
+   "path": "/System/Library/Frameworks/MetalPerformanceShaders.framework/Versions/A/MetalPerformanceShaders",
+   "realpath": "/System/Library/Frameworks/MetalPerformanceShaders.framework/Versions/A/MetalPerformanceShaders"
+  },
+  {
+   "path": "/System/Library/PrivateFrameworks/IOMobileFramebuffer.framework/Versions/A/IOMobileFramebuffer",
+   "realpath": "/System/Library/PrivateFrameworks/IOMobileFramebuffer.framework/Versions/A/IOMobileFramebuffer"
+  },
+  {
+   "path": "/System/Library/PrivateFrameworks/ProDisplayLibrary.framework/Versions/A/ProDisplayLibrary",
+   "realpath": "/System/Library/PrivateFrameworks/ProDisplayLibrary.framework/Versions/A/ProDisplayLibrary"
+  },
+  {
+   "path": "/System/Library/PrivateFrameworks/IOSurfaceAccelerator.framework/Versions/A/IOSurfaceAccelerator",
+   "realpath": "/System/Library/PrivateFrameworks/IOSurfaceAccelerator.framework/Versions/A/IOSurfaceAccelerator"
+  },
+  {
+   "path": "/System/Library/PrivateFrameworks/RunningBoardServices.framework/Versions/A/RunningBoardServices",
+   "realpath": "/System/Library/PrivateFrameworks/RunningBoardServices.framework/Versions/A/RunningBoardServices"
+  },
+  {
+   "path": "/System/Library/Frameworks/SystemConfiguration.framework/Versions/A/SystemConfiguration",
+   "realpath": "/System/Library/Frameworks/SystemConfiguration.framework/Versions/A/SystemConfiguration"
+  },
+  {
+   "path": "/System/Library/Frameworks/Metal.framework/Versions/A/Metal",
+   "realpath": "/System/Library/Frameworks/Metal.framework/Versions/A/Metal"
+  },
+  {
+   "path": "/System/Library/PrivateFrameworks/IOAccelerator.framework/Versions/A/IOAccelerator",
+   "realpath": "/System/Library/PrivateFrameworks/IOAccelerator.framework/Versions/A/IOAccelerator"
+  },
+  {
+   "path": "/System/Library/Frameworks/CoreMedia.framework/Versions/A/CoreMedia",
+   "realpath": "/System/Library/Frameworks/CoreMedia.framework/Versions/A/CoreMedia"
+  },
+  {
+   "path": "/System/Library/PrivateFrameworks/TCC.framework/Versions/A/TCC",
+   "realpath": "/System/Library/PrivateFrameworks/TCC.framework/Versions/A/TCC"
+  },
+  {
+   "path": "/usr/lib/libMobileGestalt.dylib",
+   "realpath": "/usr/lib/libMobileGestalt.dylib"
+  },
+  {
+   "path": "/usr/lib/libSMC.dylib",
+   "realpath": "/usr/lib/libSMC.dylib"
+  },
+  {
+   "path": "/System/Library/PrivateFrameworks/WatchdogClient.framework/Versions/A/WatchdogClient",
+   "realpath": "/System/Library/PrivateFrameworks/WatchdogClient.framework/Versions/A/WatchdogClient"
+  },
+  {
+   "path": "/System/Library/Frameworks/QuartzCore.framework/Versions/A/QuartzCore",
+   "realpath": "/System/Library/Frameworks/QuartzCore.framework/Versions/A/QuartzCore"
+  },
+  {
+   "path": "/System/Library/Frameworks/IOKit.framework/Versions/A/IOKit",
+   "realpath": "/System/Library/Frameworks/IOKit.framework/Versions/A/IOKit"
+  },
+  {
+   "path": "/System/Library/PrivateFrameworks/MultitouchSupport.framework/Versions/A/MultitouchSupport",
+   "realpath": "/System/Library/PrivateFrameworks/MultitouchSupport.framework/Versions/A/MultitouchSupport"
+  },
+  {
+   "path": "/System/Library/Frameworks/DiskArbitration.framework/Versions/A/DiskArbitration",
+   "realpath": "/System/Library/Frameworks/DiskArbitration.framework/Versions/A/DiskArbitration"
+  },
+  {
+   "path": "/System/Library/PrivateFrameworks/BackBoardHIDTouchEventProcessor.framework/Versions/A/BackBoardHIDTouchEventProcessor",
+   "realpath": "/System/Library/PrivateFrameworks/BackBoardHIDTouchEventProcessor.framework/Versions/A/BackBoardHIDTouchEventProcessor"
+  },
+  {
+   "path": "/System/Library/PrivateFrameworks/Gestures.framework/Versions/A/Gestures",
+   "realpath": "/System/Library/PrivateFrameworks/Gestures.framework/Versions/A/Gestures"
+  },
+  {
+   "path": "/usr/lib/swift/libswiftAccelerate.dylib",
+   "realpath": "/usr/lib/swift/libswiftAccelerate.dylib"
+  },
+  {
+   "path": "/usr/lib/swift/libswiftCoreAudio.dylib",
+   "realpath": "/usr/lib/swift/libswiftCoreAudio.dylib"
+  },
+  {
+   "path": "/usr/lib/swift/libswiftMetal.dylib",
+   "realpath": "/usr/lib/swift/libswiftMetal.dylib"
+  },
+  {
+   "path": "/usr/lib/swift/libswiftOSLog.dylib",
+   "realpath": "/usr/lib/swift/libswiftOSLog.dylib"
+  },
+  {
+   "path": "/usr/lib/swift/libswiftQuartzCore.dylib",
+   "realpath": "/usr/lib/swift/libswiftQuartzCore.dylib"
+  },
+  {
+   "path": "/usr/lib/swift/libswiftUniformTypeIdentifiers.dylib",
+   "realpath": "/usr/lib/swift/libswiftUniformTypeIdentifiers.dylib"
+  },
+  {
+   "path": "/usr/lib/swift/libswiftos.dylib",
+   "realpath": "/usr/lib/swift/libswiftos.dylib"
+  },
+  {
+   "path": "/usr/lib/swift/libswiftsimd.dylib",
+   "realpath": "/usr/lib/swift/libswiftsimd.dylib"
+  },
+  {
+   "path": "/System/Library/PrivateFrameworks/BiomeStreams.framework/Versions/A/BiomeStreams",
+   "realpath": "/System/Library/PrivateFrameworks/BiomeStreams.framework/Versions/A/BiomeStreams"
+  },
+  {
+   "path": "/System/Library/PrivateFrameworks/BiomeStorage.framework/Versions/A/BiomeStorage",
+   "realpath": "/System/Library/PrivateFrameworks/BiomeStorage.framework/Versions/A/BiomeStorage"
+  },
+  {
+   "path": "/System/Library/PrivateFrameworks/BiomeFoundation.framework/Versions/A/BiomeFoundation",
+   "realpath": "/System/Library/PrivateFrameworks/BiomeFoundation.framework/Versions/A/BiomeFoundation"
+  },
+  {
+   "path": "/System/Library/PrivateFrameworks/IntelligencePlatformLibrary.framework/Versions/A/IntelligencePlatformLibrary",
+   "realpath": "/System/Library/PrivateFrameworks/IntelligencePlatformLibrary.framework/Versions/A/IntelligencePlatformLibrary"
+  },
+  {
+   "path": "/usr/lib/libsqlite3.dylib",
+   "realpath": "/usr/lib/libsqlite3.dylib"
+  },
+  {
+   "path": "/System/Library/PrivateFrameworks/PoirotSchematizer.framework/Versions/A/PoirotSchematizer",
+   "realpath": "/System/Library/PrivateFrameworks/PoirotSchematizer.framework/Versions/A/PoirotSchematizer"
+  },
+  {
+   "path": "/System/Library/PrivateFrameworks/BiomeSync.framework/Versions/A/BiomeSync",
+   "realpath": "/System/Library/PrivateFrameworks/BiomeSync.framework/Versions/A/BiomeSync"
+  },
+  {
+   "path": "/System/Library/PrivateFrameworks/OSAnalytics.framework/Versions/A/OSAnalytics",
+   "realpath": "/System/Library/PrivateFrameworks/OSAnalytics.framework/Versions/A/OSAnalytics"
+  },
+  {
+   "path": "/System/Library/PrivateFrameworks/BiomeDSL.framework/Versions/A/BiomeDSL",
+   "realpath": "/System/Library/PrivateFrameworks/BiomeDSL.framework/Versions/A/BiomeDSL"
+  },
+  {
+   "path": "/System/Library/PrivateFrameworks/BiomePubSub.framework/Versions/A/BiomePubSub",
+   "realpath": "/System/Library/PrivateFrameworks/BiomePubSub.framework/Versions/A/BiomePubSub"
+  },
+  {
+   "path": "/System/Library/PrivateFrameworks/LoggingSupport.framework/Versions/A/LoggingSupport",
+   "realpath": "/System/Library/PrivateFrameworks/LoggingSupport.framework/Versions/A/LoggingSupport"
+  },
+  {
+   "path": "/System/Library/PrivateFrameworks/ProactiveSupport.framework/Versions/A/ProactiveSupport",
+   "realpath": "/System/Library/PrivateFrameworks/ProactiveSupport.framework/Versions/A/ProactiveSupport"
+  },
+  {
+   "path": "/System/Library/PrivateFrameworks/FeatureFlags.framework/Versions/A/FeatureFlags",
+   "realpath": "/System/Library/PrivateFrameworks/FeatureFlags.framework/Versions/A/FeatureFlags"
+  },
+  {
+   "path": "/System/Library/PrivateFrameworks/InternalSwiftProtobuf.framework/Versions/A/InternalSwiftProtobuf",
+   "realpath": "/System/Library/PrivateFrameworks/InternalSwiftProtobuf.framework/Versions/A/InternalSwiftProtobuf"
+  },
+  {
+   "path": "/System/Library/PrivateFrameworks/PoirotUDFs.framework/Versions/A/PoirotUDFs",
+   "realpath": "/System/Library/PrivateFrameworks/PoirotUDFs.framework/Versions/A/PoirotUDFs"
+  },
+  {
+   "path": "/usr/lib/swift/libswift_StringProcessing.dylib",
+   "realpath": "/usr/lib/swift/libswift_StringProcessing.dylib"
+  },
+  {
+   "path": "/usr/lib/swift/libswiftSynchronization.dylib",
+   "realpath": "/usr/lib/swift/libswiftSynchronization.dylib"
+  },
+  {
+   "path": "/System/Library/PrivateFrameworks/NSPredicateSecurityPolicy.framework/Versions/A/NSPredicateSecurityPolicy",
+   "realpath": "/System/Library/PrivateFrameworks/NSPredicateSecurityPolicy.framework/Versions/A/NSPredicateSecurityPolicy"
+  },
+  {
+   "path": "/System/Library/PrivateFrameworks/CoreAutoLayout.framework/Versions/A/CoreAutoLayout",
+   "realpath": "/System/Library/PrivateFrameworks/CoreAutoLayout.framework/Versions/A/CoreAutoLayout"
+  },
+  {
+   "path": "/usr/lib/libfakelink.dylib",
+   "realpath": "/usr/lib/libfakelink.dylib"
+  },
+  {
+   "path": "/usr/lib/libarchive.2.dylib",
+   "realpath": "/usr/lib/libarchive.2.dylib"
+  },
+  {
+   "path": "/usr/lib/liblangid.dylib",
+   "realpath": "/usr/lib/liblangid.dylib"
+  },
+  {
+   "path": "/System/Library/Frameworks/Combine.framework/Versions/A/Combine",
+   "realpath": "/System/Library/Frameworks/Combine.framework/Versions/A/Combine"
+  },
+  {
+   "path": "/System/Library/PrivateFrameworks/ReflectionInternal.framework/Versions/A/ReflectionInternal",
+   "realpath": "/System/Library/PrivateFrameworks/ReflectionInternal.framework/Versions/A/ReflectionInternal"
+  },
+  {
+   "path": "/System/Library/PrivateFrameworks/RuntimeInternal.framework/Versions/A/RuntimeInternal",
+   "realpath": "/System/Library/PrivateFrameworks/RuntimeInternal.framework/Versions/A/RuntimeInternal"
+  },
+  {
+   "path": "/usr/lib/swift/libswiftDarwin.dylib",
+   "realpath": "/usr/lib/swift/libswiftDarwin.dylib"
+  },
+  {
+   "path": "/usr/lib/swift/libswiftObservation.dylib",
+   "realpath": "/usr/lib/swift/libswiftObservation.dylib"
+  },
+  {
+   "path": "/usr/lib/swift/libswiftSystem.dylib",
+   "realpath": "/usr/lib/swift/libswiftSystem.dylib"
+  },
+  {
+   "path": "/usr/lib/swift/libswift_Concurrency.dylib",
+   "realpath": "/usr/lib/swift/libswift_Concurrency.dylib"
+  },
+  {
+   "path": "/usr/lib/swift/libswift_DarwinFoundation1.dylib",
+   "realpath": "/usr/lib/swift/libswift_DarwinFoundation1.dylib"
+  },
+  {
+   "path": "/System/Library/PrivateFrameworks/CoreServicesInternal.framework/Versions/A/CoreServicesInternal",
+   "realpath": "/System/Library/PrivateFrameworks/CoreServicesInternal.framework/Versions/A/CoreServicesInternal"
+  },
+  {
+   "path": "/usr/lib/liboah.dylib",
+   "realpath": "/usr/lib/liboah.dylib"
+  },
+  {
+   "path": "/System/Library/PrivateFrameworks/DiskImages.framework/Versions/A/DiskImages",
+   "realpath": "/System/Library/PrivateFrameworks/DiskImages.framework/Versions/A/DiskImages"
+  },
+  {
+   "path": "/System/Library/Frameworks/NetFS.framework/Versions/A/NetFS",
+   "realpath": "/System/Library/Frameworks/NetFS.framework/Versions/A/NetFS"
+  },
+  {
+   "path": "/System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/FSEvents.framework/Versions/A/FSEvents",
+   "realpath": "/System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/FSEvents.framework/Versions/A/FSEvents"
+  },
+  {
+   "path": "/System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/CarbonCore.framework/Versions/A/CarbonCore",
+   "realpath": "/System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/CarbonCore.framework/Versions/A/CarbonCore"
+  },
+  {
+   "path": "/System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Metadata",
+   "realpath": "/System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Metadata"
+  },
+  {
+   "path": "/System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/OSServices.framework/Versions/A/OSServices",
+   "realpath": "/System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/OSServices.framework/Versions/A/OSServices"
+  },
+  {
+   "path": "/System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/SearchKit.framework/Versions/A/SearchKit",
+   "realpath": "/System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/SearchKit.framework/Versions/A/SearchKit"
+  },
+  {
+   "path": "/System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/AE.framework/Versions/A/AE",
+   "realpath": "/System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/AE.framework/Versions/A/AE"
+  },
+  {
+   "path": "/System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/LaunchServices.framework/Versions/A/LaunchServices",
+   "realpath": "/System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/LaunchServices.framework/Versions/A/LaunchServices"
+  },
+  {
+   "path": "/System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/DictionaryServices.framework/Versions/A/DictionaryServices",
+   "realpath": "/System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/DictionaryServices.framework/Versions/A/DictionaryServices"
+  },
+  {
+   "path": "/System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/SharedFileList.framework/Versions/A/SharedFileList",
+   "realpath": "/System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/SharedFileList.framework/Versions/A/SharedFileList"
+  },
+  {
+   "path": "/usr/lib/libapple_nghttp2.dylib",
+   "realpath": "/usr/lib/libapple_nghttp2.dylib"
+  },
+  {
+   "path": "/System/Library/Frameworks/Network.framework/Versions/A/Network",
+   "realpath": "/System/Library/Frameworks/Network.framework/Versions/A/Network"
+  },
+  {
+   "path": "/usr/lib/libenergytrace.dylib",
+   "realpath": "/usr/lib/libenergytrace.dylib"
+  },
+  {
+   "path": "/usr/lib/system/libkxld.dylib",
+   "realpath": "/usr/lib/system/libkxld.dylib"
+  },
+  {
+   "path": "/System/Library/PrivateFrameworks/AppleKeyStore.framework/Versions/A/AppleKeyStore",
+   "realpath": "/System/Library/PrivateFrameworks/AppleKeyStore.framework/Versions/A/AppleKeyStore"
+  },
+  {
+   "path": "/usr/lib/libCoreEntitlements.dylib",
+   "realpath": "/usr/lib/libCoreEntitlements.dylib"
+  },
+  {
+   "path": "/usr/lib/libTLE.dylib",
+   "realpath": "/usr/lib/libTLE.dylib"
+  },
+  {
+   "path": "/System/Library/PrivateFrameworks/MessageSecurity.framework/Versions/A/MessageSecurity",
+   "realpath": "/System/Library/PrivateFrameworks/MessageSecurity.framework/Versions/A/MessageSecurity"
+  },
+  {
+   "path": "/System/Library/PrivateFrameworks/SymptomDiagnosticReporter.framework/Versions/A/SymptomDiagnosticReporter",
+   "realpath": "/System/Library/PrivateFrameworks/SymptomDiagnosticReporter.framework/Versions/A/SymptomDiagnosticReporter"
+  },
+  {
+   "path": "/System/Library/PrivateFrameworks/CrashReporterSupport.framework/Versions/A/CrashReporterSupport",
+   "realpath": "/System/Library/PrivateFrameworks/CrashReporterSupport.framework/Versions/A/CrashReporterSupport"
+  },
+  {
+   "path": "/System/Library/PrivateFrameworks/CoreTime.framework/Versions/A/CoreTime",
+   "realpath": "/System/Library/PrivateFrameworks/CoreTime.framework/Versions/A/CoreTime"
+  },
+  {
+   "path": "/System/Library/PrivateFrameworks/AppleFSCompression.framework/Versions/A/AppleFSCompression",
+   "realpath": "/System/Library/PrivateFrameworks/AppleFSCompression.framework/Versions/A/AppleFSCompression"
+  },
+  {
+   "path": "/usr/lib/libcoretls.dylib",
+   "realpath": "/usr/lib/libcoretls.dylib"
+  },
+  {
+   "path": "/usr/lib/libcoretls_cfhelpers.dylib",
+   "realpath": "/usr/lib/libcoretls_cfhelpers.dylib"
+  },
+  {
+   "path": "/usr/lib/libpam.2.dylib",
+   "realpath": "/usr/lib/libpam.2.dylib"
+  },
+  {
+   "path": "/usr/lib/libxar.1.dylib",
+   "realpath": "/usr/lib/libxar.1.dylib"
+  },
+  {
+   "path": "/System/Library/PrivateFrameworks/APFS.framework/Versions/A/APFS",
+   "realpath": "/System/Library/PrivateFrameworks/APFS.framework/Versions/A/APFS"
+  },
+  {
+   "path": "/System/Library/PrivateFrameworks/SwiftASN1Internal.framework/Versions/A/SwiftASN1Internal",
+   "realpath": "/System/Library/PrivateFrameworks/SwiftASN1Internal.framework/Versions/A/SwiftASN1Internal"
+  },
+  {
+   "path": "/usr/lib/libutil.dylib",
+   "realpath": "/usr/lib/libutil.dylib"
+  },
+  {
+   "path": "/usr/lib/libswiftPrespecialized.dylib",
+   "realpath": "/usr/lib/libswiftPrespecialized.dylib"
+  },
+  {
+   "path": "/System/Library/PrivateFrameworks/AppleSystemInfo.framework/Versions/A/AppleSystemInfo",
+   "realpath": "/System/Library/PrivateFrameworks/AppleSystemInfo.framework/Versions/A/AppleSystemInfo"
+  },
+  {
+   "path": "/System/Library/PrivateFrameworks/ConnectedMode.framework/Versions/A/ConnectedMode",
+   "realpath": "/System/Library/PrivateFrameworks/ConnectedMode.framework/Versions/A/ConnectedMode"
+  },
+  {
+   "path": "/System/Library/Frameworks/SwiftData.framework/Versions/A/SwiftData",
+   "realpath": "/System/Library/Frameworks/SwiftData.framework/Versions/A/SwiftData"
+  },
+  {
+   "path": "/usr/lib/libboringssl.dylib",
+   "realpath": "/usr/lib/libboringssl.dylib"
+  },
+  {
+   "path": "/usr/lib/libdns_services.dylib",
+   "realpath": "/usr/lib/libdns_services.dylib"
+  },
+  {
+   "path": "/usr/lib/libquic.dylib",
+   "realpath": "/usr/lib/libquic.dylib"
+  },
+  {
+   "path": "/usr/lib/libusrtcp.dylib",
+   "realpath": "/usr/lib/libusrtcp.dylib"
+  },
+  {
+   "path": "/System/Library/PrivateFrameworks/AtomicsInternal.framework/Versions/A/AtomicsInternal",
+   "realpath": "/System/Library/PrivateFrameworks/AtomicsInternal.framework/Versions/A/AtomicsInternal"
+  },
+  {
+   "path": "/usr/lib/swift/libswiftDistributed.dylib",
+   "realpath": "/usr/lib/swift/libswiftDistributed.dylib"
+  },
+  {
+   "path": "/System/Library/Frameworks/CoreData.framework/Versions/A/CoreData",
+   "realpath": "/System/Library/Frameworks/CoreData.framework/Versions/A/CoreData"
+  },
+  {
+   "path": "/usr/lib/liblzma.5.dylib",
+   "realpath": "/usr/lib/liblzma.5.dylib"
+  },
+  {
+   "path": "/usr/lib/swift/libswift_DarwinFoundation2.dylib",
+   "realpath": "/usr/lib/swift/libswift_DarwinFoundation2.dylib"
+  },
+  {
+   "path": "/usr/lib/swift/libswift_DarwinFoundation3.dylib",
+   "realpath": "/usr/lib/swift/libswift_DarwinFoundation3.dylib"
+  },
+  {
+   "path": "/usr/lib/swift/libswift_RegexParser.dylib",
+   "realpath": "/usr/lib/swift/libswift_RegexParser.dylib"
+  },
+  {
+   "path": "/usr/lib/libheimdal-asn1.dylib",
+   "realpath": "/usr/lib/libheimdal-asn1.dylib"
+  },
+  {
+   "path": "/System/Library/PrivateFrameworks/AppleSauce.framework/Versions/A/AppleSauce",
+   "realpath": "/System/Library/PrivateFrameworks/AppleSauce.framework/Versions/A/AppleSauce"
+  },
+  {
+   "path": "/System/Library/PrivateFrameworks/DeviceRecovery.framework/Versions/A/DeviceRecovery",
+   "realpath": "/System/Library/PrivateFrameworks/DeviceRecovery.framework/Versions/A/DeviceRecovery"
+  },
+  {
+   "path": "/System/Library/PrivateFrameworks/CoreSymbolication.framework/Versions/A/CoreSymbolication",
+   "realpath": "/System/Library/PrivateFrameworks/CoreSymbolication.framework/Versions/A/CoreSymbolication"
+  },
+  {
+   "path": "/System/Library/PrivateFrameworks/Symbolication.framework/Versions/A/Symbolication",
+   "realpath": "/System/Library/PrivateFrameworks/Symbolication.framework/Versions/A/Symbolication"
+  },
+  {
+   "path": "/System/Library/PrivateFrameworks/DebugSymbols.framework/Versions/A/DebugSymbols",
+   "realpath": "/System/Library/PrivateFrameworks/DebugSymbols.framework/Versions/A/DebugSymbols"
+  },
+  {
+   "path": "/usr/lib/libAppleArchive.dylib",
+   "realpath": "/usr/lib/libAppleArchive.dylib"
+  },
+  {
+   "path": "/usr/lib/libbz2.1.0.dylib",
+   "realpath": "/usr/lib/libbz2.1.0.dylib"
+  },
+  {
+   "path": "/System/Library/PrivateFrameworks/MallocStackLogging.framework/Versions/A/MallocStackLogging",
+   "realpath": "/System/Library/PrivateFrameworks/MallocStackLogging.framework/Versions/A/MallocStackLogging"
+  },
+  {
+   "path": "/usr/lib/libCheckFix.dylib",
+   "realpath": "/usr/lib/libCheckFix.dylib"
+  },
+  {
+   "path": "/System/Library/PrivateFrameworks/CoreNLP.framework/Versions/A/CoreNLP",
+   "realpath": "/System/Library/PrivateFrameworks/CoreNLP.framework/Versions/A/CoreNLP"
+  },
+  {
+   "path": "/System/Library/PrivateFrameworks/MetadataUtilities.framework/Versions/A/MetadataUtilities",
+   "realpath": "/System/Library/PrivateFrameworks/MetadataUtilities.framework/Versions/A/MetadataUtilities"
+  },
+  {
+   "path": "/usr/lib/libmecab.dylib",
+   "realpath": "/usr/lib/libmecab.dylib"
+  },
+  {
+   "path": "/usr/lib/libCRFSuite.dylib",
+   "realpath": "/usr/lib/libCRFSuite.dylib"
+  },
+  {
+   "path": "/usr/lib/libgermantok.dylib",
+   "realpath": "/usr/lib/libgermantok.dylib"
+  },
+  {
+   "path": "/usr/lib/libThaiTokenizer.dylib",
+   "realpath": "/usr/lib/libThaiTokenizer.dylib"
+  },
+  {
+   "path": "/usr/lib/libiconv.2.dylib",
+   "realpath": "/usr/lib/libiconv.2.dylib"
+  },
+  {
+   "path": "/usr/lib/libcharset.1.dylib",
+   "realpath": "/usr/lib/libcharset.1.dylib"
+  },
+  {
+   "path": "/System/Library/Frameworks/OpenDirectory.framework/Versions/A/Frameworks/CFOpenDirectory.framework/Versions/A/CFOpenDirectory",
+   "realpath": "/System/Library/Frameworks/OpenDirectory.framework/Versions/A/Frameworks/CFOpenDirectory.framework/Versions/A/CFOpenDirectory"
+  },
+  {
+   "path": "/System/Library/PrivateFrameworks/AppServerSupport.framework/Versions/A/AppServerSupport",
+   "realpath": "/System/Library/PrivateFrameworks/AppServerSupport.framework/Versions/A/AppServerSupport"
+  },
+  {
+   "path": "/usr/lib/libapp_launch_measurement.dylib",
+   "realpath": "/usr/lib/libapp_launch_measurement.dylib"
+  },
+  {
+   "path": "/System/Library/PrivateFrameworks/InstalledContentLibrary.framework/Versions/A/InstalledContentLibrary",
+   "realpath": "/System/Library/PrivateFrameworks/InstalledContentLibrary.framework/Versions/A/InstalledContentLibrary"
+  },
+  {
+   "path": "/System/Library/PrivateFrameworks/CoreServicesStore.framework/Versions/A/CoreServicesStore",
+   "realpath": "/System/Library/PrivateFrameworks/CoreServicesStore.framework/Versions/A/CoreServicesStore"
+  },
+  {
+   "path": "/System/Library/PrivateFrameworks/AppleMobileFileIntegrity.framework/Versions/A/AppleMobileFileIntegrity",
+   "realpath": "/System/Library/PrivateFrameworks/AppleMobileFileIntegrity.framework/Versions/A/AppleMobileFileIntegrity"
+  },
+  {
+   "path": "/usr/lib/libmis.dylib",
+   "realpath": "/usr/lib/libmis.dylib"
+  },
+  {
+   "path": "/System/Library/PrivateFrameworks/MobileSystemServices.framework/Versions/A/MobileSystemServices",
+   "realpath": "/System/Library/PrivateFrameworks/MobileSystemServices.framework/Versions/A/MobileSystemServices"
+  },
+  {
+   "path": "/System/Library/PrivateFrameworks/ConfigProfileHelper.framework/Versions/A/ConfigProfileHelper",
+   "realpath": "/System/Library/PrivateFrameworks/ConfigProfileHelper.framework/Versions/A/ConfigProfileHelper"
+  },
+  {
+   "path": "/usr/lib/libxslt.1.dylib",
+   "realpath": "/usr/lib/libxslt.1.dylib"
+  },
+  {
+   "path": "/System/Library/PrivateFrameworks/Lexicon.framework/Versions/A/Lexicon",
+   "realpath": "/System/Library/PrivateFrameworks/Lexicon.framework/Versions/A/Lexicon"
+  },
+  {
+   "path": "/System/Library/PrivateFrameworks/LinguisticData.framework/Versions/A/LinguisticData",
+   "realpath": "/System/Library/PrivateFrameworks/LinguisticData.framework/Versions/A/LinguisticData"
+  },
+  {
+   "path": "/System/Library/PrivateFrameworks/BackgroundTaskManagement.framework/Versions/A/BackgroundTaskManagement",
+   "realpath": "/System/Library/PrivateFrameworks/BackgroundTaskManagement.framework/Versions/A/BackgroundTaskManagement"
+  },
+  {
+   "path": "/System/Library/Frameworks/DiscRecording.framework/Versions/A/DiscRecording",
+   "realpath": "/System/Library/Frameworks/DiscRecording.framework/Versions/A/DiscRecording"
+  },
+  {
+   "path": "/usr/lib/libcurl.4.dylib",
+   "realpath": "/usr/lib/libcurl.4.dylib"
+  },
+  {
+   "path": "/System/Library/PrivateFrameworks/MediaKit.framework/Versions/A/MediaKit",
+   "realpath": "/System/Library/PrivateFrameworks/MediaKit.framework/Versions/A/MediaKit"
+  },
+  {
+   "path": "/System/Library/Frameworks/AudioToolbox.framework/Versions/A/AudioToolbox",
+   "realpath": "/System/Library/Frameworks/AudioToolbox.framework/Versions/A/AudioToolbox"
+  },
+  {
+   "path": "/System/Library/PrivateFrameworks/AudioToolboxCore.framework/Versions/A/AudioToolboxCore",
+   "realpath": "/System/Library/PrivateFrameworks/AudioToolboxCore.framework/Versions/A/AudioToolboxCore"
+  },
+  {
+   "path": "/System/Library/PrivateFrameworks/AudioSession.framework/Versions/A/AudioSession",
+   "realpath": "/System/Library/PrivateFrameworks/AudioSession.framework/Versions/A/AudioSession"
+  },
+  {
+   "path": "/System/Library/Frameworks/CoreMIDI.framework/Versions/A/CoreMIDI",
+   "realpath": "/System/Library/Frameworks/CoreMIDI.framework/Versions/A/CoreMIDI"
+  },
+  {
+   "path": "/usr/lib/libAudioStatistics.dylib",
+   "realpath": "/usr/lib/libAudioStatistics.dylib"
+  },
+  {
+   "path": "/System/Library/PrivateFrameworks/caulk.framework/Versions/A/caulk",
+   "realpath": "/System/Library/PrivateFrameworks/caulk.framework/Versions/A/caulk"
+  },
+  {
+   "path": "/System/Library/Frameworks/CoreAudio.framework/Versions/A/CoreAudio",
+   "realpath": "/System/Library/Frameworks/CoreAudio.framework/Versions/A/CoreAudio"
+  },
+  {
+   "path": "/usr/lib/swift/libswiftCoreMIDI.dylib",
+   "realpath": "/usr/lib/swift/libswiftCoreMIDI.dylib"
+  },
+  {
+   "path": "/System/Library/PrivateFrameworks/perfdata.framework/Versions/A/perfdata",
+   "realpath": "/System/Library/PrivateFrameworks/perfdata.framework/Versions/A/perfdata"
+  },
+  {
+   "path": "/System/Library/PrivateFrameworks/SystemPolicy.framework/Versions/A/SystemPolicy",
+   "realpath": "/System/Library/PrivateFrameworks/SystemPolicy.framework/Versions/A/SystemPolicy"
+  },
+  {
+   "path": "/usr/lib/libexpat.1.dylib",
+   "realpath": "/usr/lib/libexpat.1.dylib"
+  },
+  {
+   "path": "/usr/lib/libperfcheck.dylib",
+   "realpath": "/usr/lib/libperfcheck.dylib"
+  },
+  {
+   "path": "/System/Library/PrivateFrameworks/AudioAnalytics.framework/Versions/A/AudioAnalytics",
+   "realpath": "/System/Library/PrivateFrameworks/AudioAnalytics.framework/Versions/A/AudioAnalytics"
+  },
+  {
+   "path": "/System/Library/Frameworks/OSLog.framework/Versions/A/OSLog",
+   "realpath": "/System/Library/Frameworks/OSLog.framework/Versions/A/OSLog"
+  },
+  {
+   "path": "/System/Library/PrivateFrameworks/UserManagement.framework/Versions/A/UserManagement",
+   "realpath": "/System/Library/PrivateFrameworks/UserManagement.framework/Versions/A/UserManagement"
+  },
+  {
+   "path": "/System/Library/Frameworks/ExtensionFoundation.framework/Versions/A/ExtensionFoundation",
+   "realpath": "/System/Library/Frameworks/ExtensionFoundation.framework/Versions/A/ExtensionFoundation"
+  },
+  {
+   "path": "/System/Library/PrivateFrameworks/MobileKeyBag.framework/Versions/A/MobileKeyBag",
+   "realpath": "/System/Library/PrivateFrameworks/MobileKeyBag.framework/Versions/A/MobileKeyBag"
+  },
+  {
+   "path": "/System/Library/PrivateFrameworks/AggregateDictionary.framework/Versions/A/AggregateDictionary",
+   "realpath": "/System/Library/PrivateFrameworks/AggregateDictionary.framework/Versions/A/AggregateDictionary"
+  },
+  {
+   "path": "/System/Library/PrivateFrameworks/OSEligibility.framework/Versions/A/OSEligibility",
+   "realpath": "/System/Library/PrivateFrameworks/OSEligibility.framework/Versions/A/OSEligibility"
+  },
+  {
+   "path": "/System/Library/Frameworks/LightweightCodeRequirements.framework/Versions/A/LightweightCodeRequirements",
+   "realpath": "/System/Library/Frameworks/LightweightCodeRequirements.framework/Versions/A/LightweightCodeRequirements"
+  },
+  {
+   "path": "/System/Library/PrivateFrameworks/PlugInKit.framework/Versions/A/PlugInKit",
+   "realpath": "/System/Library/PrivateFrameworks/PlugInKit.framework/Versions/A/PlugInKit"
+  },
+  {
+   "path": "/System/Library/PrivateFrameworks/AssertionServices.framework/Versions/A/AssertionServices",
+   "realpath": "/System/Library/PrivateFrameworks/AssertionServices.framework/Versions/A/AssertionServices"
+  },
+  {
+   "path": "/System/Library/PrivateFrameworks/AppleJPEG.framework/Versions/A/AppleJPEG",
+   "realpath": "/System/Library/PrivateFrameworks/AppleJPEG.framework/Versions/A/AppleJPEG"
+  },
+  {
+   "path": "/System/Library/Frameworks/ImageIO.framework/Versions/A/Resources/libPng.dylib",
+   "realpath": "/System/Library/Frameworks/ImageIO.framework/Versions/A/Resources/libPng.dylib"
+  },
+  {
+   "path": "/System/Library/Frameworks/ImageIO.framework/Versions/A/Resources/libTIFF.dylib",
+   "realpath": "/System/Library/Frameworks/ImageIO.framework/Versions/A/Resources/libTIFF.dylib"
+  },
+  {
+   "path": "/System/Library/Frameworks/ImageIO.framework/Versions/A/Resources/libGIF.dylib",
+   "realpath": "/System/Library/Frameworks/ImageIO.framework/Versions/A/Resources/libGIF.dylib"
+  },
+  {
+   "path": "/System/Library/Frameworks/ImageIO.framework/Versions/A/Resources/libJP2.dylib",
+   "realpath": "/System/Library/Frameworks/ImageIO.framework/Versions/A/Resources/libJP2.dylib"
+  },
+  {
+   "path": "/usr/lib/libate.dylib",
+   "realpath": "/usr/lib/libate.dylib"
+  },
+  {
+   "path": "/System/Library/Frameworks/ImageIO.framework/Versions/A/Resources/libJPEG.dylib",
+   "realpath": "/System/Library/Frameworks/ImageIO.framework/Versions/A/Resources/libJPEG.dylib"
+  },
+  {
+   "path": "/System/Library/Frameworks/ImageIO.framework/Versions/A/Resources/libRadiance.dylib",
+   "realpath": "/System/Library/Frameworks/ImageIO.framework/Versions/A/Resources/libRadiance.dylib"
+  },
+  {
+   "path": "/usr/lib/swift/libswiftRegexBuilder.dylib",
+   "realpath": "/usr/lib/swift/libswiftRegexBuilder.dylib"
+  },
+  {
+   "path": "/System/Library/PrivateFrameworks/GPUCompiler.framework/Versions/32023/Libraries/libllvm-flatbuffers.dylib",
+   "realpath": "/System/Library/PrivateFrameworks/GPUCompiler.framework/Versions/32023/Libraries/libllvm-flatbuffers.dylib"
+  },
+  {
+   "path": "/System/Library/PrivateFrameworks/FramePacing.framework/Versions/A/FramePacing",
+   "realpath": "/System/Library/PrivateFrameworks/FramePacing.framework/Versions/A/FramePacing"
+  },
+  {
+   "path": "/System/Library/Frameworks/OpenGL.framework/Versions/A/Libraries/libCoreFSCache.dylib",
+   "realpath": "/System/Library/Frameworks/OpenGL.framework/Versions/A/Libraries/libCoreFSCache.dylib"
+  },
+  {
+   "path": "/System/Library/PrivateFrameworks/GPUCompiler.framework/Versions/32023/Libraries/libGPUCompilerUtils.dylib",
+   "realpath": "/System/Library/PrivateFrameworks/GPUCompiler.framework/Versions/32023/Libraries/libGPUCompilerUtils.dylib"
+  },
+  {
+   "path": "/System/Library/Frameworks/UniformTypeIdentifiers.framework/Versions/A/UniformTypeIdentifiers",
+   "realpath": "/System/Library/Frameworks/UniformTypeIdentifiers.framework/Versions/A/UniformTypeIdentifiers"
+  },
+  {
+   "path": "/System/Library/Frameworks/OpenGL.framework/Versions/A/OpenGL",
+   "realpath": "/System/Library/Frameworks/OpenGL.framework/Versions/A/OpenGL"
+  },
+  {
+   "path": "/System/Library/Frameworks/OpenGL.framework/Versions/A/Libraries/libGLU.dylib",
+   "realpath": "/System/Library/Frameworks/OpenGL.framework/Versions/A/Libraries/libGLU.dylib"
+  },
+  {
+   "path": "/System/Library/Frameworks/OpenGL.framework/Versions/A/Libraries/libGFXShared.dylib",
+   "realpath": "/System/Library/Frameworks/OpenGL.framework/Versions/A/Libraries/libGFXShared.dylib"
+  },
+  {
+   "path": "/System/Library/Frameworks/OpenGL.framework/Versions/A/Libraries/libGL.dylib",
+   "realpath": "/System/Library/Frameworks/OpenGL.framework/Versions/A/Libraries/libGL.dylib"
+  },
+  {
+   "path": "/System/Library/Frameworks/OpenGL.framework/Versions/A/Libraries/libGLImage.dylib",
+   "realpath": "/System/Library/Frameworks/OpenGL.framework/Versions/A/Libraries/libGLImage.dylib"
+  },
+  {
+   "path": "/System/Library/Frameworks/OpenGL.framework/Versions/A/Libraries/libCVMSPluginSupport.dylib",
+   "realpath": "/System/Library/Frameworks/OpenGL.framework/Versions/A/Libraries/libCVMSPluginSupport.dylib"
+  },
+  {
+   "path": "/System/Library/Frameworks/OpenGL.framework/Versions/A/Libraries/libCoreVMClient.dylib",
+   "realpath": "/System/Library/Frameworks/OpenGL.framework/Versions/A/Libraries/libCoreVMClient.dylib"
+  },
+  {
+   "path": "/System/Library/Frameworks/CoreImage.framework/Versions/A/CoreImage",
+   "realpath": "/System/Library/Frameworks/CoreImage.framework/Versions/A/CoreImage"
+  },
+  {
+   "path": "/System/Library/PrivateFrameworks/ASEProcessing.framework/Versions/A/ASEProcessing",
+   "realpath": "/System/Library/PrivateFrameworks/ASEProcessing.framework/Versions/A/ASEProcessing"
+  },
+  {
+   "path": "/System/Library/PrivateFrameworks/PhotosensitivityProcessing.framework/Versions/A/PhotosensitivityProcessing",
+   "realpath": "/System/Library/PrivateFrameworks/PhotosensitivityProcessing.framework/Versions/A/PhotosensitivityProcessing"
+  },
+  {
+   "path": "/System/Library/PrivateFrameworks/TimeSync.framework/Versions/A/TimeSync",
+   "realpath": "/System/Library/PrivateFrameworks/TimeSync.framework/Versions/A/TimeSync"
+  },
+  {
+   "path": "/System/Library/PrivateFrameworks/AppleMSG.framework/Versions/A/AppleMSG",
+   "realpath": "/System/Library/PrivateFrameworks/AppleMSG.framework/Versions/A/AppleMSG"
+  },
+  {
+   "path": "/System/Library/PrivateFrameworks/SILManager.framework/Versions/A/SILManager",
+   "realpath": "/System/Library/PrivateFrameworks/SILManager.framework/Versions/A/SILManager"
+  },
+  {
+   "path": "/System/Library/PrivateFrameworks/GraphVisualizer.framework/Versions/A/GraphVisualizer",
+   "realpath": "/System/Library/PrivateFrameworks/GraphVisualizer.framework/Versions/A/GraphVisualizer"
+  },
+  {
+   "path": "/System/Library/PrivateFrameworks/MobileAsset.framework/Versions/A/MobileAsset",
+   "realpath": "/System/Library/PrivateFrameworks/MobileAsset.framework/Versions/A/MobileAsset"
+  },
+  {
+   "path": "/System/Library/PrivateFrameworks/FontServices.framework/Versions/A/FontServices",
+   "realpath": "/System/Library/PrivateFrameworks/FontServices.framework/Versions/A/FontServices"
+  },
+  {
+   "path": "/System/Library/PrivateFrameworks/OTSVG.framework/Versions/A/OTSVG",
+   "realpath": "/System/Library/PrivateFrameworks/OTSVG.framework/Versions/A/OTSVG"
+  },
+  {
+   "path": "/System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/ATS.framework/Versions/A/Resources/libFontRegistry.dylib",
+   "realpath": "/System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/ATS.framework/Versions/A/Resources/libFontRegistry.dylib"
+  },
+  {
+   "path": "/System/Library/PrivateFrameworks/SoftwareUpdateCoreSupport.framework/Versions/A/SoftwareUpdateCoreSupport",
+   "realpath": "/System/Library/PrivateFrameworks/SoftwareUpdateCoreSupport.framework/Versions/A/SoftwareUpdateCoreSupport"
+  },
+  {
+   "path": "/System/Library/PrivateFrameworks/SoftwareUpdateCoreConnect.framework/Versions/A/SoftwareUpdateCoreConnect",
+   "realpath": "/System/Library/PrivateFrameworks/SoftwareUpdateCoreConnect.framework/Versions/A/SoftwareUpdateCoreConnect"
+  },
+  {
+   "path": "/System/Library/PrivateFrameworks/StreamingZip.framework/Versions/A/StreamingZip",
+   "realpath": "/System/Library/PrivateFrameworks/StreamingZip.framework/Versions/A/StreamingZip"
+  },
+  {
+   "path": "/System/Library/PrivateFrameworks/RemoteServiceDiscovery.framework/Versions/A/RemoteServiceDiscovery",
+   "realpath": "/System/Library/PrivateFrameworks/RemoteServiceDiscovery.framework/Versions/A/RemoteServiceDiscovery"
+  },
+  {
+   "path": "/System/Library/PrivateFrameworks/MSUDataAccessor.framework/Versions/A/MSUDataAccessor",
+   "realpath": "/System/Library/PrivateFrameworks/MSUDataAccessor.framework/Versions/A/MSUDataAccessor"
+  },
+  {
+   "path": "/usr/lib/libbootpolicy.dylib",
+   "realpath": "/usr/lib/libbootpolicy.dylib"
+  },
+  {
+   "path": "/usr/lib/libpartition2_dynamic.dylib",
+   "realpath": "/usr/lib/libpartition2_dynamic.dylib"
+  },
+  {
+   "path": "/System/Library/PrivateFrameworks/RemoteXPC.framework/Versions/A/RemoteXPC",
+   "realpath": "/System/Library/PrivateFrameworks/RemoteXPC.framework/Versions/A/RemoteXPC"
+  },
+  {
+   "path": "/usr/lib/libFDR.dylib",
+   "realpath": "/usr/lib/libFDR.dylib"
+  },
+  {
+   "path": "/usr/lib/libamsupport.dylib",
+   "realpath": "/usr/lib/libamsupport.dylib"
+  },
+  {
+   "path": "/usr/lib/libReverseProxyDevice.dylib",
+   "realpath": "/usr/lib/libReverseProxyDevice.dylib"
+  },
+  {
+   "path": "/System/Library/PrivateFrameworks/AppleDeviceQuerySupport.framework/Versions/A/AppleDeviceQuerySupport",
+   "realpath": "/System/Library/PrivateFrameworks/AppleDeviceQuerySupport.framework/Versions/A/AppleDeviceQuerySupport"
+  },
+  {
+   "path": "/usr/lib/libhvf.dylib",
+   "realpath": "/usr/lib/libhvf.dylib"
+  },
+  {
+   "path": "/System/Library/PrivateFrameworks/ParsingInternal.framework/Versions/A/ParsingInternal",
+   "realpath": "/System/Library/PrivateFrameworks/ParsingInternal.framework/Versions/A/ParsingInternal"
+  },
+  {
+   "path": "/System/Library/PrivateFrameworks/FontServices.framework/libXTFontStaticRegistryData.dylib",
+   "realpath": "/System/Library/PrivateFrameworks/FontServices.framework/libXTFontStaticRegistryData.dylib"
+  },
+  {
+   "path": "/System/Library/Frameworks/MetalPerformanceShaders.framework/Versions/A/Frameworks/MPSCore.framework/Versions/A/MPSCore",
+   "realpath": "/System/Library/Frameworks/MetalPerformanceShaders.framework/Versions/A/Frameworks/MPSCore.framework/Versions/A/MPSCore"
+  },
+  {
+   "path": "/System/Library/Frameworks/MetalPerformanceShaders.framework/Versions/A/Frameworks/MPSImage.framework/Versions/A/MPSImage",
+   "realpath": "/System/Library/Frameworks/MetalPerformanceShaders.framework/Versions/A/Frameworks/MPSImage.framework/Versions/A/MPSImage"
+  },
+  {
+   "path": "/System/Library/Frameworks/MetalPerformanceShaders.framework/Versions/A/Frameworks/MPSNeuralNetwork.framework/Versions/A/MPSNeuralNetwork",
+   "realpath": "/System/Library/Frameworks/MetalPerformanceShaders.framework/Versions/A/Frameworks/MPSNeuralNetwork.framework/Versions/A/MPSNeuralNetwork"
+  },
+  {
+   "path": "/System/Library/Frameworks/MetalPerformanceShaders.framework/Versions/A/Frameworks/MPSMatrix.framework/Versions/A/MPSMatrix",
+   "realpath": "/System/Library/Frameworks/MetalPerformanceShaders.framework/Versions/A/Frameworks/MPSMatrix.framework/Versions/A/MPSMatrix"
+  },
+  {
+   "path": "/System/Library/Frameworks/MetalPerformanceShaders.framework/Versions/A/Frameworks/MPSRayIntersector.framework/Versions/A/MPSRayIntersector",
+   "realpath": "/System/Library/Frameworks/MetalPerformanceShaders.framework/Versions/A/Frameworks/MPSRayIntersector.framework/Versions/A/MPSRayIntersector"
+  },
+  {
+   "path": "/System/Library/Frameworks/MetalPerformanceShaders.framework/Versions/A/Frameworks/MPSNDArray.framework/Versions/A/MPSNDArray",
+   "realpath": "/System/Library/Frameworks/MetalPerformanceShaders.framework/Versions/A/Frameworks/MPSNDArray.framework/Versions/A/MPSNDArray"
+  },
+  {
+   "path": "/System/Library/Frameworks/MetalPerformanceShaders.framework/Versions/A/Frameworks/MPSFunctions.framework/Versions/A/MPSFunctions",
+   "realpath": "/System/Library/Frameworks/MetalPerformanceShaders.framework/Versions/A/Frameworks/MPSFunctions.framework/Versions/A/MPSFunctions"
+  },
+  {
+   "path": "/System/Library/Frameworks/MetalPerformanceShaders.framework/Versions/A/Frameworks/MPSBenchmarkLoop.framework/Versions/A/MPSBenchmarkLoop",
+   "realpath": "/System/Library/Frameworks/MetalPerformanceShaders.framework/Versions/A/Frameworks/MPSBenchmarkLoop.framework/Versions/A/MPSBenchmarkLoop"
+  },
+  {
+   "path": "/System/Library/Frameworks/MetalPerformanceShaders.framework/Versions/A/Frameworks/MPSHost.framework/Versions/A/MPSHost",
+   "realpath": "/System/Library/Frameworks/MetalPerformanceShaders.framework/Versions/A/Frameworks/MPSHost.framework/Versions/A/MPSHost"
+  },
+  {
+   "path": "/System/Library/PrivateFrameworks/MetalTools.framework/Versions/A/MetalTools",
+   "realpath": "/System/Library/PrivateFrameworks/MetalTools.framework/Versions/A/MetalTools"
+  },
+  {
+   "path": "/System/Library/PrivateFrameworks/MTL3On4.framework/Versions/A/MTL3On4",
+   "realpath": "/System/Library/PrivateFrameworks/MTL3On4.framework/Versions/A/MTL3On4"
+  },
+  {
+   "path": "/System/Library/PrivateFrameworks/IOAccelMemoryInfo.framework/Versions/A/IOAccelMemoryInfo",
+   "realpath": "/System/Library/PrivateFrameworks/IOAccelMemoryInfo.framework/Versions/A/IOAccelMemoryInfo"
+  },
+  {
+   "path": "/System/Library/PrivateFrameworks/kperf.framework/Versions/A/kperf",
+   "realpath": "/System/Library/PrivateFrameworks/kperf.framework/Versions/A/kperf"
+  },
+  {
+   "path": "/System/Library/PrivateFrameworks/GPURawCounter.framework/Versions/A/GPURawCounter",
+   "realpath": "/System/Library/PrivateFrameworks/GPURawCounter.framework/Versions/A/GPURawCounter"
+  },
+  {
+   "path": "/System/Library/PrivateFrameworks/IOKitten.framework/Versions/A/IOKitten",
+   "realpath": "/System/Library/PrivateFrameworks/IOKitten.framework/Versions/A/IOKitten"
+  },
+  {
+   "path": "/System/Library/PrivateFrameworks/Tightbeam.framework/Versions/A/Tightbeam",
+   "realpath": "/System/Library/PrivateFrameworks/Tightbeam.framework/Versions/A/Tightbeam"
+  },
+  {
+   "path": "/usr/lib/swift/libswiftCompression.dylib",
+   "realpath": "/usr/lib/swift/libswiftCompression.dylib"
+  },
+  {
+   "path": "/System/Library/PrivateFrameworks/AFKUser.framework/Versions/A/AFKUser",
+   "realpath": "/System/Library/PrivateFrameworks/AFKUser.framework/Versions/A/AFKUser"
+  },
+  {
+   "path": "/System/Library/PrivateFrameworks/MediaExperience.framework/Versions/A/MediaExperience",
+   "realpath": "/System/Library/PrivateFrameworks/MediaExperience.framework/Versions/A/MediaExperience"
+  },
+  {
+   "path": "/System/Library/PrivateFrameworks/AudioSession.framework/libSessionUtility.dylib",
+   "realpath": "/System/Library/PrivateFrameworks/AudioSession.framework/libSessionUtility.dylib"
+  },
+  {
+   "path": "/System/Library/PrivateFrameworks/CMCaptureCore.framework/Versions/A/CMCaptureCore",
+   "realpath": "/System/Library/PrivateFrameworks/CMCaptureCore.framework/Versions/A/CMCaptureCore"
+  },
+  {
+   "path": "/usr/lib/libspindump.dylib",
+   "realpath": "/usr/lib/libspindump.dylib"
+  },
+  {
+   "path": "/System/Library/PrivateFrameworks/PowerLog.framework/Versions/A/PowerLog",
+   "realpath": "/System/Library/PrivateFrameworks/PowerLog.framework/Versions/A/PowerLog"
+  },
+  {
+   "path": "/System/Library/PrivateFrameworks/HID.framework/Versions/A/HID",
+   "realpath": "/System/Library/PrivateFrameworks/HID.framework/Versions/A/HID"
+  },
+  {
+   "path": "/System/Library/Frameworks/OpenDirectory.framework/Versions/A/OpenDirectory",
+   "realpath": "/System/Library/Frameworks/OpenDirectory.framework/Versions/A/OpenDirectory"
+  },
+  {
+   "path": "/System/Library/Frameworks/SecurityFoundation.framework/Versions/A/SecurityFoundation",
+   "realpath": "/System/Library/Frameworks/SecurityFoundation.framework/Versions/A/SecurityFoundation"
+  },
+  {
+   "path": "/System/Library/PrivateFrameworks/CorePhoneNumbers.framework/Versions/A/CorePhoneNumbers",
+   "realpath": "/System/Library/PrivateFrameworks/CorePhoneNumbers.framework/Versions/A/CorePhoneNumbers"
+  },
+  {
+   "path": "/System/Library/PrivateFrameworks/GraphicsServices.framework/Versions/A/GraphicsServices",
+   "realpath": "/System/Library/PrivateFrameworks/GraphicsServices.framework/Versions/A/GraphicsServices"
+  },
+  {
+   "path": "/usr/lib/libcrypto.46.dylib",
+   "realpath": "/usr/lib/libcrypto.46.dylib"
+  },
+  {
+   "path": "/usr/lib/libssl.48.dylib",
+   "realpath": "/usr/lib/libssl.48.dylib"
+  },
+  {
+   "path": "/System/Library/Frameworks/LDAP.framework/Versions/A/LDAP",
+   "realpath": "/System/Library/Frameworks/LDAP.framework/Versions/A/LDAP"
+  },
+  {
+   "path": "/System/Library/Frameworks/Kerberos.framework/Versions/A/Kerberos",
+   "realpath": "/System/Library/Frameworks/Kerberos.framework/Versions/A/Kerberos"
+  },
+  {
+   "path": "/System/Library/PrivateFrameworks/TrustEvaluationAgent.framework/Versions/A/TrustEvaluationAgent",
+   "realpath": "/System/Library/PrivateFrameworks/TrustEvaluationAgent.framework/Versions/A/TrustEvaluationAgent"
+  },
+  {
+   "path": "/usr/lib/libsasl2.2.dylib",
+   "realpath": "/usr/lib/libsasl2.2.dylib"
+  },
+  {
+   "path": "/usr/lib/libresolv.9.dylib",
+   "realpath": "/usr/lib/libresolv.9.dylib"
+  },
+  {
+   "path": "/System/Library/PrivateFrameworks/Heimdal.framework/Versions/A/Heimdal",
+   "realpath": "/System/Library/PrivateFrameworks/Heimdal.framework/Versions/A/Heimdal"
+  },
+  {
+   "path": "/System/Library/Frameworks/GSS.framework/Versions/A/GSS",
+   "realpath": "/System/Library/Frameworks/GSS.framework/Versions/A/GSS"
+  },
+  {
+   "path": "/System/Library/Frameworks/Kerberos.framework/Versions/A/Libraries/libHeimdalProxy.dylib",
+   "realpath": "/System/Library/Frameworks/Kerberos.framework/Versions/A/Libraries/libHeimdalProxy.dylib"
+  },
+  {
+   "path": "/System/Library/PrivateFrameworks/CommonAuth.framework/Versions/A/CommonAuth",
+   "realpath": "/System/Library/PrivateFrameworks/CommonAuth.framework/Versions/A/CommonAuth"
+  },
+  {
+   "path": "/System/Library/PrivateFrameworks/NetAuth.framework/Versions/A/NetAuth",
+   "realpath": "/System/Library/PrivateFrameworks/NetAuth.framework/Versions/A/NetAuth"
+  },
+  {
+   "path": "/System/Library/PrivateFrameworks/login.framework/Versions/A/Frameworks/loginsupport.framework/Versions/A/loginsupport",
+   "realpath": "/System/Library/PrivateFrameworks/login.framework/Versions/A/Frameworks/loginsupport.framework/Versions/A/loginsupport"
+  },
+  {
+   "path": "/System/Library/PrivateFrameworks/InternationalTextSearch.framework/Versions/A/InternationalTextSearch",
+   "realpath": "/System/Library/PrivateFrameworks/InternationalTextSearch.framework/Versions/A/InternationalTextSearch"
+  },
+  {
+   "path": "/System/Library/PrivateFrameworks/PoirotSQLite.framework/Versions/A/PoirotSQLite",
+   "realpath": "/System/Library/PrivateFrameworks/PoirotSQLite.framework/Versions/A/PoirotSQLite"
+  },
+  {
+   "path": "/System/Library/PrivateFrameworks/CascadeSets.framework/Versions/A/CascadeSets",
+   "realpath": "/System/Library/PrivateFrameworks/CascadeSets.framework/Versions/A/CascadeSets"
+  },
+  {
+   "path": "/System/Library/PrivateFrameworks/AppSupport.framework/Versions/A/AppSupport",
+   "realpath": "/System/Library/PrivateFrameworks/AppSupport.framework/Versions/A/AppSupport"
+  },
+  {
+   "path": "/System/Library/PrivateFrameworks/GPUWrangler.framework/Versions/A/GPUWrangler",
+   "realpath": "/System/Library/PrivateFrameworks/GPUWrangler.framework/Versions/A/GPUWrangler"
+  },
+  {
+   "path": "/System/Library/PrivateFrameworks/IOPresentment.framework/Versions/A/IOPresentment",
+   "realpath": "/System/Library/PrivateFrameworks/IOPresentment.framework/Versions/A/IOPresentment"
+  },
+  {
+   "path": "/System/Library/PrivateFrameworks/DSExternalDisplay.framework/Versions/A/DSExternalDisplay",
+   "realpath": "/System/Library/PrivateFrameworks/DSExternalDisplay.framework/Versions/A/DSExternalDisplay"
+  },
+  {
+   "path": "/System/Library/PrivateFrameworks/VideoToolboxParavirtualizationSupport.framework/Versions/A/VideoToolboxParavirtualizationSupport",
+   "realpath": "/System/Library/PrivateFrameworks/VideoToolboxParavirtualizationSupport.framework/Versions/A/VideoToolboxParavirtualizationSupport"
+  },
+  {
+   "path": "/System/Library/PrivateFrameworks/AppleVA.framework/Versions/A/AppleVA",
+   "realpath": "/System/Library/PrivateFrameworks/AppleVA.framework/Versions/A/AppleVA"
+  },
+  {
+   "path": "/System/Library/PrivateFrameworks/HIDDisplay.framework/Versions/A/HIDDisplay",
+   "realpath": "/System/Library/PrivateFrameworks/HIDDisplay.framework/Versions/A/HIDDisplay"
+  },
+  {
+   "path": "/System/Library/PrivateFrameworks/MIL.framework/Versions/A/MIL",
+   "realpath": "/System/Library/PrivateFrameworks/MIL.framework/Versions/A/MIL"
+  },
+  {
+   "path": "/System/Library/Frameworks/Accelerate.framework/Versions/A/Frameworks/vecLib.framework/Versions/A/libvDSP.dylib",
+   "realpath": "/System/Library/Frameworks/Accelerate.framework/Versions/A/Frameworks/vecLib.framework/Versions/A/libvDSP.dylib"
+  },
+  {
+   "path": "/System/Library/Frameworks/Accelerate.framework/Versions/A/Frameworks/vecLib.framework/Versions/A/libLAPACK.dylib",
+   "realpath": "/System/Library/Frameworks/Accelerate.framework/Versions/A/Frameworks/vecLib.framework/Versions/A/libLAPACK.dylib"
+  },
+  {
+   "path": "/System/Library/Frameworks/Accelerate.framework/Versions/A/Frameworks/vecLib.framework/Versions/A/libLinearAlgebra.dylib",
+   "realpath": "/System/Library/Frameworks/Accelerate.framework/Versions/A/Frameworks/vecLib.framework/Versions/A/libLinearAlgebra.dylib"
+  },
+  {
+   "path": "/System/Library/Frameworks/Accelerate.framework/Versions/A/Frameworks/vecLib.framework/Versions/A/libSparseBLAS.dylib",
+   "realpath": "/System/Library/Frameworks/Accelerate.framework/Versions/A/Frameworks/vecLib.framework/Versions/A/libSparseBLAS.dylib"
+  },
+  {
+   "path": "/System/Library/Frameworks/Accelerate.framework/Versions/A/Frameworks/vecLib.framework/Versions/A/libQuadrature.dylib",
+   "realpath": "/System/Library/Frameworks/Accelerate.framework/Versions/A/Frameworks/vecLib.framework/Versions/A/libQuadrature.dylib"
+  },
+  {
+   "path": "/System/Library/Frameworks/Accelerate.framework/Versions/A/Frameworks/vecLib.framework/Versions/A/libBNNS.dylib",
+   "realpath": "/System/Library/Frameworks/Accelerate.framework/Versions/A/Frameworks/vecLib.framework/Versions/A/libBNNS.dylib"
+  },
+  {
+   "path": "/System/Library/Frameworks/Accelerate.framework/Versions/A/Frameworks/vecLib.framework/Versions/A/libSparse.dylib",
+   "realpath": "/System/Library/Frameworks/Accelerate.framework/Versions/A/Frameworks/vecLib.framework/Versions/A/libSparse.dylib"
+  },
+  {
+   "path": "<psi4-prefix>/lib/libcurl.4.dylib",
+   "realpath": "<psi4-prefix>/lib/libcurl.4.dylib",
+   "sha256": "113e72afbf5c9e5de467c39a0ec539086a3057897dd6e3c58f3c6b850929bf2f"
+  },
+  {
+   "path": "<psi4-prefix>/lib/libsz.2.0.1.dylib",
+   "realpath": "<psi4-prefix>/lib/libsz.2.0.1.dylib",
+   "sha256": "418c7d818ef8e54de445302bbc017a75394088a972ba152c5541bab12b418585"
+  },
+  {
+   "path": "<psi4-prefix>/lib/libnghttp2.14.dylib",
+   "realpath": "<psi4-prefix>/lib/libnghttp2.14.dylib",
+   "sha256": "d189be787ea80f848bf77ec2acc360ce18dc6f165928893e8391f52961e9acce"
+  },
+  {
+   "path": "<psi4-prefix>/lib/libssh2.1.0.1.dylib",
+   "realpath": "<psi4-prefix>/lib/libssh2.1.0.1.dylib",
+   "sha256": "a12a0487d0943eb84ec9e33920f89b7a3e1911bb93e3379bd2c7cea5afd73efb"
+  },
+  {
+   "path": "<psi4-prefix>/lib/libpsl.5.dylib",
+   "realpath": "<psi4-prefix>/lib/libpsl.5.dylib",
+   "sha256": "02efccbd65f8dc47fde79fea72812f80dc1ae5076b2887731cd3e9c2d0ba6ace"
+  },
+  {
+   "path": "<psi4-prefix>/lib/libssl.3.dylib",
+   "realpath": "<psi4-prefix>/lib/libssl.3.dylib",
+   "sha256": "1b8b8e5795a957b655b6e2f0a8ed941111800040a3300ed97c9ae9f20ec55fd0"
+  },
+  {
+   "path": "<psi4-prefix>/lib/libgssapi_krb5.2.2.dylib",
+   "realpath": "<psi4-prefix>/lib/libgssapi_krb5.2.2.dylib",
+   "sha256": "bb114b8c00cde87fc3f9e3ddfd73f5e8cc9d62ddb1b167c8f5acf1387bfdf0d1"
+  },
+  {
+   "path": "<psi4-prefix>/lib/libzstd.1.5.7.dylib",
+   "realpath": "<psi4-prefix>/lib/libzstd.1.5.7.dylib",
+   "sha256": "94dde7b52917a03b23b96d7ec895a814f246b3f16423bc9d51bf27a224af5625"
+  },
+  {
+   "path": "<psi4-prefix>/lib/libicuuc.78.3.dylib",
+   "realpath": "<psi4-prefix>/lib/libicuuc.78.3.dylib",
+   "sha256": "20062b2bd5de7f6ba8dbf053a68c04823d41992bd7783653dce2e574ec92b550"
+  },
+  {
+   "path": "<psi4-prefix>/lib/libicudata.78.3.dylib",
+   "realpath": "<psi4-prefix>/lib/libicudata.78.3.dylib",
+   "sha256": "bc00cc5bf0d5c45e562f47fe27f6a7b9e956c5d167c7e8233b4b2c3f22f8cbbc"
+  },
+  {
+   "path": "<psi4-prefix>/lib/libkrb5.3.3.dylib",
+   "realpath": "<psi4-prefix>/lib/libkrb5.3.3.dylib",
+   "sha256": "5aaf14be86029e3a094350f5996d78394d21c17690477be08bca63b08de1600f"
+  },
+  {
+   "path": "<psi4-prefix>/lib/libk5crypto.3.1.dylib",
+   "realpath": "<psi4-prefix>/lib/libk5crypto.3.1.dylib",
+   "sha256": "30880c6c952d996d59131ab64c2164d4f8cbece35f62fc63bb38efceb222878f"
+  },
+  {
+   "path": "<psi4-prefix>/lib/libcom_err.3.0.dylib",
+   "realpath": "<psi4-prefix>/lib/libcom_err.3.0.dylib",
+   "sha256": "82aa3b096baf49f11fd4d5eb1642e9ff3417c9c8857ebb48971c4bae0b59272d"
+  },
+  {
+   "path": "<psi4-prefix>/lib/libkrb5support.1.1.dylib",
+   "realpath": "<psi4-prefix>/lib/libkrb5support.1.1.dylib",
+   "sha256": "d50aac644b95858b8738639a8318348b2d95efdb2a8b6ce7a96cfa88f2cf635c"
+  },
+  {
+   "path": "<psi4-prefix>/lib/libFaddeeva.1.dylib",
+   "realpath": "<psi4-prefix>/lib/libFaddeeva.1.dylib",
+   "sha256": "dc884d1f4e43bbd917c0740c67d4ccca01c554549bf1cfc22712f8cfa2dbd323"
+  },
+  {
+   "path": "<psi4-prefix>/lib/libpugixml.1.15.dylib",
+   "realpath": "<psi4-prefix>/lib/libpugixml.1.15.dylib",
+   "sha256": "1a4380522a2a45fbd66fd65483c12947c0222745e154be932db1b96385cf0987"
+  },
+  {
+   "path": "<psi4-prefix>/lib/libgfortran.5.dylib",
+   "realpath": "<psi4-prefix>/lib/libgfortran.5.dylib",
+   "sha256": "6ed86c020eaf1d0a6335b30985b95cab2681c351e920886119cb312a1f6968de"
+  },
+  {
+   "path": "<psi4-prefix>/lib/libquadmath.0.dylib",
+   "realpath": "<psi4-prefix>/lib/libquadmath.0.dylib",
+   "sha256": "b9d81ec96bd4d34531a9328fa263dfdf26c0a80522f3ef25ab83ede13bada205"
+  },
+  {
+   "path": "<psi4-prefix>/lib/libgcc_s.1.1.dylib",
+   "realpath": "<psi4-prefix>/lib/libgcc_s.1.1.dylib",
+   "sha256": "6ccf7e2f82cd52e5cfa99adef7f8e63138dba62e07d96d67ceef76c011b63740"
+  },
+  {
+   "path": "<psi4-prefix>/lib/libfftw3f.3.dylib",
+   "realpath": "<psi4-prefix>/lib/libfftw3f.3.dylib",
+   "sha256": "4a85649416dd7a1f4ec0426a109faafd38178581b8f98475f3ce4b20f95dc6ac"
+  },
+  {
+   "path": "<psi4-prefix>/lib/libfftw3.3.dylib",
+   "realpath": "<psi4-prefix>/lib/libfftw3.3.dylib",
+   "sha256": "2e85183337d72f865b3236941e9ad68968caf076296c99528212d7e06b6c6b91"
+  },
+  {
+   "path": "<psi4-prefix>/lib/libcpptrace.1.0.4.dylib",
+   "realpath": "<psi4-prefix>/lib/libcpptrace.1.0.4.dylib",
+   "sha256": "016175d6d13a75f1be66360576362eb73e94eabe23c5b9ce3be08fc8bc171690"
+  },
+  {
+   "path": "<psi4-prefix>/lib/libdwarf.2.1.0.dylib",
+   "realpath": "<psi4-prefix>/lib/libdwarf.2.1.0.dylib",
+   "sha256": "43e0533770f3bdecb54a4218f9aee2c4a426f698554516d3c8437f5796b9381d"
+  },
+  {
+   "path": "<psi4-prefix>/lib/python3.14/site-packages/numpy/_core/_multiarray_umath.cpython-314-darwin.so",
+   "realpath": "<psi4-prefix>/lib/python3.14/site-packages/numpy/_core/_multiarray_umath.cpython-314-darwin.so",
+   "sha256": "fb345442e1b1dda737b371ac935e832c0fb317145fa1cfdf4d91bbd2380f3fb7"
+  },
+  {
+   "path": "<psi4-prefix>/lib/python3.14/lib-dynload/_struct.cpython-314-darwin.so",
+   "realpath": "<psi4-prefix>/lib/python3.14/lib-dynload/_struct.cpython-314-darwin.so",
+   "sha256": "a75b4454da51bc1cd8b56c47e56f8115b5b90398ccc4d255643881831ff5d9f0"
+  },
+  {
+   "path": "<psi4-prefix>/lib/python3.14/lib-dynload/_pickle.cpython-314-darwin.so",
+   "realpath": "<psi4-prefix>/lib/python3.14/lib-dynload/_pickle.cpython-314-darwin.so",
+   "sha256": "c593a92b76f825c20e45b078d327981bcc81f6fa207afa132e6a2f1929e71b36"
+  },
+  {
+   "path": "<psi4-prefix>/lib/python3.14/lib-dynload/_ctypes.cpython-314-darwin.so",
+   "realpath": "<psi4-prefix>/lib/python3.14/lib-dynload/_ctypes.cpython-314-darwin.so",
+   "sha256": "b8a6c3748ddaa3619443d4aeca15b2ef4e21c1ee295befd94cb3183b2a64163d"
+  },
+  {
+   "path": "<psi4-prefix>/lib/libffi.8.dylib",
+   "realpath": "<psi4-prefix>/lib/libffi.8.dylib",
+   "sha256": "c98788ece1f44cbf62e79dca94d1e2a58fe99e0df8bc928eec3555ff56cc50c9"
+  },
+  {
+   "path": "<psi4-prefix>/lib/python3.14/site-packages/numpy/linalg/_umath_linalg.cpython-314-darwin.so",
+   "realpath": "<psi4-prefix>/lib/python3.14/site-packages/numpy/linalg/_umath_linalg.cpython-314-darwin.so",
+   "sha256": "218e123807a60be90b9ce564497b8058fc658b0f199dadfc859fa7a35e7673a2"
+  },
+  {
+   "path": "<psi4-prefix>/lib/python3.14/lib-dynload/binascii.cpython-314-darwin.so",
+   "realpath": "<psi4-prefix>/lib/python3.14/lib-dynload/binascii.cpython-314-darwin.so",
+   "sha256": "cb3963052e7c39af396a628b980f47b0c22df4092271c5c794a6d8ed41740456"
+  },
+  {
+   "path": "<psi4-prefix>/lib/python3.14/lib-dynload/zlib.cpython-314-darwin.so",
+   "realpath": "<psi4-prefix>/lib/python3.14/lib-dynload/zlib.cpython-314-darwin.so",
+   "sha256": "a905c2164f5a1679aa268cb3a4d291f6539c215e5af8ff724c459578c6998b1e"
+  },
+  {
+   "path": "<psi4-prefix>/lib/python3.14/lib-dynload/_bz2.cpython-314-darwin.so",
+   "realpath": "<psi4-prefix>/lib/python3.14/lib-dynload/_bz2.cpython-314-darwin.so",
+   "sha256": "e01acf233ea92e94c9bfdb0ad559f8bd6e787807afc5673859158c6750ba1be8"
+  },
+  {
+   "path": "<psi4-prefix>/lib/libbz2.1.0.8.dylib",
+   "realpath": "<psi4-prefix>/lib/libbz2.1.0.8.dylib",
+   "sha256": "2bf4d65c31ce1290d272dc6e84556d1decae7bdc90785caea83487677dfc65ac"
+  },
+  {
+   "path": "<psi4-prefix>/lib/python3.14/lib-dynload/_lzma.cpython-314-darwin.so",
+   "realpath": "<psi4-prefix>/lib/python3.14/lib-dynload/_lzma.cpython-314-darwin.so",
+   "sha256": "e311b3c9d1adc1f14ae20e120ccdec7d1ff314fa66744e77acb39060c48e37ed"
+  },
+  {
+   "path": "<psi4-prefix>/lib/liblzma.5.dylib",
+   "realpath": "<psi4-prefix>/lib/liblzma.5.dylib",
+   "sha256": "bec041a8e5a3a8a5b83fb1c0b9ea6d9d5c8575ea046ce2489f2ef266b834e247"
+  },
+  {
+   "path": "<psi4-prefix>/lib/python3.14/lib-dynload/_zstd.cpython-314-darwin.so",
+   "realpath": "<psi4-prefix>/lib/python3.14/lib-dynload/_zstd.cpython-314-darwin.so",
+   "sha256": "46fe5f607623ae69b4d77adb43c83e685ac4b4934e1f96a27cbda9fa3ba27271"
+  },
+  {
+   "path": "<psi4-prefix>/lib/python3.14/lib-dynload/_decimal.cpython-314-darwin.so",
+   "realpath": "<psi4-prefix>/lib/python3.14/lib-dynload/_decimal.cpython-314-darwin.so",
+   "sha256": "c5f26259dc3320b6ae7a008678ef5071e39eeaccc2e144709ef9f029882db680"
+  },
+  {
+   "path": "<psi4-prefix>/lib/libmpdec.4.0.0.dylib",
+   "realpath": "<psi4-prefix>/lib/libmpdec.4.0.0.dylib",
+   "sha256": "9eec1555e472dbbfdbd93e4ae7a02557f5bee52f8a88648cc0b34325e0ff12de"
+  },
+  {
+   "path": "<psi4-prefix>/lib/python3.14/site-packages/pydantic_core/_pydantic_core.cpython-314-darwin.so",
+   "realpath": "<psi4-prefix>/lib/python3.14/site-packages/pydantic_core/_pydantic_core.cpython-314-darwin.so",
+   "sha256": "565c471e4ee09a4551fb66cbf5c5fa7f4b55859c93309933e805c0a2add8c6f1"
+  },
+  {
+   "path": "<psi4-prefix>/lib/python3.14/lib-dynload/_uuid.cpython-314-darwin.so",
+   "realpath": "<psi4-prefix>/lib/python3.14/lib-dynload/_uuid.cpython-314-darwin.so",
+   "sha256": "ce57e07b6ba71cfa508b78aef4a46f6ec868cfc81534a682326dad77c17d9a8e"
+  },
+  {
+   "path": "<psi4-prefix>/lib/python3.14/lib-dynload/_zoneinfo.cpython-314-darwin.so",
+   "realpath": "<psi4-prefix>/lib/python3.14/lib-dynload/_zoneinfo.cpython-314-darwin.so",
+   "sha256": "329c18908106764448edb5ceb39a981a62d1dbbd6706b564c3874b496d928890"
+  },
+  {
+   "path": "<psi4-prefix>/lib/python3.14/site-packages/msgpack/_cmsgpack.cpython-314-darwin.so",
+   "realpath": "<psi4-prefix>/lib/python3.14/site-packages/msgpack/_cmsgpack.cpython-314-darwin.so",
+   "sha256": "09cc21be2f5c53db4e7cee1a2fc2e8141f1cbfa2e3938ca43ea19bfb75f95d90"
+  },
+  {
+   "path": "<psi4-prefix>/lib/python3.14/lib-dynload/_socket.cpython-314-darwin.so",
+   "realpath": "<psi4-prefix>/lib/python3.14/lib-dynload/_socket.cpython-314-darwin.so",
+   "sha256": "e69e8b5ebcd1ebb92a2fdd0417c0fb774ec743e828fb6fe0151c98bd5ac3b680"
+  },
+  {
+   "path": "<psi4-prefix>/lib/python3.14/lib-dynload/termios.cpython-314-darwin.so",
+   "realpath": "<psi4-prefix>/lib/python3.14/lib-dynload/termios.cpython-314-darwin.so",
+   "sha256": "010447f6f660c51a2778066184bcf8533daa696c2c3c14e6dcfa58688e1e8c5b"
+  },
+  {
+   "path": "<psi4-prefix>/lib/python3.14/lib-dynload/_interpreters.cpython-314-darwin.so",
+   "realpath": "<psi4-prefix>/lib/python3.14/lib-dynload/_interpreters.cpython-314-darwin.so",
+   "sha256": "b175fdc6021958070c962ec343c00303b9b3377b2df1fb942046132edb9ce6e7"
+  },
+  {
+   "path": "<psi4-prefix>/lib/python3.14/lib-dynload/_heapq.cpython-314-darwin.so",
+   "realpath": "<psi4-prefix>/lib/python3.14/lib-dynload/_heapq.cpython-314-darwin.so",
+   "sha256": "174b4cfe04a7444df954fbb1b54d17a12b3840c5cf248012f676a8c220cc67b1"
+  },
+  {
+   "path": "<psi4-prefix>/lib/python3.14/lib-dynload/_posixsubprocess.cpython-314-darwin.so",
+   "realpath": "<psi4-prefix>/lib/python3.14/lib-dynload/_posixsubprocess.cpython-314-darwin.so",
+   "sha256": "1e481fe8dba28461d85fd8f43a63649ffd8a784f29406f25a144cd718efe043b"
+  },
+  {
+   "path": "<psi4-prefix>/lib/python3.14/lib-dynload/select.cpython-314-darwin.so",
+   "realpath": "<psi4-prefix>/lib/python3.14/lib-dynload/select.cpython-314-darwin.so",
+   "sha256": "081c939d63113750d34b6462b112dab9d115af664d14a87d30262606ae802f6c"
+  },
+  {
+   "path": "<psi4-prefix>/lib/python3.14/lib-dynload/_ssl.cpython-314-darwin.so",
+   "realpath": "<psi4-prefix>/lib/python3.14/lib-dynload/_ssl.cpython-314-darwin.so",
+   "sha256": "a3fadff5ada360f43e1d171d84439120b61fcc6f6aaf07b9faa23dff4311193d"
+  },
+  {
+   "path": "<psi4-prefix>/lib/python3.14/lib-dynload/_asyncio.cpython-314-darwin.so",
+   "realpath": "<psi4-prefix>/lib/python3.14/lib-dynload/_asyncio.cpython-314-darwin.so",
+   "sha256": "a80149a1ad763d8600db1f5ad573674924377244058d8b2807a60e597b515f37"
+  },
+  {
+   "path": "<psi4-prefix>/lib/python3.14/lib-dynload/_bisect.cpython-314-darwin.so",
+   "realpath": "<psi4-prefix>/lib/python3.14/lib-dynload/_bisect.cpython-314-darwin.so",
+   "sha256": "6aa2668fa5842d53eed45c3f7acdefc616a85da4d951dddc08b8b11090e7b9ad"
+  },
+  {
+   "path": "<psi4-prefix>/lib/python3.14/lib-dynload/_random.cpython-314-darwin.so",
+   "realpath": "<psi4-prefix>/lib/python3.14/lib-dynload/_random.cpython-314-darwin.so",
+   "sha256": "92d4aa898c4683ba2ccecdf2e12d2a60ca6f53b3bec0f148a33b45720ba84a16"
+  },
+  {
+   "path": "<psi4-prefix>/lib/python3.14/lib-dynload/_elementtree.cpython-314-darwin.so",
+   "realpath": "<psi4-prefix>/lib/python3.14/lib-dynload/_elementtree.cpython-314-darwin.so",
+   "sha256": "9aa3ca91a3aaf391d55726681bc6749195319d092a445c86106a64de7263f518"
+  },
+  {
+   "path": "<psi4-prefix>/lib/python3.14/lib-dynload/pyexpat.cpython-314-darwin.so",
+   "realpath": "<psi4-prefix>/lib/python3.14/lib-dynload/pyexpat.cpython-314-darwin.so",
+   "sha256": "ba4dd05a5ab7bc48e0ef4bc0535281042074ec43959a8f30cad98e3b7d380485"
+  },
+  {
+   "path": "<psi4-prefix>/lib/libexpat.1.12.4.dylib",
+   "realpath": "<psi4-prefix>/lib/libexpat.1.12.4.dylib",
+   "sha256": "d82b125bbe39a2dd3b7949a8009bd322e50f579bcb47f383c8e29a05b90cce91"
+  }
+ ],
+ "module_file": "<psi4-prefix>/lib/python3.14/site-packages/psi4/__init__.py",
+ "problems": [],
+ "stage": "I1-loaded-identity",
+ "utc": "2026-10-29T20:39:58.109447+00:00",
+ "version": "1.11"
+}

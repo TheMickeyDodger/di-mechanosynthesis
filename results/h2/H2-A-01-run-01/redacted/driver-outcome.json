@@ -1,0 +1,1087 @@
+{
+ "attempt": "<attempt>",
+ "authorization_sha256": "7a48b939b72b5e10dccf27f61e605bb80334d0cb5be059efa6a852c59587095c",
+ "files": [
+  {
+   "path": "code-provenance.json",
+   "sha256": "1dceedcd2fd603d85d57366ccc709bb87a6a299231016d879c627350229deda6",
+   "size": 203970
+  },
+  {
+   "path": "engine.stderr",
+   "sha256": "cac246557f41f69633f58d838e666821f128a69865a37bdf25e835258563db64",
+   "size": 64
+  },
+  {
+   "path": "engine.stdout",
+   "sha256": "e1e4c2739ef4c5713924bb15e47889cf47f4520e44c24c46a070fc7272ff558f",
+   "size": 84
+  },
+  {
+   "path": "launch-record.json",
+   "sha256": "b735debe8c95893540fade52b55a8cef1285b8527c52b790bf07aa745ad30871",
+   "size": 8577
+  },
+  {
+   "path": "bundle/h2-a-01-input.json",
+   "sha256": "3ca4753312b3f2cd50274d4c8f8dda48de422d691e34bf47784b1602670dc3d3",
+   "size": 2308
+  },
+  {
+   "path": "bundle/h2-r2-sandbox.sb",
+   "sha256": "0768725ab376312c4b22dc83f47b13eeaa67c62dc618dd350c9ab47a2f754d20",
+   "size": 799
+  },
+  {
+   "path": "bundle/h2_phase_a_payload.py",
+   "sha256": "7de1d53c70af7a4ff3a71fb5fbcd7cedfec24a7e3eb49d8b27f9d6bf6cc2f69b",
+   "size": 25495
+  },
+  {
+   "path": "payload/i1-identity.json",
+   "sha256": "2a4455595af472d0f20b535802ac8cec145e27a0a4df1e28673c8828319a23a3",
+   "size": 97765
+  },
+  {
+   "path": "payload/i2-configuration.json",
+   "sha256": "827cf175627bccaeaf6de68e69ec1829e8be2c785da807c953485bdd2bf98c73",
+   "size": 4418
+  },
+  {
+   "path": "payload/i3-basis-geometry.json",
+   "sha256": "f9a84b5bb00b838e6d54337afb5bd7a826cee9b3cf2706262714237a86cad0db",
+   "size": 707
+  },
+  {
+   "path": "payload/pre-import.json",
+   "sha256": "80ec1d99f05ef0525aeb9ccf6d9665b914c576c8083ffee8a284c5bdfb1a0caa",
+   "size": 2865
+  },
+  {
+   "path": "payload/psi4-output.dat",
+   "sha256": "30d67c65da376a68a1e8af26afe49376547b565022d95d8d098898f2bd62705c",
+   "size": 8313
+  },
+  {
+   "path": "payload/psi4-output.log",
+   "sha256": "10b332bcf0a5665f779f3d7a41a85d1652ce34bd4ca170bd9644046692462dfb",
+   "size": 514
+  },
+  {
+   "path": "payload/result.json",
+   "sha256": "ded7dcc436aa5a2239dbd0901ca26a3cb51c8ae81e27fd7dd27ac7657f5191cf",
+   "size": 1372
+  },
+  {
+   "path": "scratch/timer.dat",
+   "sha256": "352a979b80bcbcfd5318b4f2de83cd851149e165ef7351b84a0cd70d3710500b",
+   "size": 2910
+  }
+ ],
+ "free_bytes_after": 481565655040,
+ "free_bytes_before": 481551568896,
+ "job_id": "H2-A-01",
+ "post_run_checks": {
+  "checks": [
+   {
+    "detail": "",
+    "id": "bundle.driver",
+    "status": "PASS"
+   },
+   {
+    "detail": "",
+    "id": "bundle.payload",
+    "status": "PASS"
+   },
+   {
+    "detail": "",
+    "id": "bundle.input",
+    "status": "PASS"
+   },
+   {
+    "detail": "",
+    "id": "bundle.parameters",
+    "status": "PASS"
+   },
+   {
+    "detail": "",
+    "id": "bundle.static_identity",
+    "status": "PASS"
+   },
+   {
+    "detail": "",
+    "id": "bundle.run_proposal",
+    "status": "PASS"
+   },
+   {
+    "detail": "",
+    "id": "bundle.decision_packet",
+    "status": "PASS"
+   },
+   {
+    "detail": "",
+    "id": "bundle.parse",
+    "status": "PASS"
+   },
+   {
+    "detail": "",
+    "id": "input.matches_parameters",
+    "status": "PASS"
+   },
+   {
+    "detail": "prefix must be an absolute, canonical, link-free directory path",
+    "id": "prefix.absolute_normalized",
+    "status": "PASS"
+   },
+   {
+    "detail": "",
+    "id": "interpreter.inside_prefix",
+    "status": "PASS"
+   },
+   {
+    "detail": "",
+    "id": "package.psi4",
+    "status": "PASS"
+   },
+   {
+    "detail": "",
+    "id": "package.libint",
+    "status": "PASS"
+   },
+   {
+    "detail": "",
+    "id": "package.record_names",
+    "status": "PASS"
+   },
+   {
+    "detail": "",
+    "id": "sha256.include/libint2/shell.h",
+    "status": "PASS"
+   },
+   {
+    "detail": "",
+    "id": "sha256.share/psi4/basis/sto-3g.gbs",
+    "status": "PASS"
+   },
+   {
+    "detail": "",
+    "id": "sha256.lib/libint2.dylib",
+    "status": "PASS"
+   },
+   {
+    "detail": "",
+    "id": "sha256.lib/python3.14/site-packages/psi4/core.cpython-314-darwin.so",
+    "status": "PASS"
+   },
+   {
+    "detail": "",
+    "id": "sha256.bin/python3.14",
+    "status": "PASS"
+   },
+   {
+    "detail": "",
+    "id": "runs_root.location",
+    "status": "PASS"
+   },
+   {
+    "detail": "",
+    "id": "free_space.floor",
+    "status": "PASS"
+   },
+   {
+    "detail": "",
+    "id": "r2.accepted_driver_pin",
+    "status": "PASS"
+   },
+   {
+    "detail": "",
+    "id": "r2.bundle.r2_driver",
+    "status": "PASS"
+   },
+   {
+    "detail": "",
+    "id": "r2.bundle.r2_profile",
+    "status": "PASS"
+   },
+   {
+    "detail": "",
+    "id": "r2.bundle.r2_platform_identity",
+    "status": "PASS"
+   },
+   {
+    "detail": "",
+    "id": "r2.bundle.r2_method_revision",
+    "status": "PASS"
+   },
+   {
+    "detail": "",
+    "id": "r2.bundle.r2_run_proposal",
+    "status": "PASS"
+   },
+   {
+    "detail": "",
+    "id": "r2.bundle.r2_decision_packet",
+    "status": "PASS"
+   },
+   {
+    "detail": "",
+    "id": "r2.bundle.method_revision_approval",
+    "status": "PASS"
+   },
+   {
+    "detail": "",
+    "id": "r2.platform_identity.parse",
+    "status": "PASS"
+   },
+   {
+    "detail": "",
+    "id": "r2.sandbox_exec",
+    "status": "PASS"
+   },
+   {
+    "detail": "",
+    "id": "r2.os_build",
+    "status": "PASS"
+   },
+   {
+    "detail": "",
+    "id": "r2.method_revision_decision",
+    "status": "PASS"
+   }
+  ],
+  "digests": {
+   "decision_packet": "cfb4a9912114452211e19edadf115816e48359911e05f48d71c54672b72b55e5",
+   "driver": "6dcb4845e3b4b29f89dc4027274675e24c1152508828b1230857baac58b9aa7d",
+   "input": "3ca4753312b3f2cd50274d4c8f8dda48de422d691e34bf47784b1602670dc3d3",
+   "method_revision_approval": "e4897a80869bc04d6ece9a8be75673085e18ddb1b07df1df5e71fd4b76f10d7c",
+   "parameters": "2728b0efe2c6dae070346a3d0475857222f02864a6da63859edf4d4e334c156e",
+   "payload": "7de1d53c70af7a4ff3a71fb5fbcd7cedfec24a7e3eb49d8b27f9d6bf6cc2f69b",
+   "r2_decision_packet": "5ce61f7c97be6db8e332d296d3f54335acb04552296d33eb230ce40cbd9c4083",
+   "r2_driver": "0b3172f8388b0f0c053a2b7a6945394e7e796aae8b14d0228447d7bc860af9b6",
+   "r2_method_revision": "9498019a23a8fa1542788b17126b91e3fff93ada49639856f6599e3afc8aecdc",
+   "r2_platform_identity": "822fbe69807184f8ac5c180caa74d23b0faca64e055ee4bc09a61c82019f2659",
+   "r2_profile": "0768725ab376312c4b22dc83f47b13eeaa67c62dc618dd350c9ab47a2f754d20",
+   "r2_run_proposal": "d0239104596409d8f278449103f413843a225550cbfb91616d25d5b5143c2b2e",
+   "run_proposal": "d9bcb7e186a0ced226478d93470682c6ff84c78abab1f7546eb45bdac551225f",
+   "static_identity": "a45ee84d0d28e794ea7f56e7ff74130551fb326c36c7d8353467966ed2c025cc"
+  },
+  "free_bytes": 481565655040,
+  "interpreter": "<psi4-prefix>/bin/python3.14",
+  "network": null,
+  "observed_sha256": {
+   "bin/python3.14": "5bac0535500ca7fe507749fbcf28e3f731dea4dabf1400f7df7f5dd26691c66a",
+   "conda-meta/": [
+    "_openmp_mutex-4.5-8_kmp_llvm.json",
+    "annotated-types-0.8.0-pyhd8ed1ab_0.json",
+    "armadillo-15.6.0-h8dccbb9_0.json",
+    "arpack-3.9.1-nompi_h1f29f7c_102.json",
+    "bzip2-1.0.8-h4e30115_10.json",
+    "c-ares-1.34.8-h74c22ad_2.json",
+    "ca-certificates-2026.7.22-hbd8a1cb_0.json",
+    "cffi-2.1.1-py314h618e29d_3.json",
+    "cpp-argparse-3.2-ha393de7_1.json",
+    "cpptrace-1.0.4-default_h7920499_100.json",
+    "dftd3-python-1.6.0-py314hcd3153d_1.json",
+    "dkh-1.2-ha5ff845_2.json",
+    "einsums-1.1.5-h13a9246_1.json",
+    "exchcxx-1.0.0-cpu_he112363_5.json",
+    "fftw-3.3.11-nompi_haf1500d_100.json",
+    "flexcache-0.3-pyh5ded981_2.json",
+    "flexparser-0.4-pyh5ded981_2.json",
+    "fmt-12.1.0-h99e4e11_1.json",
+    "gau2grid-2.0.9-h88b7d96_0.json",
+    "gauxc-1.1-nompi_hf0f618c_105.json",
+    "hdf5-1.14.6-nompi_had3affe_110.json",
+    "history",
+    "icu-78.3-py310h579977c_2.json",
+    "integratorxx-1.0.0-h4ddebb9_1.json",
+    "jonquil-0.3.2-gfortran_h04795c8_0.json",
+    "krb5-1.22.2-h34f8a20_2.json",
+    "libaec-1.1.5-h8664d51_0.json",
+    "libblas-3.11.0-11_h51639a9_openblas.json",
+    "libcblas-3.11.0-11_hb0561ab_openblas.json",
+    "libcurl-8.22.0-h6651222_0.json",
+    "libcxx-23.1.2-h55c6f16_0.json",
+    "libdwarf-2.1.0-h1da24b5_1.json",
+    "libecpint-1.0.7-hff75ede_12.json",
+    "libedit-3.1.20250104-pl5321h26f1114_1.json",
+    "libev-4.33-h1a92334_3.json",
+    "libexpat-2.8.4-h6111c0a_0.json",
+    "libffi-3.7.0-h47dc5ef_1.json",
+    "libgcc-16.2.0-h3cf6597_5.json",
+    "libgfortran-16.2.0-h07b0088_5.json",
+    "libgfortran5-16.2.0-hdb7a957_5.json",
+    "libint-2.13.1-h5a0831b_0.json",
+    "liblapack-3.11.0-11_hd9741b5_openblas.json",
+    "liblzma-5.8.3-h8088a28_1.json",
+    "libmpdec-4.0.0-h84a0fba_2.json",
+    "libnghttp2-1.68.1-h435687b_1.json",
+    "libopenblas-0.3.34-openmp_h5e6e99c_1.json",
+    "libpcm-1.2.3-h9998470_17.json",
+    "libpsl-0.23.1-hdb0c161_1.json",
+    "libpython-3.14.7-h4311e70_106_cp314.json",
+    "libsqlite-3.53.4-hca69786_1.json",
+    "libssh2-1.11.1-hbf2880b_1.json",
+    "libxc-c-7.1.2-cpu_h337c2d1_1.json",
+    "libzlib-1.3.2-h8088a28_3.json",
+    "llvm-openmp-23.1.2-hdb3d66b_0.json",
+    "mctc-lib-0.5.2-gfortran_h0230218_0.json",
+    "msgpack-python-1.2.2-py314hb1acb19_2.json",
+    "ncurses-6.6-he64c551_1.json",
+    "networkx-3.7-pyhc364b38_0.json",
+    "numpy-2.5.3-py314he06036b_0.json",
+    "openorbitaloptimizer-0.3.0-h4ddebb9_0.json",
+    "openssl-3.6.4-h55eecbc_0.json",
+    "optking-0.5.0-pyhd8ed1ab_0.json",
+    "packaging-26.3-pyhc364b38_0.json",
+    "pcmsolver-1.2.3-py_17.json",
+    "pint-0.26.1-pyhc364b38_0.json",
+    "platformdirs-4.11.12-pyh5ded981_0.json",
+    "psi4-1.11-py314h53d0584_1.json",
+    "psutil-7.2.2-py314hd98292b_3.json",
+    "pugixml-1.15-hd3d436d_0.json",
+    "py-cpuinfo-9.0.0-pyhd8ed1ab_1.json",
+    "pybind11-abi-11-hc364b38_1.json",
+    "pycparser-3.0-pyhcf101f3_0.json",
+    "pydantic-2.13.5-pyhcf101f3_0.json",
+    "pydantic-core-2.46.5-py314hc05cd11_2.json",
+    "pydantic-settings-2.15.0-pyhcf101f3_0.json",
+    "python-3.14.7-h0ae1c2c_106_cp314.json",
+    "python-dotenv-1.2.3-pyhcf101f3_0.json",
+    "python_abi-3.14-9_cp314.json",
+    "pyyaml-6.0.3-py314h6e9b3f0_1.json",
+    "qcelemental-0.51.2-pyhd8ed1ab_0.json",
+    "qcengine-0.51.0-pyhd8ed1ab_0.json",
+    "qcmanybody-0.8.0-pyhd8ed1ab_0.json",
+    "readline-8.3-h8b90a29_1.json",
+    "scipy-1.18.1-py314hd9f3d4e_1.json",
+    "simple-dftd3-1.6.0-gfortran_h643d65c_0.json",
+    "spdlog-1.17.0-h760df91_2.json",
+    "superlu-7.0.0-h742a510_1.json",
+    "tk-8.6.13-hbeba79b_4.json",
+    "toml-f-0.5.2-gfortran_h04795c8_0.json",
+    "typing-extensions-4.16.0-h69aa097_0.json",
+    "typing-inspection-0.4.4-pyhcf101f3_0.json",
+    "typing_extensions-4.16.0-pyhcf101f3_0.json",
+    "tzdata-2026c-h151e31d_0.json",
+    "yaml-0.2.5-h74c22ad_3.json",
+    "zstd-1.5.7-hf451053_7.json"
+   ],
+   "conda-meta/libint-2.13.1-h5a0831b_0.json": "7cb2b345fecc86f890da13f971ec3cd1c03ee5d6aa8907d2326adefa2d4b634b",
+   "conda-meta/psi4-1.11-py314h53d0584_1.json": "853149d1b89fa4ca2ae2768de9a4e66220c0a93fab339f6520d51ea71fc1b4f2",
+   "include/libint2/shell.h": "e0aa1e87e7cccc05c84955c9cf496fdccee2caad92c8c3e3b7f41fedd9a99c9e",
+   "lib/libint2.dylib": "964aff2a18e0948684e62102389a31eb2d09b83ef60b7c4bcc62e959131aa367",
+   "lib/python3.14/site-packages/psi4/core.cpython-314-darwin.so": "0d12c8cda49e2cfe75cea563a2fe51889fa61b88c7b5234beb165b9b54805d99",
+   "share/psi4/basis/sto-3g.gbs": "b472adfbcd0d87e1fd054963b8073a95b5ec265e8b0fd46951a56005f0f227d7"
+  },
+  "ok": true,
+  "prefix_realpath": "<psi4-prefix>",
+  "r2_method_decision": {
+   "approval_record_sha256": "e4897a80869bc04d6ece9a8be75673085e18ddb1b07df1df5e71fd4b76f10d7c",
+   "method_revision_sha256": "9498019a23a8fa1542788b17126b91e3fff93ada49639856f6599e3afc8aecdc"
+  },
+  "r2_platform_observed": {
+   "os_build_version": "26A434",
+   "os_product_version": "27.0.1",
+   "sandbox_exec_executable": true,
+   "sandbox_exec_path": "/usr/bin/sandbox-exec",
+   "sandbox_exec_regular_not_link": true,
+   "sandbox_exec_sha256": "58839ef01b4eef8aac0d2aa8f9d1c074ae45aafe3533965b030672450064acc8",
+   "sandbox_exec_size": 135136
+  },
+  "replaced_base_checks": [
+   {
+    "detail": "NETWORK_PREREQUISITE_UNRESOLVED",
+    "id": "network.prerequisite",
+    "status": "FAIL"
+   }
+  ],
+  "runs_root": "<runs-root>",
+  "utc": "2026-10-29T20:39:58.338484+00:00"
+ },
+ "preflight_final": {
+  "checks": [
+   {
+    "detail": "",
+    "id": "bundle.driver",
+    "status": "PASS"
+   },
+   {
+    "detail": "",
+    "id": "bundle.payload",
+    "status": "PASS"
+   },
+   {
+    "detail": "",
+    "id": "bundle.input",
+    "status": "PASS"
+   },
+   {
+    "detail": "",
+    "id": "bundle.parameters",
+    "status": "PASS"
+   },
+   {
+    "detail": "",
+    "id": "bundle.static_identity",
+    "status": "PASS"
+   },
+   {
+    "detail": "",
+    "id": "bundle.run_proposal",
+    "status": "PASS"
+   },
+   {
+    "detail": "",
+    "id": "bundle.decision_packet",
+    "status": "PASS"
+   },
+   {
+    "detail": "",
+    "id": "bundle.parse",
+    "status": "PASS"
+   },
+   {
+    "detail": "",
+    "id": "input.matches_parameters",
+    "status": "PASS"
+   },
+   {
+    "detail": "prefix must be an absolute, canonical, link-free directory path",
+    "id": "prefix.absolute_normalized",
+    "status": "PASS"
+   },
+   {
+    "detail": "",
+    "id": "interpreter.inside_prefix",
+    "status": "PASS"
+   },
+   {
+    "detail": "",
+    "id": "package.psi4",
+    "status": "PASS"
+   },
+   {
+    "detail": "",
+    "id": "package.libint",
+    "status": "PASS"
+   },
+   {
+    "detail": "",
+    "id": "package.record_names",
+    "status": "PASS"
+   },
+   {
+    "detail": "",
+    "id": "sha256.include/libint2/shell.h",
+    "status": "PASS"
+   },
+   {
+    "detail": "",
+    "id": "sha256.share/psi4/basis/sto-3g.gbs",
+    "status": "PASS"
+   },
+   {
+    "detail": "",
+    "id": "sha256.lib/libint2.dylib",
+    "status": "PASS"
+   },
+   {
+    "detail": "",
+    "id": "sha256.lib/python3.14/site-packages/psi4/core.cpython-314-darwin.so",
+    "status": "PASS"
+   },
+   {
+    "detail": "",
+    "id": "sha256.bin/python3.14",
+    "status": "PASS"
+   },
+   {
+    "detail": "",
+    "id": "runs_root.location",
+    "status": "PASS"
+   },
+   {
+    "detail": "",
+    "id": "attempt.fresh",
+    "status": "PASS"
+   },
+   {
+    "detail": "",
+    "id": "free_space.floor",
+    "status": "PASS"
+   },
+   {
+    "detail": "",
+    "id": "r2.accepted_driver_pin",
+    "status": "PASS"
+   },
+   {
+    "detail": "",
+    "id": "r2.bundle.r2_driver",
+    "status": "PASS"
+   },
+   {
+    "detail": "",
+    "id": "r2.bundle.r2_profile",
+    "status": "PASS"
+   },
+   {
+    "detail": "",
+    "id": "r2.bundle.r2_platform_identity",
+    "status": "PASS"
+   },
+   {
+    "detail": "",
+    "id": "r2.bundle.r2_method_revision",
+    "status": "PASS"
+   },
+   {
+    "detail": "",
+    "id": "r2.bundle.r2_run_proposal",
+    "status": "PASS"
+   },
+   {
+    "detail": "",
+    "id": "r2.bundle.r2_decision_packet",
+    "status": "PASS"
+   },
+   {
+    "detail": "",
+    "id": "r2.bundle.method_revision_approval",
+    "status": "PASS"
+   },
+   {
+    "detail": "",
+    "id": "r2.platform_identity.parse",
+    "status": "PASS"
+   },
+   {
+    "detail": "",
+    "id": "r2.sandbox_exec",
+    "status": "PASS"
+   },
+   {
+    "detail": "",
+    "id": "r2.os_build",
+    "status": "PASS"
+   },
+   {
+    "detail": "",
+    "id": "r2.method_revision_decision",
+    "status": "PASS"
+   },
+   {
+    "detail": "",
+    "id": "r2.attempt.bundle_fresh",
+    "status": "PASS"
+   }
+  ],
+  "digests": {
+   "decision_packet": "cfb4a9912114452211e19edadf115816e48359911e05f48d71c54672b72b55e5",
+   "driver": "6dcb4845e3b4b29f89dc4027274675e24c1152508828b1230857baac58b9aa7d",
+   "input": "3ca4753312b3f2cd50274d4c8f8dda48de422d691e34bf47784b1602670dc3d3",
+   "method_revision_approval": "e4897a80869bc04d6ece9a8be75673085e18ddb1b07df1df5e71fd4b76f10d7c",
+   "parameters": "2728b0efe2c6dae070346a3d0475857222f02864a6da63859edf4d4e334c156e",
+   "payload": "7de1d53c70af7a4ff3a71fb5fbcd7cedfec24a7e3eb49d8b27f9d6bf6cc2f69b",
+   "r2_decision_packet": "5ce61f7c97be6db8e332d296d3f54335acb04552296d33eb230ce40cbd9c4083",
+   "r2_driver": "0b3172f8388b0f0c053a2b7a6945394e7e796aae8b14d0228447d7bc860af9b6",
+   "r2_method_revision": "9498019a23a8fa1542788b17126b91e3fff93ada49639856f6599e3afc8aecdc",
+   "r2_platform_identity": "822fbe69807184f8ac5c180caa74d23b0faca64e055ee4bc09a61c82019f2659",
+   "r2_profile": "0768725ab376312c4b22dc83f47b13eeaa67c62dc618dd350c9ab47a2f754d20",
+   "r2_run_proposal": "d0239104596409d8f278449103f413843a225550cbfb91616d25d5b5143c2b2e",
+   "run_proposal": "d9bcb7e186a0ced226478d93470682c6ff84c78abab1f7546eb45bdac551225f",
+   "static_identity": "a45ee84d0d28e794ea7f56e7ff74130551fb326c36c7d8353467966ed2c025cc"
+  },
+  "free_bytes": 481551302656,
+  "interpreter": "<psi4-prefix>/bin/python3.14",
+  "network": null,
+  "observed_sha256": {
+   "bin/python3.14": "5bac0535500ca7fe507749fbcf28e3f731dea4dabf1400f7df7f5dd26691c66a",
+   "conda-meta/": [
+    "_openmp_mutex-4.5-8_kmp_llvm.json",
+    "annotated-types-0.8.0-pyhd8ed1ab_0.json",
+    "armadillo-15.6.0-h8dccbb9_0.json",
+    "arpack-3.9.1-nompi_h1f29f7c_102.json",
+    "bzip2-1.0.8-h4e30115_10.json",
+    "c-ares-1.34.8-h74c22ad_2.json",
+    "ca-certificates-2026.7.22-hbd8a1cb_0.json",
+    "cffi-2.1.1-py314h618e29d_3.json",
+    "cpp-argparse-3.2-ha393de7_1.json",
+    "cpptrace-1.0.4-default_h7920499_100.json",
+    "dftd3-python-1.6.0-py314hcd3153d_1.json",
+    "dkh-1.2-ha5ff845_2.json",
+    "einsums-1.1.5-h13a9246_1.json",
+    "exchcxx-1.0.0-cpu_he112363_5.json",
+    "fftw-3.3.11-nompi_haf1500d_100.json",
+    "flexcache-0.3-pyh5ded981_2.json",
+    "flexparser-0.4-pyh5ded981_2.json",
+    "fmt-12.1.0-h99e4e11_1.json",
+    "gau2grid-2.0.9-h88b7d96_0.json",
+    "gauxc-1.1-nompi_hf0f618c_105.json",
+    "hdf5-1.14.6-nompi_had3affe_110.json",
+    "history",
+    "icu-78.3-py310h579977c_2.json",
+    "integratorxx-1.0.0-h4ddebb9_1.json",
+    "jonquil-0.3.2-gfortran_h04795c8_0.json",
+    "krb5-1.22.2-h34f8a20_2.json",
+    "libaec-1.1.5-h8664d51_0.json",
+    "libblas-3.11.0-11_h51639a9_openblas.json",
+    "libcblas-3.11.0-11_hb0561ab_openblas.json",
+    "libcurl-8.22.0-h6651222_0.json",
+    "libcxx-23.1.2-h55c6f16_0.json",
+    "libdwarf-2.1.0-h1da24b5_1.json",
+    "libecpint-1.0.7-hff75ede_12.json",
+    "libedit-3.1.20250104-pl5321h26f1114_1.json",
+    "libev-4.33-h1a92334_3.json",
+    "libexpat-2.8.4-h6111c0a_0.json",
+    "libffi-3.7.0-h47dc5ef_1.json",
+    "libgcc-16.2.0-h3cf6597_5.json",
+    "libgfortran-16.2.0-h07b0088_5.json",
+    "libgfortran5-16.2.0-hdb7a957_5.json",
+    "libint-2.13.1-h5a0831b_0.json",
+    "liblapack-3.11.0-11_hd9741b5_openblas.json",
+    "liblzma-5.8.3-h8088a28_1.json",
+    "libmpdec-4.0.0-h84a0fba_2.json",
+    "libnghttp2-1.68.1-h435687b_1.json",
+    "libopenblas-0.3.34-openmp_h5e6e99c_1.json",
+    "libpcm-1.2.3-h9998470_17.json",
+    "libpsl-0.23.1-hdb0c161_1.json",
+    "libpython-3.14.7-h4311e70_106_cp314.json",
+    "libsqlite-3.53.4-hca69786_1.json",
+    "libssh2-1.11.1-hbf2880b_1.json",
+    "libxc-c-7.1.2-cpu_h337c2d1_1.json",
+    "libzlib-1.3.2-h8088a28_3.json",
+    "llvm-openmp-23.1.2-hdb3d66b_0.json",
+    "mctc-lib-0.5.2-gfortran_h0230218_0.json",
+    "msgpack-python-1.2.2-py314hb1acb19_2.json",
+    "ncurses-6.6-he64c551_1.json",
+    "networkx-3.7-pyhc364b38_0.json",
+    "numpy-2.5.3-py314he06036b_0.json",
+    "openorbitaloptimizer-0.3.0-h4ddebb9_0.json",
+    "openssl-3.6.4-h55eecbc_0.json",
+    "optking-0.5.0-pyhd8ed1ab_0.json",
+    "packaging-26.3-pyhc364b38_0.json",
+    "pcmsolver-1.2.3-py_17.json",
+    "pint-0.26.1-pyhc364b38_0.json",
+    "platformdirs-4.11.12-pyh5ded981_0.json",
+    "psi4-1.11-py314h53d0584_1.json",
+    "psutil-7.2.2-py314hd98292b_3.json",
+    "pugixml-1.15-hd3d436d_0.json",
+    "py-cpuinfo-9.0.0-pyhd8ed1ab_1.json",
+    "pybind11-abi-11-hc364b38_1.json",
+    "pycparser-3.0-pyhcf101f3_0.json",
+    "pydantic-2.13.5-pyhcf101f3_0.json",
+    "pydantic-core-2.46.5-py314hc05cd11_2.json",
+    "pydantic-settings-2.15.0-pyhcf101f3_0.json",
+    "python-3.14.7-h0ae1c2c_106_cp314.json",
+    "python-dotenv-1.2.3-pyhcf101f3_0.json",
+    "python_abi-3.14-9_cp314.json",
+    "pyyaml-6.0.3-py314h6e9b3f0_1.json",
+    "qcelemental-0.51.2-pyhd8ed1ab_0.json",
+    "qcengine-0.51.0-pyhd8ed1ab_0.json",
+    "qcmanybody-0.8.0-pyhd8ed1ab_0.json",
+    "readline-8.3-h8b90a29_1.json",
+    "scipy-1.18.1-py314hd9f3d4e_1.json",
+    "simple-dftd3-1.6.0-gfortran_h643d65c_0.json",
+    "spdlog-1.17.0-h760df91_2.json",
+    "superlu-7.0.0-h742a510_1.json",
+    "tk-8.6.13-hbeba79b_4.json",
+    "toml-f-0.5.2-gfortran_h04795c8_0.json",
+    "typing-extensions-4.16.0-h69aa097_0.json",
+    "typing-inspection-0.4.4-pyhcf101f3_0.json",
+    "typing_extensions-4.16.0-pyhcf101f3_0.json",
+    "tzdata-2026c-h151e31d_0.json",
+    "yaml-0.2.5-h74c22ad_3.json",
+    "zstd-1.5.7-hf451053_7.json"
+   ],
+   "conda-meta/libint-2.13.1-h5a0831b_0.json": "7cb2b345fecc86f890da13f971ec3cd1c03ee5d6aa8907d2326adefa2d4b634b",
+   "conda-meta/psi4-1.11-py314h53d0584_1.json": "853149d1b89fa4ca2ae2768de9a4e66220c0a93fab339f6520d51ea71fc1b4f2",
+   "include/libint2/shell.h": "e0aa1e87e7cccc05c84955c9cf496fdccee2caad92c8c3e3b7f41fedd9a99c9e",
+   "lib/libint2.dylib": "964aff2a18e0948684e62102389a31eb2d09b83ef60b7c4bcc62e959131aa367",
+   "lib/python3.14/site-packages/psi4/core.cpython-314-darwin.so": "0d12c8cda49e2cfe75cea563a2fe51889fa61b88c7b5234beb165b9b54805d99",
+   "share/psi4/basis/sto-3g.gbs": "b472adfbcd0d87e1fd054963b8073a95b5ec265e8b0fd46951a56005f0f227d7"
+  },
+  "ok": true,
+  "prefix_realpath": "<psi4-prefix>",
+  "r2_method_decision": {
+   "approval_record_sha256": "e4897a80869bc04d6ece9a8be75673085e18ddb1b07df1df5e71fd4b76f10d7c",
+   "method_revision_sha256": "9498019a23a8fa1542788b17126b91e3fff93ada49639856f6599e3afc8aecdc"
+  },
+  "r2_platform_observed": {
+   "os_build_version": "26A434",
+   "os_product_version": "27.0.1",
+   "sandbox_exec_executable": true,
+   "sandbox_exec_path": "/usr/bin/sandbox-exec",
+   "sandbox_exec_regular_not_link": true,
+   "sandbox_exec_sha256": "58839ef01b4eef8aac0d2aa8f9d1c074ae45aafe3533965b030672450064acc8",
+   "sandbox_exec_size": 135136
+  },
+  "replaced_base_checks": [
+   {
+    "detail": "NETWORK_PREREQUISITE_UNRESOLVED",
+    "id": "network.prerequisite",
+    "status": "FAIL"
+   }
+  ],
+  "runs_root": "<runs-root>",
+  "utc": "2026-10-29T20:39:49.306718+00:00"
+ },
+ "preflight_initial": {
+  "checks": [
+   {
+    "detail": "",
+    "id": "bundle.driver",
+    "status": "PASS"
+   },
+   {
+    "detail": "",
+    "id": "bundle.payload",
+    "status": "PASS"
+   },
+   {
+    "detail": "",
+    "id": "bundle.input",
+    "status": "PASS"
+   },
+   {
+    "detail": "",
+    "id": "bundle.parameters",
+    "status": "PASS"
+   },
+   {
+    "detail": "",
+    "id": "bundle.static_identity",
+    "status": "PASS"
+   },
+   {
+    "detail": "",
+    "id": "bundle.run_proposal",
+    "status": "PASS"
+   },
+   {
+    "detail": "",
+    "id": "bundle.decision_packet",
+    "status": "PASS"
+   },
+   {
+    "detail": "",
+    "id": "bundle.parse",
+    "status": "PASS"
+   },
+   {
+    "detail": "",
+    "id": "input.matches_parameters",
+    "status": "PASS"
+   },
+   {
+    "detail": "prefix must be an absolute, canonical, link-free directory path",
+    "id": "prefix.absolute_normalized",
+    "status": "PASS"
+   },
+   {
+    "detail": "",
+    "id": "interpreter.inside_prefix",
+    "status": "PASS"
+   },
+   {
+    "detail": "",
+    "id": "package.psi4",
+    "status": "PASS"
+   },
+   {
+    "detail": "",
+    "id": "package.libint",
+    "status": "PASS"
+   },
+   {
+    "detail": "",
+    "id": "package.record_names",
+    "status": "PASS"
+   },
+   {
+    "detail": "",
+    "id": "sha256.include/libint2/shell.h",
+    "status": "PASS"
+   },
+   {
+    "detail": "",
+    "id": "sha256.share/psi4/basis/sto-3g.gbs",
+    "status": "PASS"
+   },
+   {
+    "detail": "",
+    "id": "sha256.lib/libint2.dylib",
+    "status": "PASS"
+   },
+   {
+    "detail": "",
+    "id": "sha256.lib/python3.14/site-packages/psi4/core.cpython-314-darwin.so",
+    "status": "PASS"
+   },
+   {
+    "detail": "",
+    "id": "sha256.bin/python3.14",
+    "status": "PASS"
+   },
+   {
+    "detail": "",
+    "id": "runs_root.location",
+    "status": "PASS"
+   },
+   {
+    "detail": "",
+    "id": "attempt.absent",
+    "status": "PASS"
+   },
+   {
+    "detail": "",
+    "id": "free_space.floor",
+    "status": "PASS"
+   },
+   {
+    "detail": "",
+    "id": "r2.accepted_driver_pin",
+    "status": "PASS"
+   },
+   {
+    "detail": "",
+    "id": "r2.bundle.r2_driver",
+    "status": "PASS"
+   },
+   {
+    "detail": "",
+    "id": "r2.bundle.r2_profile",
+    "status": "PASS"
+   },
+   {
+    "detail": "",
+    "id": "r2.bundle.r2_platform_identity",
+    "status": "PASS"
+   },
+   {
+    "detail": "",
+    "id": "r2.bundle.r2_method_revision",
+    "status": "PASS"
+   },
+   {
+    "detail": "",
+    "id": "r2.bundle.r2_run_proposal",
+    "status": "PASS"
+   },
+   {
+    "detail": "",
+    "id": "r2.bundle.r2_decision_packet",
+    "status": "PASS"
+   },
+   {
+    "detail": "",
+    "id": "r2.bundle.method_revision_approval",
+    "status": "PASS"
+   },
+   {
+    "detail": "",
+    "id": "r2.platform_identity.parse",
+    "status": "PASS"
+   },
+   {
+    "detail": "",
+    "id": "r2.sandbox_exec",
+    "status": "PASS"
+   },
+   {
+    "detail": "",
+    "id": "r2.os_build",
+    "status": "PASS"
+   },
+   {
+    "detail": "",
+    "id": "r2.method_revision_decision",
+    "status": "PASS"
+   }
+  ],
+  "digests": {
+   "decision_packet": "cfb4a9912114452211e19edadf115816e48359911e05f48d71c54672b72b55e5",
+   "driver": "6dcb4845e3b4b29f89dc4027274675e24c1152508828b1230857baac58b9aa7d",
+   "input": "3ca4753312b3f2cd50274d4c8f8dda48de422d691e34bf47784b1602670dc3d3",
+   "method_revision_approval": "e4897a80869bc04d6ece9a8be75673085e18ddb1b07df1df5e71fd4b76f10d7c",
+   "parameters": "2728b0efe2c6dae070346a3d0475857222f02864a6da63859edf4d4e334c156e",
+   "payload": "7de1d53c70af7a4ff3a71fb5fbcd7cedfec24a7e3eb49d8b27f9d6bf6cc2f69b",
+   "r2_decision_packet": "5ce61f7c97be6db8e332d296d3f54335acb04552296d33eb230ce40cbd9c4083",
+   "r2_driver": "0b3172f8388b0f0c053a2b7a6945394e7e796aae8b14d0228447d7bc860af9b6",
+   "r2_method_revision": "9498019a23a8fa1542788b17126b91e3fff93ada49639856f6599e3afc8aecdc",
+   "r2_platform_identity": "822fbe69807184f8ac5c180caa74d23b0faca64e055ee4bc09a61c82019f2659",
+   "r2_profile": "0768725ab376312c4b22dc83f47b13eeaa67c62dc618dd350c9ab47a2f754d20",
+   "r2_run_proposal": "d0239104596409d8f278449103f413843a225550cbfb91616d25d5b5143c2b2e",
+   "run_proposal": "d9bcb7e186a0ced226478d93470682c6ff84c78abab1f7546eb45bdac551225f",
+   "static_identity": "a45ee84d0d28e794ea7f56e7ff74130551fb326c36c7d8353467966ed2c025cc"
+  },
+  "free_bytes": 481551568896,
+  "interpreter": "<psi4-prefix>/bin/python3.14",
+  "network": null,
+  "observed_sha256": {
+   "bin/python3.14": "5bac0535500ca7fe507749fbcf28e3f731dea4dabf1400f7df7f5dd26691c66a",
+   "conda-meta/": [
+    "_openmp_mutex-4.5-8_kmp_llvm.json",
+    "annotated-types-0.8.0-pyhd8ed1ab_0.json",
+    "armadillo-15.6.0-h8dccbb9_0.json",
+    "arpack-3.9.1-nompi_h1f29f7c_102.json",
+    "bzip2-1.0.8-h4e30115_10.json",
+    "c-ares-1.34.8-h74c22ad_2.json",
+    "ca-certificates-2026.7.22-hbd8a1cb_0.json",
+    "cffi-2.1.1-py314h618e29d_3.json",
+    "cpp-argparse-3.2-ha393de7_1.json",
+    "cpptrace-1.0.4-default_h7920499_100.json",
+    "dftd3-python-1.6.0-py314hcd3153d_1.json",
+    "dkh-1.2-ha5ff845_2.json",
+    "einsums-1.1.5-h13a9246_1.json",
+    "exchcxx-1.0.0-cpu_he112363_5.json",
+    "fftw-3.3.11-nompi_haf1500d_100.json",
+    "flexcache-0.3-pyh5ded981_2.json",
+    "flexparser-0.4-pyh5ded981_2.json",
+    "fmt-12.1.0-h99e4e11_1.json",
+    "gau2grid-2.0.9-h88b7d96_0.json",
+    "gauxc-1.1-nompi_hf0f618c_105.json",
+    "hdf5-1.14.6-nompi_had3affe_110.json",
+    "history",
+    "icu-78.3-py310h579977c_2.json",
+    "integratorxx-1.0.0-h4ddebb9_1.json",
+    "jonquil-0.3.2-gfortran_h04795c8_0.json",
+    "krb5-1.22.2-h34f8a20_2.json",
+    "libaec-1.1.5-h8664d51_0.json",
+    "libblas-3.11.0-11_h51639a9_openblas.json",
+    "libcblas-3.11.0-11_hb0561ab_openblas.json",
+    "libcurl-8.22.0-h6651222_0.json",
+    "libcxx-23.1.2-h55c6f16_0.json",
+    "libdwarf-2.1.0-h1da24b5_1.json",
+    "libecpint-1.0.7-hff75ede_12.json",
+    "libedit-3.1.20250104-pl5321h26f1114_1.json",
+    "libev-4.33-h1a92334_3.json",
+    "libexpat-2.8.4-h6111c0a_0.json",
+    "libffi-3.7.0-h47dc5ef_1.json",
+    "libgcc-16.2.0-h3cf6597_5.json",
+    "libgfortran-16.2.0-h07b0088_5.json",
+    "libgfortran5-16.2.0-hdb7a957_5.json",
+    "libint-2.13.1-h5a0831b_0.json",
+    "liblapack-3.11.0-11_hd9741b5_openblas.json",
+    "liblzma-5.8.3-h8088a28_1.json",
+    "libmpdec-4.0.0-h84a0fba_2.json",
+    "libnghttp2-1.68.1-h435687b_1.json",
+    "libopenblas-0.3.34-openmp_h5e6e99c_1.json",
+    "libpcm-1.2.3-h9998470_17.json",
+    "libpsl-0.23.1-hdb0c161_1.json",
+    "libpython-3.14.7-h4311e70_106_cp314.json",
+    "libsqlite-3.53.4-hca69786_1.json",
+    "libssh2-1.11.1-hbf2880b_1.json",
+    "libxc-c-7.1.2-cpu_h337c2d1_1.json",
+    "libzlib-1.3.2-h8088a28_3.json",
+    "llvm-openmp-23.1.2-hdb3d66b_0.json",
+    "mctc-lib-0.5.2-gfortran_h0230218_0.json",
+    "msgpack-python-1.2.2-py314hb1acb19_2.json",
+    "ncurses-6.6-he64c551_1.json",
+    "networkx-3.7-pyhc364b38_0.json",
+    "numpy-2.5.3-py314he06036b_0.json",
+    "openorbitaloptimizer-0.3.0-h4ddebb9_0.json",
+    "openssl-3.6.4-h55eecbc_0.json",
+    "optking-0.5.0-pyhd8ed1ab_0.json",
+    "packaging-26.3-pyhc364b38_0.json",
+    "pcmsolver-1.2.3-py_17.json",
+    "pint-0.26.1-pyhc364b38_0.json",
+    "platformdirs-4.11.12-pyh5ded981_0.json",
+    "psi4-1.11-py314h53d0584_1.json",
+    "psutil-7.2.2-py314hd98292b_3.json",
+    "pugixml-1.15-hd3d436d_0.json",
+    "py-cpuinfo-9.0.0-pyhd8ed1ab_1.json",
+    "pybind11-abi-11-hc364b38_1.json",
+    "pycparser-3.0-pyhcf101f3_0.json",
+    "pydantic-2.13.5-pyhcf101f3_0.json",
+    "pydantic-core-2.46.5-py314hc05cd11_2.json",
+    "pydantic-settings-2.15.0-pyhcf101f3_0.json",
+    "python-3.14.7-h0ae1c2c_106_cp314.json",
+    "python-dotenv-1.2.3-pyhcf101f3_0.json",
+    "python_abi-3.14-9_cp314.json",
+    "pyyaml-6.0.3-py314h6e9b3f0_1.json",
+    "qcelemental-0.51.2-pyhd8ed1ab_0.json",
+    "qcengine-0.51.0-pyhd8ed1ab_0.json",
+    "qcmanybody-0.8.0-pyhd8ed1ab_0.json",
+    "readline-8.3-h8b90a29_1.json",
+    "scipy-1.18.1-py314hd9f3d4e_1.json",
+    "simple-dftd3-1.6.0-gfortran_h643d65c_0.json",
+    "spdlog-1.17.0-h760df91_2.json",
+    "superlu-7.0.0-h742a510_1.json",
+    "tk-8.6.13-hbeba79b_4.json",
+    "toml-f-0.5.2-gfortran_h04795c8_0.json",
+    "typing-extensions-4.16.0-h69aa097_0.json",
+    "typing-inspection-0.4.4-pyhcf101f3_0.json",
+    "typing_extensions-4.16.0-pyhcf101f3_0.json",
+    "tzdata-2026c-h151e31d_0.json",
+    "yaml-0.2.5-h74c22ad_3.json",
+    "zstd-1.5.7-hf451053_7.json"
+   ],
+   "conda-meta/libint-2.13.1-h5a0831b_0.json": "7cb2b345fecc86f890da13f971ec3cd1c03ee5d6aa8907d2326adefa2d4b634b",
+   "conda-meta/psi4-1.11-py314h53d0584_1.json": "853149d1b89fa4ca2ae2768de9a4e66220c0a93fab339f6520d51ea71fc1b4f2",
+   "include/libint2/shell.h": "e0aa1e87e7cccc05c84955c9cf496fdccee2caad92c8c3e3b7f41fedd9a99c9e",
+   "lib/libint2.dylib": "964aff2a18e0948684e62102389a31eb2d09b83ef60b7c4bcc62e959131aa367",
+   "lib/python3.14/site-packages/psi4/core.cpython-314-darwin.so": "0d12c8cda49e2cfe75cea563a2fe51889fa61b88c7b5234beb165b9b54805d99",
+   "share/psi4/basis/sto-3g.gbs": "b472adfbcd0d87e1fd054963b8073a95b5ec265e8b0fd46951a56005f0f227d7"
+  },
+  "ok": true,
+  "prefix_realpath": "<psi4-prefix>",
+  "r2_method_decision": {
+   "approval_record_sha256": "e4897a80869bc04d6ece9a8be75673085e18ddb1b07df1df5e71fd4b76f10d7c",
+   "method_revision_sha256": "9498019a23a8fa1542788b17126b91e3fff93ada49639856f6599e3afc8aecdc"
+  },
+  "r2_platform_observed": {
+   "os_build_version": "26A434",
+   "os_product_version": "27.0.1",
+   "sandbox_exec_executable": true,
+   "sandbox_exec_path": "/usr/bin/sandbox-exec",
+   "sandbox_exec_regular_not_link": true,
+   "sandbox_exec_sha256": "58839ef01b4eef8aac0d2aa8f9d1c074ae45aafe3533965b030672450064acc8",
+   "sandbox_exec_size": 135136
+  },
+  "replaced_base_checks": [
+   {
+    "detail": "NETWORK_PREREQUISITE_UNRESOLVED",
+    "id": "network.prerequisite",
+    "status": "FAIL"
+   }
+  ],
+  "runs_root": "<runs-root>",
+  "utc": "2026-10-29T20:39:48.982713+00:00"
+ },
+ "process": {
+  "command": [
+   "/usr/bin/sandbox-exec",
+   "-f",
+   "<attempt>/bundle/h2-r2-sandbox.sb",
+   "-D",
+   "H2_PAYLOAD_DIR=<attempt>/payload",
+   "-D",
+   "H2_SCRATCH_DIR=<attempt>/scratch",
+   "<psi4-prefix>/bin/python3.14",
+   "-I",
+   "-B",
+   "<attempt>/bundle/h2_phase_a_payload.py",
+   "<attempt>/bundle/h2-a-01-input.json",
+   "<attempt>"
+  ],
+  "elapsed_s": 8.903699540998787,
+  "end_utc": "2026-10-29T20:39:58.211526+00:00",
+  "exit_code": 0,
+  "group_members_after_exit": false,
+  "peak_child_rss_note": "ru_maxrss of the direct child from wait4; an observation only, unit platform-defined",
+  "peak_child_rss_raw": 174800896,
+  "pgid": "<pid-number>",
+  "pid": "<pid-number>",
+  "start_utc": "2026-10-29T20:39:49.307807+00:00",
+  "timed_out": false,
+  "wall_bound_s": 300
+ },
+ "reasons": [],
+ "remaining_points": "none in Phase A; Phase B is NOT_RUN and needs a separate decision",
+ "route": "R2",
+ "rule": "stop, keep all output, mark remaining points NOT_RUN, change no setting",
+ "tier": "COMPLETED_PENDING_REVIEW",
+ "utc": "2026-10-29T20:39:58.340847+00:00"
+}

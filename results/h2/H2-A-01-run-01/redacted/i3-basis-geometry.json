@@ -1,0 +1,11 @@
+{
+ "basis_file_realpath": "<psi4-prefix>/share/psi4/basis/sto-3g.gbs",
+ "basis_file_sha256": "b472adfbcd0d87e1fd054963b8073a95b5ec265e8b0fd46951a56005f0f227d7",
+ "basis_message": "   => Loading Basis Set <=\n\n    Name: STO-3G\n    Role: ORBITAL\n    Keyword: BASIS\n    atoms 1-2 entry H          line    19 file <psi4-prefix>/share/psi4/basis/sto-3g.gbs \n\n",
+ "cwd_gbs_files": [],
+ "nbf": 2,
+ "nuclear_repulsion_hartree": 0.7142857142857143,
+ "problems": [],
+ "stage": "I3-basis-geometry",
+ "utc": "2026-10-29T20:39:58.121906+00:00"
+}

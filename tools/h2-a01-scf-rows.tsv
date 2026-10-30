@@ -1,0 +1,12 @@
+# The two SCF iteration rows that the engine printed for job H2-A-01, plotted and shown by tools/render_h2_scf_rows.py.
+# Every row field is the engine's own printed string, copied from results/h2/H2-A-01-run-01/redacted/psi4-output.dat
+# (lines 151, 153 and 154). Nothing is rounded, converted, relabelled or derived. The third column is RMS |[F,P]|,
+# the engine's own label; it is not a density difference. The engine printed no iteration 0 row, and this table has no more rows.
+# The plot draws the ABSOLUTE VALUE of the printed, signed Delta E (a postprocessing transformation: the minus sign of each
+# printed string is removed; nothing else is derived) on a logarithmic axis, at iterations 1 and 2 only.
+# The optional guide row is the recorded E_CONVERGENCE setting, drawn as a labelled reference line only.
+# Columns: row, label, total_energy, delta_e, rms_fp, trailer, source. The header row carries the printed column labels.
+header		Total Energy	Delta E	RMS |[F,P]|		redacted/psi4-output.dat:151
+1	@RHF iter   1:	-1.11671432506257	-1.11671e+00	1.56620e-16	DIIS	redacted/psi4-output.dat:153
+2	@RHF iter   2:	-1.11671432506257	-4.44089e-16	1.56620e-16	DIIS	redacted/psi4-output.dat:154
+guide	E_CONVERGENCE		1e-08			raw/result.json post_energy_readback.options.e_convergence

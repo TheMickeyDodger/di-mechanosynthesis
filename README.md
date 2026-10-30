@@ -6,9 +6,11 @@ germanium-based molecular tool transfers a C2 unit to a pair of dangling bonds o
 surface under inverted-mode scanning tunnelling microscopy. The present work defines candidate structures for the
 tool and an electronic-structure validation protocol, which are prerequisites for modelling the coupled
 tool–surface system. The repository is an active research record that is revised as sources are examined and
-calculations are specified. It reports one engine-validation attempt, E-01, which stopped before producing any
-converged result ([results/e01](results/e01/README.md)). It contains no converged quantum-chemistry results, and it
-does not reproduce any experiment, model or calculation from the benchmark study.
+calculations are specified. It reports one engine-validation attempt, E-01, which stopped before producing any converged result
+([results/e01](results/e01/README.md)), and one recorded single-point value of a small hydrogen-molecule learning calculation, to
+which no evidence class is assigned ([results/h2/H2-A-01-run-01](results/h2/H2-A-01-run-01/README.md)). It contains no converged
+quantum-chemistry result for the donor, surface or coupled models, and it does not reproduce any experiment, model or calculation
+from the benchmark study.
 
 <p align="center">
   <img src="docs/figures/activated-donor.svg" width="720"
@@ -278,8 +280,55 @@ failure or chemistry evidence. On 2026-10-11 a person replied "approved. Keep go
 a continuation of the same unchanged attempt began in a new task. It stopped as STOP_UNRUN during preparation, before
 the driver was invoked in any mode, after the executing agent's client displayed a safeguard notice whose cause is not
 known. The permission rule it would have used was never added, and no engine process was started
-([continuation stop record](results/h2/H2-A-01-continuation-01/README.md)). No launch permission remains, H2 has no
-result and Phase B is not authorized. W1, E-01, C3 readiness, Stage 1 and scope option A are unchanged.
+([continuation stop record](results/h2/H2-A-01-continuation-01/README.md)). No launch permission remained from those two attempts. A separate bounded
+authorization of 2026-10-29 covered one attempt of the same job, which ran once (next paragraph). Phase B is not authorized. W1, E-01, C3 readiness, Stage 1 and scope option A are unchanged.
+
+*H2-A-01 run, 2026-10-29:* One bounded attempt of job H2-A-01, authorized by the project owner on 2026-10-29, ran once through the
+route-R2 driver and ended with the driver tier COMPLETED_PENDING_REVIEW. The engine (Psi4 1.11) reported a total energy of
+-1.11671432506257 hartree for the hydrogen molecule at one fixed, input separation of 1.4 bohr (RHF/STO-3G, two electrons,
+singlet), converged in 2 SCF iterations. It is a single point: not a dissociation curve, not an optimized or predicted equilibrium
+bond length, not readiness, not parity with any other calculation, and not a reproduction of, or agreement with, the benchmark
+study. The values are recorded engine output, and `[COMP-PRED]` is not granted: the evidence policy requires complete provenance,
+and the engine's source-code identity is unestablished (the banner prints the build's placeholder revision, and the repository
+catalogue records that source-to-binary correspondence cannot be established from what the project holds). Also open or
+unexplained: the `CURRENT ENERGY` alias is a `[GAP]`; OMP Warning #179 is INDETERMINATE with its harmlessness unproved; the
+`network.prerequisite` FAIL is retained; and M1 (500 MiB was the engine memory setting, not an operating-system cap) is accepted
+but not resolved. The [result report](docs/learning/h2/H2-A-01-RESULT-REPORT.md), with its
+[PDF summary](docs/learning/h2/H2-A-01-RESULT-REPORT.pdf), and the [record](results/h2/H2-A-01-run-01/README.md) give the sources, the
+residuals and a conceptual question. Figures 3 to 5 follow; each source table is in section 5 of the report.
+
+<p align="center">
+  <img src="docs/figures/h2-a01-input-geometry.svg" width="720"
+       alt="Drawing along the z axis, in bohr, of the two hydrogen atoms H1 at z = -0.7 and H2 at z = +0.7, labelled as the fixed input geometry, not optimized, with the 1.4 bohr separation marked.">
+</p>
+
+Figure 3. The fixed input geometry of H2-A-01: H1 and H2 on the z axis at -0.7 and +0.7 bohr, 1.4 bohr apart. The 1.4 bohr
+internuclear distance is the fixed input, not an optimized or predicted equilibrium bond length, and not a result. Drawn by
+[`tools/render_h2_input_geometry.py`](tools/render_h2_input_geometry.py) from
+[`tools/h2-a01-input-geometry.tsv`](tools/h2-a01-input-geometry.tsv) ([PNG](docs/figures/h2-a01-input-geometry.png)).
+
+<p align="center">
+  <img src="docs/figures/h2-a01-scf-rows.svg" width="720"
+       alt="Two-panel figure. Panel A plots the absolute value of the engine's printed Delta E in hartree on a logarithmic axis against SCF iterations 1 and 2, at 1.11671e+00 and 4.44089e-16, joined by one segment, with a dashed reference line at the recorded E_CONVERGENCE 1e-08. Panel B reproduces the engine's two printed rows with its own labels.">
+</p>
+
+Figure 4. SCF convergence as printed. Panel A: the absolute value of the printed, signed Delta E at iterations 1 and 2 on a
+logarithmic axis, a postprocessing transformation in which only the minus sign was removed; the dashed line is the recorded
+E_CONVERGENCE setting, a reference only. Panel B: the engine's own two rows, verbatim, with no iteration 0. Drawn by
+[`tools/render_h2_scf_rows.py`](tools/render_h2_scf_rows.py) from [`tools/h2-a01-scf-rows.tsv`](tools/h2-a01-scf-rows.tsv)
+([PNG](docs/figures/h2-a01-scf-rows.png)).
+
+<p align="center">
+  <img src="docs/figures/h2-a01-energy-components.svg" width="720"
+       alt="Three signed bars anchored at zero on one axis in hartree: nuclear repulsion Vnn +0.7142857142857143, electronic energy E_elec -1.8310000393482843 with a dashed outline as the independent review's derivation, and total energy E_total -1.11671432506257, with the equation E_total = E_elec + Vnn.">
+</p>
+
+Figure 5. Signed energy components of the recorded single point, in hartree, all anchored at zero on one axis, with
+E_total = E_elec + Vnn. Vnn and E_total were reported by the engine (solid bars); E_elec is the independent review's derivation
+under the convention that the reported total includes the nuclear repulsion (dashed outline), and the engine did not print it.
+Drawn by [`tools/render_h2_energy_components.py`](tools/render_h2_energy_components.py) from
+[`tools/h2-a01-energy-components.tsv`](tools/h2-a01-energy-components.tsv)
+([PNG](docs/figures/h2-a01-energy-components.png)).
 
 ## Evidence classification and provenance
 
@@ -293,8 +342,7 @@ output from language models is never treated as physical evidence. The rules are
 
 Every public file is listed with its SHA256 in [provenance/EXPORT-MANIFEST.md](provenance/EXPORT-MANIFEST.md),
 which excludes itself from its own table. Where a file was adapted from a private working record, the manifest
-states the change and gives the hash of the original. Both figures are drawn directly from repository data by the
-included scripts. A software capability is accepted only when it is shown for the exact version used.
+states the change and gives the hash of the original. Figures 1 to 5 are drawn directly from repository data by the included scripts. A software capability is accepted only when it is shown for the exact version used.
 
 The work is coordinated through a separate orchestration and review system, Dodging Infinity. That system
 authorizes bounded tasks, conducts independent review and records evidence status. This repository holds the
@@ -343,7 +391,7 @@ the project's private working records are omitted, and the manifest lists each o
 | [docs/ms-001/w1-outcome-02.json](docs/ms-001/w1-outcome-02.json) | Machine-readable outcome of the second W1 pre-run determination |
 | [docs/ms-001/W1-RUN-RECORD.md](docs/ms-001/W1-RUN-RECORD.md) | The one W1 run (2026-10-04), stopped under §8 condition S10 at the input point: the phases executed, the outcome, the S10 observations, what was created, absent, empty or not queried, every acceptance criterion and stop condition, F1 to F11 coverage, a null closure inventory, and the limits; supersedes nothing |
 | [docs/ms-001/w1-run-outcome.json](docs/ms-001/w1-run-outcome.json) | Machine-readable outcome of the W1 run |
-| [docs/learning/h2/](docs/learning/h2/README.md) | H2 learning package: a lesson, a prospective, unrun method specification with its parameters, and a Phase A run proposal whose driver refuses launch; no results |
+| [docs/learning/h2/](docs/learning/h2/README.md) | H2 learning package: a lesson, a prospective, unrun method specification with its parameters, and a Phase A run proposal whose driver refuses launch, and the report of one recorded run (a single point; no result for the donor, surface or coupled models) |
 | [structures/ms-001/](structures/ms-001/README.md) | MS-001 Stage 0 geometries: model M1, the start configuration, validation configurations V1–V3 and the P2 test molecule, built geometrically and unrelaxed |
 | [tools/build_ms001_geometries.py](tools/build_ms001_geometries.py) | Deterministic generator of the MS-001 Stage 0 geometries; it measures and asserts every reported distance and angle |
 | [tools/c3_provenance_wiring.py](tools/c3_provenance_wiring.py) | Driver of the C3 provenance wiring test, one trivial non-chemistry AiiDA job |
@@ -356,10 +404,20 @@ the project's private working records are omitted, and the manifest lists each o
 | [results/e01/raw/](results/e01/raw/) | Engine output, error text, job input and classification of the precursor, redacted where stated |
 | [results/h2/H2-A-01/](results/h2/H2-A-01/README.md) | H2-A-01 stop record: the one authorized attempt stopped as STOP_UNRUN before launch, with no run invocation and no engine process; machine-readable outcome and provenance; no results |
 | [results/h2/H2-A-01-continuation-01/](results/h2/H2-A-01-continuation-01/README.md) | Stop record of the continuation of that attempt (2026-10-11): STOP_UNRUN during preparation, before any driver invocation, with no engine process; machine-readable outcome and provenance; no results |
+| [results/h2/H2-A-01-run-01/](results/h2/H2-A-01-run-01/README.md) | Record of the one bounded attempt of H2-A-01 that ran once (2026-10-29): one recorded RHF/STO-3G single point at a fixed 1.4 bohr separation, `[COMP-PRED]` not granted; machine-readable outcome, provenance with hashed inventory and redaction lineage, verbatim and redacted engine records |
+| [docs/learning/h2/H2-A-01-RESULT-REPORT.md](docs/learning/h2/H2-A-01-RESULT-REPORT.md) | Sourced report of that run with its figures, source tables, residuals and a conceptual question; its [PDF summary](docs/learning/h2/H2-A-01-RESULT-REPORT.pdf) |
 | [docs/figures/activated-donor.svg](docs/figures/activated-donor.svg) | Figure 1 |
 | [docs/figures/benchmark-outcomes.svg](docs/figures/benchmark-outcomes.svg) | Figure 2 |
+| [docs/figures/h2-a01-input-geometry.svg](docs/figures/h2-a01-input-geometry.svg) | Figure 3 (also as [PNG](docs/figures/h2-a01-input-geometry.png)) |
+| [docs/figures/h2-a01-scf-rows.svg](docs/figures/h2-a01-scf-rows.svg) | Figure 4 (also as [PNG](docs/figures/h2-a01-scf-rows.png)) |
+| [docs/figures/h2-a01-energy-components.svg](docs/figures/h2-a01-energy-components.svg) | Figure 5 (also as [PNG](docs/figures/h2-a01-energy-components.png)) |
 | [tools/render_donor_plate.py](tools/render_donor_plate.py) | Figure 1 renderer, with its bond table [tools/activated-donor-bonds.tsv](tools/activated-donor-bonds.tsv) |
 | [tools/render_outcomes_chart.py](tools/render_outcomes_chart.py) | Figure 2 renderer, with its input [tools/benchmark-reported-outcomes.tsv](tools/benchmark-reported-outcomes.tsv) |
+| [tools/render_h2_input_geometry.py](tools/render_h2_input_geometry.py) | Figure 3 renderer, with its input [tools/h2-a01-input-geometry.tsv](tools/h2-a01-input-geometry.tsv) |
+| [tools/render_h2_scf_rows.py](tools/render_h2_scf_rows.py) | Figure 4 renderer, with its input [tools/h2-a01-scf-rows.tsv](tools/h2-a01-scf-rows.tsv) |
+| [tools/render_h2_energy_components.py](tools/render_h2_energy_components.py) | Figure 5 renderer, with its input [tools/h2-a01-energy-components.tsv](tools/h2-a01-energy-components.tsv) |
+| [tools/export_h2_figure_png.py](tools/export_h2_figure_png.py) | Exports the three H2 figures to PNG with the macOS image tool `sips`; the SVG files are authoritative |
+| [tools/build_h2_report_pdf.py](tools/build_h2_report_pdf.py) | Builds the PDF summary of the H2-A-01 report from marked blocks of the report; needs reportlab, which is not standard library |
 | [structures/](structures/README.md) | Donor-candidate coordinate files |
 | [AGENTS.md](AGENTS.md) | Conventions for contributors and automated agents |
 | [provenance/EXPORT-MANIFEST.md](provenance/EXPORT-MANIFEST.md) | Per-file SHA256, derivation and redaction statements |

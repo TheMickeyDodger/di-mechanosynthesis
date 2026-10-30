@@ -1,0 +1,39 @@
+{
+ "argv": [
+  "<attempt>/bundle/h2_phase_a_payload.py",
+  "<attempt>/bundle/h2-a-01-input.json",
+  "<attempt>"
+ ],
+ "cwd": "<attempt>/scratch",
+ "dont_write_bytecode": 1,
+ "engine_modules_loaded_before_import": [],
+ "environ": {
+  "LC_ALL": "C",
+  "OMP_NUM_THREADS": "1",
+  "PATH": "<psi4-prefix>/bin:/usr/bin:/bin",
+  "PSI_SCRATCH": "<attempt>/scratch",
+  "TMPDIR": "<attempt>/scratch"
+ },
+ "executable_realpath": "<psi4-prefix>/bin/python3.14",
+ "isolated": 1,
+ "pid": "<pid-number>",
+ "prefix_realpath": "<psi4-prefix>",
+ "problems": [],
+ "stage": "P0-pre-import",
+ "static_sha256": {
+  "bin/python3.14": "5bac0535500ca7fe507749fbcf28e3f731dea4dabf1400f7df7f5dd26691c66a",
+  "include/libint2/shell.h": "e0aa1e87e7cccc05c84955c9cf496fdccee2caad92c8c3e3b7f41fedd9a99c9e",
+  "lib/libint2.dylib": "964aff2a18e0948684e62102389a31eb2d09b83ef60b7c4bcc62e959131aa367",
+  "lib/python3.14/site-packages/psi4/core.cpython-314-darwin.so": "0d12c8cda49e2cfe75cea563a2fe51889fa61b88c7b5234beb165b9b54805d99",
+  "share/psi4/basis/sto-3g.gbs": "b472adfbcd0d87e1fd054963b8073a95b5ec265e8b0fd46951a56005f0f227d7"
+ },
+ "sys_executable": "<psi4-prefix>/bin/python3.14",
+ "sys_path": [
+  "<psi4-prefix>/lib/python314.zip",
+  "<psi4-prefix>/lib/python3.14",
+  "<psi4-prefix>/lib/python3.14/lib-dynload",
+  "<psi4-prefix>/lib/python3.14/site-packages"
+ ],
+ "sys_version": "3.14.7 | packaged by conda-forge | (main, Sep  2 2026, 21:04:32) [Clang 20.1.8 ]",
+ "utc": "2026-10-29T20:39:49.971833+00:00"
+}

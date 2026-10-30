@@ -17,10 +17,9 @@ those of its Phase A run proposal in Section 21 (entries [52] to [55]); the fixt
 method-revision proposal is listed in Section 22 (entry [56]), and the test record of the enabling revision that
 binds the approved method revision is listed in Section 23 (entry [57]). The records of the one authorized attempt of
 job H2-A-01, which stopped before launch, are listed in Section 24 (entry [58]), and those of its continuation, which
-stopped before any driver invocation, in Section 25 (entry [59]). The
+stopped before any driver invocation, in Section 25 (entry [59]). The records of the completed attempt of the same job, its report and its figures are listed in Section 26 (entries [60] to [62]). The
 numbering here is shared by the main documents in the
-repository. The catalogue contains no converged quantum-chemistry values. The project's only
-quantum-chemistry attempt, E-01, stopped before any SCF iteration was reported and is closed as technically
+repository. The catalogue contains one recorded single-point value of a small hydrogen-molecule learning calculation, to which no evidence class is assigned (Section 26), and no other converged quantum-chemistry value. The project's only attempt aimed at the donors, E-01, stopped before any SCF iteration was reported and is closed as technically
 blocked and scientifically indeterminate. Its records are entries [20] and [21], and the dispersion library it
 used is [22]. The `v1.11` source files read for its postmortem are entries [23] and [24], and the project's
 postmortem, installed-build survey and closure records are entries [25] to [27]. Its public report is
@@ -1293,3 +1292,63 @@ engine was imported, initialized or run, and it gives no H2 result.
   - STOP_UNRUN is an orchestration stop before any driver invocation. It is not a driver tier, an engine failure or
     chemistry evidence, and no chemistry evidence class applies.
   - No launch permission remains. The records do not carry any authorization forward and authorize nothing.
+
+## 26. H2-A-01 completed attempt, its report and its figures
+
+This section lists the records of the one bounded attempt of job H2-A-01 that ran once on 2026-10-29 and produced one recorded
+single-point value, and the report, figures and tools derived from them. It gives one recorded energy of a small hydrogen-molecule
+calculation, to which no evidence class is assigned, and no result for the donor, surface or coupled models.
+
+**[60]** Project records of the completed attempt of H2-A-01, 2026-10-29.
+- **Records.**
+  - The [record](../results/h2/H2-A-01-run-01/README.md), with its [machine-readable outcome](../results/h2/H2-A-01-run-01/outcome.json)
+    and its [provenance record](../results/h2/H2-A-01-run-01/provenance.json), the byte-identical copies in
+    [raw/](../results/h2/H2-A-01-run-01/raw/), the redacted copies in [redacted/](../results/h2/H2-A-01-run-01/redacted/) and the
+    [code-provenance summary](../results/h2/H2-A-01-run-01/derived/code-provenance-summary.json).
+- **Content.**
+  - The settings as executed, the process and check counts, the recorded values, the engine streams, the retained
+    `network.prerequisite` FAIL, a host summary taken after the run with its supported and its supplied-and-unverified items, the
+    engine identity (the conda-forge psi4 1.11 build `py314h53d0584_1`, its placeholder banner revision and the supplied explanations
+    with their limits) and the dispositions of the independent reviews.
+- **Basis.** New records of this project, written from a retained attempt directory of sixteen files and from private task
+  records. Every original file is identified in `provenance.json` by SHA256 and a neutral description, with its public derivative,
+  and the redaction rules and replacement counts are recorded; the originals stay private and unedited. The private records are
+  cited by neutral description and SHA256 only. Among them is a supplied read-only observation of the external engine environment
+  and package cache (SHA256 `b57a92c9c83d5748718cd474b12affc9eea2778a6574bf1bdc13d90eb2712728`), made outside this project's
+  boundary and supplied to it; it was not observed by this project.
+- **Limitations.**
+  - The values are recorded engine output of one run. `[COMP-PRED]` is not granted: the engine's source-code identity is
+    unestablished, and entries [31], [37], [52], [53] and [54] record that the material the project holds cannot establish it.
+  - The `CURRENT ENERGY` alias is a `[GAP]`; OMP Warning #179 is INDETERMINATE with its harmlessness unproved; P1, loaded
+    identity, the Libint load-name question, E1 and compatibility with the sandbox profile stay open; M1 is accepted but not
+    resolved. The host summary is a post-run capture, supported but not unique, with two claims supplied and unverified.
+  - It is a single point at a fixed input separation: not a dissociation curve, an optimized or predicted equilibrium bond length,
+    readiness, parity or a reproduction of the benchmark. It does not explain E-01.
+
+**[61]** The sourced report of H2-A-01 and its PDF summary, 2026-10-29.
+- **Records.** The [report](learning/h2/H2-A-01-RESULT-REPORT.md) and its [PDF summary](learning/h2/H2-A-01-RESULT-REPORT.pdf).
+- **Content.** The summary and scope, the setup and recorded values with locators and labels, the energy convention, Figures 3 to
+  5 with their source tables, the process, checks and host, the review chronology and classification, the engine
+  source-code identity gap, the residuals, the research connection with one conceptual question, and the provenance.
+- **Basis.** A new `[AGENT]` document written from the records of [60] and the existing records cited in it. It cites existing
+  catalogue entries only (among them [31], [37], [45], [48], [52] to [54]); no source was retrieved. The PDF is a derived summary
+  of marked blocks of the report, built with reportlab 4.4.9 on Python 3.12.14 from a runtime that already existed on the build
+  host, and it carries the SHA256 of the report.
+- **Limitations.** The classification belongs to the independent review and Lead acceptance, which are private task records. The
+  report is not a result in the sense of the evidence policy, and it authorizes nothing.
+
+**[62]** The figure sources and tools of Figures 3 to 5, 2026-10-29.
+- **Records.** [Figure 3](figures/h2-a01-input-geometry.svg), [Figure 4](figures/h2-a01-scf-rows.svg) and
+  [Figure 5](figures/h2-a01-energy-components.svg), each also as PNG; their source tables
+  [tools/h2-a01-input-geometry.tsv](../tools/h2-a01-input-geometry.tsv), [tools/h2-a01-scf-rows.tsv](../tools/h2-a01-scf-rows.tsv)
+  and [tools/h2-a01-energy-components.tsv](../tools/h2-a01-energy-components.tsv); their renderers
+  [tools/render_h2_input_geometry.py](../tools/render_h2_input_geometry.py), [tools/render_h2_scf_rows.py](../tools/render_h2_scf_rows.py)
+  and [tools/render_h2_energy_components.py](../tools/render_h2_energy_components.py); the PNG exporter
+  [tools/export_h2_figure_png.py](../tools/export_h2_figure_png.py) and the PDF builder
+  [tools/build_h2_report_pdf.py](../tools/build_h2_report_pdf.py).
+- **Basis.** Original drawings of data in [60]: each renderer is deterministic, uses the standard library only, reads one table and
+  writes one SVG, and prints the table's strings as given. The PNG exports were made with the macOS tool `sips` (sips-316, macOS
+  27.0.1 build 26A434) and are byte-identical across repeated exports; the SVG files are authoritative.
+- **Limitations.** The figures draw recorded values; they compute no chemistry. Figure 4 plots the absolute value of the printed
+  Delta E, a postprocessing transformation, with the signed values in its table. Figure 5 draws the electronic energy as the
+  independent review's derivation, not as engine output.

@@ -1,0 +1,14 @@
+# Fixed INPUT geometry of job H2-A-01 (hydrogen molecule, RHF/STO-3G), drawn by tools/render_h2_input_geometry.py.
+# This is the geometry that was given to the engine. It is fixed input, NOT an optimized geometry; the 1.4 bohr internuclear
+# distance is a fixed input, not an optimized or predicted equilibrium bond length.
+# Atom positions are copied as recorded by the engine-side read-back in results/h2/H2-A-01-run-01/raw/result.json
+# (post_energy_readback.atoms); they agree with docs/learning/h2/phase-a/h2-a-01-input.json (molecule.atoms, molecule.R_bohr).
+# Values are strings and are printed exactly as given; nothing is recomputed from them except an exact-decimal consistency check.
+# Columns: key, value, unit, source.
+H1.x	0.0	bohr	raw/result.json post_energy_readback.atoms[0].xyz_bohr[0]
+H1.y	0.0	bohr	raw/result.json post_energy_readback.atoms[0].xyz_bohr[1]
+H1.z	-0.7	bohr	raw/result.json post_energy_readback.atoms[0].xyz_bohr[2]
+H2.x	0.0	bohr	raw/result.json post_energy_readback.atoms[1].xyz_bohr[0]
+H2.y	0.0	bohr	raw/result.json post_energy_readback.atoms[1].xyz_bohr[1]
+H2.z	0.7	bohr	raw/result.json post_energy_readback.atoms[1].xyz_bohr[2]
+separation	1.4	bohr	docs/learning/h2/phase-a/h2-a-01-input.json molecule.R_bohr (recorded setting, fixed)

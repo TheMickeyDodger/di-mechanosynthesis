@@ -1,0 +1,490 @@
+{
+ "schema": "di-mechanosynthesis/h2-run-provenance/2",
+ "job_id": "H2-A-01",
+ "route": "R2",
+ "status": "COMPLETED_PENDING_REVIEW",
+ "repository_head": "b8bbf237116b82e9479e9b7ac6e4b0138fba90cc",
+ "review_status": "an independent review of the run result recorded the canonical decision APPROVE with eight non-blocking findings and Lead acceptance of the narrow result is recorded; both are private task records. A later independent review of the material supporting the post-run host summary recorded REJECT with one blocker, which stays on the record; a documentary erratum relabelled the two unsupported claims supplied and unverified, a further independent review recorded APPROVE with eight non-blocking findings, and the Lead accepted that correction. A final independent review recorded APPROVE with eight non-blocking findings, and the Lead's disposition records the orchestration run-record requirement as met on a retained supplied-source basis only and the reviewed-calculation requirement as not met, with the provenance clause open on the engine's source-code identity. This record upgrades no evidence label.",
+ "bound_sha256": {
+  "note": "the sixteen interlock keys bound by the run authorization; public paths are relative to the repository root; the two private records are described by SHA256, not pathed. The key r2_run_proposal is bound by the driver to the original route-R2 run proposal; the current run proposal of record is docs/learning/h2/phase-a-r2/H2-A-R2-RUN-PROPOSAL-02.md, SHA256 a9c11ba494eb9384d348b180c8ddb7cb64cbb258ae040a411a16510628640408.",
+  "keys": {
+   "code_provenance": {
+    "sha256": "1dceedcd2fd603d85d57366ccc709bb87a6a299231016d879c627350229deda6",
+    "record": "private; described, not pathed"
+   },
+   "decision_packet": {
+    "path": "docs/learning/h2/phase-a/H2-A-01-DECISION-PACKET.md",
+    "sha256": "cfb4a9912114452211e19edadf115816e48359911e05f48d71c54672b72b55e5",
+    "equals_repository_file_at_head": true
+   },
+   "driver": {
+    "path": "docs/learning/h2/phase-a/h2_phase_a_driver.py",
+    "sha256": "6dcb4845e3b4b29f89dc4027274675e24c1152508828b1230857baac58b9aa7d",
+    "equals_repository_file_at_head": true
+   },
+   "input": {
+    "path": "docs/learning/h2/phase-a/h2-a-01-input.json",
+    "sha256": "3ca4753312b3f2cd50274d4c8f8dda48de422d691e34bf47784b1602670dc3d3",
+    "equals_repository_file_at_head": true
+   },
+   "machine_binding": {
+    "sha256": "e5cffa60f86bbfde01cf1bec0a6d7ce2c9b16dfa3bbb4ba164cd7c6fa3f2b1c3",
+    "record": "private; described, not pathed"
+   },
+   "method_revision_approval": {
+    "path": "docs/learning/h2/phase-a-r2/H2-R2-METHOD-HUMAN-APPROVAL.md",
+    "sha256": "e4897a80869bc04d6ece9a8be75673085e18ddb1b07df1df5e71fd4b76f10d7c",
+    "equals_repository_file_at_head": true
+   },
+   "parameters": {
+    "path": "docs/learning/h2/h2-method-parameters.json",
+    "sha256": "2728b0efe2c6dae070346a3d0475857222f02864a6da63859edf4d4e334c156e",
+    "equals_repository_file_at_head": true
+   },
+   "payload": {
+    "path": "docs/learning/h2/phase-a/h2_phase_a_payload.py",
+    "sha256": "7de1d53c70af7a4ff3a71fb5fbcd7cedfec24a7e3eb49d8b27f9d6bf6cc2f69b",
+    "equals_repository_file_at_head": true
+   },
+   "r2_decision_packet": {
+    "path": "docs/learning/h2/phase-a-r2/H2-A-R2-DECISION-PACKET.md",
+    "sha256": "5ce61f7c97be6db8e332d296d3f54335acb04552296d33eb230ce40cbd9c4083",
+    "equals_repository_file_at_head": true
+   },
+   "r2_driver": {
+    "path": "docs/learning/h2/phase-a-r2/h2_phase_a_r2_driver.py",
+    "sha256": "0b3172f8388b0f0c053a2b7a6945394e7e796aae8b14d0228447d7bc860af9b6",
+    "equals_repository_file_at_head": true
+   },
+   "r2_method_revision": {
+    "path": "docs/learning/h2/phase-a-r2/H2-R2-METHOD-REVISION.md",
+    "sha256": "9498019a23a8fa1542788b17126b91e3fff93ada49639856f6599e3afc8aecdc",
+    "equals_repository_file_at_head": true
+   },
+   "r2_platform_identity": {
+    "path": "docs/learning/h2/phase-a-r2/h2-r2-platform-identity.json",
+    "sha256": "822fbe69807184f8ac5c180caa74d23b0faca64e055ee4bc09a61c82019f2659",
+    "equals_repository_file_at_head": true
+   },
+   "r2_profile": {
+    "path": "docs/learning/h2/phase-a-r2/h2-r2-sandbox.sb",
+    "sha256": "0768725ab376312c4b22dc83f47b13eeaa67c62dc618dd350c9ab47a2f754d20",
+    "equals_repository_file_at_head": true
+   },
+   "r2_run_proposal": {
+    "path": "docs/learning/h2/phase-a-r2/H2-A-R2-RUN-PROPOSAL.md",
+    "sha256": "d0239104596409d8f278449103f413843a225550cbfb91616d25d5b5143c2b2e",
+    "equals_repository_file_at_head": true
+   },
+   "run_proposal": {
+    "path": "docs/learning/h2/phase-a/H2-A-01-RUN-PROPOSAL.md",
+    "sha256": "d9bcb7e186a0ced226478d93470682c6ff84c78abab1f7546eb45bdac551225f",
+    "equals_repository_file_at_head": true
+   },
+   "static_identity": {
+    "path": "docs/learning/h2/phase-a/h2-a-01-static-identity.json",
+    "sha256": "a45ee84d0d28e794ea7f56e7ff74130551fb326c36c7d8353467966ed2c025cc",
+    "equals_repository_file_at_head": true
+   }
+  }
+ },
+ "original_inventory": {
+  "note": "the sixteen files of the attempt directory, all of which stay private and unedited; each is identified by SHA256 and a neutral description, with the public derivative where one exists",
+  "files": [
+   {
+    "path": "bundle/h2-a-01-input.json",
+    "size": 2308,
+    "sha256": "3ca4753312b3f2cd50274d4c8f8dda48de422d691e34bf47784b1602670dc3d3",
+    "description": "copy of the input record that the engine-side payload read",
+    "identical_public_repository_file": {
+     "path": "docs/learning/h2/phase-a/h2-a-01-input.json",
+     "sha256": "3ca4753312b3f2cd50274d4c8f8dda48de422d691e34bf47784b1602670dc3d3"
+    }
+   },
+   {
+    "path": "bundle/h2-r2-sandbox.sb",
+    "size": 799,
+    "sha256": "0768725ab376312c4b22dc83f47b13eeaa67c62dc618dd350c9ab47a2f754d20",
+    "description": "copy of the sandbox profile used for the launch",
+    "identical_public_repository_file": {
+     "path": "docs/learning/h2/phase-a-r2/h2-r2-sandbox.sb",
+     "sha256": "0768725ab376312c4b22dc83f47b13eeaa67c62dc618dd350c9ab47a2f754d20"
+    }
+   },
+   {
+    "path": "bundle/h2_phase_a_payload.py",
+    "size": 25495,
+    "sha256": "7de1d53c70af7a4ff3a71fb5fbcd7cedfec24a7e3eb49d8b27f9d6bf6cc2f69b",
+    "description": "copy of the engine-side payload that ran",
+    "identical_public_repository_file": {
+     "path": "docs/learning/h2/phase-a/h2_phase_a_payload.py",
+     "sha256": "7de1d53c70af7a4ff3a71fb5fbcd7cedfec24a7e3eb49d8b27f9d6bf6cc2f69b"
+    }
+   },
+   {
+    "path": "code-provenance.json",
+    "size": 203970,
+    "sha256": "1dceedcd2fd603d85d57366ccc709bb87a6a299231016d879c627350229deda6",
+    "description": "record written by the driver's code-provenance mode before the run (embeds the eight covered files)",
+    "public_derivative": {
+     "path": "derived/code-provenance-summary.json",
+     "treatment": "summary",
+     "size": 4973,
+     "sha256": "faf224e9fc42788cd178651d4cbb52c10e79baac39588506ad898e52655203a9"
+    }
+   },
+   {
+    "path": "engine.stderr",
+    "size": 64,
+    "sha256": "cac246557f41f69633f58d838e666821f128a69865a37bdf25e835258563db64",
+    "description": "engine standard error stream",
+    "public_derivative": {
+     "path": "raw/engine.stderr",
+     "treatment": "byte-identical copy",
+     "size": 64,
+     "sha256": "cac246557f41f69633f58d838e666821f128a69865a37bdf25e835258563db64"
+    }
+   },
+   {
+    "path": "engine.stdout",
+    "size": 84,
+    "sha256": "e1e4c2739ef4c5713924bb15e47889cf47f4520e44c24c46a070fc7272ff558f",
+    "description": "engine standard output stream",
+    "public_derivative": {
+     "path": "raw/engine.stdout",
+     "treatment": "byte-identical copy",
+     "size": 84,
+     "sha256": "e1e4c2739ef4c5713924bb15e47889cf47f4520e44c24c46a070fc7272ff558f"
+    }
+   },
+   {
+    "path": "launch-record.json",
+    "size": 8577,
+    "sha256": "b735debe8c95893540fade52b55a8cef1285b8527c52b790bf07aa745ad30871",
+    "description": "driver record of the launch: command, environment, bound digests, platform",
+    "public_derivative": {
+     "path": "redacted/launch-record.json",
+     "treatment": "redacted copy",
+     "size": 5109,
+     "sha256": "c01f767ade2c9620722659e2088d219419600e121c690176548344108ac24062",
+     "replacements": {
+      "R01-attempt-dir": 24,
+      "R06-engine-prefix": 7
+     }
+    }
+   },
+   {
+    "path": "outcome.json",
+    "size": 34916,
+    "sha256": "42772257cfcea45763a7dbd629cb2a8a224ccb524627395585cd59831a8f24ee",
+    "description": "driver outcome: tier, process, three check blocks, inventory of the other fifteen files",
+    "public_derivative": {
+     "path": "redacted/driver-outcome.json",
+     "treatment": "redacted copy",
+     "size": 33176,
+     "sha256": "33dab9d51f9da8d406cb8437f3bf4d0b704c582a97e961866d3b35095f1e1e35",
+     "replacements": {
+      "R01-attempt-dir": 7,
+      "R02-runs-root": 3,
+      "R06-engine-prefix": 7,
+      "R11-pid-json-number": 2
+     }
+    }
+   },
+   {
+    "path": "payload/i1-identity.json",
+    "size": 97765,
+    "sha256": "2a4455595af472d0f20b535802ac8cec145e27a0a4df1e28673c8828319a23a3",
+    "description": "engine identity record taken inside the engine process: version, loaded images",
+    "public_derivative": {
+     "path": "redacted/i1-identity.json",
+     "treatment": "redacted copy",
+     "size": 84073,
+     "sha256": "4747e6fed3cb873d860d7daa179ec541ed0c603391125d9e92209c2ebb92b364",
+     "replacements": {
+      "R06-engine-prefix": 163
+     }
+    }
+   },
+   {
+    "path": "payload/i2-configuration.json",
+    "size": 4418,
+    "sha256": "827cf175627bccaeaf6de68e69ec1829e8be2c785da807c953485bdd2bf98c73",
+    "description": "engine configuration record taken inside the engine process",
+    "public_derivative": {
+     "path": "redacted/i2-configuration.json",
+     "treatment": "redacted copy",
+     "size": 4315,
+     "sha256": "17375ca880d464baba3de13f7c29b10f7ac2e75cd0c36ead47953016119618a1",
+     "replacements": {
+      "R06-engine-prefix": 1,
+      "R08-host-fqdn": 1,
+      "R12-pid-text": 1
+     }
+    }
+   },
+   {
+    "path": "payload/i3-basis-geometry.json",
+    "size": 707,
+    "sha256": "f9a84b5bb00b838e6d54337afb5bd7a826cee9b3cf2706262714237a86cad0db",
+    "description": "basis and geometry record taken inside the engine process",
+    "public_derivative": {
+     "path": "redacted/i3-basis-geometry.json",
+     "treatment": "redacted copy",
+     "size": 539,
+     "sha256": "36fc5da51ea9ad000acc857899b2828f78ba7c49a912c886f0bd139cef3e16f1",
+     "replacements": {
+      "R06-engine-prefix": 2
+     }
+    }
+   },
+   {
+    "path": "payload/pre-import.json",
+    "size": 2865,
+    "sha256": "80ec1d99f05ef0525aeb9ccf6d9665b914c576c8083ffee8a284c5bdfb1a0caa",
+    "description": "record taken before the engine was imported",
+    "public_derivative": {
+     "path": "redacted/pre-import.json",
+     "treatment": "redacted copy",
+     "size": 1482,
+     "sha256": "6171ba02974b5652f0b974c0cc5e692780b3d29130298bcf67f2db59bedfd6b7",
+     "replacements": {
+      "R01-attempt-dir": 6,
+      "R06-engine-prefix": 8,
+      "R11-pid-json-number": 1
+     }
+    }
+   },
+   {
+    "path": "payload/psi4-output.dat",
+    "size": 8313,
+    "sha256": "30d67c65da376a68a1e8af26afe49376547b565022d95d8d098898f2bd62705c",
+    "description": "engine text output",
+    "public_derivative": {
+     "path": "redacted/psi4-output.dat",
+     "treatment": "redacted copy",
+     "size": 7968,
+     "sha256": "662a04757b92b1f0f0c6e3270e5d408c04ed54d5fe0dcfdb2eab8cd7dd893ebd",
+     "replacements": {
+      "R01-attempt-dir": 1,
+      "R06-engine-prefix": 2,
+      "R08-host-fqdn": 3,
+      "R12-pid-text": 1
+     }
+    }
+   },
+   {
+    "path": "payload/psi4-output.log",
+    "size": 514,
+    "sha256": "10b332bcf0a5665f779f3d7a41a85d1652ce34bd4ca170bd9644046692462dfb",
+    "description": "engine log output",
+    "public_derivative": {
+     "path": "raw/psi4-output.log",
+     "treatment": "byte-identical copy",
+     "size": 514,
+     "sha256": "10b332bcf0a5665f779f3d7a41a85d1652ce34bd4ca170bd9644046692462dfb"
+    }
+   },
+   {
+    "path": "payload/result.json",
+    "size": 1372,
+    "sha256": "ded7dcc436aa5a2239dbd0901ca26a3cb51c8ae81e27fd7dd27ac7657f5191cf",
+    "description": "payload result record: reported energy values, convergence flag, read-back",
+    "public_derivative": {
+     "path": "raw/result.json",
+     "treatment": "byte-identical copy",
+     "size": 1372,
+     "sha256": "ded7dcc436aa5a2239dbd0901ca26a3cb51c8ae81e27fd7dd27ac7657f5191cf"
+    }
+   },
+   {
+    "path": "scratch/timer.dat",
+    "size": 2910,
+    "sha256": "352a979b80bcbcfd5318b4f2de83cd851149e165ef7351b84a0cd70d3710500b",
+    "description": "engine timer output",
+    "public_derivative": {
+     "path": "redacted/timer.dat",
+     "treatment": "redacted copy",
+     "size": 2891,
+     "sha256": "06a7117d03a55bb4e1d93fd291c4cc2ae3377a57edc5f9d61c4838e743877165",
+     "replacements": {
+      "R08-host-fqdn": 1
+     }
+    }
+   }
+  ]
+ },
+ "private_task_records": {
+  "note": "private records identified by SHA256 and a neutral description only; their content is not published",
+  "records": [
+   {
+    "description": "owner's decision record for this attempt",
+    "sha256": "7022dfe3d6d57a6c04c07943ee1011483e5a69929b3b1946b07050fb9557708f"
+   },
+   {
+    "description": "driver-schema run authorization record, bound by the run",
+    "sha256": "7a48b939b72b5e10dccf27f61e605bb80334d0cb5be059efa6a852c59587095c"
+   },
+   {
+    "description": "machine binding record, bound by the run",
+    "sha256": "e5cffa60f86bbfde01cf1bec0a6d7ce2c9b16dfa3bbb4ba164cd7c6fa3f2b1c3"
+   },
+   {
+    "description": "final run packet, bound by the authorization",
+    "sha256": "414541bbc7a8d5dc0dd94777e5b7c48ae3e23af02877bbb4618c624416124390"
+   },
+   {
+    "description": "itemized check of the authorization record before the run",
+    "sha256": "4908aa821a55450aca2a0b665ccc105c6be3be14f5f5b3a1796d30ba7120e993"
+   },
+   {
+    "description": "capture of the driver's standard output (214 bytes; names the outcome file by a private path)",
+    "sha256": "8a8142fb04e3b79c4f41aaec5e34410cb62b36259b0e27a5e91216eadb635f4a"
+   },
+   {
+    "description": "capture of the driver's standard error (empty; this is the SHA256 of empty input)",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+   },
+   {
+    "description": "independent review of the run result: complete findings artifact (decision APPROVE, eight non-blocking findings)",
+    "sha256": "cef4a62b65872f5dac1c8239f9ae4f51521d3cacc27585c11e8a16e3959d9d7c"
+   },
+   {
+    "description": "Lead acceptance of the narrow result",
+    "sha256": "2d8b76e26875d80477985ff30c0b570b99ceecc62baa4c66f47b337daad46dec"
+   },
+   {
+    "description": "post-run host capture, raw text (read-only commands)",
+    "sha256": "811ddb32f7fc830eba0fcd344178032015810c56ebb9ee60fdbd705a6a44ef4e"
+   },
+   {
+    "description": "summary of the post-run host capture (an assertion document, not a measurement)",
+    "sha256": "c5f34bc1ac43346afc9d5cdaa3c70bc9e490fb6e77c03f7ef0bf42372be786ec"
+   },
+   {
+    "description": "erratum relabelling two host-provenance claims as supplied and unverified and correcting the receipt freshness time",
+    "sha256": "f0d78e369749cb8aed8bb9f4e898eee99883f0ebc2b33c6e8f12541fdb1ff631"
+   },
+   {
+    "description": "supplied read-only observation of the external engine environment and package cache, explaining the core-extension digest difference and the banner placeholder (held privately)",
+    "sha256": "b57a92c9c83d5748718cd474b12affc9eea2778a6574bf1bdc13d90eb2712728"
+   },
+   {
+    "description": "assessment of the engine source-code identity gap, kept as the historical record",
+    "sha256": "093a4c5dc2c048c5c2adaef7d214b99865b78748b90dd7dc16fffe61aab9a4b3"
+   },
+   {
+    "description": "supplement to that assessment, recording what changed",
+    "sha256": "b263e22ca676fb6c06122973ef0beee5789d19534719a6c9fc659ebbe4e71d4a"
+   },
+   {
+    "description": "independent review of the corrected host-provenance material: complete findings artifact (decision APPROVE, eight non-blocking)",
+    "sha256": "03db860388c0cea5ee1513b7a9ab6362f9adaca2b05eb214ed13a01820f2b899"
+   },
+   {
+    "description": "Lead acceptance of that documentary correction",
+    "sha256": "81a0a54ed6a36825676a06fa3d1d9b200b1abac18bb4fd200b462efc38589b9d"
+   },
+   {
+    "description": "independent review of the final package of preparation records: complete findings artifact (decision APPROVE, eight non-blocking)",
+    "sha256": "d9aa3a507e7d23b8003315f6cfd9125c6f47e5b326d0c8053e6e75fd79fc3e0a"
+   },
+   {
+    "description": "Lead acceptance and itemized disposition of that review",
+    "sha256": "4ff7f10f1a73e8da318ecf0dd5719dd6dc31e09dc66ff6c4bdd1cca50bb8fa6c"
+   },
+   {
+    "description": "independent review of the host-provenance material: complete findings artifact (decision REJECT, one blocker, seven non-blocking)",
+    "sha256": "d39578204fbca9223d32698c1bc8e71f2b8e86c05672d5b9f617467031c11b9d"
+   },
+   {
+    "description": "Lead non-acceptance of that review's candidate",
+    "sha256": "1c73550c4e1f66560c5d60ff49a85d03935db55500edbb081fae93b714a373e9"
+   }
+  ]
+ },
+ "redaction": {
+  "rules": [
+   {
+    "id": "R01-attempt-dir",
+    "describes": "absolute path of the attempt directory",
+    "token": "<attempt>"
+   },
+   {
+    "id": "R02-runs-root",
+    "describes": "absolute path of the runs root",
+    "token": "<runs-root>"
+   },
+   {
+    "id": "R03-private-records-dir",
+    "describes": "absolute path of a private records directory",
+    "token": "<private-records>"
+   },
+   {
+    "id": "R04-work-root",
+    "describes": "absolute path of the private work directory",
+    "token": "<work-root>"
+   },
+   {
+    "id": "R05-repo-root",
+    "describes": "absolute path of the repository checkout",
+    "token": "<repo-root>"
+   },
+   {
+    "id": "R06-engine-prefix",
+    "describes": "absolute path of the engine environment prefix",
+    "token": "<psi4-prefix>"
+   },
+   {
+    "id": "R07-home-dir",
+    "describes": "absolute path of a home directory",
+    "token": "<home>"
+   },
+   {
+    "id": "R08-host-fqdn",
+    "describes": "fully qualified host name",
+    "token": "<host>"
+   },
+   {
+    "id": "R09-host-short",
+    "describes": "short host name",
+    "token": "<host-short>"
+   },
+   {
+    "id": "R10-user-name",
+    "describes": "user name",
+    "token": "<user>"
+   },
+   {
+    "id": "R11-pid-json-number",
+    "describes": "process id written as a JSON number (the value becomes the JSON string below)",
+    "token": "\"<pid-number>\""
+   },
+   {
+    "id": "R12-pid-text",
+    "describes": "process id written in text",
+    "token": "<pid>"
+   }
+  ],
+  "totals": {
+   "R01-attempt-dir": 38,
+   "R02-runs-root": 3,
+   "R06-engine-prefix": 190,
+   "R08-host-fqdn": 5,
+   "R11-pid-json-number": 3,
+   "R12-pid-text": 2
+  },
+  "verification": "for every redacted file, applying the inverse of the token map in reverse order to the public copy reproduces the original bytes exactly, the line count is unchanged and JSON files parse; so the only differences from the original are the listed replacements. No original file was edited.",
+  "retained": "source dates and times, the job label and every engine-printed number are retained; the process id is redacted (replaced by <pid>, or by the JSON string \"<pid-number>\" where it was a JSON number)"
+ },
+ "derivation": "The verbatim files in raw/ are byte-identical copies. The files in redacted/ are the originals with the replacements listed above. The file in derived/ summarizes the code-provenance record.",
+ "integration_files_changed": [
+  "README.md",
+  "AGENTS.md (factual status only)",
+  ".agents/RESEARCH-STATE.md",
+  "docs/SOURCES.md",
+  "docs/learning/h2/README.md",
+  "provenance/EXPORT-MANIFEST.md"
+ ],
+ "derived_figures_and_report": "listed with SHA256 and derivation in provenance/EXPORT-MANIFEST.md"
+}

@@ -1,0 +1,10 @@
+# Signed energy components of the recorded H2-A-01 single point, drawn by tools/render_h2_energy_components.py.
+# Values are strings in hartree (Eh) and are printed as given. The sign convention is the one the independent review established
+# for this engine build: the reported total includes the nuclear repulsion (the printed nuclear repulsion, one-electron and
+# two-electron energies sum to the printed total, redacted/psi4-output.dat lines 181-184), so electronic energy = reported total
+# minus reported nuclear repulsion. The electronic value is that independent review's derivation, attributed to it; the engine did not
+# print it. The script checks the identity in exact decimal arithmetic and draws the three table values.
+# Columns: component, value_hartree, basis, source.
+nuclear_repulsion	0.7142857142857143	engine_reported	raw/result.json reported_nuclear_repulsion_hartree; redacted/psi4-output.dat:181
+electronic	-1.8310000393482843	review_derivation	independent review: reported total minus reported nuclear repulsion, for this build (redacted/psi4-output.dat:181-184)
+total	-1.11671432506257	engine_reported	raw/result.json reported_total_energy_hartree; redacted/psi4-output.dat:177

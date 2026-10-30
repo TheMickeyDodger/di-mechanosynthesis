@@ -5,7 +5,7 @@ at a fixed internuclear separation. Its purpose is to make the steps of a self-c
 clear before any reconstruction of tool-tip geometries is attempted. The track is separate from MS-001: it is not
 part of the MS-001 Stage 0 package and does not revise any of its definitions.
 
-**Status.** The documents in this folder are `[AGENT]` documents. No calculation has been run for them, they contain
+**Status.** The lesson, the method specification and the proposals in this folder are `[AGENT]` documents. No calculation was run for them, they contain
 no computed values, they authorize nothing, and they make no claim of learner mastery. The Phase A run proposal in
 [phase-a/](phase-a/H2-A-01-RUN-PROPOSAL.md) is PROPOSED_NOT_AUTHORIZED. Its independent review recorded the canonical
 decision APPROVE for its exact bytes, and Lead acceptance is recorded; both are private task records. This approves a
@@ -26,7 +26,12 @@ STOP_UNRUN before launch, with no run invocation and no engine process
 authorization, and there is no result. On 2026-10-11 a person directed a continuation of the same unchanged attempt in
 a new task. It stopped as STOP_UNRUN during preparation, before the driver was invoked in any mode, with no engine
 process ([continuation stop record](../../../results/h2/H2-A-01-continuation-01/README.md)). No launch permission
-remains. The accepted Phase A driver still refuses every launch.
+remains. The accepted Phase A driver still refuses every launch. A separate bounded authorization of 2026-10-29 covered one attempt of
+H2-A-01 through the route-R2 driver, which ran once. Its [result report](H2-A-01-RESULT-REPORT.md), with a
+[PDF summary](H2-A-01-RESULT-REPORT.pdf), and its [record](../../../results/h2/H2-A-01-run-01/README.md) give one recorded RHF/STO-3G
+single point at a fixed 1.4 bohr separation. It is not a dissociation curve, an optimized or predicted equilibrium bond length,
+readiness, parity or a reproduction of the benchmark; `[COMP-PRED]` is not granted, and the engine's source-code identity is
+unestablished.
 
 ## Files
 
@@ -49,13 +54,16 @@ remains. The accepted Phase A driver still refuses every launch.
 | [phase-a-r2/H2-A-01-HUMAN-RUN-AUTHORIZATION.md](phase-a-r2/H2-A-01-HUMAN-RUN-AUTHORIZATION.md) | Redacted record of the person's authorization of exactly one attempt of H2-A-01, binding the run-decision packet and the current run proposal; not exercised (STOP_UNRUN before launch) and not a review decision |
 | [../../../results/h2/H2-A-01/README.md](../../../results/h2/H2-A-01/README.md) | Stop record of that attempt: STOP_UNRUN before launch, with zero run invocations and no engine process, its machine-readable outcome and provenance; no results |
 | [../../../results/h2/H2-A-01-continuation-01/README.md](../../../results/h2/H2-A-01-continuation-01/README.md) | Stop record of the continuation of that attempt (2026-10-11): STOP_UNRUN during preparation, before any driver invocation, with no engine process, its machine-readable outcome and provenance; no results |
+| [H2-A-01-RESULT-REPORT.md](H2-A-01-RESULT-REPORT.md), [H2-A-01-RESULT-REPORT.pdf](H2-A-01-RESULT-REPORT.pdf) | Sourced report of the H2-A-01 run of 2026-10-29: one recorded RHF/STO-3G single point at a fixed 1.4 bohr separation, Figures 3 to 5 with their source tables, the energy convention, residuals, the engine source-code identity gap and one conceptual question; the PDF is a derived summary |
+| [../../../results/h2/H2-A-01-run-01/README.md](../../../results/h2/H2-A-01-run-01/README.md) | Record of that run: machine-readable outcome, provenance with a hashed inventory of the sixteen original files and the redaction rules, verbatim and redacted engine records |
+| [../../figures/](../../figures/) and [../../../tools/](../../../tools/) | Figures 3 to 5 (SVG and PNG), their source tables, deterministic renderers, the PNG exporter and the PDF builder |
 
 ## Reading order
 
 Read the lesson first, then the method specification, and consult the parameter file alongside the specification.
 Then read the Phase A run proposal, its decision packet, and the driver, payload, input and static identity record it
 describes. For route R2, read the method revision, its run proposal and decision packet, then the approval record,
-the current run proposal and the run-decision packet, and finally the run authorization record and the stop record.
+the current run proposal and the run-decision packet, and finally the run authorization record and the stop record. The report of the run of 2026-10-29 follows the stop records.
 
 ## Gates
 
